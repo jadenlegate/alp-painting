@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
 import { Button } from "@/components/Button";
-import { FileText, ShieldCheck } from "lucide-react";
+import {
+  FileText, ShieldCheck, MessageSquare, Ruler, CalendarCheck,
+  HardHat, Paintbrush, ClipboardCheck, BookOpen, HeartHandshake,
+  type LucideIcon,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Process",
@@ -15,51 +19,59 @@ export const metadata: Metadata = {
 // by trades before should finish this page feeling like they know exactly
 // what they're signing up for.
 
-const STEPS = [
+const STEPS: { n: string; title: string; body: string; detail: string | null; icon: LucideIcon }[] = [
   {
     n: "01",
+    icon: MessageSquare,
     title: "Request a quote",
     body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll respond within 24 hours on weekdays, usually the same day.",
     detail: "For most projects we can give you a ballpark range before the site visit, so you're not walking in blind.",
   },
   {
     n: "02",
+    icon: Ruler,
     title: "Site visit & proposal",
     body: "We come to you — or, for out-of-area clients, we can do a live video walkthrough. We measure, assess the surface conditions, discuss product and color options, and ask the questions that matter.",
     detail: "Within 1–2 business days of the site visit, you get a written proposal: itemized scope, product specs, timeline, and warranty terms. We present it in person or on a call — we don't just email a PDF and disappear.",
   },
   {
     n: "03",
+    icon: CalendarCheck,
     title: "Booking & scheduling",
     body: "If you want to move forward, we confirm the start date, collect a deposit, and send a project agreement. We'll confirm what you need to do to prep (furniture, access codes, pet logistics).",
     detail: "We build buffer days into every exterior project for weather. You'll know the realistic range upfront — not just a start date that slips.",
   },
   {
     n: "04",
+    icon: HardHat,
     title: "Day one on site",
     body: "The crew arrives on time, in uniform, with everything they need. First order of business: protect what isn't being painted. Drop cloths, plastic masking, furniture moved. Nothing starts until the space is properly staged.",
     detail: "You'll meet the crew lead on day one. They're your main contact for the duration of the project.",
   },
   {
     n: "05",
+    icon: Paintbrush,
     title: "During the project",
     body: "We work a clean, professional site. Daily tidying is standard — you shouldn't feel like your home has been taken over. If something unexpected comes up (hidden rot, a surface that needs extra prep), we tell you immediately and don't start work until you've approved the change.",
     detail: "We don't surprise you with extras at the end of the job. Anything outside the original scope gets a written change order first.",
   },
   {
     n: "06",
+    icon: ClipboardCheck,
     title: "Final walkthrough",
     body: "When the work is done, we walk every inch of it with you. If something isn't right, we fix it before we leave. This isn't a five-minute courtesy check — it's a deliberate review of the finished product.",
     detail: "You sign off only when you're satisfied.",
   },
   {
     n: "07",
+    icon: BookOpen,
     title: "The project report",
     body: "Every Alpenglow project closes with a written report documenting the exact products used (manufacturer, product line, color name, sheen), areas covered, and application method.",
     detail: "This document lives with the house. Years from now, when you need a touch-up or want to match a color, you'll know exactly what was used — instead of guessing.",
   },
   {
     n: "08",
+    icon: HeartHandshake,
     title: "After the job",
     body: "If something comes up under warranty, contact us. We respond within 5 business days and schedule the repair promptly. The warranty isn't a legal escape hatch — it's a commitment that the work holds up.",
     detail: null,
@@ -112,11 +124,16 @@ export default function ProcessPage() {
             {STEPS.map((step, i) => (
               <div
                 key={step.n}
-                className={`grid md:grid-cols-[80px_1fr] gap-6 md:gap-10 py-10 md:py-12 ${
+                className={`grid md:grid-cols-[96px_1fr] gap-6 md:gap-10 py-10 md:py-12 ${
                   i < STEPS.length - 1 ? "border-b border-border" : ""
                 }`}
               >
-                <div className="font-serif text-3xl text-navy/30 tabular-nums">{step.n}</div>
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-12 h-12 rounded-sm bg-navy/8 flex items-center justify-center">
+                    <step.icon size={22} className="text-navy" />
+                  </div>
+                  <div className="font-serif text-sm text-navy/30 tabular-nums">{step.n}</div>
+                </div>
                 <div>
                   <h2 className="font-serif text-navy text-2xl md:text-[1.75rem]">{step.title}</h2>
                   <p className="mt-3 text-ink leading-relaxed">{step.body}</p>

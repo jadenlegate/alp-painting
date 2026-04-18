@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Montserrat } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -41,9 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${montserrat.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
