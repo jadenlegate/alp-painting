@@ -46,6 +46,7 @@ export function Navbar() {
   const solid = !isHome || scrolled || mobileOpen;
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         solid
@@ -128,10 +129,11 @@ export function Navbar() {
           </button>
         </div>
       </Container>
+    </header>
 
-      {/* Mobile full-screen menu */}
+      {/* Mobile full-screen menu — sibling of header to avoid stacking context issues */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-background overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-16 z-40 bg-background overflow-y-auto">
           <Container className="py-8">
             <div className="space-y-6">
               <div>
@@ -178,6 +180,6 @@ export function Navbar() {
           </Container>
         </div>
       )}
-    </header>
+    </>
   );
 }
