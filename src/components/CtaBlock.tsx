@@ -1,13 +1,12 @@
 import { ReactNode } from "react";
 import { Container } from "./Container";
 import { Button } from "./Button";
+import { ArrowRight } from "lucide-react";
 
-// Full-width CTA strip used at the bottom of most pages. Keep heading and
-// one subline short — this is the "one last ask" after the reader has
-// scrolled the page.
 type Props = {
   heading: ReactNode;
   subline?: ReactNode;
+  eyebrow?: string;
   primaryLabel?: string;
   primaryHref?: string;
   secondaryLabel?: string;
@@ -18,6 +17,7 @@ type Props = {
 export function CtaBlock({
   heading,
   subline,
+  eyebrow,
   primaryLabel = "Get a Quote",
   primaryHref = "/contact",
   secondaryLabel,
@@ -26,42 +26,43 @@ export function CtaBlock({
 }: Props) {
   const isNavy = variant === "navy";
   return (
-    <section className={isNavy ? "bg-navy text-background" : "bg-stone-light/50"}>
+    <section className={isNavy ? "bg-navy" : "bg-surface"}>
       <Container>
-        <div className="py-16 md:py-20 text-center max-w-2xl mx-auto">
-          <h2
-            className={`font-serif text-3xl md:text-[2.5rem] leading-[1.15] ${
-              isNavy ? "text-background" : "text-navy"
-            }`}
-          >
-            {heading}
-          </h2>
-          {subline && (
-            <p
-              className={`mt-4 md:mt-5 text-base md:text-lg ${
-                isNavy ? "text-background/80" : "text-ink"
+        <div className="py-20 md:py-24 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+          <div className="max-w-xl">
+            {eyebrow && (
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">{eyebrow}</div>
+            )}
+            <h2
+              className={`font-serif font-bold text-[2rem] md:text-[2.75rem] leading-[1.05] tracking-tight ${
+                isNavy ? "text-background" : "text-navy"
               }`}
             >
-              {subline}
-            </p>
-          )}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              {heading}
+            </h2>
+            {subline && (
+              <p className={`mt-4 text-lg leading-relaxed ${isNavy ? "text-background/70" : "text-ink"}`}>
+                {subline}
+              </p>
+            )}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <Button
               href={primaryHref}
               size="lg"
-              className={
-                isNavy
-                  ? "!bg-background !text-navy hover:!bg-surface"
-                  : ""
-              }
+              className={isNavy ? "!bg-background !text-navy hover:!bg-surface" : ""}
             >
-              {primaryLabel}
+              {primaryLabel} <ArrowRight size={16} />
             </Button>
             {secondaryLabel && secondaryHref && (
               <Button
                 href={secondaryHref}
-                variant="text"
-                className={isNavy ? "!text-background" : ""}
+                size="lg"
+                className={
+                  isNavy
+                    ? "border !border-background/25 !bg-transparent !text-background hover:!bg-background/10"
+                    : "border border-navy !text-navy hover:!bg-navy hover:!text-background"
+                }
               >
                 {secondaryLabel}
               </Button>

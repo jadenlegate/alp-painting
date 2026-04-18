@@ -150,20 +150,26 @@ export default function ProcessPage() {
       </section>
 
       {/* Project Report callout */}
-      <section className="py-16 md:py-20 bg-navy text-background">
+      <section className="py-16 md:py-20 bg-navy">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
-            <FileText size={32} className="mx-auto mb-6 text-background/70" />
-            <h2 className="font-serif text-background text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <FileText size={28} className="mx-auto mb-5 text-alpine" />
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Every project</div>
+            <h2 className="font-serif text-background font-bold text-[1.75rem] md:text-[2.5rem] leading-[1.1] tracking-tight">
               The Alpenglow Project Report
             </h2>
-            <p className="mt-5 text-background/85 text-lg leading-relaxed">
-              Every project closes with a written document: the exact products used, colors applied (manufacturer name, color code, sheen), areas covered, and care instructions.
+            <p className="mt-5 text-background/75 text-lg leading-relaxed">
+              When the job is done, most painters leave. We leave behind a written record — exact products, color codes, sheens, areas covered, and care notes.
             </p>
-            <p className="mt-4 text-background/85 leading-relaxed">
-              Most painters hand you nothing when the job is done. We give you a record that lives with the house — so repairs and touch-ups years later aren&rsquo;t guesswork, and the next owner knows what they inherited.
+            <p className="mt-4 text-background/65 leading-relaxed">
+              It lives with the house. Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used — no guessing, no calling around.
             </p>
-            <p className="mt-4 text-background/70 text-sm">Nobody else in the Sea to Sky does this.</p>
+            <p className="mt-5 text-alpine text-sm font-medium tracking-wide">Nobody else in the Sea to Sky does this.</p>
+            <div className="mt-8">
+              <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
+                Get a Quote
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
@@ -217,9 +223,10 @@ export default function ProcessPage() {
 
       <CtaBlock
         heading="Ready to get started?"
-        subline="Most quotes are delivered same day. The site visit is free."
+        eyebrow="Get in touch"
+        subline="Most quotes turn around same day. The site visit is free."
         primaryLabel="Get a Quote"
-        secondaryLabel="Call us"
+        secondaryLabel="Call (604) 938-4037"
         secondaryHref="tel:+16049384037"
       />
     </>
