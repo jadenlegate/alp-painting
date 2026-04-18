@@ -262,7 +262,7 @@ export default async function BlogPostPage({
           </Link>
 
           {post.category && (
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">{post.category}</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">{post.category}</div>
           )}
           <h1 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
             {post.title}

@@ -90,7 +90,7 @@ export default function CommercialPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-12">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">Who we work with</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Who we work with</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               B2B clients have different needs. We plan around them.
             </h2>
@@ -115,7 +115,7 @@ export default function CommercialPage() {
         <Container>
           <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">What's standard on every commercial project</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What's standard on every commercial project</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 The process that keeps B2B projects on track.
               </h2>
@@ -158,7 +158,7 @@ export default function CommercialPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-widest text-navy mb-3">Frequently asked</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
           <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Commercial project questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>

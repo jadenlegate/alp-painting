@@ -32,7 +32,7 @@ export default function WorkPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">Portfolio</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Portfolio</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               Projects across the Sea to Sky.
             </h1>

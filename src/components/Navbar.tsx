@@ -65,7 +65,7 @@ export function Navbar() {
             <img
               src={solid ? "/Alpenglow Logo Blue.svg" : "/Alpenglow Logo White.svg"}
               alt="Alpenglow Painting"
-              className="h-8 md:h-9 w-auto"
+              className="h-9 md:h-11 w-auto"
             />
           </Link>
 
@@ -76,7 +76,7 @@ export function Navbar() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className={`flex items-center gap-1 text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}>
+              <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}>
                 Services <ChevronDown size={14} />
               </button>
               {servicesOpen && (
@@ -99,7 +99,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
+                className={`text-sm font-medium transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
               >
                 {l.label}
               </Link>
@@ -110,7 +110,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${SITE.phoneRaw}`}
-              className={`flex items-center gap-1.5 text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
+              className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
             >
               <Phone size={14} /> {SITE.phone}
             </a>

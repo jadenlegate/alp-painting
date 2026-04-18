@@ -135,7 +135,7 @@ export default async function LocationPage({
               <p className="mt-5 text-ink leading-relaxed">{loc.details}</p>
 
               <div className="mt-10">
-                <div className="text-xs uppercase tracking-widest text-navy mb-4">Services in {loc.name}</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Services in {loc.name}</div>
                 <ul className="space-y-2.5">
                   {loc.services.map((s) => (
                     <li key={s} className="flex items-start gap-3">
@@ -148,7 +148,7 @@ export default async function LocationPage({
 
               {loc.neighborhoods && (
                 <div className="mt-10">
-                  <div className="text-xs uppercase tracking-widest text-navy mb-3">Areas we cover</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Areas we cover</div>
                   <p className="text-ink text-sm leading-relaxed">
                     {loc.neighborhoods.join(" · ")}
                   </p>
@@ -174,7 +174,7 @@ export default async function LocationPage({
               </div>
 
               <div className="border border-border rounded-sm bg-surface p-6">
-                <div className="text-xs uppercase tracking-widest text-navy mb-3">Response time</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Response time</div>
                 <div className="font-serif text-navy text-2xl">Same day</div>
                 <p className="mt-1 text-sm text-muted">On quote requests, weekdays</p>
               </div>

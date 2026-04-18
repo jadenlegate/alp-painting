@@ -67,7 +67,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid gap-12 md:gap-16 lg:grid-cols-[1fr_1fr] items-start">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">The founder</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">The founder</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 Jaden Legate, Owner
               </h2>
@@ -101,7 +101,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">How we work</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">How we work</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Values stated as behaviors — not platitudes.
             </h2>
@@ -121,7 +121,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">The team</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">The team</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               The people on your job site.
             </h2>
@@ -154,7 +154,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid gap-10 md:grid-cols-2 items-start">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">Community</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Community</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 Locally owned. Locally invested.
               </h2>
@@ -169,7 +169,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">Memberships</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Memberships</div>
               <div className="space-y-3">
                 {MEMBERSHIPS.map((m) => (
                   <div key={m.name} className="flex items-center justify-between border border-border rounded-sm bg-surface px-5 py-3.5">

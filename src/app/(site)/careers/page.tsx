@@ -93,7 +93,7 @@ export default function CareersPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">Why Alpenglow</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Why Alpenglow</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               A crew worth being on.
             </h2>
@@ -117,7 +117,7 @@ export default function CareersPage() {
       <section id="pay" className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">Pay structure</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Pay structure</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Real numbers. No surprises.
             </h2>
@@ -145,7 +145,7 @@ export default function CareersPage() {
         <Container>
           <div className="grid gap-12 md:grid-cols-2 items-start">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">What we look for</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What we look for</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
                 The traits that actually matter.
               </h2>
@@ -162,7 +162,7 @@ export default function CareersPage() {
               </ul>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">Life in Whistler</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Life in Whistler</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 Not just a job.
               </h2>
@@ -181,7 +181,7 @@ export default function CareersPage() {
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">How it works</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">How it works</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               The hiring process, start to finish.
             </h2>
@@ -202,7 +202,7 @@ export default function CareersPage() {
       <section id="apply" className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">Apply</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Apply</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Interested? Let&rsquo;s talk.
             </h2>

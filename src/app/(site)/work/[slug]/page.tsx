@@ -214,7 +214,7 @@ export default async function ProjectPage({
             {/* Sidebar */}
             <div className="space-y-6">
               <div className="border border-border rounded-sm bg-surface p-6">
-                <div className="text-xs uppercase tracking-widest text-navy mb-4">Project scope</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Project scope</div>
                 {project.scope && (
                   <ul className="space-y-2">
                     {project.scope.map((item) => (
@@ -228,7 +228,7 @@ export default async function ProjectPage({
               </div>
 
               <div className="border border-border rounded-sm bg-surface p-6">
-                <div className="text-xs uppercase tracking-widest text-navy mb-3">Details</div>
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Details</div>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted">Location</span>

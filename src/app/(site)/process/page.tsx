@@ -106,7 +106,7 @@ export default function ProcessPage() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">Our process</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Our process</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               From first call to final walkthrough — here&rsquo;s exactly what to expect.
             </h1>
@@ -129,8 +129,8 @@ export default function ProcessPage() {
                 }`}
               >
                 <div className="flex flex-col items-start gap-3">
-                  <div className="w-12 h-12 rounded-sm bg-navy/8 flex items-center justify-center">
-                    <step.icon size={22} className="text-navy" />
+                  <div className="w-12 h-12 rounded-sm bg-alpine/10 flex items-center justify-center">
+                    <step.icon size={22} className="text-alpine" />
                   </div>
                   <div className="font-serif text-sm text-navy/30 tabular-nums">{step.n}</div>
                 </div>
@@ -172,7 +172,7 @@ export default function ProcessPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">Warranty</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Warranty</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Up to 10 years — and that&rsquo;s not a marketing line.
             </h2>

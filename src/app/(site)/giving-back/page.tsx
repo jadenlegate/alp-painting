@@ -14,7 +14,7 @@ export default function GivingBackPage() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">Giving back</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Giving back</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               Locally owned. Locally invested.
             </h1>

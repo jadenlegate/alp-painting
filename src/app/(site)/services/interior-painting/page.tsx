@@ -127,7 +127,7 @@ export default function InteriorPaintingPage() {
         <Container>
           <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1fr]">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
                 What we do
               </div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
@@ -147,7 +147,7 @@ export default function InteriorPaintingPage() {
             </div>
 
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
                 Included in every project
               </div>
               <ul className="space-y-3">
@@ -170,7 +170,7 @@ export default function InteriorPaintingPage() {
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
               Our approach
             </div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
@@ -202,7 +202,7 @@ export default function InteriorPaintingPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-8">
-            <div className="text-xs uppercase tracking-widest text-navy mb-3">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
               Products we use
             </div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
@@ -232,7 +232,7 @@ export default function InteriorPaintingPage() {
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
                 Recent interior work
               </div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
@@ -254,7 +254,7 @@ export default function InteriorPaintingPage() {
       {/* FAQ */}
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-widest text-navy mb-3">
+          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
             Frequently asked
           </div>
           <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">

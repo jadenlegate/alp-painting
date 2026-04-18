@@ -19,7 +19,7 @@ export default function ContactPage() {
       <section className="pt-32 md:pt-40 pb-10">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
               Get a Quote
             </div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
@@ -43,7 +43,7 @@ export default function ContactPage() {
 
             <aside className="space-y-8">
               <div>
-                <div className="text-xs uppercase tracking-widest text-navy mb-4">
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
                   Or reach us directly
                 </div>
                 <div className="space-y-4 text-ink">
