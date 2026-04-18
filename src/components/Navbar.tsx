@@ -120,7 +120,7 @@ export function Navbar() {
 
           {/* Mobile menu trigger */}
           <button
-            className="lg:hidden p-2 -mr-2 text-navy"
+            className={`lg:hidden p-2 -mr-2 cursor-pointer ${solid ? "text-navy" : "text-background"}`}
             onClick={() => setMobileOpen((o) => !o)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >

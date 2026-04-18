@@ -5,6 +5,10 @@
  * See ALPENGLOW_WEBSITE_BUILD_BRIEF.md §4 for rationale.
  * Keep navy rare and intentional; body is warm off-white with charcoal text.
  */
+html {
+  font-size: 112.5%; /* ~18px base — scales all rem units up */
+}
+
 :root {
   --color-background: #faf8f5;   /* warm off-white body bg */
   --color-surface: #ffffff;      /* cards/panels that sit on the body */
