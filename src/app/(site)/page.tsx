@@ -7,7 +7,7 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
-import { MessageSquare, UserCheck, ShieldCheck, MapPin } from "lucide-react";
+import { MessageSquare, UserCheck, ShieldCheck, MapPin, Ruler, CalendarCheck, Paintbrush, BookOpen, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 const SERVICES = [
@@ -106,11 +106,11 @@ const VALUE_PROPS = [
   },
 ];
 
-const PROCESS_STEPS = [
-  { n: "01", label: "Request a quote" },
-  { n: "02", label: "Proposal & walkthrough" },
-  { n: "03", label: "Paint — with your home protected" },
-  { n: "04", label: "Final report & warranty" },
+const PROCESS_STEPS: { n: string; label: string; icon: LucideIcon }[] = [
+  { n: "01", icon: MessageSquare,  label: "Request a quote" },
+  { n: "02", icon: Ruler,          label: "Proposal & walkthrough" },
+  { n: "03", icon: Paintbrush,     label: "Paint — with your home protected" },
+  { n: "04", icon: BookOpen,       label: "Final report & warranty" },
 ];
 
 export default function HomePage() {
@@ -226,9 +226,12 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-4">
             {PROCESS_STEPS.map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
-                <div className="border-t border-navy/30 pt-4">
-                  <div className="font-serif text-navy text-sm tabular-nums">{s.n}</div>
-                  <div className="mt-2 text-ink font-medium">{s.label}</div>
+                <div className="border-t border-navy/30 pt-5">
+                  <div className="w-10 h-10 rounded-sm bg-alpine/10 flex items-center justify-center mb-3">
+                    <s.icon size={20} className="text-alpine" />
+                  </div>
+                  <div className="font-serif text-navy/40 text-xs tabular-nums mb-1">{s.n}</div>
+                  <div className="text-ink font-medium">{s.label}</div>
                 </div>
               </FadeIn>
             ))}

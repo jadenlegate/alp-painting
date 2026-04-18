@@ -15,6 +15,7 @@
   --color-ink: #1f2937;          /* body text — charcoal, not black */
   --color-muted: #6b7280;        /* captions, metadata */
   --color-border: #e5e1d8;       /* dividers, card borders */
+  --color-alpine: #48addb;       /* sky blue from original brand */
 }
 
 @theme inline {
@@ -28,6 +29,7 @@
   --color-ink: var(--color-ink);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
+  --color-alpine: var(--color-alpine);
 
   /* Fonts — loaded via next/font in layout.tsx */
   --font-sans: var(--font-inter);
