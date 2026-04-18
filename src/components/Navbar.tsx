@@ -57,10 +57,15 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="font-serif text-xl md:text-2xl text-navy tracking-tight"
+            className="flex items-center"
             onClick={() => setMobileOpen(false)}
           >
-            Alpenglow
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={solid ? "/Alpenglow Logo Blue.svg" : "/Alpenglow Logo White.svg"}
+              alt="Alpenglow Painting"
+              className="h-8 md:h-9 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -70,7 +75,7 @@ export function Navbar() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm text-ink hover:text-navy transition-colors">
+              <button className={`flex items-center gap-1 text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}>
                 Services <ChevronDown size={14} />
               </button>
               {servicesOpen && (
@@ -93,7 +98,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm text-ink hover:text-navy transition-colors"
+                className={`text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
               >
                 {l.label}
               </Link>
@@ -104,7 +109,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:${SITE.phoneRaw}`}
-              className="flex items-center gap-1.5 text-sm text-ink hover:text-navy transition-colors"
+              className={`flex items-center gap-1.5 text-sm transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
             >
               <Phone size={14} /> {SITE.phone}
             </a>
