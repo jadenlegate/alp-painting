@@ -101,7 +101,7 @@ export default function CabinetRefinishingPage() {
         imageUrl="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=2000&q=85"
         imageAlt="Freshly refinished white kitchen cabinets"
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
       </Hero>

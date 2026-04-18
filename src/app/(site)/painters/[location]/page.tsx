@@ -115,7 +115,7 @@ export default async function LocationPage({
               {loc.headline}
             </h1>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+              <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
                 Get a Quote
               </Button>
               <Button href="tel:+16049384037" variant="text" className="!text-background">

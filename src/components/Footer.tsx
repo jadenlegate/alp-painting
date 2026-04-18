@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { Container } from "./Container";
@@ -18,6 +19,7 @@ const COMPANY_LINKS = [
   { label: "Process", href: "/process" },
   { label: "Our Work", href: "/work" },
   { label: "Reviews", href: "/reviews" },
+  { label: "FAQ", href: "/faq" },
   { label: "Careers", href: "/careers" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -30,7 +32,8 @@ export function Footer() {
         <div className="py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand column */}
           <div className="space-y-4">
-            <div className="font-serif text-2xl text-navy">Alpenglow</div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/Alpenglow Logo Blue.svg" alt="Alpenglow Painting" className="h-8 w-auto" />
             <p className="text-sm text-muted max-w-[280px]">
               Premium painting for Whistler and the Sea to Sky corridor.
             </p>
@@ -130,7 +133,7 @@ export function Footer() {
               Terms
             </Link>
             <span className="hidden md:inline text-border">|</span>
-            <span>Whistler Chamber · PCA · AMPP Member</span>
+            <span>Whistler Chamber · PCA Member</span>
           </div>
         </div>
       </Container>

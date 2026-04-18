@@ -100,7 +100,7 @@ export default function ExteriorPaintingPage() {
         imageUrl="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85"
         imageAlt="Freshly painted home exterior with mountain backdrop"
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
       </Hero>

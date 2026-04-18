@@ -51,7 +51,7 @@ export function CtaBlock({
               size="lg"
               className={
                 isNavy
-                  ? "bg-background !text-navy hover:bg-stone-light"
+                  ? "!bg-background !text-navy hover:!bg-surface"
                   : ""
               }
             >

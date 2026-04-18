@@ -92,17 +92,17 @@ const VALUE_PROPS = [
   {
     icon: MessageSquare,
     title: "Clear communication",
-    body: "You'll know what's happening every step of the way — from the first quote to the final walkthrough.",
+    body: "We respond fast, show up when we say we will, and tell you if something changes. No surprises, no chasing us down.",
   },
   {
     icon: UserCheck,
     title: "Professional crews",
-    body: "Uniformed, on time, respectful of your home. The kind of trades experience you wish was standard.",
+    body: "On time, in uniform, and careful with your home. Trades work the way it should be — but rarely is.",
   },
   {
     icon: ShieldCheck,
     title: "Work that lasts",
-    body: "Up to 10 years of warranty protection. Standard 3-year coverage on most projects, at no extra cost.",
+    body: "Three years standard on every job. Up to ten on select projects. In writing — not just a handshake.",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function HomePage() {
         headline={SITE.tagline}
         subline={SITE.subline}
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-surface">
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
         <Button href="/work" variant="text" className="!text-background/90 hover:!text-background">
@@ -143,7 +143,7 @@ export default function HomePage() {
                 We&rsquo;re not the biggest painter in the Sea to Sky. We&rsquo;re the one that takes the experience seriously.
               </h2>
               <p className="mt-5 text-background/70 text-lg leading-relaxed">
-                Everyone can put paint on a wall. What makes a project worth paying for is everything around that — how we communicate, how the crew shows up, how the job closes out.
+                Any painter can roll paint on walls. What separates a good job from a bad one is everything else — showing up when you said you would, keeping the site clean, and actually following through on what was promised.
               </p>
             </div>
           </FadeIn>
@@ -227,8 +227,8 @@ export default function HomePage() {
             {PROCESS_STEPS.map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
                 <div className="border-t border-background/20 pt-5">
-                  <div className="w-10 h-10 rounded-sm bg-alpine/15 flex items-center justify-center mb-4">
-                    <s.icon size={20} className="text-alpine" />
+                  <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
+                    <s.icon size={20} className="text-background" />
                   </div>
                   <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
                   <div className="text-background font-medium">{s.label}</div>
@@ -277,10 +277,10 @@ export default function HomePage() {
             <div className="max-w-xl">
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Service area</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                Based in Whistler. Serving the corridor.
+                Based in Whistler.
               </h2>
               <p className="mt-4 text-ink text-lg leading-relaxed">
-                From Britannia Beach to Pemberton, and everywhere between. If you&rsquo;re along the Sea to Sky, we work there.
+                We&rsquo;re a Whistler operation. Most of our work is in the valley — occasionally we take on something further out when the project is the right fit.
               </p>
             </div>
           </FadeIn>

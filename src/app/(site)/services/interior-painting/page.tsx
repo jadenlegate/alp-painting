@@ -116,7 +116,7 @@ export default function InteriorPaintingPage() {
         <Button
           href="/contact"
           size="lg"
-          className="bg-background !text-navy hover:bg-stone-light"
+          className="!bg-background !text-navy hover:!bg-surface"
         >
           Get a Quote
         </Button>

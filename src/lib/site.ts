@@ -15,8 +15,8 @@ export const SITE = {
     region: "BC",
     country: "Canada",
   },
-  serviceAreas: ["Whistler", "Pemberton", "Squamish", "Sea to Sky Corridor"],
-  hours: "Mon–Fri, 8am–5pm (May–November)",
+  serviceAreas: ["Creekside", "Whistler Village", "Benchlands", "Alpine Meadows", "Emerald Estates", "Function Junction", "Cheakamus", "Spruce Grove"],
+  hours: "Mon–Fri, 8am–6pm, year-round",
   social: {
     google:
       "https://www.google.com/search?q=alpenglow+painting+whistler",

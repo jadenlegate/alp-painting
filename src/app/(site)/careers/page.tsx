@@ -78,7 +78,7 @@ export default function CareersPage() {
               We hire a small crew of serious painters each season. If you take pride in your work and want a company that treats you like an adult, keep reading.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#apply" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+              <Button href="#apply" size="lg" className="!bg-background !text-navy hover:!bg-surface">
                 Apply Now
               </Button>
               <Button href="#pay" variant="text" className="!text-background">

@@ -78,7 +78,7 @@ export default function CommercialPage() {
         imageUrl="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=85"
         imageAlt="Commercial building interior hallway freshly painted"
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
         <Button href="/contact" variant="text" className="!text-background">

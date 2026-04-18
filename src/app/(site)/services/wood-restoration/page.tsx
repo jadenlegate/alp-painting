@@ -100,7 +100,7 @@ export default function WoodRestorationPage() {
         imageUrl="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=2000&q=85"
         imageAlt="Cedar siding and deck in natural mountain setting"
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
       </Hero>
