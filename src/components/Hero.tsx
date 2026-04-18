@@ -1,18 +1,29 @@
+"use client";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 import { Container } from "./Container";
 
-// Reusable hero. `variant="home"` is full-bleed with overlay text over a
-// background image; `variant="inner"` is shorter, for service/about/etc.
-// Background image can be a URL (placeholder stock) or later, a Sanity URL.
 type Props = {
   eyebrow?: string;
   headline: ReactNode;
   subline?: ReactNode;
   imageUrl?: string;
   imageAlt?: string;
-  children?: ReactNode; // CTA area
+  children?: ReactNode;
   variant?: "home" | "inner";
   align?: "left" | "center";
+};
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const item = {
+  hidden: { opacity: 0, y: 22 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE } },
+};
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.11, delayChildren: 0.15 } },
 };
 
 export function Hero({
@@ -26,28 +37,17 @@ export function Hero({
   align = "left",
 }: Props) {
   const isHome = variant === "home";
-
-  // Home hero is almost-viewport-height; inner hero is contained.
   const heightClass = isHome
     ? "min-h-[88vh] pt-28 pb-20 md:pt-32 md:pb-24"
     : "pt-28 pb-12 md:pt-36 md:pb-16";
   const alignClass = align === "center" ? "text-center mx-auto" : "";
 
   return (
-    <section
-      className={`relative w-full overflow-hidden ${heightClass} flex items-end`}
-    >
-      {/* Background image — next/image deferred to swap-in stage.
-          For launch-with-placeholders we use plain <img> for simplicity. */}
+    <section className={`relative w-full overflow-hidden ${heightClass} flex items-end`}>
       {imageUrl && (
         <div className="absolute inset-0 -z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imageUrl}
-            alt={imageAlt}
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient overlay so white text stays readable on any photo */}
+          <img src={imageUrl} alt={imageAlt} className="w-full h-full object-cover" />
           <div
             className={`absolute inset-0 ${
               isHome
@@ -57,41 +57,49 @@ export function Hero({
           />
         </div>
       )}
-
-      {/* If no image, use a warm tinted panel so the hero still has weight */}
       {!imageUrl && <div className="absolute inset-0 -z-10 bg-stone-light/40" />}
 
       <Container>
-        <div className={`max-w-3xl ${alignClass}`}>
+        <motion.div
+          className={`max-w-3xl ${alignClass}`}
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
           {eyebrow && (
-            <div
+            <motion.div
+              variants={item}
               className={`text-xs uppercase tracking-[0.2em] mb-5 ${
                 imageUrl ? "text-background/80" : "text-navy/70"
               }`}
             >
               {eyebrow}
-            </div>
+            </motion.div>
           )}
-          <h1
+          <motion.h1
+            variants={item}
             className={`font-serif leading-[1.1] ${
-              isHome
-                ? "text-[2.25rem] md:text-[3.5rem]"
-                : "text-[2rem] md:text-[2.75rem]"
+              isHome ? "text-[2.25rem] md:text-[3.5rem]" : "text-[2rem] md:text-[2.75rem]"
             } ${imageUrl ? "text-background" : "text-navy"}`}
           >
             {headline}
-          </h1>
+          </motion.h1>
           {subline && (
-            <p
+            <motion.p
+              variants={item}
               className={`mt-5 md:mt-6 text-base md:text-lg max-w-xl ${
                 align === "center" ? "mx-auto" : ""
               } ${imageUrl ? "text-background/90" : "text-ink"}`}
             >
               {subline}
-            </p>
+            </motion.p>
           )}
-          {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
-        </div>
+          {children && (
+            <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+              {children}
+            </motion.div>
+          )}
+        </motion.div>
       </Container>
     </section>
   );

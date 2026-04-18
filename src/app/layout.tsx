@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-// Fraunces — editorial serif for headlines. Most painters use sans-serif;
-// this gives us immediate visual differentiation. Keep weights lean.
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
@@ -13,8 +11,9 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-// Inter — body + UI. Includes tabular numerals variant for stats.
-const inter = Inter({
+// Montserrat — Argentum Sans is a Montserrat fork; this is the closest
+// Google Fonts match and effectively identical in use.
+const montserrat = Montserrat({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -40,7 +39,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${montserrat.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
