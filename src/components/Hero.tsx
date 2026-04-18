@@ -38,7 +38,7 @@ export function Hero({
 }: Props) {
   const isHome = variant === "home";
   const heightClass = isHome
-    ? "min-h-[88vh] pt-28 pb-20 md:pt-32 md:pb-24"
+    ? "min-h-[92vh] pt-28 pb-24 md:pt-36 md:pb-28"
     : "pt-28 pb-12 md:pt-36 md:pb-16";
   const alignClass = align === "center" ? "text-center mx-auto" : "";
 
@@ -51,17 +51,17 @@ export function Hero({
           <div
             className={`absolute inset-0 ${
               isHome
-                ? "bg-gradient-to-t from-black/60 via-black/30 to-black/40"
-                : "bg-gradient-to-t from-black/55 via-black/25 to-black/35"
+                ? "bg-gradient-to-t from-black/75 via-black/40 to-black/30"
+                : "bg-gradient-to-t from-black/60 via-black/25 to-black/30"
             }`}
           />
         </div>
       )}
-      {!imageUrl && <div className="absolute inset-0 -z-10 bg-stone-light/40" />}
+      {!imageUrl && <div className="absolute inset-0 -z-10 bg-navy" />}
 
       <Container>
         <motion.div
-          className={`max-w-3xl ${alignClass}`}
+          className={`${isHome ? "max-w-5xl" : "max-w-3xl"} ${alignClass}`}
           variants={container}
           initial="hidden"
           animate="visible"
@@ -70,7 +70,7 @@ export function Hero({
             <motion.div
               variants={item}
               className={`text-xs uppercase tracking-[0.2em] mb-5 ${
-                imageUrl ? "text-background/80" : "text-navy/70"
+                imageUrl ? "text-alpine" : "text-alpine"
               }`}
             >
               {eyebrow}
@@ -78,24 +78,26 @@ export function Hero({
           )}
           <motion.h1
             variants={item}
-            className={`font-serif leading-[1.1] ${
-              isHome ? "text-[2.25rem] md:text-[3.5rem]" : "text-[2rem] md:text-[2.75rem]"
-            } ${imageUrl ? "text-background" : "text-navy"}`}
+            className={`font-serif tracking-tight ${
+              isHome
+                ? "text-[2.75rem] md:text-[5rem] lg:text-[6rem] leading-[1.0] font-bold"
+                : "text-[2rem] md:text-[2.75rem] leading-[1.1]"
+            } ${imageUrl || !isHome ? "text-background" : "text-background"}`}
           >
             {headline}
           </motion.h1>
           {subline && (
             <motion.p
               variants={item}
-              className={`mt-5 md:mt-6 text-base md:text-lg max-w-xl ${
+              className={`mt-6 md:mt-7 text-base md:text-xl max-w-xl ${
                 align === "center" ? "mx-auto" : ""
-              } ${imageUrl ? "text-background/90" : "text-ink"}`}
+              } text-background/80`}
             >
               {subline}
             </motion.p>
           )}
           {children && (
-            <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+            <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
               {children}
             </motion.div>
           )}

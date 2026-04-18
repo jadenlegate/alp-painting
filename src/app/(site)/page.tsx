@@ -123,38 +123,38 @@ export default function HomePage() {
         headline={SITE.tagline}
         subline={SITE.subline}
       >
-        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-stone-light">
+        <Button href="/contact" size="lg" className="bg-background !text-navy hover:bg-surface">
           Get a Quote
         </Button>
-        <Button href="/work" variant="text" className="!text-background">
+        <Button href="/work" variant="text" className="!text-background/90 hover:!text-background">
           See our work →
         </Button>
       </Hero>
 
       <TrustBar />
 
-      {/* Why Alpenglow */}
-      <Section>
+      {/* Why Alpenglow — navy background */}
+      <Section className="bg-navy">
         <Container>
           <FadeIn>
             <div className="max-w-2xl">
-              <div className="text-xs uppercase tracking-widest text-navy mb-4">Why Alpenglow</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Why Alpenglow</div>
+              <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 We&rsquo;re not the biggest painter in the Sea to Sky. We&rsquo;re the one that takes the experience seriously.
               </h2>
-              <p className="mt-5 text-ink text-lg leading-relaxed">
-                Everyone can put paint on a wall. What makes a project worth paying for is everything around that — how we communicate, how the crew shows up, how the job closes out. That&rsquo;s what we&rsquo;re built around.
+              <p className="mt-5 text-background/70 text-lg leading-relaxed">
+                Everyone can put paint on a wall. What makes a project worth paying for is everything around that — how we communicate, how the crew shows up, how the job closes out.
               </p>
             </div>
           </FadeIn>
 
-          <div className="mt-12 md:mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 md:mt-16 grid gap-5 md:grid-cols-3">
             {VALUE_PROPS.map((v, i) => (
               <FadeIn key={v.title} delay={i * 0.1}>
-                <div className="border border-border rounded-sm bg-surface p-6 md:p-7 h-full">
-                  <v.icon size={22} className="text-navy" />
-                  <h3 className="mt-4 font-serif text-xl text-navy">{v.title}</h3>
-                  <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{v.body}</p>
+                <div className="border border-background/10 rounded-sm bg-background/5 p-6 md:p-8 h-full">
+                  <v.icon size={22} className="text-alpine" />
+                  <h3 className="mt-4 font-serif text-xl text-background">{v.title}</h3>
+                  <p className="mt-2 text-background/65 leading-relaxed text-[0.95rem]">{v.body}</p>
                 </div>
               </FadeIn>
             ))}
@@ -168,8 +168,8 @@ export default function HomePage() {
           <FadeIn>
             <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
               <div>
-                <div className="text-xs uppercase tracking-widest text-navy mb-3">Services</div>
-                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] max-w-xl">
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Services</div>
+                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
                   Residential, commercial, and everything in between.
                 </h2>
               </div>
@@ -186,13 +186,13 @@ export default function HomePage() {
       </Section>
 
       {/* Featured work */}
-      <Section>
+      <Section className="bg-surface">
         <Container>
           <FadeIn>
             <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
               <div>
-                <div className="text-xs uppercase tracking-widest text-navy mb-3">Recent work</div>
-                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] max-w-xl">
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Recent work</div>
+                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
                   Projects across the Sea to Sky.
                 </h2>
               </div>
@@ -209,16 +209,16 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Process teaser */}
-      <Section className="bg-stone-light/30">
+      {/* Process teaser — navy background */}
+      <Section className="bg-navy">
         <Container>
           <FadeIn>
-            <div className="max-w-xl mb-10">
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">Our process</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <div className="max-w-xl mb-12">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our process</div>
+              <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 From first call to final walkthrough.
               </h2>
-              <p className="mt-4 text-ink text-lg leading-relaxed">
+              <p className="mt-4 text-background/70 text-lg leading-relaxed">
                 Four stages, documented at every step. No surprises, no improvising.
               </p>
             </div>
@@ -226,19 +226,19 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-4">
             {PROCESS_STEPS.map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
-                <div className="border-t border-navy/30 pt-5">
-                  <div className="w-10 h-10 rounded-sm bg-alpine/10 flex items-center justify-center mb-3">
+                <div className="border-t border-background/20 pt-5">
+                  <div className="w-10 h-10 rounded-sm bg-alpine/15 flex items-center justify-center mb-4">
                     <s.icon size={20} className="text-alpine" />
                   </div>
-                  <div className="font-serif text-navy/40 text-xs tabular-nums mb-1">{s.n}</div>
-                  <div className="text-ink font-medium">{s.label}</div>
+                  <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
+                  <div className="text-background font-medium">{s.label}</div>
                 </div>
               </FadeIn>
             ))}
           </div>
           <FadeIn delay={0.3}>
-            <div className="mt-10">
-              <Button href="/process" variant="secondary">See how it works</Button>
+            <div className="mt-12">
+              <Button href="/process" size="lg" className="border border-background/20 bg-transparent !text-background hover:bg-background/10">See how it works</Button>
             </div>
           </FadeIn>
         </Container>
@@ -249,13 +249,13 @@ export default function HomePage() {
         <Container>
           <FadeIn>
             <div className="max-w-xl mb-10 md:mb-14">
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">What clients say</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-                5.0 on Google — reviewed by people across the Sea to Sky.
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What clients say</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
+                5.0 on Google — across the Sea to Sky.
               </h2>
             </div>
           </FadeIn>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <TestimonialCard t={t} />
@@ -271,12 +271,12 @@ export default function HomePage() {
       </Section>
 
       {/* Service area */}
-      <Section className="bg-stone-light/30">
+      <Section className="bg-surface">
         <Container>
           <FadeIn>
             <div className="max-w-xl">
-              <div className="text-xs uppercase tracking-widest text-navy mb-3">Service area</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Service area</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 Based in Whistler. Serving the corridor.
               </h2>
               <p className="mt-4 text-ink text-lg leading-relaxed">
@@ -284,12 +284,12 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
             {SITE.serviceAreas.map((area, i) => (
               <FadeIn key={area} delay={i * 0.07}>
-                <div className="flex items-center gap-2 border border-border rounded-sm bg-surface p-4">
-                  <MapPin size={16} className="text-navy" />
-                  <span className="text-ink">{area}</span>
+                <div className="flex items-center gap-2.5 bg-background border border-border rounded-sm p-4">
+                  <MapPin size={15} className="text-alpine flex-shrink-0" />
+                  <span className="text-ink text-sm font-medium">{area}</span>
                 </div>
               </FadeIn>
             ))}

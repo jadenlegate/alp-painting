@@ -13,16 +13,16 @@ const ITEMS = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-border bg-stone-light/30">
+    <section className="border-b border-border bg-background">
       <Container>
-        <div className="py-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+        <div className="py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
           {ITEMS.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-2 text-xs md:text-sm text-ink/80"
+              className="flex items-center gap-2 text-xs md:text-sm text-ink/70"
             >
-              <Icon size={14} className="text-navy" />
-              <span>{label}</span>
+              <Icon size={14} className="text-alpine" />
+              <span className="font-medium">{label}</span>
             </div>
           ))}
         </div>
