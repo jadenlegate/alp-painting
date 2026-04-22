@@ -26,6 +26,7 @@ const NAV_LINKS = [
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 

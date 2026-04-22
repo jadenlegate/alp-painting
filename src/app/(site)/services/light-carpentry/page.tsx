@@ -10,7 +10,7 @@ import { AlertTriangle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Light Carpentry & Repair in Whistler",
   description:
-    "Rot repair, trim replacement, fascia, soffits, and exterior carpentry repairs done in-house — so your paint job doesn't stall waiting for another contractor.",
+    "Rot repair, trim replacement, fascia, soffits, and exterior carpentry repairs handled as part of your painting project — so the work is coordinated and finished properly.",
 };
 
 const SCOPES = [
@@ -31,16 +31,16 @@ const OUT_OF_SCOPE = [
 
 const APPROACH = [
   {
-    title: "In-house, not subcontracted.",
-    body: "Every repair is done by an Alpenglow crew member — same insurance, same warranty framework, same crew lead you met on day one. No new contractor to coordinate, no new schedule to juggle.",
+    title: "Coordinated through one point of contact.",
+    body: "You work with Alpenglow start to finish. We handle the scheduling, the trades, and the hand-off between carpentry and paint so you're not chasing multiple contractors to keep a project moving.",
   },
   {
     title: "Identified during the quote, not as a surprise.",
-    body: "On the site visit we look for rot, soft spots, and failing trim before we write the proposal. If we find it, it's in the quote. If we miss something that only appears once prep starts, we tell you before spending a dollar.",
+    body: "On the site visit we look for rot, soft spots, and failing trim before we write the proposal. If we find it, it's in the quote. If we miss something that only shows up once prep starts, we tell you before spending a dollar.",
   },
   {
     title: "Matched to the surrounding materials.",
-    body: "Cedar in, cedar out. Hardie in, Hardie out. We match species, profile, and finish so the repair disappears once the paint or stain goes on — not a patch that announces itself from across the yard.",
+    body: "Repairs are done with the same siding species, profile, and finish as the rest of the house — cedar with cedar, Hardie with Hardie — so the work blends in once the paint or stain goes on, not a patch that stands out from across the yard.",
   },
   {
     title: "Paired with paint, not sold alone.",
@@ -67,7 +67,7 @@ const FAQS = [
   },
   {
     q: "Can you just do the carpentry and we'll paint it ourselves?",
-    a: "No. We pair this work with paint and restoration projects because that's how we control the final result — and stand behind it. If you need a carpenter-only job, there are good ones in the corridor we can point you to.",
+    a: "We prefer to pair the two — and there's a real reason for it. A big part of the value of fixing rot or trim before a paint job is making sure the repair is sealed and protected properly, which happens in the way the paint or stain is applied right after. When both sides are handled by the same team, the repair blends in, the warranty stays clean, and you get one crew accountable for the result. If a carpentry-only job is really what you need, we're happy to recommend someone in the corridor.",
   },
 ];
 
@@ -77,8 +77,8 @@ export default function LightCarpentryPage() {
       <Hero
         eyebrow="Services"
         headline="Light Carpentry & Repair"
-        subline="Rot repair, trim replacement, and exterior carpentry done in-house — so your paint job doesn't stall waiting for another contractor to show up."
-        imageUrl="/Stock%20Images/CornCobBlastingSideHouse.0063-67b24c93.webp"
+        subline="Rot repair, trim replacement, and exterior carpentry handled as part of your painting project — so the work is coordinated and the finish holds up."
+        imageUrl="/stock-images/CornCobBlastingSideHouse.0063-67b24c93.webp"
         imageAlt="Exterior home under preparation — siding and trim repair"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
@@ -98,7 +98,7 @@ export default function LightCarpentryPage() {
                 <strong className="text-navy font-semibold">Rot, rotted trim, and failing fascia don&rsquo;t wait for the painter.</strong> On Sea-to-Sky homes, moisture and freeze-thaw cycles quietly undo exterior surfaces year after year — and if you paint over compromised wood, the paint fails. So we fix it first.
               </p>
               <p className="mt-4 text-ink leading-relaxed">
-                This is scope we handle in-house as part of painting and wood restoration projects. Small-to-medium repair work: siding boards, trim, fascia, soffits, deck boards, railings, and the weatherproofing details that surround them.
+                This is scope we coordinate as part of painting and wood restoration projects. Small-to-medium repair work: siding boards, trim, fascia, soffits, deck boards, railings, and the weatherproofing details that surround them.
               </p>
             </div>
             <div>

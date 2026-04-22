@@ -8,7 +8,7 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
-import { MessageSquare, UserCheck, ShieldCheck, MapPin, Ruler, Paintbrush, BookOpen, ChevronRight, type LucideIcon } from "lucide-react";
+import { MessageSquare, UserCheck, ShieldCheck, Ruler, Paintbrush, BookOpen, ChevronRight, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { BulletList } from "@/components/BulletList";
 
@@ -17,37 +17,37 @@ const SERVICES = [
     title: "Interior Painting",
     href: "/services/interior-painting",
     blurb: "Walls, trim, ceilings, doors. Clean lines and a process that respects your home.",
-    imageUrl: "/Stock%20Images/stock-photo-bright-living-room-interior-trendy-blue-color-simple-modern-style.jpg",
+    imageUrl: "/stock-images/stock-photo-bright-living-room-interior-trendy-blue-color-simple-modern-style.jpg",
   },
   {
     title: "Exterior Painting",
     href: "/services/exterior-painting",
     blurb: "Weather-tough finishes built for Whistler winters. Sikkens, Benjamin Moore, Sherwin-Williams.",
-    imageUrl: "/Stock%20Images/new-contemporary-style-luxury-home-600nw-2400351577.webp",
+    imageUrl: "/stock-images/new-contemporary-style-luxury-home-600nw-2400351577.webp",
   },
   {
     title: "Wood Restoration & Staining",
     href: "/services/wood-restoration",
     blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
-    imageUrl: "/Stock%20Images/wood-beams-13-111517455.jpg",
+    imageUrl: "/stock-images/wood-beams-13-111517455.jpg",
   },
   {
     title: "Cabinet Refinishing",
     href: "/services/cabinet-refinishing",
     blurb: "Factory-grade finishes without replacing the boxes. Spray-booth precision in your kitchen.",
-    imageUrl: "/Stock%20Images/tinted-coty2024-kitchen-1024x690.jpg",
+    imageUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
     title: "Light Carpentry & Repair",
     href: "/services/light-carpentry",
-    blurb: "Rot, trim, and fascia repair done in-house — so your paint job doesn't stall waiting on another trade.",
-    imageUrl: "/Stock%20Images/CornCobBlastingSideHouse.0063-67b24c93.webp",
+    blurb: "Rot, trim, and fascia repair coordinated with your paint project — one team, one point of contact.",
+    imageUrl: "/stock-images/CornCobBlastingSideHouse.0063-67b24c93.webp",
   },
   {
     title: "Commercial, Strata & Hotels",
     href: "/services/commercial",
     blurb: "Flexible scheduling around operations and residents. Clear communication, no drama.",
-    imageUrl: "/Stock%20Images/karpiel-steindel-architektura-bachleda-club-residence-rchitonic-pu-bachleda-hotel-022-04-arcit18.jpg",
+    imageUrl: "/stock-images/karpiel-steindel-architektura-bachleda-club-residence-rchitonic-pu-bachleda-hotel-022-04-arcit18.jpg",
   },
 ];
 
@@ -57,42 +57,42 @@ const FEATURED_PROJECTS: Project[] = [
     title: "Kadenwood chalet — full exterior",
     location: "Whistler",
     serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "/Stock%20Images/old-mountain-house-m-serhat-sezgin-turkey-03.jpg",
+    coverUrl: "/stock-images/old-mountain-house-m-serhat-sezgin-turkey-03.jpg",
   },
   {
     slug: "pemberton-farmhouse-interior",
     title: "Pemberton farmhouse interior",
     location: "Pemberton",
     serviceTags: ["Interior"],
-    coverUrl: "/Stock%20Images/pexels-binyamin-mellish-106399.jpg",
+    coverUrl: "/stock-images/pexels-binyamin-mellish-106399.jpg",
   },
   {
     slug: "squamish-modern-cabinets",
     title: "Squamish modern — kitchen cabinets",
     location: "Squamish",
     serviceTags: ["Cabinet refinishing"],
-    coverUrl: "/Stock%20Images/pexels-max-rahubovskiy-7031408.jpg",
+    coverUrl: "/stock-images/pexels-max-rahubovskiy-7031408.jpg",
   },
 ];
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Nico G.",
+    name: "Don W.",
     location: "Whistler",
     rating: 5,
-    text: "Alpenglow did two painting jobs for us. Both were done with great attention to detail and the end product was great. The team is professional in their work and communication throughout. They also did a good job cleaning up after themselves.",
+    text: "Expert workmanship in at a fair price. Very good communication. I highly recommend Alpenglow Painting.",
   },
   {
-    name: "David R.",
+    name: "David N.",
     location: "Whistler",
     rating: 5,
-    text: "What really stood out was the communications. We were always informed of when they were coming to work and when they were not due to weather. Would recommend the Alpenglow team for any residential painting job.",
+    text: "Excellent customer service and workmanship. They won't leave until you're satisfied with the end product.",
   },
   {
-    name: "Jane B.",
+    name: "Neil McK.",
     location: "Whistler",
     rating: 5,
-    text: "The best customer service from the Alpenglow crew. So professional, on time, and looked after every detail.",
+    text: "Good communication, fair estimate and overdelivered on nice work with pleasant team. You can't ask for more. Highly recommend.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        imageUrl="/Stock%20Images/I_Blackcomb_Dusk_1-scaled.jpg"
+        imageUrl="/stock-images/I_Blackcomb_Dusk_1-scaled.jpg"
         imageAlt="Blackcomb mountain at dusk — Whistler, BC"
         headline={SITE.tagline}
         subline={SITE.subline}
@@ -225,7 +225,7 @@ export default function HomePage() {
               <div className="aspect-[4/3] rounded-sm overflow-hidden bg-stone-light/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/Stock%20Images/6ModernMountainHomeStudioMcGee.jpg"
+                  src="/stock-images/6ModernMountainHomeStudioMcGee.jpg"
                   alt="A finished Alpenglow project"
                   className="w-full h-full object-cover"
                 />
@@ -243,7 +243,7 @@ export default function HomePage() {
                 <div className="mt-7">
                   <BulletList
                     items={[
-                      "A clear, itemized estimate — no vague lump sums",
+                      "A clear, itemized quote — no vague lump sums",
                       "Punctual starts and realistic timelines with weather buffer",
                       "A clean, protected work site throughout the project",
                       "Proactive updates so you always know what's happening",
@@ -345,16 +345,6 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-            {SITE.serviceAreas.map((area, i) => (
-              <FadeIn key={area} delay={i * 0.07}>
-                <div className="flex items-center gap-2.5 bg-background border border-border rounded-sm p-4">
-                  <MapPin size={15} className="text-alpine flex-shrink-0" />
-                  <span className="text-ink text-sm font-medium">{area}</span>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </Container>
       </Section>
 

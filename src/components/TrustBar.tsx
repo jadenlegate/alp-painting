@@ -15,13 +15,13 @@ export function TrustBar() {
   return (
     <section className="border-b border-border bg-background">
       <Container>
-        <div className="py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+        <div className="py-5 grid grid-cols-1 gap-y-3 sm:grid-cols-2 sm:gap-x-6 md:flex md:flex-wrap md:items-center md:justify-center md:gap-x-10">
           {ITEMS.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-2 text-xs md:text-sm text-ink/70"
+              className="flex items-center justify-center gap-2 text-xs md:text-sm text-ink/70"
             >
-              <Icon size={14} className="text-alpine" />
+              <Icon size={14} className="text-alpine flex-shrink-0" />
               <span className="font-medium">{label}</span>
             </div>
           ))}

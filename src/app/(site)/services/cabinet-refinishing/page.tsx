@@ -98,7 +98,7 @@ export default function CabinetRefinishingPage() {
         eyebrow="Services"
         headline="Cabinet Refinishing"
         subline="A factory-smooth finish on your existing cabinets. No replacement, no renovation chaos — just a kitchen that looks new."
-        imageUrl="/Stock%20Images/WKP-53Constitution-HR-10.jpeg.webp"
+        imageUrl="/stock-images/WKP-53Constitution-HR-10.jpeg.webp"
         imageAlt="Freshly refinished white kitchen cabinets"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
