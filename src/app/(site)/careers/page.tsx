@@ -167,7 +167,7 @@ export default function CareersPage() {
                 Not just a job.
               </h2>
               <p className="mt-4 text-ink leading-relaxed">
-                We operate May through October. The shoulder seasons are some of the best conditions in the country — hiking, mountain biking, long evenings. If you&rsquo;re considering relocating for the season, Whistler does it well.
+                Whistler is one of the best places in the country to live — skiing and boarding in winter, hiking and mountain biking in summer, and long evenings in between. If you&rsquo;re considering relocating, the lifestyle up here does it well.
               </p>
               <p className="mt-3 text-ink leading-relaxed">
                 4-day weeks mean you get long weekends, every week. We can help with referrals for housing if you&rsquo;re coming from out of town.

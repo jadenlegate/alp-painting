@@ -80,7 +80,7 @@ export default function AboutPage() {
                   I started Alpenglow to build something different — a company where <span className="text-navy font-semibold">the process itself is a reason to hire us</span>, not just the finished wall. Clear communication, professional crews, documentation at every step.
                 </p>
                 <p>
-                  We&rsquo;re based in Whistler and work across the Sea to Sky corridor. Seasonal operation, May through October, so we can do the work properly instead of rushing a calendar year.
+                  We&rsquo;re based in Whistler and happy to take on projects any time of year — interior work, exterior work, and everything in between.
                 </p>
               </div>
             </div>

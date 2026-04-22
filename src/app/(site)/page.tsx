@@ -80,19 +80,19 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Nico G.",
     location: "Whistler",
     rating: 5,
-    text: "Jaden did two painting jobs for us. Both were done with great attention to detail and the end product was great. He's professional in his work and communication throughout. His team also did a good job cleaning up after themselves.",
+    text: "Alpenglow did two painting jobs for us. Both were done with great attention to detail and the end product was great. The team is professional in their work and communication throughout. They also did a good job cleaning up after themselves.",
   },
   {
     name: "David R.",
     location: "Whistler",
     rating: 5,
-    text: "What really stood out was the communications. We were always informed of when they were coming to work and when they were not due to weather. Would recommend Jaden and his team for any residential painting job.",
+    text: "What really stood out was the communications. We were always informed of when they were coming to work and when they were not due to weather. Would recommend the Alpenglow team for any residential painting job.",
   },
   {
     name: "Jane B.",
     location: "Whistler",
     rating: 5,
-    text: "The best customer service from Jaden and his crew. He was so professional, on time and looked after every detail.",
+    text: "The best customer service from the Alpenglow crew. So professional, on time, and looked after every detail.",
   },
 ];
 

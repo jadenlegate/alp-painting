@@ -16,7 +16,7 @@ export const SITE = {
     country: "Canada",
   },
   serviceAreas: ["Creekside", "Whistler Village", "Benchlands", "Alpine Meadows", "Emerald Estates", "Function Junction", "Cheakamus", "Spruce Grove"],
-  hours: "Mon–Fri, 8am–6pm, year-round",
+  hours: "Mon–Fri, 8am–6pm",
   social: {
     google:
       "https://www.google.com/search?q=alpenglow+painting+whistler",

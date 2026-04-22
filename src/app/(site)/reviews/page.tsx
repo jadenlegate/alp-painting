@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 type Review = {
   name: string;
   location: string;
-  date: string;
   rating: number;
   body: string;
 };
@@ -24,58 +23,50 @@ const REVIEWS: Review[] = [
   {
     name: "Lawrence N.",
     location: "Whistler",
-    date: "2025",
     rating: 5,
-    body: "Jaden and his crew did a fantastic job of painting the exterior of my house at Whistler, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. Jaden kept me well informed throughout the process. He and his crew are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
+    body: "The Alpenglow team did a fantastic job painting the exterior of my house, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. They kept me well informed throughout. The crew are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
   },
   {
     name: "Cheryl W.",
     location: "Whistler",
-    date: "2025",
     rating: 5,
-    body: "Jaden was professional and efficient. He took the time to explain the process he would need to change colour from dark to light and varnished wood to white semi-gloss window trim. He went out to his truck and put together our quote and brought it back to us right away. Price was good. His crew were friendly and flexible and did a great job. They worked around other contractors with ease and got the job done in time and at the price quoted.",
+    body: "Alpenglow was professional and efficient. They took the time to explain the process needed to change colour from dark to light and varnished wood to white semi-gloss window trim. They put together our quote on the spot and brought it right back to us. Price was good. The crew were friendly and flexible and did a great job — they worked around other contractors with ease and got the job done in time and at the price quoted.",
   },
   {
     name: "Wilf G.",
     location: "Whistler",
-    date: "2025",
     rating: 5,
-    body: "Jaden and his team worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. That's exactly why we chose Alpenglow. We also chose them partly because they pay their employees a living wage, who seemed happy and respectful in their work.",
+    body: "The Alpenglow team worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. That's exactly why we chose Alpenglow. We also chose them partly because they pay their employees a living wage, and the crew seemed happy and respectful in their work.",
   },
   {
     name: "Tara M.",
     location: "Whistler",
-    date: "2024",
     rating: 5,
-    body: "The team did a great job on so many levels with the painting of our parents' home. They were efficient with their time, provided quality service and their communication throughout the process exceeded our expectations. As a bonus, they also completed carpentry issues identified on the weathered wood that saved hiring another trade mid-stream.",
+    body: "The Alpenglow team did a great job on so many levels with the painting of our parents' home. They were efficient with their time, provided quality service and their communication throughout the process exceeded our expectations. As a bonus, they also completed carpentry issues identified on the weathered wood that saved hiring another trade mid-stream.",
   },
   {
     name: "Robyn A.",
     location: "Whistler",
-    date: "2024",
     rating: 5,
-    body: "I hired the team to undertake an evaluation of my house trim condition and to sand and stain the areas that had been weathered so as to prevent more expensive maintenance down the road. From start to finish I was impressed with the attention to detail, the professionalism of Jaden Legate the owner, the quality of work and price.",
+    body: "I hired Alpenglow to undertake an evaluation of my house trim condition and to sand and stain the areas that had been weathered so as to prevent more expensive maintenance down the road. From start to finish I was impressed with the attention to detail, the professionalism of the team, the quality of work and price.",
   },
   {
     name: "Nico G.",
     location: "Whistler",
-    date: "2024",
     rating: 5,
-    body: "Jaden did two painting jobs for us. Both were done with great attention to detail and the end product was great. He's professional in his work and communication throughout. His team also did a good job cleaning up after themselves. We strongly recommend him.",
+    body: "Alpenglow did two painting jobs for us. Both were done with great attention to detail and the end product was great. The team is professional in their work and communication throughout. They also did a good job cleaning up after themselves. We strongly recommend them.",
   },
   {
     name: "David R.",
     location: "Whistler",
-    date: "2024",
     rating: 5,
-    body: "Jaden and his crew did a great job painting our home's exterior, siding, fascia and windows. What really stood out for us was the communications — we were always informed of when they were coming to work and when they were not due to weather. We would recommend Jaden and his team for any residential painting job.",
+    body: "The Alpenglow team did a great job painting our home's exterior, siding, fascia and windows. What really stood out for us was the communications — we were always informed of when they were coming to work and when they were not due to weather. We would recommend them for any residential painting job.",
   },
   {
     name: "Susie W.",
     location: "Whistler",
-    date: "2023",
     rating: 5,
-    body: "Jaden and his crew were professional and polite the entire time they were on site. They arrived when they said they would. They completed the job on time. They always left the job site tidy and clean. Jaden promptly answered any questions and concerns we had. We found him great to work with.",
+    body: "The Alpenglow crew were professional and polite the entire time they were on site. They arrived when they said they would. They completed the job on time. They always left the job site tidy and clean. They promptly answered any questions and concerns we had. We found them great to work with.",
   },
 ];
 
@@ -141,7 +132,7 @@ export default function ReviewsPage() {
                 <p className="mt-4 text-ink leading-relaxed">&ldquo;{r.body}&rdquo;</p>
                 <div className="mt-5">
                   <div className="font-medium text-navy text-sm">{r.name}</div>
-                  <div className="text-xs text-muted mt-0.5">{r.location} · {r.date}</div>
+                  <div className="text-xs text-muted mt-0.5">{r.location}</div>
                 </div>
               </div>
             ))}

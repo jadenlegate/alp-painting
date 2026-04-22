@@ -116,9 +116,8 @@ export function Footer() {
                 </a>
               </li>
               <li className="text-muted">
-                {SITE.serviceAreas.slice(0, 3).join(" · ")}
+                Based in Whistler, BC
               </li>
-              <li className="text-muted">{SITE.hours}</li>
             </ul>
           </div>
         </div>

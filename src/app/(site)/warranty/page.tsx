@@ -1,57 +1,55 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
-import { ShieldCheck, Check, X, FileText } from "lucide-react";
+import { ShieldCheck, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Warranty & Quality Guarantee",
   description:
-    "Our 3-year written quality guarantee — what's covered, what isn't, and why. Full transparency on the contractual commitment behind every Alpenglow project.",
+    "Our written quality guarantee — coverage tiers, what factors affect them, and the conditions that keep them valid.",
 };
 
-const COVERED = [
-  "Peeling, flaking, and premature finish failure under normal conditions",
-  "Paint applied by our crew, for three years from project completion",
-  "Labour and materials to fix the failed area — at no charge",
-];
-
-const NOT_COVERED = [
-  "Horizontal or walked-on surfaces (decks, floors, steps, railings, roofs)",
-  "Fences and foundations",
-  "Eaves-troughs and downspouts",
-  "Stain work with a single coat (guaranteed only if two or more coats are applied)",
-  "Exterior varnish (1-year coverage only)",
-  "An older coat underneath ours that breaks down",
-  "Moisture damage from leaks, cracks, burst pipes, or structural movement",
-  "Fading, rusting, or substances bleeding through the paint",
-  "Dark colors chosen for vinyl siding (warping risk is on you)",
-  "Pressure washing (no permanent material is being applied)",
+const WARRANTY_TIERS = [
+  {
+    years: "3",
+    label: "Standard",
+    description: "Included on all projects at no extra cost. Covers peeling, flaking, and premature finish failure under normal conditions.",
+    highlight: false,
+  },
+  {
+    years: "7",
+    label: "Extended",
+    description: "Available on most exterior and interior projects when premium products are specified. Requires a surface assessment at quoting.",
+    highlight: false,
+  },
+  {
+    years: "10",
+    label: "Maximum",
+    description: "Available on select projects where surface conditions and product choice support it.",
+    highlight: true,
+  },
 ];
 
 const PREP_LEVELS = [
   {
-    name: "Minimal",
-    guaranteed: false,
-    body: "Minimum scraping to remove loose flakes only. Fast and cheap — but not covered by the guarantee. We'll tell you if this is what the project needs.",
-  },
-  {
     name: "Standard",
-    guaranteed: true,
-    body: "Scrape all loose paint, feather-sand the edges, and seal against moisture. The default on most of our projects. Fully guaranteed.",
+    body: "Scrape loose paint, feather-sand the edges, and seal against moisture. This is the default on most of our projects and the level our warranty is built around.",
   },
   {
     name: "Refinish",
-    guaranteed: true,
-    body: "Complete paint removal, thorough sanding of the entire surface. Priced on time and materials. Fully guaranteed — and the right move when older coats are compromised.",
+    body: "Complete paint removal and thorough sanding of the entire surface. Priced on time and materials — the right move when older coats are compromised.",
   },
 ];
 
 const FINE_PRINT = [
   "Your project must be paid in full to activate the guarantee.",
-  "Guarantee work must be requested within the 3-year window, from the date of project completion.",
+  "Guarantee work must be requested within the warranty window, from the date of project completion.",
   "The guarantee is non-transferable — if the property is sold, it ends.",
-  "We fix the failed area, not the whole project.",
-  "We only guarantee work done with our approved products (Sherwin-Williams, Benjamin Moore, and a few others). If you insist on a different brand, we'll use it — but we can't stand behind it.",
+  "Coverage applies to the work we performed, repainting the failed area.",
+  "We warranty work done with approved products (Sherwin-Williams, Benjamin Moore, and a few others). Other brands can be used on request but sit outside our warranty.",
+  "Pressure washing is not covered — no permanent material is being applied.",
+  "Stain work requires two or more coats to be guaranteed. Exterior varnish carries a one-year warranty.",
+  "Horizontal and walked-on surfaces (decks, floors, steps, railings, roofs), fences, foundations, eaves, and downspouts are excluded.",
 ];
 
 export default function WarrantyPage() {
@@ -63,20 +61,20 @@ export default function WarrantyPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Warranty</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
-              Three years in writing — backed by the way we prep.
+              A written guarantee on every project.
             </h1>
             <p className="mt-6 text-ink text-lg leading-relaxed">
-              Our quality guarantee isn&rsquo;t a marketing line. It&rsquo;s a contractual commitment on every job we deliver — and the reason we prep the way we do.
+              Every Alpenglow project comes with a written workmanship warranty. Standard coverage is 3 years, included at no extra cost, with extended options available on projects where the surface and products support it.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Headline promise */}
+      {/* Promise block */}
       <section className="py-16 md:py-20">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <div className="flex items-start gap-4 mb-8">
+            <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-sm bg-alpine/10 flex items-center justify-center flex-shrink-0">
                 <ShieldCheck size={22} className="text-alpine" />
               </div>
@@ -85,10 +83,7 @@ export default function WarrantyPage() {
                   The Alpenglow Quality Guarantee
                 </h2>
                 <p className="mt-3 text-ink leading-relaxed">
-                  For <strong>three years</strong> from your project&rsquo;s completion, if the paint we applied fails due to improper application — peeling, flaking, or premature finish failure — we come back and fix it at no charge. Labour and materials included.
-                </p>
-                <p className="mt-3 text-ink leading-relaxed">
-                  Extended coverage (up to 10 years) is available on select projects where surface condition, product choice, and prep level support it. Ask at the site visit.
+                  If the paint we applied fails due to improper application — peeling, flaking, or premature finish failure — we come back and fix it at no charge. Labour and materials included, within the warranty period.
                 </p>
               </div>
             </div>
@@ -96,38 +91,42 @@ export default function WarrantyPage() {
         </Container>
       </section>
 
-      {/* What's covered / What's not covered */}
-      <section className="pb-16 md:pb-20">
+      {/* Warranty tiers */}
+      <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-5xl mx-auto grid gap-8 md:gap-10 md:grid-cols-2">
-            <div className="rounded-sm border border-border bg-surface p-6 md:p-8">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What&rsquo;s covered</div>
-              <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight mb-5">
-                The integrity of the paint we applied.
-              </h3>
-              <ul className="space-y-3">
-                {COVERED.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-ink leading-relaxed text-[0.95rem]">
-                    <Check size={16} className="text-alpine mt-1 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-sm border border-border bg-surface p-6 md:p-8">
-              <div className="text-xs uppercase tracking-[0.2em] text-muted mb-3">What&rsquo;s not covered</div>
-              <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight mb-5">
-                Things outside our control — and honest exclusions.
-              </h3>
-              <ul className="space-y-3">
-                {NOT_COVERED.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-ink leading-relaxed text-[0.95rem]">
-                    <X size={16} className="text-muted mt-1 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="max-w-xl mb-10 md:mb-14">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Coverage tiers</div>
+            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              Three, seven, or ten years.
+            </h2>
+            <p className="mt-4 text-ink leading-relaxed">
+              The level of coverage depends on the surface, the products specified, and the prep the project gets. We&rsquo;ll walk you through which tier applies at the quote.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {WARRANTY_TIERS.map((tier) => (
+              <div
+                key={tier.years}
+                className={`rounded-sm border p-6 md:p-7 ${
+                  tier.highlight
+                    ? "border-navy bg-navy text-background"
+                    : "border-border bg-surface"
+                }`}
+              >
+                <div className="flex items-baseline gap-1.5 mb-4">
+                  <span className={`font-serif text-5xl tabular-nums ${tier.highlight ? "text-background" : "text-navy"}`}>
+                    {tier.years}
+                  </span>
+                  <span className={`text-sm ${tier.highlight ? "text-background/70" : "text-muted"}`}>years</span>
+                </div>
+                <div className={`font-medium mb-2 ${tier.highlight ? "text-background" : "text-navy"}`}>
+                  {tier.label}
+                </div>
+                <p className={`text-sm leading-relaxed ${tier.highlight ? "text-background/80" : "text-ink"}`}>
+                  {tier.description}
+                </p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
@@ -136,25 +135,20 @@ export default function WarrantyPage() {
       <section className="py-16 md:py-20 bg-navy">
         <Container>
           <div className="max-w-3xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Preparation levels</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Preparation level</div>
             <h2 className="font-serif text-background text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
-              How much prep your project gets decides whether it&rsquo;s guaranteed.
+              How much prep your project gets shapes the outcome.
             </h2>
             <p className="mt-4 text-background/70 text-lg leading-relaxed">
-              Every project is quoted at one of three prep levels. The level determines the finish, the lifespan, and whether the job falls under our guarantee. You&rsquo;ll know which one your project needs before you sign.
+              Every project is quoted at one of two prep levels. You&rsquo;ll know which one applies to your project before you sign.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {PREP_LEVELS.map((lvl) => (
               <div
                 key={lvl.name}
                 className="rounded-sm border border-background/10 bg-background/5 p-6 md:p-7"
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className={`text-xs uppercase tracking-[0.2em] font-medium ${lvl.guaranteed ? "text-alpine" : "text-background/50"}`}>
-                    {lvl.guaranteed ? "Guaranteed" : "Not guaranteed"}
-                  </span>
-                </div>
                 <h3 className="font-serif text-background text-xl mb-3">{lvl.name}</h3>
                 <p className="text-background/70 leading-relaxed text-[0.95rem]">{lvl.body}</p>
               </div>
@@ -180,7 +174,7 @@ export default function WarrantyPage() {
               ))}
             </ul>
             <p className="mt-10 text-muted text-sm leading-relaxed italic">
-              This page summarizes our warranty for readability. The full terms live in your signed project agreement and take precedence over anything here. Ask us anything before you sign — we&rsquo;d rather over-explain than under-deliver.
+              This page summarizes our warranty. The full terms live in your signed project agreement and take precedence over anything here. If you have questions, ask us before you sign.
             </p>
           </div>
         </Container>
@@ -189,7 +183,7 @@ export default function WarrantyPage() {
       <CtaBlock
         heading="Questions about coverage?"
         eyebrow="Before you sign"
-        subline="We&rsquo;d rather walk you through the warranty on the phone than have surprises later."
+        subline="Ask us anything about the warranty at the site visit."
         primaryLabel="Get a Quote"
         secondaryLabel="Call (604) 938-4037"
         secondaryHref="tel:+16049384037"

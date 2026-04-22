@@ -24,15 +24,15 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "01",
     icon: MessageSquare,
     title: "Request a quote",
-    body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll respond within 24 hours on weekdays, usually the same day.",
-    detail: "For most projects we can give you a ballpark range before the site visit, so you're not walking in blind.",
+    body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll respond within 24 hours on weekdays.",
+    detail: null,
   },
   {
     n: "02",
     icon: Ruler,
     title: "Site visit & proposal",
-    body: "We come to you — or, for out-of-area clients, we can do a live video walkthrough. We measure, assess the surface conditions, discuss product and color options, and ask the questions that matter.",
-    detail: "Within 1–2 business days of the site visit, you get a written proposal: itemized scope, product specs, timeline, and warranty terms. We present it in person or on a call — we don't just email a PDF and disappear.",
+    body: "We come to the property to measure, look at the surfaces, and work through product and color options with you.",
+    detail: "Most proposals are presented on the spot. For larger projects that need more calculation, we usually have it ready within a day. If we can't meet in person, we'll schedule a video call to walk through it together.",
   },
   {
     n: "03",
@@ -94,7 +94,7 @@ const WARRANTY_TIERS = [
   {
     years: "10",
     label: "Maximum",
-    description: "Available on select projects where surface conditions and product choice support it. Nobody else in the Sea to Sky offers this.",
+    description: "Available on select projects where surface conditions and product choice support it.",
     highlight: true,
   },
 ];
@@ -159,12 +159,11 @@ export default function ProcessPage() {
               The Alpenglow Project Report
             </h2>
             <p className="mt-5 text-background/75 text-lg leading-relaxed">
-              When the job is done, most painters leave. We leave behind a written record — exact products, color codes, sheens, areas covered, and care notes.
+              Every project closes with a written record: the products we used, color codes, sheens, areas covered, and care notes.
             </p>
             <p className="mt-4 text-background/65 leading-relaxed">
-              It lives with the house. Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used — no guessing, no calling around.
+              It lives with the house. Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used.
             </p>
-            <p className="mt-5 text-alpine text-sm font-medium tracking-wide">Nobody else in the Sea to Sky does this.</p>
             <div className="mt-8">
               <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
                 Get a Quote
@@ -180,10 +179,10 @@ export default function ProcessPage() {
           <div className="max-w-xl mb-10 md:mb-14">
             <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Warranty</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Up to 10 years — and that&rsquo;s not a marketing line.
+              Three, seven, or ten years.
             </h2>
             <p className="mt-4 text-ink leading-relaxed">
-              We offer a warranty because we believe in the work. The standard 3-year coverage is included at no extra cost. Extended terms are available when the surface and product choice support it.
+              Standard 3-year coverage is included on every project at no extra cost. Extended terms are available when the surface and product choice support it.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -204,9 +203,6 @@ export default function ProcessPage() {
                 </div>
                 <div className={`font-medium mb-2 ${tier.highlight ? "text-background" : "text-navy"}`}>
                   {tier.label}
-                  {tier.highlight && (
-                    <span className="ml-2 text-xs uppercase tracking-widest opacity-70">Sea to Sky exclusive</span>
-                  )}
                 </div>
                 <p className={`text-sm leading-relaxed ${tier.highlight ? "text-background/80" : "text-ink"}`}>
                   {tier.description}

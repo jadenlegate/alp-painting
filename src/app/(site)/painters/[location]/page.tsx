@@ -38,7 +38,7 @@ const LOCATIONS: LocationData[] = [
     region: "Sea to Sky",
     headline: "Painting contractors in Pemberton, BC",
     intro: "We work regularly in Pemberton — farmhouses, rural properties, and the newer developments along Portage Road. Pemberton's climate is different from Whistler's: hotter summers, colder overnight lows, and more UV exposure in the valley. Exterior prep and product choice matter here.",
-    details: "We schedule Pemberton jobs in blocks to minimize drive time and keep our crew efficient. If you're in the valley, we're usually out there at least once a week during peak season.",
+    details: "We schedule Pemberton jobs in blocks to minimize drive time and keep our crew efficient. If you're in the valley, we're usually out there regularly.",
     imageUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2000&q=85",
     services: ["Exterior painting", "Interior painting", "Wood restoration and deck staining", "Cabinet refinishing"],
     neighborhoods: ["Pemberton townsite", "Portage Road", "Birken", "Mount Currie"],

@@ -70,7 +70,7 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "What's the best time of year to paint exterior in Whistler?",
-    a: "May through September is the window. We need temperatures above 10°C and dry conditions for at least 24 hours after application. We track forecasts closely and plan project windows that give us enough buffer days.",
+    a: "Late spring through early fall is the typical window — we need temperatures above 10°C and dry conditions for at least 24 hours after application. We track forecasts closely and plan project windows that give us enough buffer days.",
   },
   {
     q: "How long does an exterior project take?",

@@ -23,15 +23,15 @@ const FAQ_SECTIONS = [
       },
       {
         q: "How quickly can you start a project?",
-        a: "It depends on the season and our current schedule. During peak season (June–September) we typically book 2–4 weeks out. We can sometimes accommodate urgent jobs — ask on the call.",
+        a: "It depends on our current schedule. Typical lead time is a few weeks, though we can sometimes accommodate urgent jobs. Ask on the call.",
       },
       {
         q: "What areas do you serve?",
-        a: "We work across the Sea to Sky: Whistler, Pemberton, Squamish, and surrounding areas. We operate May through October.",
+        a: "Based in Whistler. Most of our work is in the valley — we occasionally take on projects further out when the timing and scope are right.",
       },
       {
-        q: "Do you do work in the off-season?",
-        a: "We take limited interior projects in the shoulder seasons (April and November). We don't do exterior work outside of May–October — weather doesn't cooperate and the results won't hold.",
+        q: "Do you do work any time of year?",
+        a: "Yes. We're happy to help with projects any time of year. Exterior timing depends on weather and surface conditions, which we'll discuss at the site visit.",
       },
     ],
   },
@@ -145,10 +145,12 @@ export default function FAQPage() {
 
       <section className="pb-24">
         <Container size="prose">
-          <div className="space-y-14">
+          <div className="space-y-16">
             {FAQ_SECTIONS.map((section) => (
               <div key={section.category}>
-                <h2 className="font-serif text-navy text-xl md:text-2xl mb-6">{section.category}</h2>
+                <h2 className="font-serif font-bold text-navy text-2xl md:text-3xl pb-3 mb-6 border-b-2 border-alpine inline-block">
+                  {section.category}
+                </h2>
                 <FAQAccordion items={section.items} />
               </div>
             ))}
