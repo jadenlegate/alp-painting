@@ -77,22 +77,22 @@ const FEATURED_PROJECTS: Project[] = [
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Sarah M.",
+    name: "Nico G.",
     location: "Whistler",
     rating: 5,
-    text: "The crew showed up when they said they would, protected everything in the house, and the walkthrough at the end was something I've never had from a trades company. I knew exactly what had been done and how to take care of it.",
+    text: "Jaden did two painting jobs for us. Both were done with great attention to detail and the end product was great. He's professional in his work and communication throughout. His team also did a good job cleaning up after themselves.",
   },
   {
-    name: "David K.",
-    location: "Pemberton",
-    rating: 5,
-    text: "Got a quote the same day. The proposal was the clearest I've seen — every line item explained. The finish on our cedar siding is better than the day the house was built.",
-  },
-  {
-    name: "Renata S.",
+    name: "David R.",
     location: "Whistler",
     rating: 5,
-    text: "We've used three painters over the last decade. Alpenglow is the only one I'd hire again without thinking twice. Professional from first email to final handshake.",
+    text: "What really stood out was the communications. We were always informed of when they were coming to work and when they were not due to weather. Would recommend Jaden and his team for any residential painting job.",
+  },
+  {
+    name: "Jane B.",
+    location: "Whistler",
+    rating: 5,
+    text: "The best customer service from Jaden and his crew. He was so professional, on time and looked after every detail.",
   },
 ];
 

@@ -18,73 +18,64 @@ type Review = {
   date: string;
   rating: number;
   body: string;
-  service?: string;
 };
 
 const REVIEWS: Review[] = [
   {
-    name: "Michael T.",
+    name: "Lawrence N.",
     location: "Whistler",
-    date: "October 2024",
+    date: "2025",
     rating: 5,
-    body: "We've had several contractors work on our place over the years. Alpenglow was the first crew that showed up exactly when they said they would, communicated proactively when the weather pushed the schedule, and actually cleaned up at the end of each day. The exterior looks incredible. Worth every dollar.",
-    service: "Exterior",
+    body: "Jaden and his crew did a fantastic job of painting the exterior of my house at Whistler, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. Jaden kept me well informed throughout the process. He and his crew are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
   },
   {
-    name: "Sarah L.",
+    name: "Cheryl W.",
     location: "Whistler",
-    date: "September 2024",
+    date: "2025",
     rating: 5,
-    body: "Jaden and his crew repainted our entire interior while we were away for two weeks. Came back to a perfect job — no overspray, no missed spots, not a single scuff on any of our furniture. The project report they leave at the end is something I've never seen from a trades company before. Genuinely impressed.",
-    service: "Interior",
+    body: "Jaden was professional and efficient. He took the time to explain the process he would need to change colour from dark to light and varnished wood to white semi-gloss window trim. He went out to his truck and put together our quote and brought it back to us right away. Price was good. His crew were friendly and flexible and did a great job. They worked around other contractors with ease and got the job done in time and at the price quoted.",
   },
   {
-    name: "Dave M.",
-    location: "Squamish",
-    date: "August 2024",
-    rating: 5,
-    body: "Cabinet refinishing — turned our 15-year-old oak kitchen into something that looks brand new. The spray finish is flawless, doors hang perfectly, and they matched the new color we picked exactly. Half the cost of replacing the cabinets.",
-    service: "Cabinet refinishing",
-  },
-  {
-    name: "Jennifer & Rob K.",
-    location: "Pemberton",
-    date: "July 2024",
-    rating: 5,
-    body: "Our log home hadn't been touched in over a decade. Alpenglow did a full restoration — blasting, chinking repair, the works. Jaden walked us through every step, showed us what was failing and why, and the finished result looks better than the day we built it. Couldn't recommend more highly.",
-    service: "Wood restoration",
-  },
-  {
-    name: "Chris B.",
+    name: "Wilf G.",
     location: "Whistler",
-    date: "June 2024",
+    date: "2025",
     rating: 5,
-    body: "Used them for a rental property repaint. They worked fast without cutting corners, communicated directly with my property manager, and the job was done before the tenant moved in. I'll use them every time.",
-    service: "Interior",
+    body: "Jaden and his team worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. That's exactly why we chose Alpenglow. We also chose them partly because they pay their employees a living wage, who seemed happy and respectful in their work.",
   },
   {
-    name: "Anna W.",
-    location: "Squamish",
-    date: "May 2024",
-    rating: 5,
-    body: "The 4-day crew showed up in clean gear, laid down drop cloths before touching anything, and never left a mess. The quality of the finish on our cedar siding is exceptional. They also noticed some rot on the soffit we hadn't caught — flagged it, we got it repaired before they painted. Exactly the kind of contractor you want.",
-    service: "Exterior",
-  },
-  {
-    name: "Paul N.",
+    name: "Tara M.",
     location: "Whistler",
-    date: "October 2023",
+    date: "2024",
     rating: 5,
-    body: "Strata council hired Alpenglow for our building's common areas. The coordination with residents was professional, the crew was on-time every day, and the final result was exactly what we specified. Two council members came to me asking for their number for personal projects. That's a good sign.",
-    service: "Commercial / Strata",
+    body: "The team did a great job on so many levels with the painting of our parents' home. They were efficient with their time, provided quality service and their communication throughout the process exceeded our expectations. As a bonus, they also completed carpentry issues identified on the weathered wood that saved hiring another trade mid-stream.",
   },
   {
-    name: "Karen F.",
-    location: "Pemberton",
-    date: "September 2023",
+    name: "Robyn A.",
+    location: "Whistler",
+    date: "2024",
     rating: 5,
-    body: "Transparent pricing, no surprise charges, and the warranty they offer is real — not a fine-print gimmick. When we noticed a small spot that had bubbled a few weeks later, they were back within a week to fix it without any fuss. That's a company that stands behind the work.",
-    service: "Exterior",
+    body: "I hired the team to undertake an evaluation of my house trim condition and to sand and stain the areas that had been weathered so as to prevent more expensive maintenance down the road. From start to finish I was impressed with the attention to detail, the professionalism of Jaden Legate the owner, the quality of work and price.",
+  },
+  {
+    name: "Nico G.",
+    location: "Whistler",
+    date: "2024",
+    rating: 5,
+    body: "Jaden did two painting jobs for us. Both were done with great attention to detail and the end product was great. He's professional in his work and communication throughout. His team also did a good job cleaning up after themselves. We strongly recommend him.",
+  },
+  {
+    name: "David R.",
+    location: "Whistler",
+    date: "2024",
+    rating: 5,
+    body: "Jaden and his crew did a great job painting our home's exterior, siding, fascia and windows. What really stood out for us was the communications — we were always informed of when they were coming to work and when they were not due to weather. We would recommend Jaden and his team for any residential painting job.",
+  },
+  {
+    name: "Susie W.",
+    location: "Whistler",
+    date: "2023",
+    rating: 5,
+    body: "Jaden and his crew were professional and polite the entire time they were on site. They arrived when they said they would. They completed the job on time. They always left the job site tidy and clean. Jaden promptly answered any questions and concerns we had. We found him great to work with.",
   },
 ];
 
@@ -148,16 +139,9 @@ export default function ReviewsPage() {
               <div key={i} className="border border-border rounded-sm bg-surface p-6 md:p-7">
                 <StarRating rating={r.rating} />
                 <p className="mt-4 text-ink leading-relaxed">&ldquo;{r.body}&rdquo;</p>
-                <div className="mt-5 flex items-end justify-between gap-4">
-                  <div>
-                    <div className="font-medium text-navy text-sm">{r.name}</div>
-                    <div className="text-xs text-muted mt-0.5">{r.location} · {r.date}</div>
-                  </div>
-                  {r.service && (
-                    <div className="text-xs text-muted border border-border rounded-sm px-2 py-1 whitespace-nowrap">
-                      {r.service}
-                    </div>
-                  )}
+                <div className="mt-5">
+                  <div className="font-medium text-navy text-sm">{r.name}</div>
+                  <div className="text-xs text-muted mt-0.5">{r.location} · {r.date}</div>
                 </div>
               </div>
             ))}
