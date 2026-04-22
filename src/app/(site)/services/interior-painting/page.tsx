@@ -266,7 +266,7 @@ export default function InteriorPaintingPage() {
 
       <CtaBlock
         heading="Ready for a fresh interior?"
-        subline="Tell us about your space — we'll come see it and quote it, usually the same day."
+        subline="Tell us about your space — we'll come see it and quote it, usually the day of the visit."
         primaryLabel="Get a Quote"
       />
     </>

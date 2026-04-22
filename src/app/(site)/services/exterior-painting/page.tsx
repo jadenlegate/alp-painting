@@ -201,7 +201,7 @@ export default function ExteriorPaintingPage() {
 
       <CtaBlock
         heading="Ready to repaint the exterior?"
-        subline="Tell us about the project — we'll come take a look and quote it, usually the same day."
+        subline="Tell us about the project — we'll come take a look and quote it, usually the day of the visit."
       />
     </>
   );

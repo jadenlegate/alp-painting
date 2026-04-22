@@ -199,7 +199,7 @@ export default function CabinetRefinishingPage() {
 
       <CtaBlock
         heading="Want to see what your kitchen could look like?"
-        subline="We'll take a look at the cabinets on-site and give you an honest assessment — and a quote, usually the same day."
+        subline="We'll take a look at the cabinets on-site and give you an honest assessment — and a quote the day of the visit."
       />
     </>
   );

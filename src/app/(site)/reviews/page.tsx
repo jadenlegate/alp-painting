@@ -133,12 +133,8 @@ export default function ReviewsPage() {
               </div>
             </div>
             <div>
-              <div className="font-serif text-4xl text-navy tabular-nums">{REVIEWS.length}+</div>
+              <div className="font-serif text-4xl text-navy tabular-nums">25+</div>
               <div className="mt-1 text-sm text-muted">Reviews</div>
-            </div>
-            <div>
-              <div className="font-serif text-4xl text-navy">3</div>
-              <div className="mt-1 text-sm text-muted">Communities served</div>
             </div>
           </div>
         </Container>
@@ -184,7 +180,7 @@ export default function ReviewsPage() {
 
       <CtaBlock
         heading="Ready to work with us?"
-        subline="Most quotes are delivered same day. The site visit is free."
+        subline="Most quotes are delivered the day of your site visit. The site visit is free."
         primaryLabel="Get a Quote"
       />
     </>

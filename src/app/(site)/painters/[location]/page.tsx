@@ -185,7 +185,7 @@ export default async function LocationPage({
 
       <CtaBlock
         heading={`Ready to get started in ${loc.name}?`}
-        subline="The site visit is free. Most quotes are delivered same day."
+        subline="The site visit is free. Most quotes are delivered the day of your site visit."
         primaryLabel="Get a Quote"
       />
     </>

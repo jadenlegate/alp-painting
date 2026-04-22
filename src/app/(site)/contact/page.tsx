@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Get a Quote",
   description:
-    "Request a quote from Alpenglow Painting. Most quotes delivered same day for projects across Whistler, Pemberton, and Squamish.",
+    "Request a quote from Alpenglow Painting. Most quotes delivered the day of the site visit for projects across Whistler, Pemberton, and Squamish.",
 };
 
 // Contact page — two columns on desktop: form on the left, direct-contact
@@ -26,7 +26,7 @@ export default function ContactPage() {
               Let&rsquo;s talk about your project.
             </h1>
             <p className="mt-5 text-ink text-lg leading-relaxed">
-              Most quotes are delivered same day. Tell us a bit about the
+              Most quotes are delivered the day of your site visit. Tell us a bit about the
               project and we&rsquo;ll get back to you within 24 hours on
               weekdays.
             </p>

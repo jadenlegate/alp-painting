@@ -299,7 +299,7 @@ export default function HomePage() {
 
       <CtaBlock
         heading="Ready to start?"
-        subline="Most quotes are delivered same day."
+        subline="Most quotes are delivered the day of your site visit."
         primaryLabel="Get a Quote"
         primaryHref="/contact"
       />

@@ -224,7 +224,7 @@ export default function ProcessPage() {
       <CtaBlock
         heading="Ready to get started?"
         eyebrow="Get in touch"
-        subline="Most quotes turn around same day. The site visit is free."
+        subline="Most quotes are delivered the day of your site visit. The site visit is free."
         primaryLabel="Get a Quote"
         secondaryLabel="Call (604) 938-4037"
         secondaryHref="tel:+16049384037"

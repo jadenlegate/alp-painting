@@ -67,8 +67,7 @@ export function ContactForm() {
           <h3 className="font-serif text-2xl">Thanks — we got it.</h3>
         </div>
         <p className="text-ink leading-relaxed">
-          We&rsquo;ll be in touch within 24 hours on weekdays. Most quotes are
-          delivered same day. If it&rsquo;s urgent, call us at{" "}
+          We&rsquo;ll be in touch within 24 hours on weekdays to book your free site visit — most quotes are delivered the day of that visit. If it&rsquo;s urgent, call us at{" "}
           <a href="tel:+16049384037" className="text-navy underline">
             (604) 938-4037
           </a>
@@ -85,7 +84,7 @@ export function ContactForm() {
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone" name="phone" type="tel" required />
         <div>
-          <Label>Project location</Label>
+          <Label required>Project location</Label>
           <select
             name="location"
             required
@@ -125,10 +124,11 @@ export function ContactForm() {
       </div>
 
       <div>
-        <Label>Tell us about your project</Label>
+        <Label required>Tell us about your project</Label>
         <textarea
           name="project"
           rows={4}
+          required
           className="mt-1.5 w-full border border-border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none focus:border-navy"
           placeholder="Size of the space, timing you're targeting, anything we should know…"
         />
@@ -174,17 +174,17 @@ export function ContactForm() {
       </Button>
 
       <p className="text-xs text-muted">
-        We respond within 24 hours on weekdays. Most quotes are delivered the
-        same day.
+        We respond within 24 hours on weekdays to book a free site visit. Most quotes are delivered the day of that visit.
       </p>
     </form>
   );
 }
 
-function Label({ children }: { children: React.ReactNode }) {
+function Label({ children, required }: { children: React.ReactNode; required?: boolean }) {
   return (
     <label className="text-xs uppercase tracking-widest text-navy font-medium">
       {children}
+      {required && <span className="text-alpine ml-1" aria-hidden="true">*</span>}
     </label>
   );
 }
@@ -202,7 +202,7 @@ function Field({
 }) {
   return (
     <div>
-      <Label>{label}</Label>
+      <Label required={required}>{label}</Label>
       <input
         type={type}
         name={name}
