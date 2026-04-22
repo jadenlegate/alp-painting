@@ -271,7 +271,6 @@ export default async function ProjectPage({
       <CtaBlock
         heading="Like what you see?"
         subline="We'd love to hear about your project."
-        variant="stone"
       />
     </>
   );

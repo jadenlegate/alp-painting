@@ -45,7 +45,6 @@ export default function GivingBackPage() {
         heading="Want to work with a company that gives back?"
         subline="Get a quote — we're proud of the work and the community it supports."
         primaryLabel="Get a Quote"
-        variant="stone"
       />
     </>
   );

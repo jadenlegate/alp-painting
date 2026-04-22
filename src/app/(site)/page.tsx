@@ -220,9 +220,9 @@ export default function HomePage() {
       {/* Designed around you — photo-paired benefits block */}
       <Section>
         <Container>
-          <div className="grid gap-10 md:gap-16 md:grid-cols-2 md:items-center">
-            <FadeIn direction="left">
-              <div className="aspect-[4/3] rounded-sm overflow-hidden bg-stone-light/40">
+          <div className="grid gap-10 md:gap-16 md:grid-cols-2 md:items-stretch">
+            <FadeIn direction="left" className="md:h-full">
+              <div className="h-full min-h-[400px] md:min-h-0 rounded-sm overflow-hidden bg-stone-light/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/stock-images/6ModernMountainHomeStudioMcGee.jpg"
@@ -237,8 +237,11 @@ export default function HomePage() {
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                   A painting project should feel <span className="text-alpine">straightforward</span>, not stressful.
                 </h2>
-                <p className="mt-5 text-ink text-lg leading-relaxed">
-                  <strong className="text-navy font-semibold">That belief shapes how we quote, schedule, and run every job.</strong> Here&rsquo;s what you can count on from the moment you call us:
+                <p className="mt-5 text-ink text-lg leading-relaxed font-semibold text-navy">
+                  That belief shapes how we quote, schedule, and run every job.
+                </p>
+                <p className="mt-3 text-ink leading-relaxed">
+                  Here&rsquo;s what you can count on from the moment you call us:
                 </p>
                 <div className="mt-7">
                   <BulletList

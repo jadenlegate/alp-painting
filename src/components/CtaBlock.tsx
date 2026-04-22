@@ -11,7 +11,6 @@ type Props = {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
-  variant?: "navy" | "stone";
 };
 
 export function CtaBlock({
@@ -22,26 +21,20 @@ export function CtaBlock({
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref,
-  variant = "navy",
 }: Props) {
-  const isNavy = variant === "navy";
   return (
-    <section className={isNavy ? "bg-navy" : "bg-surface"}>
+    <section className="bg-navy">
       <Container>
         <div className="py-20 md:py-24 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
           <div className="max-w-xl">
             {eyebrow && (
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">{eyebrow}</div>
             )}
-            <h2
-              className={`font-serif font-bold text-[2rem] md:text-[2.75rem] leading-[1.05] tracking-tight ${
-                isNavy ? "text-background" : "text-navy"
-              }`}
-            >
+            <h2 className="font-serif font-bold text-background text-[2rem] md:text-[2.75rem] leading-[1.05] tracking-tight">
               {heading}
             </h2>
             {subline && (
-              <p className={`mt-4 text-lg leading-relaxed ${isNavy ? "text-background/70" : "text-ink"}`}>
+              <p className="mt-4 text-lg leading-relaxed text-background/70">
                 {subline}
               </p>
             )}
@@ -50,7 +43,7 @@ export function CtaBlock({
             <Button
               href={primaryHref}
               size="lg"
-              className={isNavy ? "!bg-background !text-navy hover:!bg-surface" : ""}
+              className="!bg-background !text-navy hover:!bg-surface"
             >
               {primaryLabel} <ArrowRight size={16} />
             </Button>
@@ -58,11 +51,7 @@ export function CtaBlock({
               <Button
                 href={secondaryHref}
                 size="lg"
-                className={
-                  isNavy
-                    ? "border !border-background/25 !bg-transparent !text-background hover:!bg-background/10"
-                    : "border border-navy !text-navy hover:!bg-navy hover:!text-background"
-                }
+                className="border !border-background/25 !bg-transparent !text-background hover:!bg-background/10"
               >
                 {secondaryLabel}
               </Button>
