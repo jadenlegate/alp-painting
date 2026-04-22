@@ -162,8 +162,6 @@ export default function FAQPage() {
         heading="Still have questions?"
         subline="Call us at (604) 938-4037 or fill out the contact form. We respond same day."
         primaryLabel="Get in Touch"
-        secondaryLabel="Call us"
-        secondaryHref="tel:+16049384037"
       />
     </>
   );

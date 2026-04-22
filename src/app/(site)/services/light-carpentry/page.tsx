@@ -169,8 +169,6 @@ export default function LightCarpentryPage() {
         eyebrow="Get a site visit"
         subline="We&rsquo;ll flag everything that needs repair on the quote — so painting day isn&rsquo;t the day you find out."
         primaryLabel="Get a Quote"
-        secondaryLabel="Call (604) 938-4037"
-        secondaryHref="tel:+16049384037"
       />
     </>
   );

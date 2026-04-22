@@ -222,8 +222,6 @@ export default function ProcessPage() {
         eyebrow="Get in touch"
         subline="Most quotes are delivered the day of your site visit. The site visit is free."
         primaryLabel="Get a Quote"
-        secondaryLabel="Call (604) 938-4037"
-        secondaryHref="tel:+16049384037"
       />
     </>
   );

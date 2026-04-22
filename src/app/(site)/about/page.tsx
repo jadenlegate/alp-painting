@@ -186,8 +186,6 @@ export default function AboutPage() {
         heading="Want to work with us?"
         subline="Get a quote — or check out our careers page if you're a painter looking for a good crew."
         primaryLabel="Get a Quote"
-        secondaryLabel="Join the team"
-        secondaryHref="/careers"
       />
     </>
   );

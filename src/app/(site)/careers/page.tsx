@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
+import { CtaBlock } from "@/components/CtaBlock";
 import { Check, DollarSign, Calendar, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -198,28 +199,15 @@ export default function CareersPage() {
       </section>
 
       {/* Application CTA */}
-      <section id="apply" className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Apply</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Interested? Let&rsquo;s talk.
-            </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              Fill out the application form — takes about 5 minutes. We respond within 24 hours.
-            </p>
-            <div className="mt-8">
-              {/* Link to ClickUp application form — update URL when form is ready */}
-              <Button
-                href="https://forms.clickup.com/alpenglow-painter-application"
-                size="lg"
-              >
-                Apply Now
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <div id="apply">
+        <CtaBlock
+          eyebrow="Apply"
+          heading={<>Interested? Let&rsquo;s talk.</>}
+          subline="Fill out the application form — takes about 5 minutes. We respond within 24 hours."
+          primaryLabel="Apply Now"
+          primaryHref="https://forms.clickup.com/alpenglow-painter-application"
+        />
+      </div>
     </>
   );
 }

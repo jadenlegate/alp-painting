@@ -185,8 +185,6 @@ export default function WarrantyPage() {
         eyebrow="Before you sign"
         subline="Ask us anything about the warranty at the site visit."
         primaryLabel="Get a Quote"
-        secondaryLabel="Call (604) 938-4037"
-        secondaryHref="tel:+16049384037"
       />
     </>
   );
