@@ -74,10 +74,10 @@ export default function AboutPage() {
               {/* Jaden: replace this placeholder with your actual story via Sanity */}
               <div className="mt-5 space-y-4 text-ink leading-relaxed">
                 <p>
-                  Alpenglow Painting started because I kept seeing the same thing: homeowners who had been through enough bad trades experiences that they approached every new contractor with their guard up. They weren&rsquo;t wrong to. The industry earned that skepticism.
+                  <strong className="text-navy font-semibold">Alpenglow started because I kept seeing the same thing:</strong> homeowners who had been through enough bad trades experiences that they approached every new contractor with their guard up. They weren&rsquo;t wrong to. The industry earned that skepticism.
                 </p>
                 <p>
-                  I started Alpenglow to build something different — a company where the process itself is a reason to hire us, not just the finished wall. Clear communication, professional crews, documentation at every step.
+                  I started Alpenglow to build something different — a company where <span className="text-navy font-semibold">the process itself is a reason to hire us</span>, not just the finished wall. Clear communication, professional crews, documentation at every step.
                 </p>
                 <p>
                   We&rsquo;re based in Whistler and work across the Sea to Sky corridor. Seasonal operation, May through October, so we can do the work properly instead of rushing a calendar year.

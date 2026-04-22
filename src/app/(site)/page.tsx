@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
@@ -7,8 +8,9 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
-import { MessageSquare, UserCheck, ShieldCheck, MapPin, Ruler, CalendarCheck, Paintbrush, BookOpen, type LucideIcon } from "lucide-react";
+import { MessageSquare, UserCheck, ShieldCheck, MapPin, Ruler, Paintbrush, BookOpen, ChevronRight, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
+import { BulletList } from "@/components/BulletList";
 
 const SERVICES = [
   {
@@ -140,10 +142,10 @@ export default function HomePage() {
             <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Why Alpenglow</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                We&rsquo;re not the biggest painter in the Sea to Sky. We&rsquo;re the one that takes the experience seriously.
+                We&rsquo;re not the biggest painter in the Sea to Sky. We&rsquo;re the one that takes <span className="text-alpine">the experience</span> seriously.
               </h2>
               <p className="mt-5 text-background/70 text-lg leading-relaxed">
-                Any painter can roll paint on walls. What separates a good job from a bad one is everything else — showing up when you said you would, keeping the site clean, and actually following through on what was promised.
+                <strong className="text-background font-semibold">Any painter can roll paint on walls.</strong> What separates a good job from a bad one is everything else — showing up when you said you would, keeping the site clean, and actually following through on what was promised.
               </p>
             </div>
           </FadeIn>
@@ -170,7 +172,7 @@ export default function HomePage() {
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Services</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
-                  Residential, commercial, and everything in between.
+                  Residential, commercial, <span className="text-alpine">and everything in between</span>.
                 </h2>
               </div>
             </div>
@@ -209,6 +211,49 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* Designed around you — photo-paired benefits block */}
+      <Section>
+        <Container>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-2 md:items-center">
+            <FadeIn direction="left">
+              <div className="aspect-[4/3] rounded-sm overflow-hidden bg-stone-light/40">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Stock%20Images/6ModernMountainHomeStudioMcGee.jpg"
+                  alt="A finished Alpenglow project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn direction="right">
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Designed around you</div>
+                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
+                  A painting project should feel <span className="text-alpine">straightforward</span>, not stressful.
+                </h2>
+                <p className="mt-5 text-ink text-lg leading-relaxed">
+                  <strong className="text-navy font-semibold">That belief shapes how we quote, schedule, and run every job.</strong> Here&rsquo;s what you can count on from the moment you call us:
+                </p>
+                <div className="mt-7">
+                  <BulletList
+                    items={[
+                      "A clear, itemized estimate — no vague lump sums",
+                      "Punctual starts and realistic timelines with weather buffer",
+                      "A clean, protected work site throughout the project",
+                      "Proactive updates so you always know what's happening",
+                      "Fixed pricing that only moves if the scope actually changes",
+                      "A thorough final walkthrough before you sign off",
+                      "$5M liability insurance and full WorkSafeBC coverage",
+                      "A written 3-year warranty, with extensions on select projects",
+                    ]}
+                  />
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </Container>
+      </Section>
+
       {/* Process teaser — navy background */}
       <Section className="bg-navy">
         <Container>
@@ -216,24 +261,34 @@ export default function HomePage() {
             <div className="max-w-xl mb-12">
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our process</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                From first call to final walkthrough.
+                From first call to <span className="text-alpine">final walkthrough</span>.
               </h2>
               <p className="mt-4 text-background/70 text-lg leading-relaxed">
-                Four stages, documented at every step. No surprises, no improvising.
+                <strong className="text-background font-semibold">Four stages, documented at every step.</strong> No surprises, no improvising.
               </p>
             </div>
           </FadeIn>
-          <div className="grid gap-6 md:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start">
             {PROCESS_STEPS.map((s, i) => (
-              <FadeIn key={s.n} delay={i * 0.08}>
-                <div className="border-t border-background/20 pt-5">
-                  <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
-                    <s.icon size={20} className="text-background" />
+              <Fragment key={s.n}>
+                <FadeIn delay={i * 0.08}>
+                  <div className="border-t border-background/20 pt-5">
+                    <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
+                      <s.icon size={20} className="text-background" />
+                    </div>
+                    <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
+                    <div className="text-background font-medium">{s.label}</div>
                   </div>
-                  <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
-                  <div className="text-background font-medium">{s.label}</div>
-                </div>
-              </FadeIn>
+                </FadeIn>
+                {i < PROCESS_STEPS.length - 1 && (
+                  <div
+                    className="hidden md:flex items-center justify-center pt-8 text-background/30"
+                    aria-hidden="true"
+                  >
+                    <ChevronRight size={20} />
+                  </div>
+                )}
+              </Fragment>
             ))}
           </div>
           <FadeIn delay={0.3}>
@@ -251,7 +306,7 @@ export default function HomePage() {
             <div className="max-w-xl mb-10 md:mb-14">
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What clients say</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                5.0 on Google — across the Sea to Sky.
+                <span className="text-alpine">5.0 on Google</span> — across the Sea to Sky.
               </h2>
             </div>
           </FadeIn>
@@ -277,10 +332,10 @@ export default function HomePage() {
             <div className="max-w-xl">
               <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Service area</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                Based in Whistler.
+                Based in <span className="text-alpine">Whistler</span>.
               </h2>
               <p className="mt-4 text-ink text-lg leading-relaxed">
-                We&rsquo;re a Whistler operation. Most of our work is in the valley — occasionally we take on something further out when the project is the right fit.
+                <strong className="text-navy font-semibold">We&rsquo;re a Whistler operation.</strong> Most of our work is in the valley — occasionally we take on something further out when the project is the right fit.
               </p>
             </div>
           </FadeIn>

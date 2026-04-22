@@ -108,10 +108,10 @@ export default function ProcessPage() {
           <div className="max-w-3xl mx-auto">
             <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Our process</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
-              From first call to final walkthrough — here&rsquo;s exactly what to expect.
+              From first call to final walkthrough — <span className="text-alpine">here&rsquo;s exactly what to expect</span>.
             </h1>
             <p className="mt-6 text-ink text-lg leading-relaxed">
-              We built our process around a simple idea: most homeowners have hired a contractor before and been let down. Every step below is designed to prevent the specific things that tend to go wrong.
+              <strong className="text-navy font-semibold">We built our process around a simple idea:</strong> most homeowners have hired a contractor before and been let down. Every step below is designed to prevent the specific things that tend to go wrong.
             </p>
           </div>
         </Container>
