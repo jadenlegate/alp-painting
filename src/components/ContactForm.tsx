@@ -9,6 +9,7 @@ const SERVICES = [
   "Exterior Painting",
   "Wood Restoration / Staining",
   "Cabinet Refinishing",
+  "Light Carpentry / Repair",
   "Commercial / Strata / Hotel",
   "Not sure yet",
 ];

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // vague job postings. Real pay ranges, real schedule, real expectations.
 
 const PERKS = [
-  { icon: DollarSign, label: "Performance-based pay", detail: "$25–40+/hr depending on role and output" },
+  { icon: DollarSign, label: "Performance-based pay", detail: "$25–40+/hr depending on role and performance" },
   { icon: Calendar, label: "4-day work weeks", detail: "Standard schedule is Mon–Thu, long weekends standard" },
   { icon: Users, label: "Team that shows up", detail: "Professional crew, good culture, no drama" },
   { icon: MapPin, label: "Work in Whistler", detail: "Live and work in one of the best places in Canada" },
@@ -47,11 +47,10 @@ const TRAITS = [
 ];
 
 const HIRING_STEPS = [
-  { n: "01", label: "Apply", detail: "Submit the form below — a few questions, no resume required if you'd rather just talk." },
-  { n: "02", label: "Quick call", detail: "15–20 minutes. We ask about your experience, you ask us whatever you want." },
-  { n: "03", label: "Trial day", detail: "Paid trial on a real job site so you can see how we work before committing." },
-  { n: "04", label: "Offer", detail: "If it's a fit, we send an offer with your start date, rate, and schedule." },
-  { n: "05", label: "Season start", detail: "Orientation, gear, and intro to the crew. First day of the season, you're ready." },
+  { n: "01", label: "Apply", detail: "Submit the form below — a few questions to get things started." },
+  { n: "02", label: "Virtual interview", detail: "15–20 minutes over video. We ask about your experience, you ask us whatever you want." },
+  { n: "03", label: "Offer", detail: "If it's a fit, we send an offer with your start date, rate, and schedule." },
+  { n: "04", label: "Start working", detail: "Orientation, gear, and intro to the crew. You're ready for your first day on the job." },
 ];
 
 export default function CareersPage() {
@@ -170,7 +169,7 @@ export default function CareersPage() {
                 Whistler is one of the best places in the country to live — skiing and boarding in winter, hiking and mountain biking in summer, and long evenings in between. If you&rsquo;re considering relocating, the lifestyle up here does it well.
               </p>
               <p className="mt-3 text-ink leading-relaxed">
-                4-day weeks mean you get long weekends, every week. We can help with referrals for housing if you&rsquo;re coming from out of town.
+                4-day weeks mean you get long weekends.
               </p>
             </div>
           </div>
@@ -186,7 +185,7 @@ export default function CareersPage() {
               The hiring process, start to finish.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-5">
+          <div className="grid gap-6 md:grid-cols-4">
             {HIRING_STEPS.map((s) => (
               <div key={s.n} className="border-t border-navy/30 pt-4">
                 <div className="font-serif text-navy text-sm tabular-nums">{s.n}</div>
@@ -207,7 +206,7 @@ export default function CareersPage() {
               Interested? Let&rsquo;s talk.
             </h2>
             <p className="mt-4 text-ink leading-relaxed">
-              Fill out the application form — takes about 5 minutes. No formal resume required. We respond within 2 business days.
+              Fill out the application form — takes about 5 minutes. We respond within 24 hours.
             </p>
             <div className="mt-8">
               {/* Link to ClickUp application form — update URL when form is ready */}
@@ -218,12 +217,6 @@ export default function CareersPage() {
                 Apply Now
               </Button>
             </div>
-            <p className="mt-4 text-sm text-muted">
-              Prefer to reach out directly?{" "}
-              <a href="mailto:hello@alpenglowpainting.ca" className="text-navy underline underline-offset-4">
-                hello@alpenglowpainting.ca
-              </a>
-            </p>
           </div>
         </Container>
       </section>

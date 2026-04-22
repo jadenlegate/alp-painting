@@ -25,11 +25,11 @@ const ABOUT_LINKS = [
   { label: "Our Process", href: "/process" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
-  { label: "Careers", href: "/careers" },
 ];
 
 const MAIN_LINKS = [
   { label: "Our Work", href: "/work" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -136,6 +136,10 @@ export function Navbar() {
                   </div>
                 )}
               </div>
+
+              <Link href="/careers" className={linkClass}>
+                Careers
+              </Link>
 
               <Link href="/contact" className={linkClass}>
                 Contact
