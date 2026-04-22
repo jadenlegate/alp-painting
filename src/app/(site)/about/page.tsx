@@ -85,10 +85,9 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="aspect-[4/5] rounded-sm overflow-hidden bg-stone-light/40">
-              {/* Replace with Jaden's portrait photo via Sanity */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                src="/Jaden Alpenglow Headshot-2.jpg"
                 alt="Jaden Legate — owner of Alpenglow Painting"
                 className="w-full h-full object-cover"
               />
