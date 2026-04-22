@@ -238,7 +238,7 @@ export default function HomePage() {
           </div>
           <FadeIn delay={0.3}>
             <div className="mt-12">
-              <Button href="/process" size="lg" className="border border-background/20 bg-transparent !text-background hover:bg-background/10">See how it works</Button>
+              <Button href="/process" size="lg" className="border !border-background/25 !bg-transparent !text-background hover:!bg-background/10">See how it works</Button>
             </div>
           </FadeIn>
         </Container>

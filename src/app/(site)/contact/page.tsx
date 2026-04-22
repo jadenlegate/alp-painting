@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ContactForm } from "@/components/ContactForm";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -63,11 +63,6 @@ export default function ContactPage() {
                     icon={MapPin}
                     label="Based in"
                     value={`${SITE.address.city}, ${SITE.address.region}`}
-                  />
-                  <DirectContact
-                    icon={Clock}
-                    label="Business hours"
-                    value={SITE.hours}
                   />
                 </div>
               </div>
