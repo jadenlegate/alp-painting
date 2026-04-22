@@ -110,7 +110,7 @@ export default function InteriorPaintingPage() {
         eyebrow="Services"
         headline="Interior Painting"
         subline="Walls, trim, ceilings, cabinets. A clean process that respects your home — and a finish that holds up."
-        imageUrl="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=85"
+        imageUrl="/stock%20images/empty-dark-blue-wall-modern-living-room-mock-up-interior-contemporary-style-free-space-picture-poster-leather-sofa-armchair-fireplace-plant-3d-rendering_429124-1653.avif"
         imageAlt="Interior of a Whistler home mid-repaint"
       >
         <Button

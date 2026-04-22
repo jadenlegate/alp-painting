@@ -75,7 +75,7 @@ export default function CommercialPage() {
         eyebrow="Services"
         headline="Commercial, Strata & Hotels"
         subline="Painting for buildings that can't stop running. Flexible scheduling, clear communication, and a crew that works to your timeline — not ours."
-        imageUrl="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=85"
+        imageUrl="/stock%20images/whistler-village-spring-1-1024x676.jpg"
         imageAlt="Commercial building interior hallway freshly painted"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">

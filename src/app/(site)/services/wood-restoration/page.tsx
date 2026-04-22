@@ -97,7 +97,7 @@ export default function WoodRestorationPage() {
         eyebrow="Services"
         headline="Wood Restoration & Staining"
         subline="Cedar siding, decks, timber frames, fences. Properly cleaned, properly stained, and documented so you know when to come back."
-        imageUrl="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=2000&q=85"
+        imageUrl="/stock%20images/2beb0596b7d27d9ce6d5fac9d571f6bb--wood-stain-colors-deck-colors.jpg"
         imageAlt="Cedar siding and deck in natural mountain setting"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">

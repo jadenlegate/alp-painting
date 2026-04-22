@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 
 // Placeholder projects — replace with Sanity fetch once content is loaded.
 const ALL_PROJECTS: Project[] = [
-  { slug: "whistler-chalet-exterior", title: "Kadenwood chalet — full exterior", location: "Whistler", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "pemberton-farmhouse-interior", title: "Pemberton farmhouse interior", location: "Pemberton", serviceTags: ["Interior"], coverUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "squamish-modern-cabinets", title: "Squamish modern — kitchen cabinets", location: "Squamish", serviceTags: ["Cabinet refinishing"], coverUrl: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "whistler-log-home-restoration", title: "Whistler log home — full restoration", location: "Whistler", serviceTags: ["Wood restoration"], coverUrl: "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "pemberton-farmhouse-exterior", title: "Pemberton farmhouse — repaint", location: "Pemberton", serviceTags: ["Exterior"], coverUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "whistler-family-home-repaint", title: "Whistler family home — full repaint", location: "Whistler", serviceTags: ["Interior"], coverUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "squamish-contemporary-exterior", title: "Squamish contemporary — cedar + trim", location: "Squamish", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "whistler-chalet-kitchen", title: "Whistler chalet — kitchen cabinets", location: "Whistler", serviceTags: ["Cabinet refinishing"], coverUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80" },
-  { slug: "pemberton-deck-staining", title: "Pemberton property — deck and fencing", location: "Pemberton", serviceTags: ["Wood restoration"], coverUrl: "https://images.unsplash.com/photo-1416339684178-3a239570f315?auto=format&fit=crop&w=1200&q=80" },
+  { slug: "whistler-chalet-exterior", title: "Kadenwood chalet — full exterior", location: "Whistler", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/stock%20images/mountaincottage-1-1080x675-1.jpg" },
+  { slug: "pemberton-farmhouse-interior", title: "Pemberton farmhouse interior", location: "Pemberton", serviceTags: ["Interior"], coverUrl: "/stock%20images/pexels-terry-magallanes-2635038.jpg" },
+  { slug: "squamish-modern-cabinets", title: "Squamish modern — kitchen cabinets", location: "Squamish", serviceTags: ["Cabinet refinishing"], coverUrl: "/stock%20images/pexels-mark-2724749.jpg" },
+  { slug: "whistler-log-home-restoration", title: "Whistler log home — full restoration", location: "Whistler", serviceTags: ["Wood restoration"], coverUrl: "/stock%20images/Mountain-House-Style.webp" },
+  { slug: "pemberton-farmhouse-exterior", title: "Pemberton farmhouse — repaint", location: "Pemberton", serviceTags: ["Exterior"], coverUrl: "/stock%20images/vacation-home-design-mountains.jpg" },
+  { slug: "whistler-family-home-repaint", title: "Whistler family home — full repaint", location: "Whistler", serviceTags: ["Interior"], coverUrl: "/stock%20images/6ModernMountainHomeStudioMcGee.jpg" },
+  { slug: "squamish-contemporary-exterior", title: "Squamish contemporary — cedar + trim", location: "Squamish", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/stock%20images/contemporary-home-exterior-colorful-sunset-600nw-2116568516.webp" },
+  { slug: "whistler-chalet-kitchen", title: "Whistler chalet — kitchen cabinets", location: "Whistler", serviceTags: ["Cabinet refinishing"], coverUrl: "/stock%20images/tinted-coty2024-kitchen-1024x690.jpg" },
+  { slug: "pemberton-deck-staining", title: "Pemberton property — deck and fencing", location: "Pemberton", serviceTags: ["Wood restoration"], coverUrl: "/stock%20images/2beb0596b7d27d9ce6d5fac9d571f6bb--wood-stain-colors-deck-colors.jpg" },
 ];
 
 export default function WorkPage() {
