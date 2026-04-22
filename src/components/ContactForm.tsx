@@ -4,10 +4,6 @@ import { useState, FormEvent } from "react";
 import { Button } from "./Button";
 import { Check, AlertCircle } from "lucide-react";
 
-// Quote request form. Posts JSON to /api/quote which forwards to a Zapier
-// Catch Hook (so Jaden can route leads into his CRM + automated texts).
-// Keep the field count minimal per brief §7.7 — every added field
-// measurably drops conversion.
 const SERVICES = [
   "Interior Painting",
   "Exterior Painting",
@@ -20,29 +16,61 @@ const SERVICES = [
 const LOCATIONS = ["Whistler", "Pemberton", "Squamish", "Other"];
 
 type Status = "idle" | "submitting" | "success" | "error";
+type Errors = Partial<Record<"name" | "email" | "phone" | "location" | "project", string>>;
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [errorMsg, setErrorMsg] = useState<string>("");
+  const [submitErrorMsg, setSubmitErrorMsg] = useState<string>("");
+  const [errors, setErrors] = useState<Errors>({});
+
+  const validate = (payload: {
+    name: string;
+    email: string;
+    phone: string;
+    location: string;
+    project: string;
+  }): Errors => {
+    const e: Errors = {};
+    if (!payload.name.trim()) e.name = "Please tell us your name.";
+    if (!payload.email.trim()) e.email = "We need an email to get back to you.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email.trim()))
+      e.email = "That doesn't look like a valid email.";
+    if (!payload.phone.trim()) e.phone = "A phone number helps us reach you quickly.";
+    if (!payload.location) e.location = "Select the project location.";
+    if (!payload.project.trim()) e.project = "Tell us a bit about the project.";
+    return e;
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("submitting");
-    setErrorMsg("");
-
     const form = e.currentTarget;
     const data = new FormData(form);
+
     const payload = {
-      name: data.get("name"),
-      email: data.get("email"),
-      phone: data.get("phone"),
-      location: data.get("location"),
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+      location: String(data.get("location") ?? ""),
       services: data.getAll("services"),
-      project: data.get("project"),
-      contactMethod: data.get("contactMethod"),
+      project: String(data.get("project") ?? ""),
+      contactMethod: String(data.get("contactMethod") ?? ""),
       submittedAt: new Date().toISOString(),
       source: "alpenglowpainting.ca",
     };
+
+    const validationErrors = validate(payload);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setStatus("idle");
+      // scroll to first invalid field
+      const firstKey = Object.keys(validationErrors)[0];
+      document.querySelector<HTMLElement>(`[name="${firstKey}"]`)?.focus();
+      return;
+    }
+
+    setErrors({});
+    setStatus("submitting");
+    setSubmitErrorMsg("");
 
     try {
       const res = await fetch("/api/quote", {
@@ -55,7 +83,7 @@ export function ContactForm() {
       form.reset();
     } catch (err) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Unknown error");
+      setSubmitErrorMsg(err instanceof Error ? err.message : "Unknown error");
     }
   };
 
@@ -77,19 +105,42 @@ export function ContactForm() {
     );
   }
 
+  const errorCount = Object.keys(errors).length;
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} noValidate className="space-y-6">
+      {errorCount > 0 && (
+        <div
+          role="alert"
+          className="flex items-start gap-3 border border-red-200 bg-red-50 rounded-sm p-4"
+        >
+          <AlertCircle size={18} className="text-red-700 flex-shrink-0 mt-0.5" />
+          <div className="text-sm text-red-900">
+            <div className="font-medium mb-0.5">
+              {errorCount === 1 ? "One field needs attention." : `${errorCount} fields need attention.`}
+            </div>
+            <div className="text-red-800">
+              Please review the highlighted fields below and try again.
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="grid md:grid-cols-2 gap-5">
-        <Field label="Name" name="name" required />
-        <Field label="Email" name="email" type="email" required />
-        <Field label="Phone" name="phone" type="tel" required />
+        <Field label="Name" name="name" required error={errors.name} />
+        <Field label="Email" name="email" type="email" required error={errors.email} />
+        <Field label="Phone" name="phone" type="tel" required error={errors.phone} />
         <div>
           <Label required>Project location</Label>
           <select
             name="location"
-            required
             defaultValue=""
-            className="mt-1.5 w-full border border-border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none focus:border-navy"
+            aria-invalid={!!errors.location}
+            className={`mt-1.5 w-full border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none ${
+              errors.location
+                ? "border-red-400 focus:border-red-500"
+                : "border-border focus:border-navy"
+            }`}
           >
             <option value="" disabled>
               Select a location
@@ -100,6 +151,7 @@ export function ContactForm() {
               </option>
             ))}
           </select>
+          {errors.location && <ErrorText>{errors.location}</ErrorText>}
         </div>
       </div>
 
@@ -128,10 +180,15 @@ export function ContactForm() {
         <textarea
           name="project"
           rows={4}
-          required
-          className="mt-1.5 w-full border border-border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none focus:border-navy"
+          aria-invalid={!!errors.project}
+          className={`mt-1.5 w-full border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none ${
+            errors.project
+              ? "border-red-400 focus:border-red-500"
+              : "border-border focus:border-navy"
+          }`}
           placeholder="Size of the space, timing you're targeting, anything we should know…"
         />
+        {errors.project && <ErrorText>{errors.project}</ErrorText>}
       </div>
 
       <div>
@@ -156,15 +213,18 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <div className="flex items-start gap-2 text-sm text-red-700 bg-red-50 border border-red-200 rounded-sm p-3">
-          <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
-          <div>
-            Something went wrong sending the form. Please try again or email{" "}
-            <a href="mailto:hello@alpenglowpainting.ca" className="underline">
-              hello@alpenglowpainting.ca
-            </a>
-            .
-            {errorMsg && <div className="text-red-600 mt-1 text-xs">{errorMsg}</div>}
+        <div className="flex items-start gap-3 border border-red-200 bg-red-50 rounded-sm p-4">
+          <AlertCircle size={18} className="text-red-700 flex-shrink-0 mt-0.5" />
+          <div className="text-sm text-red-900">
+            <div className="font-medium mb-0.5">We couldn&rsquo;t send that.</div>
+            <div className="text-red-800">
+              Please try again, or email{" "}
+              <a href="mailto:hello@alpenglowpainting.ca" className="underline">
+                hello@alpenglowpainting.ca
+              </a>{" "}
+              directly.
+            </div>
+            {submitErrorMsg && <div className="text-red-700/70 mt-1.5 text-xs">{submitErrorMsg}</div>}
           </div>
         </div>
       )}
@@ -189,16 +249,27 @@ function Label({ children, required }: { children: React.ReactNode; required?: b
   );
 }
 
+function ErrorText({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mt-1.5 flex items-center gap-1.5 text-xs text-red-700">
+      <AlertCircle size={12} className="flex-shrink-0" />
+      <span>{children}</span>
+    </div>
+  );
+}
+
 function Field({
   label,
   name,
   type = "text",
   required = false,
+  error,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
+  error?: string;
 }) {
   return (
     <div>
@@ -206,9 +277,14 @@ function Field({
       <input
         type={type}
         name={name}
-        required={required}
-        className="mt-1.5 w-full border border-border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none focus:border-navy"
+        aria-invalid={!!error}
+        className={`mt-1.5 w-full border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none ${
+          error
+            ? "border-red-400 focus:border-red-500"
+            : "border-border focus:border-navy"
+        }`}
       />
+      {error && <ErrorText>{error}</ErrorText>}
     </div>
   );
 }
