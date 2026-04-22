@@ -20,6 +20,7 @@ const STATIC_ROUTES = [
   "/services/exterior-painting",
   "/services/wood-restoration",
   "/services/cabinet-refinishing",
+  "/services/light-carpentry",
   "/services/commercial",
 ];
 

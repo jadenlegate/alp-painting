@@ -16,6 +16,7 @@ const SERVICES = [
   { label: "Exterior Painting", href: "/services/exterior-painting" },
   { label: "Wood Restoration & Staining", href: "/services/wood-restoration" },
   { label: "Cabinet Refinishing", href: "/services/cabinet-refinishing" },
+  { label: "Light Carpentry & Repair", href: "/services/light-carpentry" },
   { label: "Commercial, Strata & Hotels", href: "/services/commercial" },
 ];
 

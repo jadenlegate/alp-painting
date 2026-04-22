@@ -38,6 +38,12 @@ const SERVICES = [
     imageUrl: "/Stock%20Images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
+    title: "Light Carpentry & Repair",
+    href: "/services/light-carpentry",
+    blurb: "Rot, trim, and fascia repair done in-house — so your paint job doesn't stall waiting on another trade.",
+    imageUrl: "/Stock%20Images/CornCobBlastingSideHouse.0063-67b24c93.webp",
+  },
+  {
     title: "Commercial, Strata & Hotels",
     href: "/services/commercial",
     blurb: "Flexible scheduling around operations and residents. Clear communication, no drama.",
