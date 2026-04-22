@@ -10,6 +10,7 @@ const STATIC_ROUTES = [
   "/work",
   "/reviews",
   "/faq",
+  "/warranty",
   "/blog",
   "/careers",
   "/giving-back",

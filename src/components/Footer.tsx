@@ -19,6 +19,7 @@ const COMPANY_LINKS = [
   { label: "Process", href: "/process" },
   { label: "Our Work", href: "/work" },
   { label: "Reviews", href: "/reviews" },
+  { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
   { label: "Careers", href: "/careers" },
   { label: "Blog", href: "/blog" },

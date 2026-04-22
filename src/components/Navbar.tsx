@@ -22,6 +22,7 @@ const SERVICES = [
 const NAV_LINKS = [
   { label: "Our Work", href: "/work" },
   { label: "Process", href: "/process" },
+  { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
