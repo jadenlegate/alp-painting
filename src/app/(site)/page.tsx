@@ -15,31 +15,31 @@ const SERVICES = [
     title: "Interior Painting",
     href: "/services/interior-painting",
     blurb: "Walls, trim, ceilings, doors. Clean lines and a process that respects your home.",
-    imageUrl: "/stock%20images/stock-photo-bright-living-room-interior-trendy-blue-color-simple-modern-style.jpg",
+    imageUrl: "/Stock%20Images/stock-photo-bright-living-room-interior-trendy-blue-color-simple-modern-style.jpg",
   },
   {
     title: "Exterior Painting",
     href: "/services/exterior-painting",
     blurb: "Weather-tough finishes built for Whistler winters. Sikkens, Benjamin Moore, Sherwin-Williams.",
-    imageUrl: "/stock%20images/new-contemporary-style-luxury-home-600nw-2400351577.webp",
+    imageUrl: "/Stock%20Images/new-contemporary-style-luxury-home-600nw-2400351577.webp",
   },
   {
     title: "Wood Restoration & Staining",
     href: "/services/wood-restoration",
     blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
-    imageUrl: "/stock%20images/wood-beams-13-111517455.jpg",
+    imageUrl: "/Stock%20Images/wood-beams-13-111517455.jpg",
   },
   {
     title: "Cabinet Refinishing",
     href: "/services/cabinet-refinishing",
     blurb: "Factory-grade finishes without replacing the boxes. Spray-booth precision in your kitchen.",
-    imageUrl: "/stock%20images/tinted-coty2024-kitchen-1024x690.jpg",
+    imageUrl: "/Stock%20Images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
     title: "Commercial, Strata & Hotels",
     href: "/services/commercial",
     blurb: "Flexible scheduling around operations and residents. Clear communication, no drama.",
-    imageUrl: "/stock%20images/karpiel-steindel-architektura-bachleda-club-residence-rchitonic-pu-bachleda-hotel-022-04-arcit18.jpg",
+    imageUrl: "/Stock%20Images/karpiel-steindel-architektura-bachleda-club-residence-rchitonic-pu-bachleda-hotel-022-04-arcit18.jpg",
   },
 ];
 
@@ -49,21 +49,21 @@ const FEATURED_PROJECTS: Project[] = [
     title: "Kadenwood chalet — full exterior",
     location: "Whistler",
     serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "/stock%20images/old-mountain-house-m-serhat-sezgin-turkey-03.jpg",
+    coverUrl: "/Stock%20Images/old-mountain-house-m-serhat-sezgin-turkey-03.jpg",
   },
   {
     slug: "pemberton-farmhouse-interior",
     title: "Pemberton farmhouse interior",
     location: "Pemberton",
     serviceTags: ["Interior"],
-    coverUrl: "/stock%20images/pexels-binyamin-mellish-106399.jpg",
+    coverUrl: "/Stock%20Images/pexels-binyamin-mellish-106399.jpg",
   },
   {
     slug: "squamish-modern-cabinets",
     title: "Squamish modern — kitchen cabinets",
     location: "Squamish",
     serviceTags: ["Cabinet refinishing"],
-    coverUrl: "/stock%20images/pexels-max-rahubovskiy-7031408.jpg",
+    coverUrl: "/Stock%20Images/pexels-max-rahubovskiy-7031408.jpg",
   },
 ];
 
@@ -118,7 +118,7 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        imageUrl="/stock%20images/I_Blackcomb_Dusk_1-scaled.jpg"
+        imageUrl="/Stock%20Images/I_Blackcomb_Dusk_1-scaled.jpg"
         imageAlt="Blackcomb mountain at dusk — Whistler, BC"
         headline={SITE.tagline}
         subline={SITE.subline}

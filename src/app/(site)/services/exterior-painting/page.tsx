@@ -97,7 +97,7 @@ export default function ExteriorPaintingPage() {
         eyebrow="Services"
         headline="Exterior Painting"
         subline="Built for Whistler winters. Premium coatings, thorough prep, and a warranty that holds up when the weather does its worst."
-        imageUrl="/stock%20images/organic-modern-mountain-home-living-stone-design-build-img~82c18bb90b1ed2a0_4-9760-1-d4cd6cb.jpg"
+        imageUrl="/Stock%20Images/organic-modern-mountain-home-living-stone-design-build-img~82c18bb90b1ed2a0_4-9760-1-d4cd6cb.jpg"
         imageAlt="Freshly painted home exterior with mountain backdrop"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">

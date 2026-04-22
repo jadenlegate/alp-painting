@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 
 // Placeholder projects — replace with Sanity fetch once content is loaded.
 const ALL_PROJECTS: Project[] = [
-  { slug: "whistler-chalet-exterior", title: "Kadenwood chalet — full exterior", location: "Whistler", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/stock%20images/mountaincottage-1-1080x675-1.jpg" },
-  { slug: "pemberton-farmhouse-interior", title: "Pemberton farmhouse interior", location: "Pemberton", serviceTags: ["Interior"], coverUrl: "/stock%20images/pexels-terry-magallanes-2635038.jpg" },
-  { slug: "squamish-modern-cabinets", title: "Squamish modern — kitchen cabinets", location: "Squamish", serviceTags: ["Cabinet refinishing"], coverUrl: "/stock%20images/pexels-mark-2724749.jpg" },
-  { slug: "whistler-log-home-restoration", title: "Whistler log home — full restoration", location: "Whistler", serviceTags: ["Wood restoration"], coverUrl: "/stock%20images/Mountain-House-Style.webp" },
-  { slug: "pemberton-farmhouse-exterior", title: "Pemberton farmhouse — repaint", location: "Pemberton", serviceTags: ["Exterior"], coverUrl: "/stock%20images/vacation-home-design-mountains.jpg" },
-  { slug: "whistler-family-home-repaint", title: "Whistler family home — full repaint", location: "Whistler", serviceTags: ["Interior"], coverUrl: "/stock%20images/6ModernMountainHomeStudioMcGee.jpg" },
-  { slug: "squamish-contemporary-exterior", title: "Squamish contemporary — cedar + trim", location: "Squamish", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/stock%20images/contemporary-home-exterior-colorful-sunset-600nw-2116568516.webp" },
-  { slug: "whistler-chalet-kitchen", title: "Whistler chalet — kitchen cabinets", location: "Whistler", serviceTags: ["Cabinet refinishing"], coverUrl: "/stock%20images/tinted-coty2024-kitchen-1024x690.jpg" },
-  { slug: "pemberton-deck-staining", title: "Pemberton property — deck and fencing", location: "Pemberton", serviceTags: ["Wood restoration"], coverUrl: "/stock%20images/2beb0596b7d27d9ce6d5fac9d571f6bb--wood-stain-colors-deck-colors.jpg" },
+  { slug: "whistler-chalet-exterior", title: "Kadenwood chalet — full exterior", location: "Whistler", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/Stock%20Images/mountaincottage-1-1080x675-1.jpg" },
+  { slug: "pemberton-farmhouse-interior", title: "Pemberton farmhouse interior", location: "Pemberton", serviceTags: ["Interior"], coverUrl: "/Stock%20Images/pexels-terry-magallanes-2635038.jpg" },
+  { slug: "squamish-modern-cabinets", title: "Squamish modern — kitchen cabinets", location: "Squamish", serviceTags: ["Cabinet refinishing"], coverUrl: "/Stock%20Images/pexels-mark-2724749.jpg" },
+  { slug: "whistler-log-home-restoration", title: "Whistler log home — full restoration", location: "Whistler", serviceTags: ["Wood restoration"], coverUrl: "/Stock%20Images/Mountain-House-Style.webp" },
+  { slug: "pemberton-farmhouse-exterior", title: "Pemberton farmhouse — repaint", location: "Pemberton", serviceTags: ["Exterior"], coverUrl: "/Stock%20Images/vacation-home-design-mountains.jpg" },
+  { slug: "whistler-family-home-repaint", title: "Whistler family home — full repaint", location: "Whistler", serviceTags: ["Interior"], coverUrl: "/Stock%20Images/6ModernMountainHomeStudioMcGee.jpg" },
+  { slug: "squamish-contemporary-exterior", title: "Squamish contemporary — cedar + trim", location: "Squamish", serviceTags: ["Exterior", "Wood restoration"], coverUrl: "/Stock%20Images/contemporary-home-exterior-colorful-sunset-600nw-2116568516.webp" },
+  { slug: "whistler-chalet-kitchen", title: "Whistler chalet — kitchen cabinets", location: "Whistler", serviceTags: ["Cabinet refinishing"], coverUrl: "/Stock%20Images/tinted-coty2024-kitchen-1024x690.jpg" },
+  { slug: "pemberton-deck-staining", title: "Pemberton property — deck and fencing", location: "Pemberton", serviceTags: ["Wood restoration"], coverUrl: "/Stock%20Images/2beb0596b7d27d9ce6d5fac9d571f6bb--wood-stain-colors-deck-colors.jpg" },
 ];
 
 export default function WorkPage() {
