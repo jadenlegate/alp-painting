@@ -105,7 +105,7 @@ export default function ProcessPage() {
       {/* Hero */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
-          <div className="max-w-2xl">
+          <div className="max-w-3xl mx-auto">
             <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Our process</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               From first call to final walkthrough — here&rsquo;s exactly what to expect.
