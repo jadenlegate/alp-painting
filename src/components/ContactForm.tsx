@@ -17,7 +17,7 @@ const SERVICES = [
 const LOCATIONS = ["Whistler", "Pemberton", "Squamish", "Other"];
 
 type Status = "idle" | "submitting" | "success" | "error";
-type Errors = Partial<Record<"name" | "email" | "phone" | "location" | "project", string>>;
+type Errors = Partial<Record<"firstName" | "lastName" | "email" | "phone" | "location" | "project", string>>;
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -25,14 +25,16 @@ export function ContactForm() {
   const [errors, setErrors] = useState<Errors>({});
 
   const validate = (payload: {
-    name: string;
+    firstName: string;
+    lastName: string;
     email: string;
     phone: string;
     location: string;
     project: string;
   }): Errors => {
     const e: Errors = {};
-    if (!payload.name.trim()) e.name = "Please tell us your name.";
+    if (!payload.firstName.trim()) e.firstName = "Please tell us your first name.";
+    if (!payload.lastName.trim()) e.lastName = "Please tell us your last name.";
     if (!payload.email.trim()) e.email = "We need an email to get back to you.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email.trim()))
       e.email = "That doesn't look like a valid email.";
@@ -47,8 +49,12 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    const firstName = String(data.get("firstName") ?? "");
+    const lastName = String(data.get("lastName") ?? "");
     const payload = {
-      name: String(data.get("name") ?? ""),
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`.trim(),
       email: String(data.get("email") ?? ""),
       phone: String(data.get("phone") ?? ""),
       location: String(data.get("location") ?? ""),
@@ -128,9 +134,10 @@ export function ContactForm() {
       )}
 
       <div className="grid md:grid-cols-2 gap-5">
-        <Field label="Name" name="name" required error={errors.name} />
-        <Field label="Email" name="email" type="email" required error={errors.email} />
-        <Field label="Phone" name="phone" type="tel" required error={errors.phone} />
+        <Field label="First name" name="firstName" required error={errors.firstName} autoComplete="given-name" />
+        <Field label="Last name" name="lastName" required error={errors.lastName} autoComplete="family-name" />
+        <Field label="Email" name="email" type="email" required error={errors.email} autoComplete="email" />
+        <Field label="Phone" name="phone" type="tel" required error={errors.phone} autoComplete="tel" />
         <div>
           <Label required>Project location</Label>
           <select
@@ -265,12 +272,14 @@ function Field({
   type = "text",
   required = false,
   error,
+  autoComplete,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   error?: string;
+  autoComplete?: string;
 }) {
   return (
     <div>
@@ -278,6 +287,7 @@ function Field({
       <input
         type={type}
         name={name}
+        autoComplete={autoComplete}
         aria-invalid={!!error}
         className={`mt-1.5 w-full border rounded-sm bg-surface px-3 py-2.5 text-sm focus:outline-none ${
           error
