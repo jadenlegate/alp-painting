@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -10,6 +11,8 @@ type Props = {
   caption?: string;
   location?: string;
   aspectClass?: string;
+  /** Responsive size hint for the image optimizer (CSS media-query syntax). */
+  sizes?: string;
 };
 
 export function BeforeAfterSlider({
@@ -20,6 +23,7 @@ export function BeforeAfterSlider({
   caption,
   location,
   aspectClass = "aspect-[4/3]",
+  sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
@@ -72,22 +76,28 @@ export function BeforeAfterSlider({
           updateFromClientX(e.touches[0].clientX);
         }}
       >
-        {/* After (base layer — always full width) */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        {/* After (base layer — always full width). next/image handles
+            pre-downscaling via sharp (Lanczos) to avoid moiré on fine
+            detail like siding boards. */}
+        <Image
           src={afterUrl}
           alt={afterAlt}
+          fill
+          sizes={sizes}
           draggable={false}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          quality={85}
+          className="object-cover pointer-events-none"
         />
 
         {/* Before (same layout as after, clipped by clip-path — no layout shift) */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={beforeUrl}
           alt={beforeAlt}
+          fill
+          sizes={sizes}
           draggable={false}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          quality={85}
+          className="object-cover pointer-events-none"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         />
 

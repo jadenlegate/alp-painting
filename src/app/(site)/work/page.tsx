@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
@@ -64,14 +65,20 @@ const GALLERY_3_COLS = balanceColumns(GALLERY, 3);
 const GALLERY_2_COLS = balanceColumns(GALLERY, 2);
 
 function GalleryImg({ img }: { img: GalleryImage }) {
+  // Width/height are in "ratio units" — next/image uses them only to compute
+  // aspect ratio, so the intrinsic values don't need to be pixel-accurate.
+  const w = img.ratio >= 1 ? 1000 : Math.round(1000 / img.ratio);
+  const h = img.ratio >= 1 ? Math.round(1000 * img.ratio) : 1000;
   return (
     <div className="overflow-hidden rounded-sm bg-stone-light/40 border border-border">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={img.src}
         alt={img.alt}
+        width={w}
+        height={h}
         loading="lazy"
-        style={{ aspectRatio: `${1 / img.ratio}` }}
+        quality={85}
+        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         className="block w-full h-auto hover:scale-[1.02] transition-transform duration-500"
       />
     </div>
