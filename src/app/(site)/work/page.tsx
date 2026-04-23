@@ -31,13 +31,11 @@ const GALLERY: GalleryImage[] = [
   { src: "/stock-images/portfolio/black-garage-door-finished-whistler.jpg", alt: "Glossy black garage door, freshly painted, Whistler", ratio: PORTRAIT },
   { src: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg", alt: "Pine ceiling of a covered deck after staining, Whistler", ratio: PORTRAIT },
   { src: "/stock-images/portfolio/alpenglow-painter-exterior-prep-whistler.jpg", alt: "Alpenglow painter prepping exterior trim", ratio: PORTRAIT },
-  { src: "/stock-images/portfolio/cedar-siding-installation-whistler.jpg", alt: "Cedar siding installation and finish, Whistler", ratio: LAND_43 },
   { src: "/stock-images/portfolio/master-bedroom-detail-whistler.jpg", alt: "Master bedroom painted walls with wood accents, Whistler", ratio: LAND_32 },
   { src: "/stock-images/portfolio/alpenglow-painter-ladder-window-whistler.jpg", alt: "Alpenglow painter on a ladder painting window trim", ratio: PORTRAIT },
   { src: "/stock-images/portfolio/guest-bedroom-chalet-whistler.jpg", alt: "Guest bedroom in a Whistler chalet with blue walls", ratio: LAND_32 },
   { src: "/stock-images/portfolio/interior-painting-in-progress-whistler.jpg", alt: "Interior painting in progress with drop cloths, Whistler", ratio: LAND_43 },
   { src: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg", alt: "Dark-stained cedar chalet exterior, Whistler", ratio: LAND_43 },
-  { src: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg", alt: "Exterior repaint on a family home, Whistler", ratio: LAND_43 },
 ];
 
 // Pre-computed 3-column distribution: LPT-balanced so column heights
@@ -157,6 +155,24 @@ export default function WorkPage() {
               beforeAlt="Weathered garage door siding before repaint, Whistler"
               afterAlt="Freshly painted garage door siding, Whistler"
               caption="Garage door and surround — refinished to factory-clean."
+              location="Whistler"
+            />
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/cedar-siding-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/cedar-siding-installation-whistler.jpg"
+              beforeAlt="Deck and siding before cedar installation, Whistler"
+              afterAlt="Fresh cedar siding and trim installed, Whistler"
+              caption="Cedar siding — new install finished on site."
+              location="Whistler"
+            />
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/family-home-exterior-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/exterior-repaint-finished-whistler.jpg"
+              beforeAlt="Faded family home exterior before repaint, Whistler"
+              afterAlt="Family home after full exterior repaint, Whistler"
+              caption="Family home — full exterior repaint, crisp trim."
               location="Whistler"
             />
           </div>
