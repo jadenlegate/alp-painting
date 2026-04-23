@@ -10,32 +10,78 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work" },
 };
 
-type GalleryImage = { src: string; alt: string };
+// ratio = height / width (the image's rendered aspect, EXIF-aware).
+// Used so each image can set CSS `aspect-ratio: width / height` and render
+// at its native proportions with no cropping. Ratios are also used by the
+// column distribution below to balance column heights so the bottom of
+// the gallery lands close to flush across all three columns.
+type GalleryImage = { src: string; alt: string; ratio: number };
 
-// Flat portfolio gallery. Two before/after sliders are rendered in a
-// dedicated section; the rest is a CSS-columns masonry layout that
-// preserves each image's native aspect ratio (no cropping).
+const PORTRAIT = 4 / 3; // iPhone portrait, rendered height/width
+const LAND_43 = 3 / 4; // iPhone landscape
+const LAND_32 = 2 / 3; // DSLR 3:2 landscape
+
 const GALLERY: GalleryImage[] = [
-  { src: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg", alt: "Freshly painted interior with chandelier, Whistler" },
-  { src: "/stock-images/portfolio/cedar-fascia-finished-whistler.jpg", alt: "Freshly stained cedar fascia against blue sky, Whistler" },
-  { src: "/stock-images/portfolio/living-room-chalet-whistler.jpg", alt: "Whistler chalet living room with stone fireplace" },
-  { src: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg", alt: "Whistler chalet master bedroom after repaint" },
-  { src: "/stock-images/portfolio/cedar-soffit-finished-whistler.jpg", alt: "Finished cedar soffit with stain, Whistler" },
-  { src: "/stock-images/portfolio/cedar-ceiling-detail-whistler.jpg", alt: "Detail of freshly stained cedar ceiling, Whistler" },
-  { src: "/stock-images/portfolio/black-garage-door-finished-whistler.jpg", alt: "Glossy black garage door, freshly painted, Whistler" },
-  { src: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg", alt: "Stained cedar exterior with rail detail, Whistler" },
-  { src: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg", alt: "Pine ceiling of a covered deck after staining, Whistler" },
-  { src: "/stock-images/portfolio/alpenglow-painter-exterior-prep-whistler.jpg", alt: "Alpenglow painter prepping exterior trim" },
-  { src: "/stock-images/portfolio/cedar-siding-installation-whistler.jpg", alt: "Cedar siding installation and finish, Whistler" },
-  { src: "/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg", alt: "Cedar shake chalet exterior in Whistler" },
-  { src: "/stock-images/portfolio/master-bedroom-detail-whistler.jpg", alt: "Master bedroom painted walls with wood accents, Whistler" },
-  { src: "/stock-images/portfolio/alpenglow-painter-ladder-window-whistler.jpg", alt: "Alpenglow painter on a ladder painting window trim" },
-  { src: "/stock-images/portfolio/guest-bedroom-chalet-whistler.jpg", alt: "Guest bedroom in a Whistler chalet with blue walls" },
-  { src: "/stock-images/portfolio/interior-painting-in-progress-whistler.jpg", alt: "Interior painting in progress with drop cloths, Whistler" },
-  { src: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg", alt: "Dark-stained cedar chalet exterior, Whistler" },
-  { src: "/stock-images/portfolio/garage-door-prep-masking-whistler.jpg", alt: "Garage door masked off for prep, Whistler" },
-  { src: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg", alt: "Exterior repaint on a family home, Whistler" },
+  { src: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg", alt: "Freshly painted interior with chandelier, Whistler", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/cedar-fascia-finished-whistler.jpg", alt: "Freshly stained cedar fascia against blue sky, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/living-room-chalet-whistler.jpg", alt: "Whistler chalet living room with stone fireplace", ratio: LAND_32 },
+  { src: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg", alt: "Whistler chalet master bedroom after repaint", ratio: LAND_32 },
+  { src: "/stock-images/portfolio/cedar-soffit-finished-whistler.jpg", alt: "Finished cedar soffit with stain, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/cedar-ceiling-detail-whistler.jpg", alt: "Detail of freshly stained cedar ceiling, Whistler", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/black-garage-door-finished-whistler.jpg", alt: "Glossy black garage door, freshly painted, Whistler", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg", alt: "Stained cedar exterior with rail detail, Whistler", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg", alt: "Pine ceiling of a covered deck after staining, Whistler", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/alpenglow-painter-exterior-prep-whistler.jpg", alt: "Alpenglow painter prepping exterior trim", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/cedar-siding-installation-whistler.jpg", alt: "Cedar siding installation and finish, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg", alt: "Cedar shake chalet exterior in Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/master-bedroom-detail-whistler.jpg", alt: "Master bedroom painted walls with wood accents, Whistler", ratio: LAND_32 },
+  { src: "/stock-images/portfolio/alpenglow-painter-ladder-window-whistler.jpg", alt: "Alpenglow painter on a ladder painting window trim", ratio: PORTRAIT },
+  { src: "/stock-images/portfolio/guest-bedroom-chalet-whistler.jpg", alt: "Guest bedroom in a Whistler chalet with blue walls", ratio: LAND_32 },
+  { src: "/stock-images/portfolio/interior-painting-in-progress-whistler.jpg", alt: "Interior painting in progress with drop cloths, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg", alt: "Dark-stained cedar chalet exterior, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/garage-door-prep-masking-whistler.jpg", alt: "Garage door masked off for prep, Whistler", ratio: LAND_43 },
+  { src: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg", alt: "Exterior repaint on a family home, Whistler", ratio: LAND_43 },
 ];
+
+// Pre-computed 3-column distribution: LPT-balanced so column heights
+// (sum of aspect ratios per column) come out as close to equal as the
+// discrete item sizes allow. Done at build time so the rendered columns
+// are deterministic and SSR-friendly.
+function balanceColumns(items: GalleryImage[], cols: number): GalleryImage[][] {
+  const columns: { items: GalleryImage[]; height: number }[] = Array.from(
+    { length: cols },
+    () => ({ items: [], height: 0 }),
+  );
+  // Longest Processing Time first: largest aspect ratios placed first so
+  // the shorter tail items can fine-tune the final balance.
+  const sorted = [...items]
+    .map((item, idx) => ({ item, idx }))
+    .sort((a, b) => b.item.ratio - a.item.ratio || a.idx - b.idx);
+  for (const { item } of sorted) {
+    const target = columns.reduce((min, c) => (c.height < min.height ? c : min), columns[0]);
+    target.items.push(item);
+    target.height += item.ratio;
+  }
+  return columns.map((c) => c.items);
+}
+
+const GALLERY_3_COLS = balanceColumns(GALLERY, 3);
+const GALLERY_2_COLS = balanceColumns(GALLERY, 2);
+
+function GalleryImg({ img }: { img: GalleryImage }) {
+  return (
+    <div className="overflow-hidden rounded-sm bg-stone-light/40 border border-border">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={img.src}
+        alt={img.alt}
+        loading="lazy"
+        style={{ aspectRatio: `${1 / img.ratio}` }}
+        className="block w-full h-auto hover:scale-[1.02] transition-transform duration-500"
+      />
+    </div>
+  );
+}
 
 export default function WorkPage() {
   return (
@@ -98,19 +144,25 @@ export default function WorkPage() {
               A broader look.
             </h2>
           </div>
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-5 [column-fill:_balance]">
-            {GALLERY.map((img) => (
-              <div
-                key={img.src}
-                className="mb-4 md:mb-5 break-inside-avoid overflow-hidden rounded-sm bg-stone-light/40 border border-border"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="block w-full h-auto hover:scale-[1.02] transition-transform duration-500"
-                />
+          {/* Mobile: single stacked column (bottom is trivially flush) */}
+          <div className="sm:hidden flex flex-col gap-4">
+            {GALLERY.map((img) => <GalleryImg key={img.src} img={img} />)}
+          </div>
+
+          {/* Tablet: 2-column LPT-balanced columns */}
+          <div className="hidden sm:grid lg:hidden grid-cols-2 gap-4 md:gap-5">
+            {GALLERY_2_COLS.map((col, i) => (
+              <div key={i} className="flex flex-col gap-4 md:gap-5">
+                {col.map((img) => <GalleryImg key={img.src} img={img} />)}
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: 3-column LPT-balanced columns */}
+          <div className="hidden lg:grid grid-cols-3 gap-5">
+            {GALLERY_3_COLS.map((col, i) => (
+              <div key={i} className="flex flex-col gap-5">
+                {col.map((img) => <GalleryImg key={img.src} img={img} />)}
               </div>
             ))}
           </div>

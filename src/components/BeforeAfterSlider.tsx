@@ -72,7 +72,7 @@ export function BeforeAfterSlider({
           updateFromClientX(e.touches[0].clientX);
         }}
       >
-        {/* After (base layer) */}
+        {/* After (base layer — always full width) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={afterUrl}
@@ -81,23 +81,15 @@ export function BeforeAfterSlider({
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         />
 
-        {/* Before (clipped by slider) */}
-        <div
-          className="absolute inset-0 overflow-hidden pointer-events-none"
-          style={{ width: `${position}%` }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={beforeUrl}
-            alt={beforeAlt}
-            draggable={false}
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{
-              width: containerRef.current?.getBoundingClientRect().width ?? "100%",
-              maxWidth: "none",
-            }}
-          />
-        </div>
+        {/* Before (same layout as after, clipped by clip-path — no layout shift) */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={beforeUrl}
+          alt={beforeAlt}
+          draggable={false}
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        />
 
         {/* Corner labels */}
         <div className="absolute top-3 left-3 bg-navy/90 text-background text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-sm font-medium pointer-events-none">
