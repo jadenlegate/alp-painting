@@ -215,6 +215,9 @@ export default function ProcessPage() {
             <ShieldCheck size={16} className="text-navy mt-0.5 flex-shrink-0" />
             <span>Warranty covers peeling, flaking, and premature finish failure under normal use. Does not cover damage from impact, flooding, or structural movement.</span>
           </div>
+          <div className="mt-8">
+            <Button href="/warranty" variant="secondary">See full warranty details</Button>
+          </div>
         </Container>
       </section>
 

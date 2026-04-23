@@ -334,23 +334,6 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Service area */}
-      <Section className="bg-surface">
-        <Container>
-          <FadeIn>
-            <div className="max-w-xl">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Service area</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                Based in <span className="text-alpine">Whistler</span>.
-              </h2>
-              <p className="mt-4 text-ink text-lg leading-relaxed">
-                <strong className="text-navy font-semibold">We&rsquo;re a Whistler operation.</strong> Most of our work is in the valley — occasionally we take on something further out when the project is the right fit.
-              </p>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
-
       <CtaBlock
         eyebrow="Next steps"
         heading="Ready to start?"
