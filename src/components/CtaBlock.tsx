@@ -8,6 +8,7 @@ type Props = {
   eyebrow?: string;
   primaryLabel?: string;
   primaryHref?: string;
+  primaryNewTab?: boolean;
   secondaryLabel?: string;
   secondaryHref?: string;
   secondaryNewTab?: boolean;
@@ -19,6 +20,7 @@ export function CtaBlock({
   eyebrow,
   primaryLabel = "Get a Quote",
   primaryHref = "/contact",
+  primaryNewTab = false,
   secondaryLabel,
   secondaryHref,
   secondaryNewTab = false,
@@ -40,11 +42,12 @@ export function CtaBlock({
               </p>
             )}
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+          <div className="flex flex-col lg:flex-row gap-3 flex-shrink-0 w-full md:w-auto">
             <Button
               href={primaryHref}
               size="lg"
-              className="!bg-background !text-navy hover:!bg-surface"
+              target={primaryNewTab ? "_blank" : undefined}
+              className="!bg-background !text-navy hover:!bg-surface whitespace-nowrap justify-center"
             >
               {primaryLabel}
             </Button>
@@ -53,7 +56,7 @@ export function CtaBlock({
                 href={secondaryHref}
                 size="lg"
                 target={secondaryNewTab ? "_blank" : undefined}
-                className="border !border-background/30 !bg-transparent !text-background hover:!bg-background/10"
+                className="border !border-background/30 !bg-transparent !text-background hover:!bg-background/10 whitespace-nowrap justify-center"
               >
                 {secondaryLabel}
               </Button>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
-import { Check, DollarSign, Calendar, Users, MapPin } from "lucide-react";
+import { Check, DollarSign, Calendar, Users, MapPin, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Painter Jobs in Whistler — Careers at Alpenglow Painting",
@@ -79,25 +79,18 @@ export default function CareersPage() {
               We hire a small crew of serious painters each season. If you take pride in your work and want a company that treats you like an adult, keep reading.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#apply" size="lg" className="!bg-background !text-navy hover:!bg-surface">
+              <Button
+                href="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
+                size="lg"
+                target="_blank"
+                className="!bg-background !text-navy hover:!bg-surface"
+              >
                 Apply Now
               </Button>
               <Button href="#pay" variant="text" className="!text-background">
                 See pay rates ↓
               </Button>
             </div>
-            <p className="mt-5 text-sm text-background/80">
-              Prefer the full details up front?{" "}
-              <a
-                href="/job-description/alpenglow-painter-job-description-2026.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-background"
-              >
-                Read the detailed job description (PDF)
-              </a>
-              .
-            </p>
           </div>
         </Container>
       </section>
@@ -190,6 +183,36 @@ export default function CareersPage() {
         </Container>
       </section>
 
+      {/* Detailed job description callout */}
+      <section className="py-12 md:py-16">
+        <Container>
+          <div className="border border-navy/15 rounded-sm bg-surface p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+            <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-navy/5 flex items-center justify-center">
+              <FileText size={22} className="text-navy" />
+            </div>
+            <div className="flex-1">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">Full job description</div>
+              <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
+                Prefer the full details up front?
+              </h3>
+              <p className="mt-2 text-ink leading-relaxed">
+                Read the complete job description — duties, expectations, schedule, benefits, and growth path — before you apply.
+              </p>
+            </div>
+            <div className="md:flex-shrink-0">
+              <Button
+                href="/job-description/alpenglow-painter-job-description-2026.pdf"
+                target="_blank"
+                size="lg"
+                variant="secondary"
+              >
+                Read Detailed Job Description
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Hiring process */}
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
@@ -218,7 +241,8 @@ export default function CareersPage() {
           heading={<>Interested? Let&rsquo;s talk.</>}
           subline="Fill out the application form — takes about 5 minutes. We respond within 24 hours."
           primaryLabel="Apply Now"
-          primaryHref="https://forms.clickup.com/alpenglow-painter-application"
+          primaryHref="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
+          primaryNewTab
           secondaryLabel="Read Detailed Job Description"
           secondaryHref="/job-description/alpenglow-painter-job-description-2026.pdf"
           secondaryNewTab
