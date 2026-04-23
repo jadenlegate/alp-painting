@@ -4,9 +4,10 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "FAQ — Frequently Asked Questions",
+  title: "Painting FAQ — Whistler Painters Answer Your Questions",
   description:
-    "Answers to common questions about quoting, scheduling, products, warranties, and what it's like to work with Alpenglow Painting.",
+    "Answers to common questions about painting quotes, scheduling, products, warranties, and working with Alpenglow Painting in Whistler, Pemberton, and Squamish.",
+  alternates: { canonical: "/faq" },
 };
 
 const FAQ_SECTIONS = [
@@ -126,9 +127,25 @@ const FAQ_SECTIONS = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_SECTIONS.flatMap((section) =>
+    section.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  ),
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container size="prose">
           <div>

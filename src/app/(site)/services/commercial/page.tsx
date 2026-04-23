@@ -7,9 +7,26 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { Check, Building2, Users, Clock, CalendarCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Commercial, Strata & Hotel Painting in Whistler",
+  title: "Commercial, Strata & Hotel Painting — Whistler & Sea to Sky",
   description:
-    "Commercial painting for hotels, strata buildings, and property managers across Whistler and the Sea to Sky. Flexible scheduling, minimal disruption.",
+    "Commercial painting contractors for hotels, strata buildings, and property managers across Whistler, Pemberton, and Squamish. Flexible scheduling, $5M liability insurance, minimal disruption.",
+  alternates: { canonical: "/services/commercial" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Commercial, Strata & Hotel Painting",
+  serviceType: "Commercial Painting",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Commercial, strata, and hotel painting across Whistler and the Sea to Sky corridor. Phased scheduling, resident and guest coordination, and $5M commercial general liability insurance.",
+  url: "https://alpenglowpainting.ca/services/commercial",
 };
 
 const AUDIENCES = [
@@ -71,6 +88,10 @@ const FAQS = [
 export default function CommercialPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Commercial, Strata & Hotels"

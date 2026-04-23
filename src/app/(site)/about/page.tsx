@@ -4,9 +4,10 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "About Alpenglow Painting",
+  title: "About — Whistler Painting Company",
   description:
-    "Alpenglow Painting is a Whistler-based residential and commercial painting company. Owner-operated, locally owned, and focused on the experience — not just the paint.",
+    "Alpenglow Painting is a Whistler-based residential and commercial painting company serving the Sea to Sky corridor. Owner-operated, locally owned, and focused on the experience — not just the paint.",
+  alternates: { canonical: "/about" },
 };
 
 // About page — brief §7.5.

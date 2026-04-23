@@ -4,9 +4,10 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { CtaBlock } from "@/components/CtaBlock";
 
 export const metadata: Metadata = {
-  title: "Our Work",
+  title: "Our Work — Painting Projects in Whistler & Sea to Sky",
   description:
-    "Portfolio of painting and restoration projects across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, cabinets, and commercial.",
+    "Portfolio of painting and restoration projects across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, cabinet refinishing, and commercial work.",
+  alternates: { canonical: "/work" },
 };
 
 // /work — Portfolio gallery. Once Sanity is populated, this should fetch

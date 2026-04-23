@@ -10,6 +10,7 @@ type Props = {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  secondaryNewTab?: boolean;
 };
 
 export function CtaBlock({
@@ -20,6 +21,7 @@ export function CtaBlock({
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref,
+  secondaryNewTab = false,
 }: Props) {
   return (
     <section className="bg-navy">
@@ -50,6 +52,7 @@ export function CtaBlock({
               <Button
                 href={secondaryHref}
                 size="lg"
+                target={secondaryNewTab ? "_blank" : undefined}
                 className="border !border-background/30 !bg-transparent !text-background hover:!bg-background/10"
               >
                 {secondaryLabel}

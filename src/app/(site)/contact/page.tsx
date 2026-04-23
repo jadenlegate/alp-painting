@@ -5,9 +5,10 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Get a Quote",
+  title: "Contact — Get a Painting Quote in Whistler",
   description:
-    "Request a quote from Alpenglow Painting. Most quotes delivered the day of the site visit for projects across Whistler, Pemberton, and Squamish.",
+    "Request a free painting quote from Alpenglow Painting. Most quotes delivered the day of the site visit for projects across Whistler, Pemberton, and Squamish.",
+  alternates: { canonical: "/contact" },
 };
 
 // Contact page — two columns on desktop: form on the left, direct-contact

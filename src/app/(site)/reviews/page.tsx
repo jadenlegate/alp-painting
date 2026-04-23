@@ -4,9 +4,10 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Reviews — What Clients Say",
+  title: "Reviews — Whistler Painters with 5.0 Google Rating",
   description:
-    "Reviews from homeowners and property managers across Whistler, Pemberton, and Squamish. See what clients say about working with Alpenglow Painting.",
+    "Reviews from homeowners and property managers across Whistler, Pemberton, and Squamish. 5.0 on Google — see what clients say about working with Alpenglow Painting.",
+  alternates: { canonical: "/reviews" },
 };
 
 // Reviews page. Placeholder reviews — replace with live Google reviews embed

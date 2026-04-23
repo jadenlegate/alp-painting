@@ -17,19 +17,19 @@ const SERVICES = [
     title: "Interior Painting",
     href: "/services/interior-painting",
     blurb: "Walls, trim, ceilings, doors. Clean lines and a process that respects your home.",
-    imageUrl: "/stock-images/stock-photo-bright-living-room-interior-trendy-blue-color-simple-modern-style.jpg",
+    imageUrl: "/stock-images/interior-painting-whistler.jpg",
   },
   {
     title: "Exterior Painting",
     href: "/services/exterior-painting",
     blurb: "Weather-tough finishes built for Whistler winters. Sikkens, Benjamin Moore, Sherwin-Williams.",
-    imageUrl: "/stock-images/new-contemporary-style-luxury-home-600nw-2400351577.webp",
+    imageUrl: "/stock-images/exterior-painting-whistler.webp",
   },
   {
     title: "Wood Restoration & Staining",
     href: "/services/wood-restoration",
     blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
-    imageUrl: "/stock-images/wood-beams-13-111517455.jpg",
+    imageUrl: "/stock-images/wood-restoration-staining-whistler.jpg",
   },
   {
     title: "Cabinet Refinishing",
@@ -41,13 +41,13 @@ const SERVICES = [
     title: "Light Carpentry & Repair",
     href: "/services/light-carpentry",
     blurb: "Rot, trim, and fascia repair coordinated with your paint project — one team, one point of contact.",
-    imageUrl: "/stock-images/CornCobBlastingSideHouse.0063-67b24c93.webp",
+    imageUrl: "/stock-images/light-carpentry-repair-whistler.jpg",
   },
   {
     title: "Commercial, Strata & Hotels",
     href: "/services/commercial",
     blurb: "Flexible scheduling around operations and residents. Clear communication, no drama.",
-    imageUrl: "/stock-images/karpiel-steindel-architektura-bachleda-club-residence-rchitonic-pu-bachleda-hotel-022-04-arcit18.jpg",
+    imageUrl: "/stock-images/commercial-strata-hotel-painting-whistler.jpg",
   },
 ];
 

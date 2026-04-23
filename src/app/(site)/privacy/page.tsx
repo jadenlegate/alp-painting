@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Alpenglow Painting Inc.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {

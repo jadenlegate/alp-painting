@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
-  title: "Blog — Painting Tips and Advice",
+  title: "Painting Blog — Whistler Home Maintenance Advice",
   description:
-    "Practical advice on painting, wood restoration, and home maintenance for Sea to Sky homeowners.",
+    "Practical advice on painting, wood restoration, and home maintenance written for Whistler, Pemberton, and Squamish homeowners.",
+  alternates: { canonical: "/blog" },
 };
 
 // Blog index. Once Sanity is populated, replace POSTS with a GROQ fetch.

@@ -3,9 +3,10 @@ import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
 
 export const metadata: Metadata = {
-  title: "Giving Back — Community and Environment",
+  title: "Giving Back — Whistler Community & Environment",
   description:
-    "Alpenglow Painting donates 1% of annual profits to local environmental and community organizations in the Sea to Sky.",
+    "Alpenglow Painting donates 1% of annual profits to local environmental and community organizations across Whistler and the Sea to Sky.",
+  alternates: { canonical: "/giving-back" },
 };
 
 export default function GivingBackPage() {

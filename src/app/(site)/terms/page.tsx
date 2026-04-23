@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of service for Alpenglow Painting Inc.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

@@ -8,9 +8,26 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Interior Painting in Whistler",
+  title: "Interior Painters — Whistler, Pemberton & Squamish",
   description:
-    "Interior painting across Whistler, Pemberton, and Squamish. Walls, trim, ceilings, doors. Clean crews, up to 10-year warranty.",
+    "Professional interior painters serving Whistler, Pemberton, and Squamish. Walls, trim, ceilings, and doors with clean crews, premium Benjamin Moore and Sherwin-Williams finishes, and up to a 10-year warranty.",
+  alternates: { canonical: "/services/interior-painting" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Interior Painting",
+  serviceType: "Interior Painting",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and up to a 10-year warranty.",
+  url: "https://alpenglowpainting.ca/services/interior-painting",
 };
 
 // Interior Painting service page — matches brief §7.2 template:
@@ -106,6 +123,10 @@ const FAQS = [
 export default function InteriorPaintingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Interior Painting"

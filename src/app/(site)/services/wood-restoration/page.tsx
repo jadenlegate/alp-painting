@@ -8,9 +8,26 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wood Restoration & Staining in Whistler",
+  title: "Wood Restoration & Staining — Whistler, Pemberton & Squamish",
   description:
-    "Cedar siding, decks, timber frames, fences. Wood restoration and staining across Whistler, Pemberton, and Squamish. Sansin, Sikkens, Messmer's.",
+    "Cedar siding, decks, timber-frame beams, and fences. Wood restoration and staining across Whistler, Pemberton, and Squamish using Sansin, Sikkens, and Messmer's penetrating finishes.",
+  alternates: { canonical: "/services/wood-restoration" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Wood Restoration & Staining",
+  serviceType: "Wood Restoration and Staining",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Wood restoration and staining for cedar siding, decks, timber-frame beams, and fences across Whistler and the Sea to Sky. Premium penetrating stains specified for mountain exposure.",
+  url: "https://alpenglowpainting.ca/services/wood-restoration",
 };
 
 const INCLUDED = [
@@ -93,6 +110,10 @@ const FAQS = [
 export default function WoodRestorationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Wood Restoration & Staining"

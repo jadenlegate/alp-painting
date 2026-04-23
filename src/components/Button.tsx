@@ -17,6 +17,7 @@ type Props = {
   type?: "button" | "submit";
   className?: string;
   disabled?: boolean;
+  target?: "_blank" | "_self";
 };
 
 const variantClasses: Record<Variant, string> = {
@@ -42,6 +43,7 @@ export function Button({
   type = "button",
   className = "",
   disabled = false,
+  target,
 }: Props) {
   const base =
     "inline-flex items-center justify-center gap-2 font-medium tracking-wide transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
@@ -49,6 +51,13 @@ export function Button({
   const classes = `${base} ${radius} ${variant !== "text" ? sizeClasses[size] : ""} ${variantClasses[variant]} ${className}`;
 
   if (href) {
+    if (target === "_blank") {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}

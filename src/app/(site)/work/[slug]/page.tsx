@@ -135,9 +135,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = ALL_PROJECTS.find((p) => p.slug === slug);
   if (!project) return { title: "Project Not Found" };
+  const description = project.description ?? `${project.title} by Alpenglow Painting in ${project.location}.`;
   return {
     title: `${project.title} — Portfolio`,
-    description: project.description ?? `${project.title} by Alpenglow Painting in ${project.location}.`,
+    description,
+    alternates: { canonical: `/work/${project.slug}` },
+    openGraph: {
+      title: project.title,
+      description,
+      url: `/work/${project.slug}`,
+      images: project.coverUrl ? [project.coverUrl] : undefined,
+    },
   };
 }
 

@@ -188,6 +188,21 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      images: post.coverUrl ? [post.coverUrl] : undefined,
+      publishedTime: post.publishedAt,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.coverUrl ? [post.coverUrl] : undefined,
+    },
   };
 }
 
@@ -236,8 +251,28 @@ export default async function BlogPostPage({
     });
   };
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    image: post.coverUrl,
+    url: `https://alpenglowpainting.ca/blog/${post.slug}`,
+    mainEntityOfPage: `https://alpenglowpainting.ca/blog/${post.slug}`,
+    author: { "@type": "Organization", name: "Alpenglow Painting" },
+    publisher: { "@type": "Organization", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+    articleSection: post.category,
+    inLanguage: "en-CA",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Hero */}
       {post.coverUrl && (
         <div className="relative h-[40vh] md:h-[50vh] min-h-[280px] overflow-hidden">

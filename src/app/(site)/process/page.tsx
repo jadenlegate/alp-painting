@@ -9,9 +9,10 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Process",
+  title: "Our Process — How We Paint Your Whistler Home",
   description:
-    "From first call to final walkthrough — here's exactly what working with Alpenglow Painting looks like, step by step.",
+    "From first call to final walkthrough — the exact process Alpenglow Painting follows on every Whistler, Pemberton, and Squamish project.",
+  alternates: { canonical: "/process" },
 };
 
 // Process page — editorial walkthrough per brief §7.4.

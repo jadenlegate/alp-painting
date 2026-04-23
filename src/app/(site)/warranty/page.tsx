@@ -4,9 +4,10 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { ShieldCheck, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Warranty & Quality Guarantee",
+  title: "Painting Warranty — Up to 10 Years in Writing",
   description:
-    "Our written quality guarantee — coverage tiers, what factors affect them, and the conditions that keep them valid.",
+    "Alpenglow Painting's written warranty — 3-year standard, up to 10 years on qualifying projects across Whistler, Pemberton, and Squamish. Coverage tiers, exclusions, and how to register a claim.",
+  alternates: { canonical: "/warranty" },
 };
 
 const WARRANTY_TIERS = [

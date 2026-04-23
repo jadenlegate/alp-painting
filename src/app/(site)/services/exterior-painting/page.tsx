@@ -8,9 +8,26 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Exterior Painting in Whistler",
+  title: "Exterior Painters — Whistler, Pemberton & Squamish",
   description:
-    "Exterior painting across Whistler, Pemberton, and Squamish. Weather-tough finishes built for mountain climates. Up to 10-year warranty.",
+    "Exterior painting contractors serving Whistler, Pemberton, and Squamish. Weather-tough finishes built for Sea to Sky climates — Sikkens, Benjamin Moore Aura, and Sherwin-Williams Duration. Up to a 10-year warranty.",
+  alternates: { canonical: "/services/exterior-painting" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Exterior Painting",
+  serviceType: "Exterior Painting",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Exterior painting for homes and commercial buildings in Whistler and the Sea to Sky. Weather-tough finishes for mountain climates with premium Sikkens, Benjamin Moore, and Sherwin-Williams products.",
+  url: "https://alpenglowpainting.ca/services/exterior-painting",
 };
 
 const INCLUDED = [
@@ -93,6 +110,10 @@ const FAQS = [
 export default function ExteriorPaintingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Exterior Painting"

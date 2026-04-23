@@ -5,9 +5,10 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { Check, DollarSign, Calendar, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Careers — Join Our Team",
+  title: "Painter Jobs in Whistler — Careers at Alpenglow Painting",
   description:
-    "Alpenglow Painting is hiring painters for the Whistler season. Competitive pay, 4-day weeks, performance bonuses, and life in one of the best places in Canada.",
+    "Alpenglow Painting is hiring painters in Whistler and the Sea to Sky. Competitive pay ($25–40+/hr), 4-day weeks, performance bonuses, and a crew that shows up.",
+  alternates: { canonical: "/careers" },
 };
 
 // Careers page — brief §7.6. Currently #2 trafficked page on the site.
@@ -85,6 +86,18 @@ export default function CareersPage() {
                 See pay rates ↓
               </Button>
             </div>
+            <p className="mt-5 text-sm text-background/80">
+              Prefer the full details up front?{" "}
+              <a
+                href="/job-description/alpenglow-painter-job-description-2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-background"
+              >
+                Read the detailed job description (PDF)
+              </a>
+              .
+            </p>
           </div>
         </Container>
       </section>
@@ -206,6 +219,9 @@ export default function CareersPage() {
           subline="Fill out the application form — takes about 5 minutes. We respond within 24 hours."
           primaryLabel="Apply Now"
           primaryHref="https://forms.clickup.com/alpenglow-painter-application"
+          secondaryLabel="Read Detailed Job Description"
+          secondaryHref="/job-description/alpenglow-painter-job-description-2026.pdf"
+          secondaryNewTab
         />
       </div>
     </>

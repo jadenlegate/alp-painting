@@ -78,9 +78,17 @@ export async function generateMetadata({
   const { location } = await params;
   const loc = LOCATIONS.find((l) => l.slug === location);
   if (!loc) return { title: "Location Not Found" };
+  const description = `Alpenglow Painting serves ${loc.name} and the ${loc.region}. Interior, exterior, wood restoration, cabinet refinishing, and commercial painting. Owner-operated, locally based, with up to a 10-year warranty.`;
   return {
-    title: `${loc.headline}`,
-    description: `Alpenglow Painting serves ${loc.name} and the ${loc.region}. Exterior, interior, wood restoration, and cabinet refinishing. Owner-operated, locally based.`,
+    title: `Painters in ${loc.name}, BC — Alpenglow Painting`,
+    description,
+    alternates: { canonical: `/painters/${loc.slug}` },
+    openGraph: {
+      title: `Painters in ${loc.name}, BC`,
+      description,
+      url: `/painters/${loc.slug}`,
+      images: loc.imageUrl ? [loc.imageUrl] : undefined,
+    },
   };
 }
 
@@ -93,8 +101,23 @@ export default async function LocationPage({
   const loc = LOCATIONS.find((l) => l.slug === location);
   if (!loc) notFound();
 
+  const locationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Painting Services in ${loc.name}`,
+    serviceType: "Painting Contractor",
+    provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+    areaServed: { "@type": "City", name: loc.name, containedInPlace: { "@type": "AdministrativeArea", name: loc.region } },
+    description: loc.intro,
+    url: `https://alpenglowpainting.ca/painters/${loc.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 -z-10">

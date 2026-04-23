@@ -8,9 +8,26 @@ import { BulletList } from "@/components/BulletList";
 import { AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Light Carpentry & Repair in Whistler",
+  title: "Light Carpentry & Repair — Whistler, Pemberton & Squamish",
   description:
-    "Rot repair, trim replacement, fascia, soffits, and exterior carpentry repairs handled as part of your painting project — so the work is coordinated and finished properly.",
+    "Rot repair, trim replacement, fascia, soffits, and exterior carpentry repairs across Whistler, Pemberton, and Squamish — coordinated with your painting project so it's finished properly.",
+  alternates: { canonical: "/services/light-carpentry" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Light Carpentry & Repair",
+  serviceType: "Light Carpentry",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Exterior carpentry repair for Sea to Sky homes: rotted siding, fascia, soffits, trim, deck boards, and weatherproofing — coordinated with your painting project.",
+  url: "https://alpenglowpainting.ca/services/light-carpentry",
 };
 
 const SCOPES = [
@@ -74,6 +91,10 @@ const FAQS = [
 export default function LightCarpentryPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Light Carpentry & Repair"

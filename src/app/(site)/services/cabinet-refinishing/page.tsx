@@ -8,9 +8,26 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cabinet Refinishing in Whistler",
+  title: "Cabinet Refinishing — Whistler, Pemberton & Squamish",
   description:
-    "Kitchen and bathroom cabinet refinishing across Whistler, Pemberton, and Squamish. Factory-grade spray finish without replacing your boxes.",
+    "Kitchen and bathroom cabinet refinishing across Whistler, Pemberton, and Squamish. Factory-grade spray finish without replacing your boxes. Premium conversion varnishes and lacquers.",
+  alternates: { canonical: "/services/cabinet-refinishing" },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Cabinet Refinishing",
+  serviceType: "Cabinet Refinishing",
+  provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
+  areaServed: [
+    { "@type": "City", name: "Whistler" },
+    { "@type": "City", name: "Pemberton" },
+    { "@type": "City", name: "Squamish" },
+  ],
+  description:
+    "Cabinet refinishing across Whistler and the Sea to Sky. Spray-applied, factory-grade finishes for kitchen and bathroom cabinets without replacing the boxes.",
+  url: "https://alpenglowpainting.ca/services/cabinet-refinishing",
 };
 
 const INCLUDED = [
@@ -94,6 +111,10 @@ const FAQS = [
 export default function CabinetRefinishingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Hero
         eyebrow="Services"
         headline="Cabinet Refinishing"
