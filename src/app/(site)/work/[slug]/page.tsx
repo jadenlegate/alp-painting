@@ -269,8 +269,9 @@ export default async function ProjectPage({
       </section>
 
       <CtaBlock
-        heading="Like what you see?"
-        subline="We'd love to hear about your project."
+        eyebrow="Like this project?"
+        heading="Your place, next?"
+        subline="We'd love to hear about what you're thinking."
       />
     </>
   );

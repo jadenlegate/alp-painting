@@ -352,6 +352,7 @@ export default function HomePage() {
       </Section>
 
       <CtaBlock
+        eyebrow="Next steps"
         heading="Ready to start?"
         subline="Most quotes are delivered the day of your site visit."
         primaryLabel="Get a Quote"

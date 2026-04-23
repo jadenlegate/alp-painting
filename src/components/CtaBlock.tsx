@@ -8,6 +8,8 @@ type Props = {
   eyebrow?: string;
   primaryLabel?: string;
   primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 };
 
 export function CtaBlock({
@@ -16,6 +18,8 @@ export function CtaBlock({
   eyebrow,
   primaryLabel = "Get a Quote",
   primaryHref = "/contact",
+  secondaryLabel,
+  secondaryHref,
 }: Props) {
   return (
     <section className="bg-navy">
@@ -34,7 +38,7 @@ export function CtaBlock({
               </p>
             )}
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <Button
               href={primaryHref}
               size="lg"
@@ -42,6 +46,15 @@ export function CtaBlock({
             >
               {primaryLabel}
             </Button>
+            {secondaryLabel && secondaryHref && (
+              <Button
+                href={secondaryHref}
+                size="lg"
+                className="border !border-background/30 !bg-transparent !text-background hover:!bg-background/10"
+              >
+                {secondaryLabel}
+              </Button>
+            )}
           </div>
         </div>
       </Container>

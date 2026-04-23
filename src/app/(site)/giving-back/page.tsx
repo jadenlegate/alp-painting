@@ -42,6 +42,7 @@ export default function GivingBackPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Work together"
         heading="Want to work with a company that gives back?"
         subline="Get a quote — we're proud of the work and the community it supports."
         primaryLabel="Get a Quote"

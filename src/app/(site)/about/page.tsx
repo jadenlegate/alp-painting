@@ -183,9 +183,12 @@ export default function AboutPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Work with us"
         heading="Want to work with us?"
         subline="Get a quote — or check out our careers page if you're a painter looking for a good crew."
         primaryLabel="Get a Quote"
+        secondaryLabel="Careers"
+        secondaryHref="/careers"
       />
     </>
   );

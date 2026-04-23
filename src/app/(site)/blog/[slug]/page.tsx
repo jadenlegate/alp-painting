@@ -285,6 +285,7 @@ export default async function BlogPostPage({
       </section>
 
       <CtaBlock
+        eyebrow="Get in touch"
         heading="Ready to get started?"
         subline="Most quotes are delivered the day of your site visit. The site visit is free."
         primaryLabel="Get a Quote"

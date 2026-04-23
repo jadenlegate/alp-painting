@@ -159,8 +159,9 @@ export default function FAQPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Still curious"
         heading="Still have questions?"
-        subline="Call us at (604) 938-4037 or fill out the contact form. We respond same day."
+        subline="Fill out the contact form and we'll get back to you within 24 hours on weekdays."
         primaryLabel="Get in Touch"
       />
     </>

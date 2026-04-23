@@ -198,6 +198,7 @@ export default function CabinetRefinishingPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Get in touch"
         heading="Want to see what your kitchen could look like?"
         subline="We'll take a look at the cabinets on-site and give you an honest assessment — and a quote the day of the visit."
       />

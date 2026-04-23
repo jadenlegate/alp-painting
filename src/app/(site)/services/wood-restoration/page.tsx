@@ -197,6 +197,7 @@ export default function WoodRestorationPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Wood done right"
         heading="Time to restore the wood?"
         subline="We'll assess the condition on-site and recommend what actually needs to be done — not just what's billable."
       />

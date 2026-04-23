@@ -200,6 +200,7 @@ export default function ExteriorPaintingPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Get in touch"
         heading="Ready to repaint the exterior?"
         subline="Tell us about the project — we'll come take a look and quote it, usually the day of the visit."
       />

@@ -184,6 +184,7 @@ export default async function LocationPage({
       </section>
 
       <CtaBlock
+        eyebrow="Local quotes"
         heading={`Ready to get started in ${loc.name}?`}
         subline="The site visit is free. Most quotes are delivered the day of your site visit."
         primaryLabel="Get a Quote"

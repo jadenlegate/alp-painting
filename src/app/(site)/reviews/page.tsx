@@ -154,6 +154,7 @@ export default function ReviewsPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Join the list"
         heading="Ready to work with us?"
         subline="Most quotes are delivered the day of your site visit. The site visit is free."
         primaryLabel="Get a Quote"

@@ -165,6 +165,7 @@ export default function CommercialPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Commercial inquiry"
         heading="Let's talk about your building."
         subline="Send us a brief description of the scope and we'll set up a site visit. No pressure, no vague quotes over the phone."
         primaryLabel="Get in Touch"

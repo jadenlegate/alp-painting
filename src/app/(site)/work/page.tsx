@@ -54,6 +54,7 @@ export default function WorkPage() {
       </section>
 
       <CtaBlock
+        eyebrow="Start a project"
         heading="Like what you see?"
         subline="We'd love to hear about your project."
       />
