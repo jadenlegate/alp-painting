@@ -133,8 +133,6 @@ export function Footer() {
             <Link href="/terms" className="hover:text-navy">
               Terms
             </Link>
-            <span className="hidden md:inline text-border">|</span>
-            <span>Whistler Chamber · PCA Member</span>
           </div>
         </div>
       </Container>
