@@ -10,20 +10,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work" },
 };
 
-type GalleryImage = {
-  src: string;
-  alt: string;
-  span?: "wide" | "tall" | "normal";
-};
+type GalleryImage = { src: string; alt: string };
 
-// Flat portfolio gallery. Two before/after sliders are rendered in dedicated
-// spots; the rest is a masonry-style grid of single images.
+// Flat portfolio gallery. Two before/after sliders are rendered in a
+// dedicated section; the rest is a CSS-columns masonry layout that
+// preserves each image's native aspect ratio (no cropping).
 const GALLERY: GalleryImage[] = [
-  { src: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg", alt: "Freshly painted interior with chandelier, Whistler", span: "wide" },
+  { src: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg", alt: "Freshly painted interior with chandelier, Whistler" },
   { src: "/stock-images/portfolio/cedar-fascia-finished-whistler.jpg", alt: "Freshly stained cedar fascia against blue sky, Whistler" },
-  { src: "/stock-images/portfolio/cedar-soffit-finished-whistler.jpg", alt: "Finished cedar soffit with stain, Whistler" },
   { src: "/stock-images/portfolio/living-room-chalet-whistler.jpg", alt: "Whistler chalet living room with stone fireplace" },
-  { src: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg", alt: "Whistler chalet master bedroom after repaint", span: "tall" },
+  { src: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg", alt: "Whistler chalet master bedroom after repaint" },
+  { src: "/stock-images/portfolio/cedar-soffit-finished-whistler.jpg", alt: "Finished cedar soffit with stain, Whistler" },
   { src: "/stock-images/portfolio/cedar-ceiling-detail-whistler.jpg", alt: "Detail of freshly stained cedar ceiling, Whistler" },
   { src: "/stock-images/portfolio/black-garage-door-finished-whistler.jpg", alt: "Glossy black garage door, freshly painted, Whistler" },
   { src: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg", alt: "Stained cedar exterior with rail detail, Whistler" },
@@ -39,13 +36,6 @@ const GALLERY: GalleryImage[] = [
   { src: "/stock-images/portfolio/garage-door-prep-masking-whistler.jpg", alt: "Garage door masked off for prep, Whistler" },
   { src: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg", alt: "Exterior repaint on a family home, Whistler" },
 ];
-
-const spanClass = (span: GalleryImage["span"]) =>
-  span === "wide"
-    ? "md:col-span-2"
-    : span === "tall"
-      ? "md:row-span-2 aspect-[3/4]"
-      : "aspect-[4/3]";
 
 export default function WorkPage() {
   return (
@@ -76,8 +66,9 @@ export default function WorkPage() {
               The clearest way to judge our work is with your own eyes. Slide the handle left or right to compare.
             </p>
           </div>
-          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+          <div className="grid gap-8 md:gap-10 md:grid-cols-2 max-w-4xl mx-auto">
             <BeforeAfterSlider
+              aspectClass="aspect-[3/4]"
               beforeUrl="/stock-images/portfolio/cedar-ceiling-before-whistler.jpg"
               afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
               beforeAlt="Weathered cedar ceiling before restoration, Whistler"
@@ -86,8 +77,9 @@ export default function WorkPage() {
               location="Whistler"
             />
             <BeforeAfterSlider
-              beforeUrl="/stock-images/portfolio/chalet-bay-window-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/chalet-bay-window-after-whistler.jpg"
+              aspectClass="aspect-[3/4]"
+              beforeUrl="/stock-images/portfolio/chalet-bay-window-after-whistler.jpg"
+              afterUrl="/stock-images/portfolio/chalet-bay-window-before-whistler.jpg"
               beforeAlt="Weathered dark cedar chalet bay window before restoration, Whistler"
               afterAlt="Cedar chalet bay window after full exterior restoration, Whistler"
               caption="Chalet exterior — bay window and siding, fully restored."
@@ -106,18 +98,18 @@ export default function WorkPage() {
               A broader look.
             </h2>
           </div>
-          <div className="grid gap-4 md:gap-5 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-auto">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-5 [column-fill:_balance]">
             {GALLERY.map((img) => (
               <div
                 key={img.src}
-                className={`relative overflow-hidden rounded-sm bg-stone-light/40 border border-border ${spanClass(img.span)}`}
+                className="mb-4 md:mb-5 break-inside-avoid overflow-hidden rounded-sm bg-stone-light/40 border border-border"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500"
+                  className="block w-full h-auto hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             ))}

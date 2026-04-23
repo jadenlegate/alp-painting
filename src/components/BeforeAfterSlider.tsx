@@ -9,6 +9,7 @@ type Props = {
   afterAlt: string;
   caption?: string;
   location?: string;
+  aspectClass?: string;
 };
 
 export function BeforeAfterSlider({
@@ -18,6 +19,7 @@ export function BeforeAfterSlider({
   afterAlt,
   caption,
   location,
+  aspectClass = "aspect-[4/3]",
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
@@ -60,7 +62,7 @@ export function BeforeAfterSlider({
     <figure className="w-full">
       <div
         ref={containerRef}
-        className="relative w-full overflow-hidden rounded-sm border border-border bg-stone-light/40 select-none cursor-ew-resize aspect-[4/3]"
+        className={`relative w-full overflow-hidden rounded-sm border border-border bg-stone-light/40 select-none cursor-ew-resize ${aspectClass}`}
         onMouseDown={(e) => {
           setDragging(true);
           updateFromClientX(e.clientX);
