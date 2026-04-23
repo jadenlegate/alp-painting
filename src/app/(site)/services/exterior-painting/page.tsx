@@ -63,24 +63,24 @@ const PRODUCTS = ["Sikkens", "Benjamin Moore", "Sherwin-Williams", "Sansin", "Me
 const RELATED_PROJECTS: Project[] = [
   {
     slug: "whistler-chalet-exterior",
-    title: "Kadenwood chalet — full exterior",
+    title: "Whistler chalet — full exterior",
+    location: "Whistler",
+    serviceTags: ["Exterior", "Wood restoration"],
+    coverUrl: "/stock-images/portfolio/chalet-bay-window-after-whistler.jpg",
+  },
+  {
+    slug: "whistler-family-home-repaint",
+    title: "Family home — exterior repaint",
     location: "Whistler",
     serviceTags: ["Exterior"],
-    coverUrl: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg",
   },
   {
-    slug: "pemberton-farmhouse-exterior",
-    title: "Pemberton farmhouse — repaint",
-    location: "Pemberton",
-    serviceTags: ["Exterior"],
-    coverUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    slug: "squamish-contemporary-exterior",
-    title: "Squamish contemporary — cedar + trim",
-    location: "Squamish",
+    slug: "whistler-cedar-fascia",
+    title: "Cedar fascia and soffit restoration",
+    location: "Whistler",
     serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/cedar-fascia-finished-whistler.jpg",
   },
 ];
 

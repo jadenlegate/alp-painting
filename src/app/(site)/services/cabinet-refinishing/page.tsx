@@ -63,25 +63,25 @@ const PRODUCTS = ["Benjamin Moore", "Sherwin-Williams", "Minwax"];
 
 const RELATED_PROJECTS: Project[] = [
   {
-    slug: "squamish-modern-cabinets",
-    title: "Squamish modern — kitchen cabinets",
-    location: "Squamish",
-    serviceTags: ["Cabinet refinishing"],
-    coverUrl: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
     slug: "whistler-chalet-kitchen",
     title: "Whistler chalet — kitchen refresh",
     location: "Whistler",
     serviceTags: ["Cabinet refinishing"],
-    coverUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
-    slug: "pemberton-bathroom-vanity",
-    title: "Pemberton — bathroom vanity repaint",
-    location: "Pemberton",
-    serviceTags: ["Cabinet refinishing", "Interior"],
-    coverUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80",
+    slug: "whistler-chalet-living",
+    title: "Chalet living room — paint and trim",
+    location: "Whistler",
+    serviceTags: ["Interior"],
+    coverUrl: "/stock-images/portfolio/living-room-chalet-whistler.jpg",
+  },
+  {
+    slug: "whistler-master-suite",
+    title: "Master suite — finish carpentry refresh",
+    location: "Whistler",
+    serviceTags: ["Interior"],
+    coverUrl: "/stock-images/portfolio/master-bedroom-detail-whistler.jpg",
   },
 ];
 

@@ -54,24 +54,24 @@ const SERVICES = [
 const FEATURED_PROJECTS: Project[] = [
   {
     slug: "whistler-chalet-exterior",
-    title: "Kadenwood chalet — full exterior",
+    title: "Whistler chalet — exterior restoration",
     location: "Whistler",
     serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "/stock-images/old-mountain-house-m-serhat-sezgin-turkey-03.jpg",
+    coverUrl: "/stock-images/portfolio/chalet-bay-window-after-whistler.jpg",
   },
   {
-    slug: "pemberton-farmhouse-interior",
-    title: "Pemberton farmhouse interior",
-    location: "Pemberton",
+    slug: "whistler-chalet-interior",
+    title: "Chalet interior — full repaint",
+    location: "Whistler",
     serviceTags: ["Interior"],
-    coverUrl: "/stock-images/pexels-binyamin-mellish-106399.jpg",
+    coverUrl: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg",
   },
   {
-    slug: "squamish-modern-cabinets",
-    title: "Squamish modern — kitchen cabinets",
-    location: "Squamish",
-    serviceTags: ["Cabinet refinishing"],
-    coverUrl: "/stock-images/pexels-max-rahubovskiy-7031408.jpg",
+    slug: "whistler-cedar-deck-ceiling",
+    title: "Covered deck — cedar ceiling restoration",
+    location: "Whistler",
+    serviceTags: ["Wood restoration"],
+    coverUrl: "/stock-images/portfolio/cedar-ceiling-after-whistler.jpg",
   },
 ];
 

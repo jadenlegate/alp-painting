@@ -62,25 +62,25 @@ const PRODUCTS = ["Sansin", "Sikkens", "Messmer's", "Benjamin Moore"];
 
 const RELATED_PROJECTS: Project[] = [
   {
-    slug: "whistler-log-home-restoration",
-    title: "Whistler log home — full restoration",
+    slug: "whistler-cedar-ceiling",
+    title: "Covered deck — cedar ceiling restoration",
     location: "Whistler",
     serviceTags: ["Wood restoration"],
-    coverUrl: "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/cedar-ceiling-after-whistler.jpg",
   },
   {
-    slug: "pemberton-deck-staining",
-    title: "Pemberton property — deck and fencing",
-    location: "Pemberton",
+    slug: "whistler-pine-deck-ceiling",
+    title: "Pine deck ceiling — re-stained",
+    location: "Whistler",
     serviceTags: ["Wood restoration"],
-    coverUrl: "https://images.unsplash.com/photo-1416339684178-3a239570f315?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg",
   },
   {
-    slug: "whistler-cedar-siding",
-    title: "Kadenwood — cedar siding re-stain",
+    slug: "whistler-stained-cedar-exterior",
+    title: "Stained cedar exterior — full refresh",
     location: "Whistler",
     serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg",
   },
 ];
 

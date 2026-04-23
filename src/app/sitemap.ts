@@ -24,18 +24,6 @@ const STATIC_ROUTES = [
   "/services/commercial",
 ];
 
-const PROJECT_SLUGS = [
-  "whistler-chalet-exterior",
-  "pemberton-farmhouse-interior",
-  "squamish-modern-cabinets",
-  "whistler-log-home-restoration",
-  "pemberton-farmhouse-exterior",
-  "whistler-family-home-repaint",
-  "squamish-contemporary-exterior",
-  "whistler-chalet-kitchen",
-  "pemberton-deck-staining",
-];
-
 const BLOG_SLUGS = [
   "how-long-does-exterior-paint-last-whistler",
   "cedar-oil-vs-stain-which-is-right",
@@ -56,15 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: path === "" ? "weekly" : "monthly",
       priority: path === "" ? 1 : path.startsWith("/services/") ? 0.9 : 0.7,
-    });
-  }
-
-  for (const slug of PROJECT_SLUGS) {
-    entries.push({
-      url: `${BASE_URL}/work/${slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6,
     });
   }
 

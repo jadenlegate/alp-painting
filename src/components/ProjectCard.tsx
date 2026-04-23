@@ -16,7 +16,7 @@ export function ProjectCard({ project }: { project: Project }) {
       whileHover={{ y: -5 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
     >
-      <Link href={`/work/${project.slug}`} className="group block">
+      <Link href="/work" className="group block">
         <div className="aspect-[3/2] overflow-hidden rounded-sm bg-stone-light/40">
           {project.coverUrl ? (
             /* eslint-disable-next-line @next/next/no-img-element */

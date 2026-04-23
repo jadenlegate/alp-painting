@@ -72,28 +72,25 @@ const PRODUCTS = [
 
 const RELATED_PROJECTS: Project[] = [
   {
-    slug: "pemberton-farmhouse-interior",
-    title: "Pemberton farmhouse interior",
-    location: "Pemberton",
+    slug: "whistler-chalet-interior",
+    title: "Chalet interior — full repaint",
+    location: "Whistler",
     serviceTags: ["Interior"],
-    coverUrl:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg",
   },
   {
-    slug: "whistler-family-home-repaint",
-    title: "Whistler family home — full repaint",
+    slug: "whistler-master-bedroom-repaint",
+    title: "Master bedroom — walls and trim",
     location: "Whistler",
     serviceTags: ["Interior", "Trim"],
-    coverUrl:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg",
   },
   {
-    slug: "squamish-townhome-interior",
-    title: "Squamish townhome refresh",
-    location: "Squamish",
+    slug: "whistler-guest-bedroom",
+    title: "Guest bedroom repaint",
+    location: "Whistler",
     serviceTags: ["Interior"],
-    coverUrl:
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+    coverUrl: "/stock-images/portfolio/guest-bedroom-chalet-whistler.jpg",
   },
 ];
 
