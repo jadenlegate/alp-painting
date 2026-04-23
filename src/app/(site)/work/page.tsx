@@ -115,8 +115,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
               beforeAlt="Weathered cedar ceiling before restoration, Whistler"
               afterAlt="Cedar ceiling after cleaning and re-staining, Whistler"
-              caption="Covered deck cedar ceiling — cleaned, brightened, and re-stained."
-              location="Whistler"
+              caption="Old finish stripped, wood sanded smooth, and 4 coats of spar urethane applied."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[3/4]"
@@ -124,8 +123,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/chalet-bay-window-before-whistler.jpg"
               beforeAlt="Weathered dark cedar chalet bay window before restoration, Whistler"
               afterAlt="Cedar chalet bay window after full exterior restoration, Whistler"
-              caption="Chalet exterior — bay window and siding, fully restored."
-              location="Whistler"
+              caption="Old flaking stain chemically stripped instead of sanded off to keep roughsawn wood grain. 2 coats of premium oil-based stain applied."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[3/4]"
@@ -133,8 +131,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
               beforeAlt="Weathered cedar deck before restoration, Whistler"
               afterAlt="Freshly stained cedar deck and rail, Whistler"
-              caption="Mountain-view deck — cedar boards and rail, fully re-stained."
-              location="Whistler"
+              caption="Deck pressure washed, wood sanded to bare, semi-solid stain applied."
             />
           </div>
           {/* Landscape-oriented pairs */}
@@ -145,8 +142,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg"
               beforeAlt="Faded chalet exterior before full repaint, Whistler"
               afterAlt="Chalet exterior after full repaint, Whistler"
-              caption="Chalet exterior — full repaint with fresh accent trim."
-              location="Whistler"
+              caption="Pressure washed, flaking paint scraped and sanded off, 2 coats of premium solid stain applied."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[4/3]"
@@ -154,8 +150,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/garage-door-after-whistler.jpg"
               beforeAlt="Weathered garage door siding before repaint, Whistler"
               afterAlt="Freshly painted garage door siding, Whistler"
-              caption="Garage door and surround — refinished to factory-clean."
-              location="Whistler"
+              caption="Wood sanded to bare, semi-solid stain applied."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[4/3]"
@@ -163,8 +158,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/cedar-siding-installation-whistler.jpg"
               beforeAlt="Deck and siding before cedar installation, Whistler"
               afterAlt="Fresh cedar siding and trim installed, Whistler"
-              caption="Cedar siding — new install finished on site."
-              location="Whistler"
+              caption="Old finish removed, 3 coats of premium oil-based finish applied."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[4/3]"
@@ -172,8 +166,7 @@ export default function WorkPage() {
               afterUrl="/stock-images/portfolio/exterior-repaint-finished-whistler.jpg"
               beforeAlt="Faded family home exterior before repaint, Whistler"
               afterAlt="Family home after full exterior repaint, Whistler"
-              caption="Family home — full exterior repaint, crisp trim."
-              location="Whistler"
+              caption="Pressure washed, flaking paint scraped and sanded off, 2 coats of premium solid stain applied."
             />
           </div>
         </Container>
