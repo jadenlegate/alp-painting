@@ -186,25 +186,28 @@ export default function CareersPage() {
       {/* Detailed job description callout */}
       <section className="py-12 md:py-16">
         <Container>
-          <div className="border border-navy/15 rounded-sm bg-surface p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
-            <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-navy/5 flex items-center justify-center">
-              <FileText size={22} className="text-navy" />
+          <div className="border border-navy/15 rounded-sm bg-surface p-6 md:p-8 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
+            <div className="flex items-start gap-5 lg:gap-6 flex-1 min-w-0">
+              <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-navy/5 flex items-center justify-center">
+                <FileText size={22} className="text-navy" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">Full job description</div>
+                <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
+                  Prefer the full details up front?
+                </h3>
+                <p className="mt-2 text-ink leading-relaxed">
+                  Read the complete job description — duties, expectations, schedule, benefits, and growth path — before you apply.
+                </p>
+              </div>
             </div>
-            <div className="flex-1">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">Full job description</div>
-              <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
-                Prefer the full details up front?
-              </h3>
-              <p className="mt-2 text-ink leading-relaxed">
-                Read the complete job description — duties, expectations, schedule, benefits, and growth path — before you apply.
-              </p>
-            </div>
-            <div className="md:flex-shrink-0">
+            <div className="lg:flex-shrink-0">
               <Button
                 href="/job-description/alpenglow-painter-job-description-2026.pdf"
                 target="_blank"
                 size="lg"
                 variant="secondary"
+                className="w-full sm:w-auto justify-center whitespace-nowrap"
               >
                 Read Detailed Job Description
               </Button>
