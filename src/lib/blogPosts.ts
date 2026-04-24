@@ -999,6 +999,603 @@ We've been painting in the Sea to Sky long enough to have strong opinions about 
 If your exterior is showing early failure, a site visit lets us identify which stressor is driving it. [Get in touch](/contact) for a walkthrough. For context on how we prevent failure on new projects, [our post on why exterior paint fails early in the mountains](/blog/why-exterior-paint-fails-early-mountains) covers the prep side. Related: [how long exterior paint should actually last in Whistler](/blog/how-long-does-exterior-paint-last-whistler).`,
   },
   {
+    slug: "sikkens-benjamin-moore-sherwin-williams-whistler-exterior",
+    title: "Sikkens vs Benjamin Moore vs Sherwin-Williams for Whistler exteriors",
+    publishedAt: "2025-04-15",
+    excerpt:
+      "The three product lines we actually use on Sea to Sky exteriors, where each one wins, and where we'd pick another. A real comparison from a painter who specs all three.",
+    coverUrl: "/stock-images/portfolio/cedar-fascia-finished-whistler.jpg",
+    category: "Exterior",
+    content: `A homeowner comparing exterior paint in Whistler usually ends up looking at three manufacturers: Sikkens, Benjamin Moore, and Sherwin-Williams. All three make genuinely good products. The question isn't which is "best" — it's which is best for your specific wall.
+
+We spec all three on different jobs. Here's how we actually choose between them.
+
+## Sikkens — the cedar and timber specialist
+
+**Where it wins:** Rough-sawn cedar, timber-frame members, cedar shakes, fir beams. Anywhere we want a penetrating product that flexes with the wood and doesn't form a hard film.
+
+**Top product we use:** Cetol SRD Plus. Goes on like an oil, penetrates, leaves a low-sheen finish. Maintenance is a clean-and-recoat every 3–4 years — no stripping.
+
+**Where we don't reach for Sikkens:** Painted surfaces (they don't really compete in that category), smooth wood that a client wants to look sprayed or mirror-smooth, modern white/pastel finishes on cedar (the warm tones of Cetol shift colour perception).
+
+**What it costs:** Cetol SRD Plus is roughly $85–95 per gallon. Coverage on rough-sawn cedar is lower than on smooth — about 150–200 sqft per gallon instead of 300. Budget accordingly.
+
+## Benjamin Moore — our go-to for painted exteriors and trim
+
+**Where it wins:** Painted exteriors (Hardie, smooth cedar that's going white, stucco), trim work, doors. The Aura Exterior line has excellent UV resistance with their Color Lock formulation, and Advance is our default for cabinet and trim applications.
+
+**Top products we use:**
+
+- Aura Exterior (flat, low lustre, satin) — premium exterior painted surfaces, excellent UV.
+- Regal Select Exterior — tier down from Aura, solid choice for most residential exteriors where deep dark colours aren't a concern.
+- Arborcoat Solid — when a client wants a solid stain over cedar with paint-like colour consistency.
+- Advance Waterborne Alkyd — interior trim and exterior doors where we want a level, hard finish.
+
+**Where we don't reach for Benjamin Moore:** Rough-sawn cedar that a client wants to remain looking natural (Sikkens does this better). High-wear industrial applications (Sherwin has specific tiers for this).
+
+**What it costs:** Aura Exterior runs about $85–100 per gallon. Regal Select Exterior is $65–75.
+
+## Sherwin-Williams — the one with the widest tier depth
+
+**Where it wins:** Clients who want to match to a specific Sherwin fan (designer-specified colours), commercial and strata projects where Sherwin's contractor programs and documentation are cleaner, and jobs that need the Emerald Urethane line for its hardness.
+
+**Top products we use:**
+
+- Duration Exterior — comparable tier to BM Regal Select, excellent broad-use exterior.
+- Emerald Exterior — top-tier, with specific UV stabilizers.
+- Emerald Urethane Trim Enamel — the hardest interior trim finish we use, excellent for cabinet boxes.
+- SuperDeck Transparent Stain — decent mid-tier cedar product.
+
+**Where we don't reach for Sherwin-Williams:** Rough-sawn cedar restoration (Sikkens penetrates better). Some of their mid-tier products don't hold up as well at high elevation — we stick to Emerald or Duration, not the lower tiers.
+
+**What it costs:** Duration is $80–90 per gallon. Emerald is $95–110.
+
+## A sample spec: our decisions on a typical Whistler chalet
+
+To make the comparison concrete, here's how we'd split products on a 3,200 sqft Whistler chalet with rough-sawn cedar siding, painted Hardie trim, and a covered deck with timber posts:
+
+- **Rough-sawn cedar siding:** Sikkens Cetol SRD Plus, semi-transparent tint matched to existing.
+- **Timber posts and beams:** Sikkens Cetol SRD Plus, same tint as siding.
+- **Covered deck T&G ceiling:** Sikkens Cetol HLS Plus (higher film stain, better for surfaces that won't see direct rain).
+- **Painted Hardie trim and fascia:** Benjamin Moore Aura Exterior, colour matched to client's selection.
+- **Painted exterior doors:** Benjamin Moore Advance in the door colour.
+- **Metal railings or flashings:** Sherwin-Williams DTM Acrylic after a rust-inhibitive primer.
+
+Three brands on one project. Each picked for what it does best on that specific surface.
+
+## What we don't recommend
+
+**House-brand paints** (Home Depot, Rona). The retail tier products from the big-box stores use different formulations than the contractor-tier products from the same manufacturer. They're fine for a DIY small project. They don't hold up as long on a full exterior in the Sea to Sky.
+
+**Store-brand paints** (Behr, Olympic). Same issue. The premium tiers of these brands are mid-tier at best in the contractor paint world.
+
+**Deep discounts or warehouse specials.** If a contractor is specifying a paint they bought on clearance, the warranty on that paint may be void. Real contractor programs get dealer-direct shipping with full warranty support.
+
+## Picking without over-thinking
+
+Most homeowners don't need to understand all of this. The practical advice is:
+
+1. Ask your contractor which specific products they're specifying and why.
+2. Verify they're current manufacturer products (not discontinued or re-formulated).
+3. Check that they match the substrate (penetrating product on cedar, film product on Hardie).
+4. Look at the warranty on the product tier they're using.
+
+If your contractor can explain their product choice and it matches the above, you're in good hands regardless of which brand it is.
+
+## Where to go from here
+
+If you want the specific product recommendations for your home, [book a site visit](/contact). A walkthrough with the siding in front of us produces a tighter recommendation than a general article can. More on how we think about product selection in [our post on premium paint](/blog/premium-paint-worth-it). Related: [oil vs stain for cedar](/blog/cedar-oil-vs-stain-which-is-right).`,
+  },
+  {
+    slug: "solid-vs-semi-transparent-stain-cedar",
+    title: "Solid vs semi-transparent stain for cedar: when each one actually makes sense",
+    publishedAt: "2025-04-02",
+    excerpt:
+      "Solid stain gives you colour consistency and UV protection. Semi-transparent preserves wood grain and fails more gracefully. The right answer depends on what you want to see and what you want to maintain. Here's how we decide.",
+    coverUrl: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg",
+    category: "Wood restoration",
+    content: `Most cedar homes in the Sea to Sky eventually face the choice: stay with a semi-transparent stain that shows the grain, or step up to a solid stain that covers it. Both are legitimate. Both have trade-offs. The "right" answer depends on what the client wants to see and what maintenance they're willing to live with.
+
+Here's how we walk through the choice with homeowners.
+
+## What each one is doing
+
+**Semi-transparent stains** (Sikkens Cetol SRD Plus, Cabot Australian Timber Oil, Armstrong-Clark, Sansin DEC) let the wood grain show through. The pigment is suspended in an oil or low-film acrylic carrier that penetrates into the surface. UV protection comes from the pigment load, which is moderate.
+
+**Solid stains** (Benjamin Moore Arborcoat Solid, Sherwin-Williams SuperDeck Solid, Sikkens Rubbol Solid) cover the grain completely. They behave more like paint — they form a film on the surface and rely on pigment to block UV entirely. Colour consistency is nearly perfect.
+
+## The case for semi-transparent
+
+You'd pick semi-transparent when:
+
+- You want the cedar to still look like cedar. The grain, the knots, the character of the wood is the look you're after.
+- The cedar is new or in excellent condition. Heavily weathered cedar doesn't look great under semi-transparent — the surface damage shows through.
+- You're willing to recoat every 3–4 years with a clean-and-recoat process (no stripping).
+- You're on a covered or partly-covered elevation. Full south-facing exposure chews through semi-transparent faster.
+
+Semi-transparent fails gracefully. When it's time to recoat, you wash, brighten, and apply another coat. No scraping, no peeling, no major prep.
+
+## The case for solid
+
+You'd pick solid when:
+
+- You want colour consistency. Solid stains match across boards, across elevations, across different cedar grades.
+- Your cedar is older or shows significant weathering. Solid covers surface damage that semi-transparent would highlight.
+- You want longer intervals between maintenance — 5–8 years instead of 3–4.
+- You're shifting the home's colour direction. Going from natural cedar to a dark navy or deep brown is a solid-stain job.
+
+Solid fails less gracefully. When it eventually peels (and it will, in year 7 or 8), the prep to recoat is closer to a full paint prep — scraping, sanding, priming.
+
+## The hybrid some clients don't know exists
+
+There's a middle tier: **semi-solid stain** (Benjamin Moore Arborcoat Semi-Solid, Cabot Semi-Solid). It obscures the grain more than semi-transparent but less than full solid. You see texture but not clear grain. Good for cedar that's a bit too weathered for clean semi-transparent but the client doesn't want to commit to full solid.
+
+We don't spec semi-solid often but it's the right answer on maybe 1 in 15 projects.
+
+## What actually happens at maintenance time
+
+This is where the real cost difference shows up.
+
+**Semi-transparent maintenance cycle:** Year 4, we wash and brighten the cedar, let it dry, apply one coat of the same stain. One day of wash, one day of dry, one day of apply. Cost is roughly $2,000–$4,000 on a typical home. Finish looks fresh for another 3–4 years.
+
+**Solid maintenance cycle:** Year 7–8, we identify peeling areas, scrape and sand them, feather-sand the transitions, spot-prime bare wood, apply two coats over the full surface. Multiple days of prep, multiple days of application. Cost is roughly $6,000–$12,000 on the same home. Finish looks fresh for another 7–8 years.
+
+Over a 15-year window, the totals often come out similar. Semi-transparent has more frequent, lower-cost touches. Solid has less frequent, higher-cost reapplications.
+
+## The aesthetic question most homeowners don't verbalize
+
+Cedar with semi-transparent stain looks like cedar. Cedar with solid stain looks like painted wood. They are meaningfully different aesthetic directions.
+
+If you want a cabin or chalet look that emphasizes the wood, you're going semi-transparent (or in some cases, pure oil with no pigment). If you want a home that reads as designed architecture with cedar as a texture rather than a focal point, solid stain often fits better.
+
+We've done both on similar-sized homes across Whistler. Neither is wrong. It's about what you want the home to say.
+
+## When we'd recommend paint instead of either
+
+If a client wants a full colour change to white, or a very light colour generally, we often steer away from both stains and toward a proper painted finish (Benjamin Moore Aura Exterior, Sherwin-Williams Emerald). The solid stain light-colour products work but paint performs better on white and near-white exteriors.
+
+If a client wants a deep, saturated colour (dark navy, forest green, black), solid stain or Arborcoat Solid often makes more sense than paint.
+
+This is a conversation we have on the site visit, not in the abstract.
+
+## Recommendations by exposure
+
+Rough framework we use when talking through options:
+
+- **Fully covered elevations (deep porches, under roof overhangs):** Semi-transparent or oil. The substrate isn't taking much weather.
+- **North-facing elevations:** Semi-transparent works. Low UV, low fade.
+- **South or west-facing elevations with cedar you want to keep natural-looking:** Semi-transparent, expect 3-year maintenance.
+- **South or west-facing elevations where colour consistency matters:** Solid or paint.
+- **Old cedar that's been through multiple refinish cycles already:** Often solid is the right call — the wood isn't going to look clean under semi-transparent anymore.
+
+## Where to start
+
+If you're planning cedar refinish for your Sea to Sky home, [book a site visit](/contact). The specific recommendation depends on what we see on your walls. For more on the overall oil vs stain question, [our detailed walkthrough is here](/blog/cedar-oil-vs-stain-which-is-right). Our [wood restoration service page](/services/wood-restoration) covers the full scope.`,
+  },
+  {
+    slug: "oil-based-vs-water-based-wood-finishes-mountain",
+    title: "Oil-based vs water-based wood finishes in mountain climates",
+    publishedAt: "2025-03-18",
+    excerpt:
+      "The oil-vs-water question on wood finishes matters more in the Sea to Sky than in most of Canada. Here's how each performs in mountain conditions, where we still reach for oil, and where water-based has earned its place.",
+    coverUrl: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg",
+    category: "Wood restoration",
+    content: `For most of the last 40 years, oil-based stains were the default on cedar and fir exteriors in the Sea to Sky. They penetrate deep, flex well with freeze-thaw, and have a long track record in mountain conditions. Waterborne alternatives have closed the gap over the last decade and are now our first choice on many projects — but not all of them.
+
+Here's how we think about the oil vs water question on wood finishes in Whistler, Pemberton, and Squamish.
+
+## What "oil-based" actually means now
+
+Most of what was sold as "oil-based stain" 20 years ago was straight alkyd oil carried in mineral spirits. That formulation is increasingly restricted by VOC regulations. What's labelled "oil-based" today is often a lower-VOC alkyd or a modified oil — still oil-based in behaviour, but reformulated to meet regulations.
+
+Products still effectively oil-based that we use:
+
+- **Sikkens Cetol SRD Plus** (technically low-VOC oil-modified alkyd).
+- **Armstrong-Clark oil-based stains** (high-solids oil, excellent penetration).
+- **Cabot Australian Timber Oil** (alkyd-based, tinted oil).
+- **TWP 1500** (oil-based, popular on deck projects).
+
+## What water-based has become
+
+Modern waterborne wood finishes are not what they were 15 years ago. The polymer chemistry has caught up. Products worth specifying today include:
+
+- **Sansin ENS** (water-based alkyd emulsion, performs like an oil).
+- **Sikkens Cetol Filter 7 Plus (water-based version)** — decent for UV exposure, lower odour.
+- **Benjamin Moore Arborcoat (both semi-transparent and solid)** — waterborne, hybrid polymer tech.
+- **PPG ProLuxe RE/CF** — waterborne, specific application scenarios.
+
+## Where oil still wins in the mountains
+
+Three scenarios where we still reach for oil first:
+
+**1. Heavily weathered rough-sawn cedar that's never been finished.**
+
+Oil penetrates deep into the surface cells of bare rough-sawn cedar, getting into places water-based products sit on top of. On a 15-year-old neglected cedar exterior we're bringing back, oil typically performs better for the first 2–3 years.
+
+**2. Substrates with high oil content already in them (old oil-treated timbers, old-growth cedar).**
+
+Water-based products sometimes don't bond well over decades of existing oil. The test is simple — water beads on the surface instead of soaking in. When we see that, we switch back to oil-based to maintain compatibility.
+
+**3. Timber-frame members with exposed end grain.**
+
+End grain drinks whatever we put on it. Oil soaks in deep and stays. Water-based can wick too far through the end grain and cause colour inconsistency near the cuts.
+
+## Where water-based has earned its place
+
+**1. Light-coloured finishes on cedar.**
+
+Oil yellows over time. A clear oil on cedar shifts warmer and more amber as it ages. A waterborne finish stays truer to the applied colour. If a client wants a "weathered grey" or a clean natural look, water-based is almost always better.
+
+**2. Covered surfaces and interior wood.**
+
+Interior T&G ceilings, protected soffits, carriage house exteriors — water-based products work great here and have much lower odour profiles, which matters on occupied homes.
+
+**3. High-traffic areas where clean lines matter.**
+
+Water-based finishes can be overcoated in 2–4 hours. Oil-based often needs 12–24 hours between coats. On a fast-turn project where we need to move the crew to the next elevation, water-based is more practical.
+
+**4. Commercial and strata projects.**
+
+Multi-unit buildings usually require VOC documentation. Water-based products make the paperwork easier and keep residents less impacted by odour.
+
+## The performance gap is mostly gone
+
+If you asked us this question in 2010, we'd have said oil-based products were clearly better on nearly every exterior in the Sea to Sky. That's no longer true. The waterborne products have closed the gap on UV resistance, flexibility, and film integrity.
+
+What hasn't fully closed:
+
+- Penetration depth on bare rough-sawn cedar (oil still wins).
+- Amber warmth on cedar (oil wins if you want it, loses if you don't).
+- Ease of recoatability (water-based slightly better).
+
+## A specific side-by-side we've watched
+
+On one of our repeat clients in Creekside, we've maintained two adjacent cedar exteriors — one with Sikkens Cetol SRD Plus (oil-modified), one with Sansin ENS (water-based alkyd emulsion). Both applied in the same year, same elevation, same exposure. Seven years in:
+
+- Oil-based has kept more of its original warmth but shows slightly more UV fade on the south face.
+- Water-based has kept its colour more uniformly but is slightly less penetrated into the substrate.
+- Both held up. Neither has failed. Both needed a refresh at year 4 on the south face.
+
+The functional difference between the two over seven years is small. The aesthetic difference is visible but subtle.
+
+## What we recommend today
+
+For most Sea to Sky cedar projects in 2026, we default to:
+
+- Rough-sawn cedar siding: oil-modified (Sikkens Cetol SRD Plus) or water-based alkyd (Sansin ENS), depending on what's already on the wall.
+- Smooth cedar deck boards: oil-based (Armstrong-Clark or Cabot) for penetration.
+- Timber-frame posts and beams: oil-modified for colour and depth.
+- Covered T&G ceilings: water-based (lower odour, faster recoat).
+- Painted cedar: water-based acrylic always (Benjamin Moore Aura Exterior, Sherwin-Williams Emerald).
+
+The specific choice on a specific wall is always driven by substrate condition, existing finish, and aesthetic direction.
+
+## Where to start
+
+If you're deciding between oil and water-based for an upcoming project, [book a site visit](/contact). The substrate tells us more than any general principle. Related reading: [oil vs stain for cedar](/blog/cedar-oil-vs-stain-which-is-right), [solid vs semi-transparent](/blog/solid-vs-semi-transparent-stain-cedar).`,
+  },
+  {
+    slug: "spar-urethane-marine-varnish-penetrating-oil-interior-wood",
+    title: "Spar urethane, marine varnish, or penetrating oil: finishing interior wood",
+    publishedAt: "2025-03-04",
+    excerpt:
+      "When finishing interior wood — vaulted T&G ceilings, timber frames, feature walls — the product you pick shapes the look more than the wood does. Here's what spar urethane, marine varnish, and penetrating oils each actually do.",
+    coverUrl: "/stock-images/portfolio/cedar-ceiling-detail-whistler.jpg",
+    category: "Interior",
+    content: `Most Whistler chalets have a lot of interior wood — tongue-and-groove ceilings, timber-frame members, cedar feature walls, fir beams. The product used to finish that wood shapes the entire feel of the space more than the wood species does. A cedar ceiling finished in clear spar urethane looks different, reflects light differently, and ages differently than the same ceiling finished in a penetrating oil.
+
+Here's what each product category is doing and when we reach for it.
+
+## Spar urethane — the high-film, high-protection default
+
+**What it does:** Forms a hard, glossy film on the surface of the wood. Highly resistant to moisture, UV, and general wear. The name comes from its original use on ship spars.
+
+**Where it makes sense:**
+- High-humidity areas (bathrooms, mudrooms) where moisture protection matters.
+- Window sills and surfaces that see sunlight through glass.
+- Wood that needs to be wiped clean regularly.
+- Clients who want a glossy, "finished furniture" look.
+
+**Brands we use:** Minwax Helmsman (the hardware-store standard, fine for smaller projects), General Finishes Exterior 450 (better build quality), Sikkens Cetol 7 (higher-end, for premium applications).
+
+**Trade-offs:** High film means visible brush strokes if not applied well. Builds up in corners. Needs sanding between coats on proper builds (usually 3–4 thin coats with 220-grit sanding between). Ambers over time, especially in sunlight.
+
+**What the finished wood looks like:** Shiny, amber-toned, rich depth. Reads as "finished" rather than "natural."
+
+## Marine varnish — the spar urethane's heavier cousin
+
+**What it does:** Very similar to spar urethane but with even higher film build and more UV protection. Originally formulated for boat exteriors that need to withstand saltwater and sustained sun.
+
+**Where it makes sense:**
+- Large-format features where we want maximum protection (grand entrance doors, decorative wood around skylights, wine cellar doors).
+- Wood that's going to see significant UV through interior glazing (south-facing T&G ceilings with skylights).
+- Client wants the highest possible gloss and protection on a feature surface.
+
+**Brands we use:** Epifanes Clear Gloss Marine (high-end, used on yachts), Pettit Z-Spar Captain's Varnish (commercial-grade).
+
+**Trade-offs:** Significantly more expensive than spar urethane. More demanding application — needs warm, dust-free conditions and long between-coat times. Over-application causes blushing. Rarely the right call for bulk applications like a whole cedar ceiling.
+
+**What the finished wood looks like:** Deep, glass-like, amber, with serious surface depth. Reads as "premium yacht" rather than "cabin."
+
+## Penetrating oils — the matte, natural-looking option
+
+**What it does:** Soaks into the wood rather than forming a surface film. No build-up, no gloss, no plasticky feel. The wood still looks and feels like wood.
+
+**Where it makes sense:**
+- Large-area applications where a film finish would feel wrong (a 2,000 sqft T&G ceiling in a great room).
+- Rough-sawn cedar feature walls where texture is the whole point.
+- Timber-frame posts and beams where the character of the wood should be foreground.
+- Clients who want a "cabin" or "lodge" aesthetic rather than a "finished furniture" one.
+
+**Brands we use:** Rubio Monocoat (Belgian, single-coat finish, extensive colour palette), Sansin SDF (waterborne penetrating oil, low-odour), Osmo Polyx-Oil (hardwax oil, excellent for floors too).
+
+**Trade-offs:** Less UV and moisture protection than film finishes. Requires refresh every 5–10 years depending on exposure and use. Colour depth is lower than a high-film product.
+
+**What the finished wood looks like:** Natural, matte, textured. The wood is fully visible without a plastic-like coating.
+
+## A typical whole-home spec
+
+On a 4,500 sqft Whistler chalet with significant interior wood, we might spec:
+
+- **Great room T&G ceiling (cedar):** Rubio Monocoat in natural tone. Matte, long-lasting, minimal odour.
+- **Timber-frame posts and beams (fir):** Sansin SDF natural. Preserves character.
+- **Dining room wall (cedar feature wall):** Rubio Monocoat or unfinished — client's call based on aesthetic.
+- **Mudroom bench and cubbies (maple):** General Finishes Exterior 450 satin — wiped-clean hard finish.
+- **Powder room ceiling (T&G cedar with humidity exposure):** Sikkens Cetol 7 satin — film finish for moisture protection.
+- **Entry door (cedar, south-facing with glazing):** Epifanes Clear Gloss Marine — premium protection.
+
+Five different products on one home, each matched to what that specific surface needs.
+
+## What most other painters do
+
+Most painters default to spar urethane for everything interior. It's available at every paint store, it's reasonably forgiving, and the clients generally like the look. That's fine for a small project.
+
+Where it goes wrong: applying three coats of spar urethane on a 2,000 sqft T&G ceiling produces a plasticky, over-finished look that doesn't fit most chalet aesthetics. And it's extremely difficult to maintain. A penetrating oil is less work now and less work in 10 years.
+
+## The aesthetic question, again
+
+This comes up in almost every consultation. The homeowner says "I want the wood to look natural." That rules out heavy spar urethane and marine varnish. They usually end up with a penetrating oil.
+
+Or the homeowner says "I want it to look finished and last forever without maintenance." That points at spar urethane or marine varnish.
+
+Or — most commonly — they say "I don't know, what do you recommend?" At which point we look at the light in the room, the amount of wood, the architectural style, and the use pattern, and recommend accordingly.
+
+## Where to start
+
+If you're planning interior wood finishing for a Sea to Sky home, [book a site visit](/contact). The recommendation depends heavily on seeing the wood in its actual lighting. For context on interior painting more broadly, [our post on interior painting in Whistler](/blog/interior-painting-whistler-what-to-expect) covers the full service scope.`,
+  },
+  {
+    slug: "premium-paint-worth-it",
+    title: "Premium paint is worth it — but only on these surfaces",
+    publishedAt: "2025-02-20",
+    excerpt:
+      "Every contractor tells you to buy the best paint. Sometimes they're right. Sometimes they're upselling. Here's where premium paint actually earns its price in a Sea to Sky home, and where mid-tier is perfectly fine.",
+    coverUrl: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg",
+    category: "Cost & hiring",
+    content: `"Premium paint lasts longer." Every contractor says it, including us. It's also not a blanket truth. Premium paint costs about 30–60% more than mid-tier contractor paint. On some surfaces, that premium earns itself back many times over. On others, it's money spent where the result is indistinguishable.
+
+Here's where we actually spec premium paint, where we'd recommend mid-tier, and where it genuinely doesn't matter.
+
+## Where premium paint matters most
+
+### 1. Exterior surfaces with high UV
+
+South and west-facing exterior walls, trim, and fascia in the Sea to Sky. These surfaces see sustained UV for hundreds of hours per summer. The binder in the paint has to resist UV breakdown or the finish chalks, fades, and fails.
+
+Premium paints have upgraded binder chemistry — Aura Exterior's Color Lock, Sherwin Emerald's specific UV stabilizers — that mid-tier paints don't have. The gap shows up in year 3–5, when the mid-tier paint starts looking tired on the south face while the premium still looks fresh.
+
+**Worth it?** Yes, very clearly. The $400–600 extra on a full exterior gets you 2–3 additional years of service life.
+
+### 2. High-traffic interior surfaces
+
+Kitchens, mudrooms, kids' rooms, and hallways. Surfaces that get touched, scrubbed, splashed, and scuffed.
+
+Premium interior paints (Benjamin Moore Aura, Sherwin Emerald) have binders that allow the paint to be scrubbed hard without marking. Mid-tier paints scrub off — literally, you end up with a lighter patch where a mark was cleaned.
+
+**Worth it?** Yes, on the specific rooms that see wear. Not necessarily worth it on a guest bedroom or formal dining room that rarely gets touched.
+
+### 3. Cabinets and trim
+
+The places you look at closely every day. Cabinet doors, door and window trim, baseboards. Every defect is visible. Premium paints level better (fewer brush marks), have fewer pigment variations, and cure harder.
+
+**Worth it?** Yes. The product cost is a tiny fraction of cabinet or trim labour cost. The finish quality gap is significant.
+
+### 4. Dark and saturated colours
+
+Deep reds, rich blues, forest greens, true blacks. Saturated colours need more pigment and better binders to hit full colour and stay there.
+
+Mid-tier paints in deep colours often need 3–4 coats instead of 2, and they fade faster. Premium paints nail it in 2 coats and hold the colour.
+
+**Worth it?** Yes. The extra labour of additional coats usually exceeds the product savings.
+
+## Where mid-tier paint is perfectly fine
+
+### 1. Low-traffic interior walls in neutral colours
+
+Bedroom walls in beige, off-white, light grey. They're not getting touched much, UV exposure is minimal (interior windows don't transmit much), and nobody's going to scrub them regularly.
+
+Benjamin Moore Regal Select, Sherwin ProClassic — these are excellent mid-tier products that perform beautifully on low-traffic neutral walls. Premium overspec here doesn't show.
+
+**Worth it to upgrade?** Rarely. Save the budget for surfaces that earn it.
+
+### 2. Ceilings
+
+Flat white ceilings in bedrooms and living rooms. They're not touched, they're not in high UV, they don't see scuff. A decent contractor-grade ceiling paint (Benjamin Moore Ben Ceiling, Sherwin ProMar Ceiling) performs indistinguishably from a premium ceiling paint on 95% of projects.
+
+**Worth it?** No. Ceiling paint is a category where mid-tier is the right call.
+
+### 3. Closets
+
+A closet interior repainted in a standard white will look identical whether it's Aura or a mid-tier product. Nobody's evaluating closet paint.
+
+**Worth it?** No.
+
+### 4. Garage walls and outbuildings
+
+Functional surfaces where the priority is "painted" rather than "flawless." Mid-tier serves here.
+
+**Worth it?** No, generally. Unless the garage is a high-use workshop where scuff resistance matters.
+
+## Where it honestly doesn't matter
+
+**Temporary rentals and flip houses.** If the paint is going to be repainted by the next owner within 2–3 years anyway, premium paint's 8–10 year advantage is irrelevant.
+
+**Surfaces slated for replacement soon.** Don't paint a wall you're planning to remove next year in premium paint.
+
+**Quick colour tests or sample panels.** Mid-tier samples are fine.
+
+## What we actually spec on a typical Whistler interior
+
+On a 3,000 sqft family home interior repaint, our typical product breakdown:
+
+- **Kitchen, mudroom, bathrooms, hallways:** Benjamin Moore Aura (premium). Scrubbability matters.
+- **Kids' rooms:** Benjamin Moore Aura matte (premium). Kids.
+- **Living room, bedrooms:** Benjamin Moore Regal Select (mid-tier). Adequate.
+- **Ceilings throughout:** Benjamin Moore Ben Ceiling (mid-tier). Fine.
+- **Trim and doors:** Benjamin Moore Advance (premium). Finish quality is the whole point.
+- **Closets:** Whatever wall paint is left over (mid-tier or premium). Doesn't matter.
+
+Premium paint on about 40–50% of the surfaces. Mid-tier on the rest. The blended cost is about 15% higher than all-mid-tier, not 50% higher.
+
+## The contractor conversation to have
+
+Ask your contractor which products they're specifying for which surfaces and why. The good answer is a mix — premium for the surfaces that earn it, mid-tier for the ones that don't. The bad answer is all-premium with no differentiation (upselling) or all-mid-tier regardless of surface (corner-cutting).
+
+Either extreme is a signal.
+
+## Where to start
+
+If you're planning an interior or exterior and want to understand the product spec, [book a walkthrough](/contact). We'll talk through our spec line by line — what we're using where and why. For context on how product quality ties into overall cost, [our exterior painting cost breakdown](/blog/exterior-painting-cost-whistler-2026) and [interior painting cost breakdown](/blog/interior-painting-cost-whistler) cover the full picture.`,
+  },
+  {
+    slug: "when-to-paint-exterior-whistler-month-by-month",
+    title: "When to paint your exterior in Whistler: month by month",
+    publishedAt: "2025-02-06",
+    excerpt:
+      "Exterior painting in the Sea to Sky has a reliable window (June through mid-September) and a wider grey-zone either side of it. Here's what each month is actually good for, and when to avoid painting outside.",
+    coverUrl: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg",
+    category: "Seasonal",
+    content: `Exterior painting in Whistler has a real weather window. Most modern acrylic paints and stains need air temperatures above about 10°C for 24–48 hours after application, and they really want sustained dry weather to cure properly. In the Sea to Sky, that gives us a reliable summer window, with spring and fall shoulders that work if you watch the forecast.
+
+Here's what each month looks like, and when we'll actually book exterior work.
+
+## January, February, March
+
+Not happening. Temperatures are reliably below cure thresholds, snow is on the ground, homes are winterized. We don't book exterior work in these months.
+
+What's useful in winter:
+
+- Planning and scoping for summer projects. We book much of our summer exterior calendar between January and March.
+- Interior projects — [kitchens](/services/cabinet-refinishing), [living areas](/services/interior-painting) — are at their best in winter when owners are home more and outdoor distractions are fewer.
+- Winter colour consultations are productive because we can see how a home's colours relate to the snow-dominated landscape around it.
+
+## April
+
+Transitional. Daytime temperatures in the Sea to Sky reach 10°C reliably by mid-April in most years, but overnight lows still dip into the 0–5°C range. Substrates are often still cold from winter even when the air has warmed.
+
+What works:
+- Sheltered south-facing walls, mid-day work only.
+- Small touch-up projects where the weather window matters less.
+- Prep work — pressure washing, carpentry repair, caulking — can start in April. The paint itself waits.
+
+What doesn't:
+- Full exterior projects. Too much weather risk.
+- North-facing elevations (never quite warm enough).
+- Stains on wood with remaining moisture from snow melt.
+
+We occasionally book April projects, but always with a written caveat about weather contingencies.
+
+## May
+
+The real start of the season. First two weeks are still shoulder-ish; mid-May onward is mostly reliable.
+
+What we typically do in May:
+
+- Start major exterior projects after May 15, weather permitting.
+- Prep work for June starts (washing, scraping, spot carpentry).
+- Deck staining, which wants warmer wood.
+- Crew schedules fill up fast — most of our May slots are booked by late March.
+
+Still watch for: late snow events, particularly at elevation. A May snowstorm can knock a project off for 3–4 days.
+
+## June
+
+Prime season. Temperatures are reliable, humidity is moderate, precipitation is low to moderate. Our most efficient production weeks are usually in June.
+
+What's good in June:
+- Every type of exterior project.
+- Full-house cedar restorations that need several consecutive dry days.
+- High-elevation projects (Kadenwood, Emerald Estates) where May was still too cold.
+
+What to watch: mid-June occasionally gets a "June-uary" cold snap that drops temperatures for a few days. We keep an eye on the forecast and work around it.
+
+## July
+
+Peak season. Our calendar is fullest, the weather is reliable, the days are long (we can work later in the evening when it stays warm and light). Most of the year's exterior production happens in July and early August.
+
+What's good in July:
+- All projects.
+- Long projects that need weather consistency.
+- Commercial and strata projects that can't tolerate delays.
+
+What to watch:
+- Bookings fill up. If you want July, you need to be in the conversation by February.
+- Midsummer heat — we shift to earlier starts to avoid peak afternoon heat on south-facing elevations.
+- Forest fire smoke. In smoky years, air quality and visibility can disrupt work for days at a time.
+
+## August
+
+Still solid. Similar to July conditions, occasionally a bit drier. Evening temperatures start to cool in the second half of August but daytime is still reliably paint-appropriate.
+
+What's good in August:
+- Continuing the big projects started in June and July.
+- Fall shoulder-season bookings that want to be done before weather turns.
+
+What to watch:
+- The last 10 days of August start showing fall signals. We begin tightening up end-of-season timelines.
+
+## September
+
+The last productive month. First two weeks are excellent, last two weeks are increasingly risky.
+
+What we still do in September:
+- Finish projects we've been working on.
+- Smaller, time-limited projects (single elevation, deck restains).
+- Interior work begins ramping up as clients return from summer.
+
+What we don't:
+- Start new large exterior projects. The weather window is too narrow to guarantee completion.
+
+Our hard stop for new large exterior work is usually around September 15. Past that, we've seen too many projects get caught in early fall weather.
+
+## October, November, December
+
+Too risky. Overnight temperatures below cure thresholds, precipitation frequent, substrates often cold even during daytime highs.
+
+What works:
+- Nothing major. Interior work is what we do.
+- Occasional sheltered patches of small exterior touch-up under a roof overhang on a warm October day. Exceptions, not plans.
+
+What we don't do:
+- Start a full exterior in October "because it'll be fine." It won't be fine. [Why exterior paint fails early in the mountains](/blog/why-exterior-paint-fails-early-mountains) covers the late-season failure pattern in detail.
+
+## Planning around the window
+
+A practical calendar for a Sea to Sky homeowner thinking about an exterior:
+
+- **Previous September through January:** Plan, gather references.
+- **February through March:** Get quotes, finalize contractor.
+- **April:** Contract signed, deposit placed. Order any custom colour matches (3-week lead times aren't uncommon).
+- **May through mid-September:** Project executed.
+- **Late September:** Touch-ups and closeout.
+
+If you wait until April to start getting quotes, you're competing for the last remaining August or September slots. Most quality contractors' prime season is booked by early April.
+
+## Where to start
+
+If you want to get on our calendar for summer 2026, now is the time to start the conversation. [Reach out](/contact) and we'll set up a site visit on your schedule. Related: [our breakdown of what mountain conditions do to paint](/blog/exterior-painters-whistler-mountain-climate), which explains why the seasonal window matters so much.`,
+  },
+  {
     slug: "how-long-does-exterior-paint-last-whistler",
     title: "How long does exterior paint last in Whistler? (And what shortens it)",
     publishedAt: "2024-09-15",
