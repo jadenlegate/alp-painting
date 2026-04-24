@@ -174,13 +174,11 @@ export default function HomePage() {
       <Section>
         <Container>
           <FadeIn>
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-              <div>
-                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Services</div>
-                <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
-                  Residential, commercial, <span className="text-alpine">and everything in between</span>.
-                </h2>
-              </div>
+            <div className="mb-10 md:mb-14">
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Services</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
+                What we offer.
+              </h2>
             </div>
           </FadeIn>
           <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
