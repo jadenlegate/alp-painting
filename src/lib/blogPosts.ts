@@ -1596,6 +1596,927 @@ If you wait until April to start getting quotes, you're competing for the last r
 If you want to get on our calendar for summer 2026, now is the time to start the conversation. [Reach out](/contact) and we'll set up a site visit on your schedule. Related: [our breakdown of what mountain conditions do to paint](/blog/exterior-painters-whistler-mountain-climate), which explains why the seasonal window matters so much.`,
   },
   {
+    slug: "painting-in-winter-sea-to-sky",
+    title: "Painting in winter in the Sea to Sky: what's actually possible",
+    publishedAt: "2025-01-22",
+    excerpt:
+      "Winter is the wrong time for exterior work in Whistler, but the right time for most interior projects. Here's what's actually achievable between November and April, and what's worth waiting on.",
+    coverUrl: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg",
+    category: "Seasonal",
+    content: `The question comes up every November: "Can you still paint in winter?" The answer depends on whether we're talking about the inside of your house or the outside, and whether we're in January or a mild February. Here's what we actually take on during Sea to Sky winters, and what we steer clients away from.
+
+## Exterior in winter: almost never
+
+The physics are against us. Modern acrylic paints need temperatures above about 10°C for 24–48 hours after application to cure properly. In Whistler between mid-October and mid-April, we're lucky to see three or four days in a row that meet that threshold, and even those days have cold overnight lows that slow or halt the cure.
+
+What can fail on an exterior paint job done in winter conditions:
+
+- **Incomplete cure.** Paint feels dry but hasn't cross-linked fully. Adhesion is compromised.
+- **Blushing.** Moisture condensing on partially-cured film turns clear finishes cloudy.
+- **Frost damage.** A freeze within the first 24–48 hours of application can crack the film invisibly. Failure shows up in the following summer.
+- **Poor penetration on stains.** Cold wood doesn't absorb oil or water-based stains properly.
+
+We've been asked to patch exteriors done by other contractors in late fall. It's usually cheaper to redo than to try to salvage.
+
+### The rare exception
+
+A sunny, dry mid-February day on a sheltered south-facing wall can sometimes support small touch-up work if the substrate is warm and the product is formulated for low-temp application. Emphasis on all three conditions. If a client has a specific small area that needs emergency attention, we'll look at it. We don't schedule it.
+
+## Interior in winter: often the best time
+
+Most of our interior work happens between November and April. Homeowners are home more. The house isn't being distracted by summer chores. The crew isn't stretched thin by exterior projects.
+
+### What works beautifully in winter
+
+**Whole-house interior repaints.** We can move through a home room by room without weather pressure. Most of our longer interior projects (5-plus rooms) happen in December, January, and February.
+
+**Cabinet refinishing.** The off-site spray portion of a cabinet refinish is unaffected by outdoor conditions. We run our shop spray all winter. Reinstallation happens on a day that suits the client's schedule.
+
+**Trim work.** Trim projects are often taken on between exterior seasons. We can dedicate time to getting every door, window, and baseboard done properly.
+
+**Interior wood finishing.** Tongue-and-groove ceilings, timber-frame finishing, feature walls. Winter is the best time for these — low humidity, controlled indoor environment.
+
+**Ceiling work.** Hard to do in summer when owners are using rooms. Easy in winter when rooms are available.
+
+### One winter-specific consideration
+
+Interior paint still has a curing preference for moderate humidity (40–60% RH). Winter air in the Sea to Sky can be very dry — sometimes 20% RH or below when the heat is cranked up. Paint dries fast but levels less well in dry air. We humidify the workspace for trim and cabinet work when needed (small portable humidifiers, or just leaving a kettle of water on the stove for bigger rooms).
+
+## Prep work that can happen in winter
+
+Even when we can't apply paint outside, some exterior prep can start:
+
+- **Carpentry repairs.** Replacing rotten boards, fixing trim, patching stucco. Most of this can be done on a dry January day.
+- **Consultation and planning.** Site visits for summer projects. We can't start the paint, but we can do the walkthrough, write the proposal, and lock the summer slot.
+- **Pressure washing** can sometimes be done in late winter/early spring to get ahead of a May start.
+
+For summer projects, the right time to engage us is January through March. Our summer calendar fills up by April.
+
+## What winter lets us do well that summer doesn't
+
+A few projects that genuinely benefit from winter scheduling:
+
+**Colour testing.** You can live with sample swatches on the wall for weeks in winter without feeling like you're wasting painting season. We encourage it. Two or three samples on each wall for a week tells you more than picking from a fan.
+
+**Slower, pickier work.** On a fussy colour change (navy to white, say) that needs three coats and perfect leveling, winter gives us the time to do it right. Summer is production mode.
+
+**Complex projects.** The ones where we're working around clients' schedules, making lots of small decisions, adjusting as we go. Winter pace suits these.
+
+## What to avoid
+
+**Exterior emergency work.** If something is visibly peeling and you want it addressed now, the right answer is usually to patch with plastic or temporary sealant and schedule the proper repair for spring. An emergency winter patch job rarely lasts.
+
+**Exterior stain in winter.** Oil-based stains applied cold don't penetrate. Water-based stains can freeze in the can before they even go on the wall.
+
+**Spraying exterior doors in the garage.** Not enough ventilation, not enough temperature control. Doors that need spray finishing come to our shop.
+
+## Planning the next summer from mid-winter
+
+Our typical winter conversations with clients:
+
+- November–December: early interest in summer exterior work. Site visits happen.
+- January–February: proposals finalized, deposits placed. Spring prep scheduled.
+- March: finalize colour selections, order custom colours if needed.
+- April: start of the season, exterior work begins for flexible first projects.
+- May–September: heart of the season.
+
+Clients who reach out in May or June looking for a same-summer exterior are often pushed to August or later, or to the following year. The prime slots belong to homeowners who started the conversation in January.
+
+## Where to start
+
+If you have interior work you want done this winter, [reach out](/contact) — we have capacity most winter weeks. If you're planning a summer exterior, starting the conversation now means you get your pick of the calendar. Related: [our month-by-month guide to exterior painting in Whistler](/blog/when-to-paint-exterior-whistler-month-by-month) and [spring prep for mountain homes](/blog/spring-prep-mountain-homes-painting-season).`,
+  },
+  {
+    slug: "spring-prep-mountain-homes-painting-season",
+    title: "Spring prep: what mountain homes need before painting season starts",
+    publishedAt: "2025-01-08",
+    excerpt:
+      "March and April are the shoulder weeks where Sea to Sky homes come out of winter and reveal what the season has done to them. Here's what to check on your home before the painting crew shows up — and what prep you can get ahead of.",
+    coverUrl: "/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg",
+    category: "Seasonal",
+    content: `Every spring we walk homes that look fine from a distance and reveal themselves up close. Snow has just come off, the substrate is drying out, and the damage from the winter is becoming visible. This is the right time to audit a home's exterior before the painting season starts — whether you're planning a repaint or just wanting to catch small issues before they become big ones.
+
+Here's what we look at, and what you can check yourself.
+
+## Walk the perimeter when the snow recedes
+
+The first dry week in March or April is the best time to audit. Walk the full perimeter of the home, slowly, looking at each elevation. You're looking for:
+
+- **Peeling paint or stain.** Small at first, especially around trim and caulk joints. Document location and extent.
+- **Soft or spongy wood.** Press on trim boards, fascia, deck boards. Anywhere that gives under a firm press is the start of rot.
+- **Cracked or missing caulk.** Especially at window and door surrounds, corner boards, and where different materials meet.
+- **Separated trim.** Nails backing out, boards that have pulled away from the wall even slightly.
+- **Staining or dark patches on siding.** Tannin bleed, mildew, or moisture damage.
+- **Damaged flashing.** Bent, pulled away, or showing rust.
+- **Gutter condition.** Pulled away from the fascia? Sagging? Full of debris? All of these push water into the wall.
+
+Take photos. Even if you're not repainting this year, they're useful for comparison in future seasons.
+
+## What winter damage usually looks like
+
+Four patterns we see most years:
+
+**Peeling along the bottom edge of siding boards.** Snow has sat against the wall for months, and the lower 4–8 inches of each board got too wet too many times. The finish gives up first.
+
+**Cracked caulk at horizontal trim joints.** Caulk shrinks in cold, expands in warmth. Joints that were fine in October are split in April.
+
+**Rotten board ends.** The ends of siding and trim boards are end-grain. Moisture wicks in. A full season of moisture exposure can turn a board end into sponge.
+
+**Blackened wood behind peeling paint.** Fungal growth where moisture was trapped. This is a sign the paint was sealing in moisture rather than keeping it out.
+
+Not every home has all of these. Most Whistler homes have at least two by the time they're 6–8 years out from their last paint.
+
+## What you can do yourself before the crew arrives
+
+A few prep tasks you can knock out in March or April that save time on the actual paint project:
+
+- **Trim back plants.** Any shrub, tree branch, or vine within 2 feet of the house should be trimmed back. It's easier for us to paint when we're not fighting landscaping, and the plants will rebound.
+- **Clean gutters and downspouts.** Runoff during the actual paint project is a real factor. Clean gutters mean controlled runoff.
+- **Remove or move outdoor furniture and decorations.** Decks, patios, and walkways need to be clear.
+- **Photograph existing condition.** For insurance records and for your own reference.
+
+What not to do yourself unless you know what you're doing:
+
+- **Don't pressure-wash.** Too much pressure on rough cedar or stucco does damage. Leave this to the paint crew.
+- **Don't scrape.** Uneven scraping creates a substrate the paint crew has to re-prep anyway.
+- **Don't caulk.** Bad caulking is worse than no caulking. Use the wrong product and the paint crew has to remove it before they can work.
+
+Basically: do the yard work, leave the paint prep.
+
+## What we look for on a spring site visit
+
+When we come out in spring to quote a summer project, we're evaluating:
+
+- **Overall condition.** Roughly where is this home in its paint lifecycle?
+- **Priority areas.** Which elevations or surfaces need attention most urgently?
+- **Hidden issues.** Probing trim for rot, checking flashing, looking at the condition behind downspouts.
+- **Scope creep risk.** Are there carpentry repairs that need to happen before paint? How extensive?
+- **Timing flexibility.** Is this a project that can wait for mid-summer, or does it need to start at the first available window?
+
+The output of the walkthrough is a written proposal with a scope that reflects what we actually saw. No ballpark numbers over the phone.
+
+## Budgeting for what winter uncovered
+
+A home that's been neglected for 10+ years will often have carpentry repairs that change the budget. Rotten fascia, failing trim, cracked siding boards. These aren't painting work — they're [light carpentry](/services/light-carpentry) work that has to happen before painting can.
+
+A rough framework:
+
+- **Well-maintained 6-8 year cycle home:** Carpentry is minimal or zero. Budget is for paint only.
+- **10+ year cycle home:** Expect 5–15% of the paint cost in carpentry repair. Sometimes more.
+- **15+ year neglected home:** Carpentry can approach or exceed the paint cost. We'd stage the project: carpentry first, then paint.
+
+We price carpentry separately in the proposal so you can see the split.
+
+## The calendar advantage of early planning
+
+Spring prep and planning gives you access to prime summer slots. By the time most homeowners call (late May), our July calendar is typically full. The homeowners who get our July slots are the ones who walked their home in March, called us in early April, and signed the proposal by the end of the month.
+
+It's not urgency marketing. It's just how a small contractor's calendar works.
+
+## Where to start
+
+If you want us to do the spring walkthrough on your home, [get in touch](/contact). We do these from March through early May, free of charge, whether or not you end up booking with us. Related reading: [our month-by-month painting calendar](/blog/when-to-paint-exterior-whistler-month-by-month), [how long exterior paint should last](/blog/how-long-does-exterior-paint-last-whistler).`,
+  },
+  {
+    slug: "re-staining-deck-whistler-timing",
+    title: "Re-staining your deck in Whistler: timing, warning signs, and product picks",
+    publishedAt: "2024-12-18",
+    excerpt:
+      "Most Sea to Sky decks need re-staining every 2–3 years, not the 5–7 the product label suggests. Here's how to tell when yours is due, what product to put on, and how to time the work around weather and deck use.",
+    coverUrl: "/stock-images/portfolio/pine-ceiling-covered-deck-whistler.jpg",
+    category: "Wood restoration",
+    content: `Deck stain has a harder job than any other exterior finish on a home. It takes direct UV, constant foot traffic, snow sitting on it for months, spilled drinks, sunscreen, barbecue grease, and freeze-thaw cycles more aggressive than most walls ever see. Products advertised as "5-year deck stain" are rating themselves under conditions a Whistler deck doesn't share. Real maintenance intervals up here are shorter.
+
+Here's how we think about deck re-staining in the Sea to Sky.
+
+## How to tell when your deck is due
+
+Four signs, in roughly the order they appear:
+
+**Water beading has stopped.** Drip water on the deck boards. If it soaks in rather than beading, the finish has broken down. This usually happens 18 months to 3 years after the last coat, depending on exposure.
+
+**Colour is fading visibly on the sun-exposed boards.** The south-facing half of the deck is 2–3 shades lighter than the shaded half. The stain is still sort of doing its job but the UV protection is weakening.
+
+**Surface feels rough.** Running a hand along the boards catches on the grain. The top cells of the wood are starting to open up because the finish is no longer protecting them.
+
+**You can see grey patches.** Grey means the wood is bare. The finish has given up in those spots. If you wait past this stage, you're into restoration rather than maintenance.
+
+Most Whistler decks I walk show signs 1 and 2 at about the 2-year mark and sign 3 at about 3 years. By year 4, sign 4 is visible and the work required to refresh is more substantial.
+
+## What happens if you wait too long
+
+A deck that's been let go for 5–6 years without maintenance is typically at the point where:
+
+- Some boards have cupped or split and need replacement.
+- Surface wood is grey and rough across most of the deck.
+- Fasteners may be proud of the surface (shifting through freeze-thaw).
+- End grain is significantly degraded.
+
+At this point, the project is partly carpentry and partly full restoration. Cost runs 2–3x what a 2-year refresh would have.
+
+## Product picks for Sea to Sky decks
+
+We use different products depending on wood type and client preference:
+
+**For cedar decks:**
+- **Armstrong-Clark Oil-Based Semi-Transparent.** Our default for most cedar decks. Penetrates deep, ages gracefully, easy to recoat.
+- **Sikkens Cetol DEK.** When we want a slightly higher film build for a deck that sees less maintenance attention.
+- **Sansin DEC.** Waterborne alternative with excellent UV, good penetration for its category.
+
+**For pressure-treated decks:**
+- **Benjamin Moore Arborcoat Semi-Transparent.** Reliable on PT, holds colour.
+- **Cabot Semi-Solid.** When PT has aged enough that grain is no longer attractive and we're hiding it a bit.
+
+**For hardwood decks (ipe, cumaru, garapa):**
+- **Messmer's UV Plus for Hardwoods.** Specifically formulated for dense tropical species.
+- **Penofin Hardwood Formula.** Alternative. Same category.
+
+Products we don't recommend on Sea to Sky decks:
+
+- **High-film solid stains on flat deck boards.** They peel under freeze-thaw and UV. Fine on railings, terrible on boards.
+- **Paint.** Never. Don't paint a deck.
+- **Hardware-store no-name stains.** Fine for a garden shed. Not fine for a deck that takes real weather.
+
+## Timing the work
+
+Decks want dry, warm conditions for application. Ideally:
+
+- Wood moisture below 15% (we test with a moisture meter).
+- Air temperature 12°C or higher.
+- No rain in the forecast for 48 hours after application.
+- Deck not scheduled for heavy use for 72 hours.
+
+The productive window in Whistler is roughly June through mid-September, with May and late September as shoulder. A deck that needs restaining in April or October is usually better served by waiting for the right conditions.
+
+Some clients want us to refresh a deck in May so they can use it all summer. We'll push back if the wood is still cold or wet. Rushing a deck stain produces a finish that fails in the first winter.
+
+## Prep on a deck re-stain
+
+If the deck is still in good shape and just needs a refresh:
+
+1. Clear everything off the deck.
+2. Clean with a cedar brightener or deck wash.
+3. Rinse thoroughly.
+4. Let dry for at least 48 hours.
+5. Lightly sand any rough areas.
+6. Apply stain per manufacturer's instructions — usually one wet-on-wet coat on vertical surfaces, two on horizontal boards.
+
+Total time: 2–3 days including dry time.
+
+If the deck has been neglected and needs restoration:
+
+1. All of the above, plus:
+2. Aggressive cleaning with a proper deck stripper if there's a failing previous finish.
+3. Full sanding to open the grain.
+4. Fill gaps, replace damaged boards.
+5. Re-caulk penetrations.
+6. Possibly two coats of penetrating stain.
+
+Total time: 4–7 days depending on condition.
+
+## Why our deck maintenance clients often keep us on a schedule
+
+A lot of our repeat clients put their deck on a 2-year maintenance schedule with us. Every other spring, we come out, wash the deck, and apply a maintenance coat. It's not a big project — typically half a day on most residential decks — and the result is a deck that always looks good and never drifts into restoration territory.
+
+Cost on a typical mid-size deck: $500–$1,200 for a 2-year maintenance cycle. Compare that to $2,500–$5,000 for a full 5-year restoration, and the math of maintenance vs let-it-go is clear.
+
+## Signs the deck should be replaced, not re-stained
+
+Sometimes the right answer isn't more stain. Indicators:
+
+- More than 25% of boards are cupped, split, or soft.
+- Railings are structurally loose.
+- Fasteners are popping out of most boards.
+- Substructure (joists) shows visible rot.
+
+At that point, you're looking at a rebuild. We'd stain the new deck after it's built.
+
+## Where to start
+
+If your deck is showing any of the four warning signs above, [book a site visit](/contact). We'll tell you honestly whether it needs a refresh, a full restoration, or replacement. Related: [our overall wood restoration approach](/services/wood-restoration), [solid vs semi-transparent stain](/blog/solid-vs-semi-transparent-stain-cedar).`,
+  },
+  {
+    slug: "how-to-maintain-exterior-paint-whistler",
+    title: "How to maintain your exterior paint between repaints",
+    publishedAt: "2024-11-30",
+    excerpt:
+      "A well-done exterior paint job lasts longest when it's looked after, not ignored. Here's a maintenance approach that adds 3–5 years to a Sea to Sky paint job — most of it doesn't involve a paintbrush.",
+    coverUrl: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg",
+    category: "Process",
+    content: `The homeowner who gets 12 years out of an exterior paint job and the homeowner who gets 7 years out of the same job often paid the same money and used the same products. The difference is maintenance. Not major work — just a few specific habits that catch small issues before they become full repaint triggers.
+
+Here's what we recommend to every client after their project is finished.
+
+## The annual walkthrough
+
+Every spring, walk the exterior the way we walk it on a quote visit. Look at:
+
+- **South and west elevations first.** UV-driven failures start here.
+- **Horizontal surfaces.** Tops of trim, fascia, railings, window sills. Water pools.
+- **Caulk joints.** Especially around windows and at horizontal-to-vertical material transitions.
+- **Fastener heads.** Nails, screws. If they're rusting, the rust is about to bleed through the finish.
+- **Around gutters and downspouts.** Wet areas that rarely dry.
+- **Anywhere vegetation is touching the wall.** Branches rubbing = finish damage.
+
+Photograph anything that looks off. Year-over-year comparison photos tell you whether something is changing fast or slow.
+
+## What you can handle yourself
+
+A few tasks homeowners can do that meaningfully extend paint life:
+
+**Wash the exterior annually.** Not pressure-washing — a gentle hose rinse with a soft brush on a long handle. Removes airborne grit, pollen, sap, and bug debris that accelerate finish breakdown. An hour a year on a typical home.
+
+**Trim back vegetation.** Any branch or vine that's within 2 feet of the house, especially if it touches when wind blows. Contact wear removes finish in specific spots.
+
+**Keep gutters clean.** Overflow during heavy rain pushes water into the wall behind the gutter, where it saturates the underlying wood and lifts the finish. Clean twice a year minimum.
+
+**Fix minor caulk cracks before they get bad.** A tube of exterior-grade flexible caulk (Big Stretch, OSI Quad) costs $10. Squeezing fresh caulk into a cracked joint takes five minutes and prevents water from getting into the wall.
+
+**Wipe down high-touch areas.** Exterior doors, the area around mailboxes, the inside of covered porches. These accumulate grime faster than the rest of the exterior and show it.
+
+## What we handle on a 3–4 year touch-up visit
+
+A lot of our long-term clients have us come out every 3–4 years for a half-day touch-up visit. Not a full repaint. Just:
+
+- Inspect the full perimeter with a real painter's eye.
+- Re-caulk any failing joints.
+- Spot-prime and touch-up any small areas of failing finish.
+- Re-treat end grain on exposed cuts if needed.
+- Re-coat the worst 10% of surfaces (usually south-facing trim).
+
+Cost is typically $500–$1,500 depending on home size and what we find. Results:
+
+- The finish continues looking consistent, not aged.
+- Small failures stay small.
+- The next full repaint happens later — sometimes years later.
+
+## What not to do
+
+**Don't ignore peeling.** A nickel-sized peel in June becomes a fist-sized one by October. Peeling spreads, it doesn't heal. The earlier you catch it, the cheaper the fix.
+
+**Don't power-wash aggressively.** This is different from a gentle wash. Full-pressure power washing degrades cedar, stucco, and older paint films. It also forces water behind siding. Leave real pressure washing to the next paint project.
+
+**Don't paint over a problem.** A wet area, a failing substrate, a rusting nail — fix the underlying issue before putting paint over it. Paint over rust just means the rust is still rusting, hidden.
+
+**Don't use the wrong touch-up paint.** If your previous contractor left labelled touch-up paint, use that. If not, the closest colour match from the store is rarely close enough. A touch-up spot that's slightly off colour is more visible than the original blemish was.
+
+**Don't assume your warranty covers everything.** Warranties usually cover product failure and adhesion failure due to application — not UV fade, not wear, not damage from external sources. Read the specific terms of yours. [Our warranty page explains ours](/warranty).
+
+## Sign up for a maintenance schedule
+
+Some of our clients just have us on their calendar. Every 3–4 years, we come out for the touch-up visit without them having to remember to call. It's a low-key way to keep a home looking great for 15+ years between major repaints.
+
+We offer this as a service. If you want it, we'll note it when your project finishes and reach out when the time comes.
+
+## A realistic lifetime
+
+With proper maintenance on a well-done job in the Sea to Sky:
+
+- **Premium product + proper prep + maintenance:** 12–15 years between full repaints.
+- **Premium product + proper prep + no maintenance:** 8–10 years.
+- **Mid-tier product + proper prep + no maintenance:** 6–8 years.
+- **Any product + poor prep:** 3–5 years, sometimes sooner.
+
+The maintenance gap is real. A $3,000 touch-up visit every few years extends a $25,000 exterior by multiple years and keeps the home looking fresh throughout.
+
+## Where to start
+
+If your exterior was painted by someone else and you want a maintenance assessment, [book a walkthrough](/contact). For context on how we prevent failures on new projects, [our post on why exterior paint fails early](/blog/why-exterior-paint-fails-early-mountains) covers the prep-side reasons, and [our month-by-month calendar](/blog/when-to-paint-exterior-whistler-month-by-month) covers timing considerations.`,
+  },
+  {
+    slug: "painting-over-knots-tannin-bleed-softwoods",
+    title: "Painting over knotty pine, cedar, and softwoods: tannin bleed and how to stop it",
+    publishedAt: "2024-11-15",
+    excerpt:
+      "Painting over cedar, pine, or fir and ending up with brown or yellow stains coming through the paint a week later? It's tannin bleed. Here's what's happening and how we actually block it.",
+    coverUrl: "/stock-images/portfolio/interior-painting-in-progress-whistler.jpg",
+    category: "Process",
+    content: `A client calls us a week after their interior paint project is done. The freshly painted white cedar ceiling has yellow-brown streaks and rings appearing through the paint. It looks terrible, and the homeowner's first thought is that the paint is defective. It isn't. What they're looking at is tannin bleed, and it's completely predictable — and preventable — if the contractor plans for it.
+
+This post explains what tannin bleed is, which woods it affects, and how we actually block it on Whistler projects.
+
+## What's happening at the chemistry level
+
+Cedar, redwood, pine, fir, and a few other softwoods contain natural water-soluble extractives — tannins, resins, and oils that the tree produced to resist rot and insects while it was alive. These extractives are still in the wood years after it's milled into siding or trim.
+
+When you apply a water-based paint over these woods, the water in the paint re-dissolves the extractives. As the paint dries, the extractives are pulled to the surface with the evaporating water. They end up sitting in the cured paint film — as brown, yellow, or reddish stains.
+
+It's not the paint failing. It's the wood leaking through the paint.
+
+## Which surfaces need tannin blocking
+
+Every softwood surface being painted for the first time, and many being repainted. Worst offenders:
+
+- **Western red cedar.** The champion tannin leaker. Knots especially.
+- **Redwood.** Comparable to cedar.
+- **Knotty pine.** Knots bleed dramatically. Clear pine boards less so.
+- **Douglas fir.** Bleeds at knots and around structural features.
+- **Hemlock.** Moderate bleed, mostly at knots.
+
+Oak, maple, and most hardwoods don't have this problem. The resin content is different.
+
+## How to block tannin properly
+
+There's exactly one reliable method: a purpose-built stain-blocking primer applied to the wood before any finish coat.
+
+**Zinsser BIN** is the industry standard. A shellac-based primer, extremely fast drying, blocks nearly any water-soluble stain. Smells strong while wet. We use this on interior projects constantly.
+
+**Zinsser Cover Stain** (oil-based) — comparable performance, easier to tint, more forgiving application. Slightly lower blocking power than BIN but handles most cases.
+
+**Zinsser Smart Prime** (waterborne) — a newer category. Better than standard water-based primers, not as bulletproof as BIN or Cover Stain. Works on moderate tannin situations.
+
+What doesn't work:
+
+- **Standard waterborne primer.** Tannin leaks right through.
+- **Standard paint without primer.** Worst outcome.
+- **Paint-and-primer-in-one.** These are fine on previously-painted surfaces but not on bare softwood.
+
+## Our process on a cedar ceiling going white
+
+Step by step, how we handle a rough-sawn cedar T&G ceiling that a client wants painted white:
+
+1. Clean the surface (vacuum and wipe down).
+2. Sand any gloss or previous finish lightly.
+3. Spot-prime all visible knots with BIN using a small brush — full, not thin coats. Let dry.
+4. Full-prime the entire ceiling with BIN or Zinsser Cover Stain using a roller and brush for cuts.
+5. Let dry overnight at least.
+6. Check for bleed-through. If any knot is still showing through the primer, spot-re-prime.
+7. Apply the first finish coat (usually Benjamin Moore Aura or Regal Select in the ceiling colour).
+8. Let cure per manufacturer spec.
+9. Apply the second finish coat.
+
+Skipping step 3 is where most tannin failures happen. A contractor who primes once with a standard primer and then paints will sometimes get lucky on cedar. Most of the time, the knots come back through within a week.
+
+## The "I thought you'd primed it" moment
+
+We've been called out to fix tannin bleed that other contractors caused. The conversation is always the same: the homeowner is angry, thinks the paint is defective. Then they check with the contractor, who says "we primed it" — but it turns out they used a generic waterborne primer that doesn't block tannin.
+
+Fixing the problem after the fact means sanding back the bled-through areas, re-priming with BIN, and re-coating. It's not free. Doing it right the first time costs maybe an extra $100–$200 in materials on a typical ceiling and saves the rework.
+
+## Exterior tannin bleed
+
+Same issue, different visuals. On an exterior cedar that a homeowner wants painted white (solid stain or full paint), tannins will bleed through in the first rain if the substrate wasn't properly primed.
+
+Exterior blocking products:
+
+- **Zinsser Peel Stop Extreme** or **Zinsser Gardz** — for exterior softwoods, block tannins and improve adhesion.
+- **Benjamin Moore Fresh Start Superior Primer** — good on exterior softwoods, but needs two coats on heavy tannin woods like western red cedar.
+
+Exterior white paints on cedar are a real challenge. We succeed when we prime properly. We've seen competitor jobs on cedar exteriors where yellow tannin streaks became visible within months of a white paint going on. They're not repairable by overcoating with more white. The substrate has to be re-primed.
+
+## Is it worth painting cedar white in the first place?
+
+Philosophical question. Some clients love the look. Some think it's a mistake to cover beautiful cedar with white paint.
+
+Our take: if the cedar is older, damaged, or the homeowner wants a clean modern aesthetic, white or near-white makes sense. If the cedar is new or in great condition, consider staying with a transparent or semi-transparent stain — [our oil vs stain post](/blog/cedar-oil-vs-stain-which-is-right) covers the options.
+
+Whichever direction you pick, tannin blocking is a solved problem. It just has to be done correctly.
+
+## Where to start
+
+If you're planning a project that involves painting over cedar, pine, or fir — especially a colour change — make sure the contractor's proposal explicitly specifies a stain-blocking primer. If it doesn't, ask. [Book a site visit](/contact) and we'll walk through the exact product and process we'd use on your specific wood.`,
+  },
+  {
+    slug: "strata-repaint-case-study-whistler",
+    title: "Strata repaint case study: phasing a 32-unit project without upsetting residents",
+    publishedAt: "2024-10-28",
+    excerpt:
+      "A real strata exterior repaint project in Whistler, from first council meeting to final closeout. The phasing plan, the communication rhythm, and what we'd do differently if we ran it again.",
+    coverUrl: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg",
+    category: "Case study",
+    content: `A strata council in Whistler called us in early 2024 about a full exterior repaint on their 32-unit townhouse complex. Last full paint was 11 years previous. Owners were starting to complain about peeling on multiple elevations. The council had gotten three bids, ours was the middle one. They chose us not on price — they chose us on the phasing and communication plan.
+
+Here's how that project actually ran. Names and specifics anonymized.
+
+## The problem the council was solving for
+
+Beyond the paint itself, the council had three concerns:
+
+1. **Resident disruption.** 32 units, mixed owner-occupied and rental, some seniors, a couple of young families. Complaints about construction noise during a previous roofing project had been intense.
+2. **Timeline control.** A previous contractor on a smaller project had estimated 3 weeks and taken 7. The council had lost the trust of owners who'd rearranged their lives for the original timeline.
+3. **Documentation.** The council wanted a closeout package they could hand to residents and file for the next maintenance cycle 10+ years out.
+
+Our proposal was built around those three concerns, not just the paint.
+
+## The phasing plan
+
+We broke the complex into 8 phases of 4 units each. Each phase was a separate mini-project:
+
+- **Day 1 of phase:** Setup, scaffolding if needed, protection of plants and walkways.
+- **Day 2–3:** Pressure washing, prep, caulk replacement, carpentry spot-repairs.
+- **Day 4–5:** Prime and first coat.
+- **Day 6:** Second coat.
+- **Day 7:** Final detail, touch-ups, cleanup.
+- **Day 8:** Walkthrough with property manager.
+
+Each phase took 7 working days. With 8 phases, plus weather buffer, we'd contracted for 12 weeks total. We finished in 10.5 weeks.
+
+Phases were scheduled starting with the furthest units from the main entrance so that by the time we were working near high-traffic areas, the crew had its rhythm.
+
+## Communication rhythm
+
+Two weeks before start, we sent a printed package to every owner and tenant:
+
+- Project overview (one page, plain language).
+- Phase schedule with a map showing which units were in which phase and which weeks.
+- Contact info for the project lead (me) and the property manager.
+- FAQ covering the common concerns (noise, access, parking, pets, paint fumes).
+- A photo of the colour palette approved by the council.
+
+48 hours before each phase's start, we hung laminated notices on the front door of every unit in the upcoming phase, confirming dates.
+
+Daily during active phases, we posted a short written update on a whiteboard in the mail room: what had been done that day, what was planned for the next day, any issues. The property manager photographed it and sent it to owners who'd asked for email updates.
+
+One evening per week during active work, I was on-site from 4:30 to 6:00 for residents to come talk to me directly. Most weeks nobody came. Some weeks one or two residents came with a question or a specific concern. Every one of those conversations prevented a bigger issue.
+
+## Product spec
+
+- **Painted horizontal siding (Hardie):** Benjamin Moore Aura Exterior in the council-approved colour. Two coats.
+- **Exposed cedar trim and accents:** Sikkens Cetol SRD Plus, semi-transparent tint.
+- **Entry doors:** Benjamin Moore Advance, slight sheen.
+- **Metal railings and door trim:** Sherwin-Williams DTM Acrylic over a rust-inhibitive primer.
+- **Caulking:** OSI Quad at all moving joints, Sherwin-Williams Loxon on larger expansion joints.
+- **Primer:** Zinsser Peel Stop Extreme on cedar where tannin blocking was needed.
+
+All products documented in the closeout package with batch numbers and can counts per phase.
+
+## Carpentry that emerged mid-project
+
+On a project this old, carpentry repair is never fully scoped at quote time. During prep, we found:
+
+- 12 sections of rotted fascia across 6 units. Replaced.
+- 4 window trim boards that were too far gone to save. Replaced.
+- 2 sections of siding with board-end rot. Replaced individual boards.
+- 8 caulk joints that needed removal and replacement rather than topping up.
+
+Each additional repair was documented, photographed, priced, and approved by the property manager before work proceeded. Total carpentry add-ons came to about 6% of the paint budget. All approved in writing, all tracked.
+
+## What went wrong
+
+Two things, both minor in hindsight:
+
+**A phase overran by two days because of weather.** Phase 5 hit an unexpected three-day rain pattern. We fell two days behind schedule. Communicated immediately to the property manager, who updated the affected owners. Made the time up by slight compression of phase 6 setup. No owner complaints.
+
+**Paint colour on one elevation read differently than the sample.** The colour approved by the council looked about 10% darker on the north-facing elevation due to shade. Two owners on that elevation raised it at the weekly check-in. The council's building committee and I walked it together. Decision was to keep the colour — it was the spec'd colour, and the elevation-specific variation was within normal range. Committee explained this to the complaining owners. Issue resolved.
+
+## Closeout package
+
+Delivered to the property manager on project completion:
+
+- Final scope-vs-delivered comparison document.
+- Product list with batch numbers per phase, cross-referenced to elevation.
+- Before-and-after photos of each phase, labelled.
+- Warranty document (3-year on labour, manufacturer warranties on products).
+- Touch-up paint in labelled 1L cans, stored in the property manager's closet. One can per colour per 4 units.
+- Maintenance schedule recommending annual washes and 3-year inspection.
+- List of carpentry repairs with locations and materials used.
+
+The council's intent was to hand this package to the next council 10 years from now. A project is only as good as the documentation left behind for the next cycle.
+
+## What we'd do differently
+
+Two things:
+
+**Start the weekly on-site office hour earlier in the project.** We started it at week 3. Looking back, week 1 would have been better. A couple of small early concerns didn't surface until week 5, and they were easier to address immediately than later.
+
+**Add a digital communication channel.** The laminated door hangers worked. The whiteboard in the mail room worked. But some residents told us afterward they'd have preferred email updates directly to them. For the next strata project we take on, we'll set up a simple email list.
+
+## The paint itself
+
+Is fine. It's two coats of Aura over properly-prepped substrate with quality caulk at every joint. It's going to last 10–12 years in this climate with reasonable maintenance. That was, by the end, the most straightforward part of the project.
+
+## Where to start
+
+If you're on a strata council or property manager weighing a full exterior repaint in the Sea to Sky, [get in touch](/contact). Our [commercial and strata painting service page](/services/commercial) covers more on how we scope this type of work. For context on the product side, [our breakdown of premium paint](/blog/premium-paint-worth-it) covers where the product budget earns itself back.`,
+  },
+  {
+    slug: "chalet-restoration-case-study-whistler",
+    title: "Restoring a Whistler chalet exterior: before, after, and the products we used",
+    publishedAt: "2024-10-10",
+    excerpt:
+      "A full exterior restoration on a 15-year-old cedar chalet in Whistler. What we found, what we replaced, which products we reached for, and what the finished project tells us about cedar maintenance in the Sea to Sky.",
+    coverUrl: "/stock-images/portfolio/chalet-bay-window-after-whistler.jpg",
+    category: "Case study",
+    content: `A Whistler chalet we finished in 2024 started as a classic case: 15-year-old rough-sawn cedar exterior, original semi-transparent stain last refreshed 8 years prior, south-facing elevations with significant UV damage, north-facing elevations with blackened wood behind remaining finish. The owners had been thinking about repainting for several years. What they needed wasn't repainting — it was restoration.
+
+Here's the project from first walkthrough to final closeout.
+
+## What we found on the site visit
+
+A 3,800 sqft two-storey chalet with:
+
+- **South and west elevations:** Cedar substantially weathered. Original stain mostly gone on upper two-thirds. Surface fibres opening up. Water no longer beading — soaking in within seconds.
+- **North elevation:** Finish mostly still intact but wood behind it showing black fungal growth in several areas. Moisture trapped.
+- **East elevation:** Best condition. Remaining finish serviceable, some UV fade.
+- **Timber-frame posts and beams:** Silvery-grey, some checking in the surface grain. Structurally fine.
+- **Bay window surround:** Yellow exterior trim, peeling paint in sheets. Cedar beneath was degraded.
+- **Deck T&G ceiling:** Original finish still mostly intact but showing failure starting at the edges.
+- **Fascia and soffit:** Mixed condition. Two sections of fascia with soft wood indicating early rot.
+
+Before-and-after photos from this project are visible on our [work page](/work), including the bay window restoration which ran as one of our featured before/after sliders.
+
+## The conversation with the owners
+
+The owners had been quoted by another contractor for $15,000 as a "refresh repaint." We quoted $28,000 for full restoration. The difference was what each contractor had scoped.
+
+The $15,000 quote was to wash, spot-prime failures, and apply one coat of solid stain. It would have looked great for maybe 2 years. The underlying substrate problems — the trapped moisture, the degraded surface fibres, the starting-rot fascia — would have continued regardless.
+
+Our $28,000 quote included:
+
+- Full pressure wash with cedar brightener.
+- Fascia replacement (two sections).
+- Scraping and sanding of all failing finish.
+- Timber-frame member sanding and re-staining.
+- Bay window surround full rebuild and repaint.
+- Deck T&G ceiling refresh.
+- Two full coats of premium stain on all cedar.
+- Spot-primed bare areas before coats.
+- Project report and 3-year warranty.
+
+The owners went with our scope. We started in mid-June.
+
+## Product spec
+
+- **Rough-sawn cedar siding:** Sikkens Cetol SRD Plus in a custom-matched semi-transparent tint. Two coats.
+- **Timber-frame posts and beams:** Sikkens Cetol SRD Plus in the same tint. Two coats.
+- **Deck T&G ceiling:** Sikkens Cetol HLS Plus (higher-film grade for covered surface).
+- **Painted bay window trim:** Zinsser BIN stain-blocking primer, followed by two coats of Benjamin Moore Aura Exterior in a crisp white.
+- **New fascia boards:** Pre-primed on all six faces before installation (end grain especially), then two finish coats.
+- **Metal flashing:** Rust-Oleum Professional Hi-Performance Enamel over Rust-Oleum Clean Metal Primer.
+
+Six distinct products across the project, each matched to its specific substrate.
+
+## The schedule
+
+- **Week 1:** Setup, full pressure wash, carpentry assessment, begin carpentry replacement on fascia.
+- **Week 2:** Complete carpentry. Sand and prep south and west elevations.
+- **Week 3:** Prep north and east elevations. Begin first coat on south (warmest, driest first).
+- **Week 4:** First coat on remaining elevations. Begin second coat on south.
+- **Week 5:** Second coat on remaining elevations. Timber-frame work.
+- **Week 6:** Bay window trim. Deck ceiling. Details.
+- **Week 7:** Final walkthrough, touch-ups, cleanup.
+
+Seven weeks total on a 3,800 sqft chalet. One weather delay (three days of rain in week 3). We built the schedule with five extra days of buffer. Used three, finished two days ahead.
+
+## What a $28,000 project actually buys vs a $15,000 "refresh"
+
+A year out from finish, the restoration job is:
+
+- Colour uniform across all elevations.
+- Finish uniformly intact.
+- Water still beading on all surfaces.
+- Fungal growth areas fully resolved (previously-blackened wood now healthy).
+- Fascia solid, no rot progression.
+- Bay window trim bright white, no tannin bleed.
+
+If the owners had taken the $15,000 scope, a year out they'd have:
+
+- Colour mostly uniform but thin on the south elevations where one coat couldn't cover the damage.
+- Continued peeling starting in year 2 on poorly-prepped areas.
+- Fungal growth still active under the new finish on the north elevation.
+- Fascia continuing to rot.
+- Bay window tannin bleed showing in weeks.
+
+The owners would have been back in the market for another repaint in 3 years, paying another $15,000+, probably by a different contractor.
+
+The $28,000 project is scheduled for a maintenance refresh at year 4 (about $3,500–$5,000) and a full repaint in year 10–12.
+
+Total 10-year cost of restoration approach: about $32,000.
+Total 10-year cost of cheaper refresh plus the repaint they would have needed: about $32,000, with worse appearance throughout.
+
+Same money. Very different outcome.
+
+## What the project tells us about cedar maintenance
+
+Three lessons, in order of importance:
+
+1. **Maintenance is cheaper than restoration.** If these owners had had Sikkens Cetol reapplied every 4 years for the 15 years, total cost over that span would have been around $18,000–$24,000. They spent $28,000 at the restoration point. The maintenance schedule would have been cheaper and the home would have looked better throughout.
+
+2. **Prep can't be skipped on rough-sawn cedar.** The difference between a 2-year finish and a 10-year finish is almost always prep.
+
+3. **Cedar has to breathe.** The north-elevation fungal growth was caused by a paint system that was sealing in moisture rather than letting it out. Penetrating stains let the wood dry. Film paints and heavy solid stains often don't.
+
+## Where to start
+
+If you have a cedar chalet in the Sea to Sky showing any of what we found on this project, [get in touch](/contact). Site visits are free. Related reading: [wood restoration in the Sea to Sky](/blog/wood-restoration-sea-to-sky-cedar-fir), [oil vs stain for cedar](/blog/cedar-oil-vs-stain-which-is-right), and our [wood restoration service page](/services/wood-restoration).`,
+  },
+  {
+    slug: "why-we-stopped-oil-primer-rough-cedar",
+    title: "Why we stopped using oil-based primer on rough cedar",
+    publishedAt: "2024-09-28",
+    excerpt:
+      "For years, oil-based primer was the default on rough cedar siding. We've shifted away from it for most cedar work over the last two seasons — not because it fails, but because a better alternative exists. Here's what changed and why.",
+    coverUrl: "/stock-images/portfolio/cedar-siding-installation-whistler.jpg",
+    category: "Case study",
+    content: `A decade ago, specifying oil-based primer on rough cedar siding was uncontroversial. The conventional wisdom was that oil penetrated better than water-based products, blocked tannins reliably, and gave the best base for either solid stain or paint. Every paint rep agreed. Every trade publication said the same.
+
+Over the last two painting seasons in the Sea to Sky, we've moved away from oil-based primer for most of our cedar work. The reasons are practical, not ideological. Here's what changed.
+
+## What oil-based primer does well
+
+Before the case against — real credit where it's due. Oil-based primers still have legitimate strengths:
+
+- **Deep penetration into bare wood.** Oil soaks into the first 1–2 mm of substrate in a way water-based products don't.
+- **Excellent tannin blocking.** Traditional oil-alkyd primers handle cedar and redwood tannins reliably.
+- **Adhesion on chalky or weathered surfaces.** Oil penetrates through surface contamination better than most water-based primers.
+- **Proven track record.** Decades of successful jobs.
+
+None of those strengths have gone away. The product still works.
+
+## Why we've moved away from it anyway
+
+Five reasons, in rough order of significance:
+
+### 1. Reformulations have changed how it works
+
+VOC regulations have forced most oil-based primers to reformulate over the last decade. The products sold as "oil-based primer" today are often lower-VOC alkyd blends, not the high-solids oil primers from 20 years ago. Some of them still perform well. Some don't. The label says the same thing but the can behaves differently.
+
+Waterborne stain-blocking primers (Zinsser Peel Stop Extreme, Sherwin-Williams Emerald Exterior Latex Primer, Benjamin Moore Fresh Start) are genuinely better now than they were 10 years ago. Their tannin blocking has improved substantially. The gap with oil has narrowed.
+
+### 2. Application and cleanup
+
+Oil-based primer is a slower, messier product to work with. It takes longer to apply, it takes longer to dry between coats, and the cleanup requires mineral spirits. On a crew that's trying to keep a project moving, the time and material cost of oil adds up.
+
+Water-based alternatives apply faster, re-coat faster, and clean up with water. On a multi-week exterior project, we can save a half-day per week in handling time by switching to water-based primer.
+
+### 3. Inter-coat compatibility
+
+If we prime with oil-based and then apply a water-based finish coat (which is what most modern exterior paints and stains are), there's always a small risk of inter-coat adhesion issues. The products are compatible in theory, but they're not identical in how they bond to each other over long timeframes.
+
+Water-based primer under water-based finish is chemically simpler. Adhesion is usually better. Long-term film integrity is more predictable.
+
+### 4. Environmental and health
+
+Oil-based primer has a VOC profile and solvent signature that matters for crew health and client comfort. On occupied homes, on interior projects, on sensitive clients — water-based is usually the right call.
+
+This isn't a purist argument. We're not throwing out all oil products. But as waterborne alternatives have closed the performance gap, the environmental and health cost of oil starts to matter more in the decision.
+
+### 5. Schedule reliability
+
+Oil-based primer needs more favourable conditions to apply well. It's more sensitive to humidity, temperature, and substrate moisture. In a Whistler summer where we're chasing a tight weather window, water-based products give us more days where we can productively work.
+
+## What we use now
+
+On a typical cedar siding project requiring primer:
+
+- **Bare rough-sawn cedar:** Usually no primer. We use penetrating stains (Sikkens Cetol SRD Plus, Sansin ENS) that don't require separate priming.
+- **Painting over cedar (any colour):** Zinsser Peel Stop Extreme or Benjamin Moore Fresh Start Exterior Superior Primer. Both waterborne, both handle cedar tannins.
+- **Interior cedar being painted:** Zinsser BIN (shellac-based, not oil-based). Best tannin blocker available. Fast-drying.
+- **Knots on pine or fir trim:** Zinsser BIN spot-prime, then standard waterborne primer over the rest.
+
+Where we still reach for oil-based primer:
+
+- **Very old, very weathered substrates** where deep penetration matters more than the other factors.
+- **Metal surfaces** (where oil-alkyd metal primers are still the best option).
+- **Specific repair scenarios** where the substrate behaviour demands it.
+
+## The honest tradeoff
+
+We've lost some depth of penetration on bare cedar by switching to waterborne primer. On a brand-new cedar wall being painted for the first time, an oil primer would arguably still give a marginally better foundation.
+
+What we've gained:
+
+- Faster schedule on multi-week projects.
+- Cleaner application and cleanup.
+- Better inter-coat compatibility with modern finish paints.
+- Lower health and environmental impact.
+- More predictable behaviour in variable weather.
+
+The first loss is small. The gains are meaningful across a whole project.
+
+## What this doesn't mean
+
+**We haven't stopped using oil-based products entirely.** Oil-based stains (Armstrong-Clark, Cabot) are still in our kit for specific wood surfaces. Oil-modified alkyds (Sikkens Cetol SRD Plus) are still our first choice on rough cedar siding.
+
+**We haven't concluded water-based is always better.** Some substrates still want oil. Some clients have legitimate preferences. Some older homes need what they're used to getting.
+
+**We haven't switched because a paint rep told us to.** Reps always have a reason to promote the latest product. We switched because we watched our own projects over two full seasons.
+
+## Why we're sharing this
+
+A painting blog that just says "use premium products and hire a pro" is empty content. The real conversations in trade are specific — this product vs that product, this substrate vs that one, this climate vs that one. Sharing what we've actually learned across hundreds of Sea to Sky projects is more useful than abstract advice.
+
+If you're a homeowner reading this, the practical takeaway is: ask your contractor what specific primer they'd use on your cedar, and whether they've updated their product choices in the last couple of years. "We use what we've always used" isn't necessarily wrong, but "we've updated to X because Y" is the answer from someone who's actually paying attention.
+
+## Where to start
+
+If you have a cedar project coming up and want to understand the product spec, [book a site visit](/contact). Related: [rough-sawn cedar prep](/blog/rough-sawn-cedar-prep-whistler), [oil vs water-based finishes in mountain climates](/blog/oil-based-vs-water-based-wood-finishes-mountain), and our [wood restoration service page](/services/wood-restoration).`,
+  },
+  {
+    slug: "what-prep-really-means-exterior-paint",
+    title: "What 'prep' really means: a walk through a 40-hour exterior prep",
+    publishedAt: "2024-09-14",
+    excerpt:
+      "Every painting quote claims 'full prep included.' What does that actually mean in hours, tasks, and decisions? Here's a real-time walkthrough of the 40 hours we spent prepping one Whistler exterior before any finish coat went on.",
+    coverUrl: "/stock-images/portfolio/alpenglow-painter-exterior-prep-whistler.jpg",
+    category: "Process",
+    content: `"Full prep included" appears on every exterior painting quote. It's one of the least informative phrases in the industry. Two contractors both claiming full prep can do wildly different work and produce wildly different outcomes.
+
+To make it concrete, here's a real breakdown of the 40 hours we spent prepping a 2,400 sqft Whistler home exterior before any paint went on a wall. This was a repaint on a home that was about 8 years out from its last full exterior. Substrate condition was typical for that age: serviceable overall, localized failures, significant UV damage on south elevations.
+
+## Hours 1–4: Setup and protection
+
+A two-person crew, morning one.
+
+- Walked the perimeter with the owner. Confirmed the project scope, walked through any last-minute concerns, took keys and gate codes.
+- Protected landscaping: drop cloths over flower beds near walls, breathable fabric over shrubs touching elevations, plastic on tender new plantings only.
+- Covered deck surfaces and patio with tarps anchored with painters tape (not masking tape — tape that won't leave residue).
+- Removed exterior hardware where possible: light fixtures, house numbers, door kickplates. Photographed hardware before removal for reinstall reference.
+- Masked windows with 3M yellow poly masking film. Every window. On a 2,400 sqft home with a dozen windows, this alone took about 2 hours.
+
+Hour 4, we'd touched zero paint and done zero prep in the "paint work" sense. Setup is just setup. It has to happen.
+
+## Hours 5–12: Pressure washing
+
+Day one afternoon and morning of day two.
+
+- Started at the roofline, worked down, elevation by elevation.
+- Pressure 500–1,200 PSI on cedar siding, 1,500–2,500 on Hardie trim. Different tips for different surfaces.
+- Used a cedar brightener (oxalic-acid based) on the rough-sawn cedar to restore surface colour and open the grain.
+- Rinse thoroughly after each section to remove cleaner residue.
+- Let overnight dry before doing anything else.
+
+Eight hours of washing. Most homeowners see 2 hours of someone with a wand and assume that's it. The careful version takes four times as long because you're matching pressure to substrate and rinsing properly.
+
+## Hours 13–22: Scraping and sanding
+
+Day two afternoon through morning of day three.
+
+- Elevation by elevation, used carbide scrapers to remove all loose finish and peeling areas.
+- Transitions where old finish met bare wood were feather-sanded with 60–80 grit on a Festool Rotex with dust extraction.
+- Areas with chalking (mostly south-face trim) were scuff-sanded to promote adhesion on the new coat.
+- Specific trouble spots: two window sills that had significant UV damage, one section of fascia where paint was flaking in sheets, three small areas at the corners where the previous paint job had been thin.
+
+Total: about 10 hours across two days of detailed prep work. Every square foot of suspect finish was either treated or confirmed sound.
+
+## Hours 23–28: Carpentry repair
+
+Day three afternoon.
+
+- Replaced one section of fascia (approximately 4 feet) that had gone soft.
+- Replaced two window trim pieces on the south elevation that had rotted at the mitered corners.
+- Filled smaller damaged areas with an exterior-grade wood epoxy.
+- Nail-set every proud fastener and spot-primed rust-prone areas with Zinsser metal-blocking primer.
+- Removed and replaced approximately 15 feet of failed caulk at window surrounds and trim joints. Replaced with OSI Quad at the joints and Sherwin-Williams Loxon at the larger gaps.
+
+About 6 hours. Carpentry is usually an emerging scope item — you don't always know exactly what you'll find until you're into the prep.
+
+## Hours 29–34: Priming
+
+Day four morning.
+
+- Spot-primed all bare wood with Benjamin Moore Fresh Start Exterior Superior Primer. Every exposed substrate got a primer coat.
+- On the south-elevation trim that had seen the worst UV damage, full-primed the entire trim surface (not just spot-primed).
+- On repaired carpentry, primed all six faces of new wood before install and then primed again after install.
+- Let everything dry per spec before proceeding.
+
+About 6 hours. Spot-priming is often underestimated — it sounds fast but actually requires fine brush work at every transition.
+
+## Hours 35–40: Final prep check and masking verification
+
+Day four afternoon.
+
+- Walked the entire perimeter with a small ladder and a flashlight, looking at every elevation under raking light for missed areas.
+- Re-sanded three small areas I found that needed another pass.
+- Verified all caulk was cured (press-test with finger).
+- Verified all window masking was still sound; replaced any that had blown loose.
+- Covered walkways and any remaining exposed hardware.
+- Prepped paint cans: verified batch numbers, tinted if needed, stirred thoroughly.
+
+About 6 hours.
+
+Total prep: 40 hours. Next day, we started the first finish coat.
+
+## What a "full prep" quote at half these hours is doing
+
+A contractor claiming "full prep included" who only spends 15–20 hours on a project of this size is skipping specific things. Most commonly:
+
+- Pressure wash is done at higher pressure, faster, without cleaner. Removes visible dirt but doesn't prepare the substrate.
+- Scraping happens only on obviously peeling areas; no broader sanding or scuffing of marginal areas.
+- Caulking is topped up rather than replaced where it's failing.
+- Priming is skipped on "minor" bare areas that a topcoat is expected to cover.
+- Hardware and window masking is done hastily with masking tape instead of proper films.
+
+None of these are individually critical. All of them together cut 2–3 years off the finish life.
+
+## What we include in writing
+
+When we quote an exterior, the proposal lists prep specifically:
+
+- Wash method, pressure range, and cleaner product.
+- Scrape and sand standard, with note on what gets spot-sanded vs full-sanded.
+- Caulk product and joint approach.
+- Carpentry expected and what's contingent.
+- Priming product and coverage (spot vs full).
+- Masking and protection standard.
+
+If your contractor's proposal doesn't include this kind of specificity, the prep may or may not happen. You're buying a black box.
+
+## Where to start
+
+If you want an exterior quote that spells out prep in writing, [get in touch](/contact). For more on why prep matters specifically on rough cedar, see [our cedar prep walkthrough](/blog/rough-sawn-cedar-prep-whistler). For context on the broader failure modes prep prevents, see [why exterior paint fails early](/blog/why-exterior-paint-fails-early-mountains).`,
+  },
+  {
     slug: "how-long-does-exterior-paint-last-whistler",
     title: "How long does exterior paint last in Whistler? (And what shortens it)",
     publishedAt: "2024-09-15",
