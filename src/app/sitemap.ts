@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { POSTS } from "@/lib/blogPosts";
 
 const BASE_URL = "https://alpenglowpainting.ca";
 
@@ -24,14 +25,6 @@ const STATIC_ROUTES = [
   "/services/commercial",
 ];
 
-const BLOG_SLUGS = [
-  "how-long-does-exterior-paint-last-whistler",
-  "cedar-oil-vs-stain-which-is-right",
-  "cabinet-painting-vs-replacement",
-  "what-to-ask-a-painting-contractor",
-  "how-to-read-a-paint-quote",
-];
-
 const LOCATION_SLUGS = ["whistler", "pemberton", "squamish", "squamish-valley"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -47,10 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  for (const slug of BLOG_SLUGS) {
+  for (const post of POSTS) {
     entries.push({
-      url: `${BASE_URL}/blog/${slug}`,
-      lastModified: now,
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
       changeFrequency: "monthly",
       priority: 0.5,
     });

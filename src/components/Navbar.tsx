@@ -25,6 +25,7 @@ const ABOUT_LINKS = [
   { label: "Our Process", href: "/process" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const MAIN_LINKS = [
