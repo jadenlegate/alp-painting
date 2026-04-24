@@ -485,6 +485,520 @@ When the council meets next year to plan the following cycle, they open the pack
 Our [commercial, strata, and hotel painting service page](/services/commercial) has more on the scope of what we do and who we've worked with. If your project is a strata repaint, a hotel refresh, or a commercial building in the Sea to Sky, [reach out](/contact) and we'll set up a property walkthrough. Expect the first proposal within two weeks — commercial bids take longer than residential because the documentation is more substantial.`,
   },
   {
+    slug: "exterior-painting-cost-whistler-2026",
+    title: "How much does exterior painting cost in Whistler? Honest ranges for 2026",
+    publishedAt: "2025-07-08",
+    excerpt:
+      "Exterior painting costs in the Sea to Sky are higher than the national averages you'll find online. Here's what you should actually budget for a Whistler exterior in 2026, broken down by home size and complexity.",
+    coverUrl: "/stock-images/portfolio/exterior-repaint-finished-whistler.jpg",
+    category: "Cost & hiring",
+    content: `Every homeowner asking about exterior painting wants the number. The honest answer is that exterior painting in Whistler costs more than the average you'll find in a Google search, and the range is wide because the range of homes here is wide. A 1,800 sqft family home in Alta Vista and a 5,500 sqft chalet in Kadenwood are not comparable projects.
+
+Here's what actually drives the cost, and what we see most Sea to Sky exterior quotes land at in 2026.
+
+## What's in an exterior paint price
+
+Roughly three things:
+
+1. **Labour.** Typically 70–80% of the total. Exterior work is slow — it's scaffolding, moving equipment, masking, weather delays, access issues.
+2. **Product.** Usually 10–15%. Premium exterior paint is about $90–110 per gallon; a large chalet uses 20–40 gallons. The product bill is real but not the biggest line.
+3. **Overhead and contingency.** Insurance, WCB, vehicles, shop space, warranty reserve. 10–15%.
+
+That breakdown varies, but not by a lot. A quote that's significantly lower than the range below has cut something out of it — usually prep or product tier.
+
+## 2026 ranges for Whistler exteriors
+
+These are ranges we see across Whistler, Pemberton, and Squamish for honestly-prepped, premium-product exterior projects. Numbers assume two-coat application on sound substrate:
+
+- **Small family home, 1,500–2,000 sqft, single storey or 1.5 storey, simple siding:** $8,000–$14,000
+- **Mid-size home, 2,000–3,000 sqft, two storey, mixed siding (stucco + wood trim, or Hardie + cedar accents):** $14,000–$24,000
+- **Large chalet, 3,000–5,000 sqft, two or three storey, cedar-heavy:** $22,000–$42,000
+- **Trophy home, 5,000+ sqft, complex exterior, significant scaffolding needs:** $40,000–$90,000+
+
+These numbers include wash, prep, caulk, spot-prime, two finish coats on all surfaces, and a written warranty. They don't include major carpentry or rot repair, which we price separately after assessment.
+
+## What drives you to the top or bottom of the range
+
+The biggest variables, in roughly the order they affect price:
+
+**Access and height.** A single-storey rancher is much cheaper to paint than a three-storey walk-out. Scaffolding, lift rental, and the slower pace of working at height all add cost.
+
+**Cedar vs painted.** Cedar siding and timber restoration takes longer than painted surfaces. A chalet with a lot of natural cedar will price higher than a similar chalet with painted Hardie.
+
+**Existing condition.** A home that was last painted 6 years ago with decent prep is a faster job than one that's been neglected for 15 years. The latter might need 40+ hours of additional scraping, priming, and carpentry repair before any finish coat goes on.
+
+**Complexity.** Gable returns, dormers, turrets, wrap-around decks, mixed material changes — anything that slows down the work adds hours.
+
+**Product tier.** The difference between a $60/gallon and a $95/gallon paint across a whole exterior is often $400–$600. Most of our clients choose premium — it's not the place to save.
+
+**Timeline pressure.** If you need the job done in a specific three-week window in July, you're narrowing our crew's flexibility and pricing tends to move up accordingly.
+
+## What a $10,000 quote for a $22,000 project is missing
+
+When one quote is significantly lower than others, it's almost always one of these:
+
+- Single-coat finish instead of two-coat.
+- Cheaper paint specified but labeled "premium" without a product name.
+- Prep listed generically with no commitment to sanding, scraping, priming.
+- No caulk replacement.
+- Crew that disappears at callback time.
+- No written warranty.
+
+A 25% discount on a proper project usually means 50–60% less actual work done. The finish fails early, and you pay again in 3–5 years. [Our guide to reading a paint quote](/blog/how-to-read-a-paint-quote) covers the specific line items to look at.
+
+## How to actually budget
+
+A reasonable approach if you're planning an exterior for 2026:
+
+1. Measure your home's perimeter (roughly) and estimate square footage of exterior wall surface, not floor area. Google Maps measure tool is good enough.
+2. Use $6–$10 per sqft of exterior wall surface as a rough planning number for the Sea to Sky.
+3. Add 20% for homes with significant cedar, timber frame, or complex architecture.
+4. Get two or three written proposals and compare scope before price.
+
+We don't quote over the phone — exterior pricing without a site visit isn't a quote, it's a guess. A walk-around usually takes 20 minutes and tells us more than any square-footage calculation.
+
+## Where to go from here
+
+If you have a Sea to Sky exterior coming up and want a real proposal, [book a site visit](/contact). For context on how we think about exteriors in this climate, [our breakdown of what mountain exposure does to paint](/blog/exterior-painters-whistler-mountain-climate) is a useful read first.
+
+If the price feels high, it's worth asking why paint jobs that last 10 years cost more than paint jobs that last 3. Usually the difference is in the labour and prep you're not seeing, and it's real.`,
+  },
+  {
+    slug: "interior-painting-cost-whistler",
+    title: "Interior painting cost breakdown for a Whistler home in 2026",
+    publishedAt: "2025-06-25",
+    excerpt:
+      "Interior painting cost in Whistler runs about 30–50% higher than the Canadian average. Here's what the price covers, why it's higher here, and how to budget for different scopes of interior work.",
+    coverUrl: "/stock-images/portfolio/master-bedroom-chalet-whistler.jpg",
+    category: "Cost & hiring",
+    content: `Interior painting in Whistler costs more than interior painting in most of the country. The product is the same. The difference is the labour market, the season pressure, and the standard of finish most Sea to Sky clients expect. A quick roller job isn't what most homeowners here are paying for. A careful, clean, well-cut interior repaint done to a high standard is what they want, and that's what the prices reflect.
+
+Here's what you should actually budget for different interior scopes in 2026, and what moves the number up or down.
+
+## 2026 ranges for Whistler interiors
+
+Assuming two-coat application on walls, existing trim repaint, and all furniture protection:
+
+- **Single room, 10x12, walls + trim + ceiling:** $900–$1,600
+- **Single room, 14x18 with vaulted ceiling:** $1,400–$2,400
+- **Whole 2-bedroom condo, walls + trim + ceilings:** $5,500–$9,000
+- **Whole 3-bedroom family home, 2,000 sqft:** $9,000–$16,000
+- **Whole 5-bedroom chalet with vaulted great room and wood detailing:** $18,000–$35,000+
+
+Ranges widen with ceiling height, trim detail, and whether walls are ready for paint or need prep. A home with smooth-finish drywall is 25–30% cheaper to repaint than a home with heavy orange-peel or knockdown texture.
+
+## What you're actually paying for
+
+A proper interior project divides roughly into:
+
+- **Protection and setup:** cover floors, move furniture, mask windows and hardware. Often underestimated — on a full-house repaint it's a day of work before any paint is opened.
+- **Prep:** patch nail pops, fill cracks, sand patches flat, spot-prime. Quality of prep is the single biggest predictor of how long the job will look good.
+- **Cutting in:** the slow, precise work at ceilings, trim, and corners. You can tell a careful painter from a fast one entirely by how their cut lines look.
+- **Rolling walls:** the part everybody pictures when they think of painting, and the fastest part of the process.
+- **Trim and doors:** a second pass with a different process. If re-coating oil-based trim, a bonding primer is required.
+- **Final walk and touch-up:** every room checked under good light, every flaw flagged and fixed.
+
+## Where costs go up
+
+**Ceilings matter.** A flat 8-foot ceiling is one thing. A vaulted tongue-and-groove ceiling in a great room is a different project. Expect to pay $8–$14 per sqft of ceiling surface for T&G work, especially if any knot-sealing or colour change is involved.
+
+**Trim condition.** If existing trim is oil-based and the client wants latex, every surface needs a bonding primer. That's a full additional coat on miles of trim. Adds 15–25% to trim labour.
+
+**Colour changes.** Going from a light neutral to another light neutral is two coats. Going from dark to white might be three coats, sometimes four. Deep accent colours in saturated reds, teals, or forest greens often need three coats to hit full colour.
+
+**Closets and details.** The places that didn't get painted last time. Most quotes from competitors assume closets are out of scope. Ours include them unless the client excludes them.
+
+**Working around occupants.** An empty house is cheaper to paint than an occupied one. Not by a huge amount, but it's real.
+
+## Where costs go down
+
+If you want to bring the price down without compromising quality:
+
+- **Paint fewer surfaces.** Walls only, keep existing trim and ceiling. Often cuts the price by 30–40%.
+- **Stay in the same colour family.** Two coats of a similar shade cures faster and uses less product than a colour change.
+- **Plan ahead.** Booking 3–4 months out gets you better rates than emergency-scheduled work in peak season.
+- **Consolidate rooms.** Painting all the bedrooms at once is cheaper per room than doing them one at a time over a year.
+
+## What a good interior quote looks like
+
+A written quote specifying: rooms in scope, surfaces in scope per room (walls, trim, ceiling, closets, doors), colour count, products by name, approximate timeline, and warranty terms. Prep expectations should be in writing, not assumed. [Our guide to reading a painting quote](/blog/how-to-read-a-paint-quote) covers what to verify line by line.
+
+## Common misconceptions
+
+**"Painters just roll walls." ** They don't. Well under half the hours on any interior project are rolling walls. Most of the time goes to prep, protection, and trim.
+
+**"One quote is the same as another."** Not even close. On a $10,000 job, we've seen competitor quotes ranging from $6,000 to $14,000 for what looks like the same scope. The difference is almost always the actual work being done.
+
+**"I can DIY most of it."** You can paint one room on a weekend. You cannot paint a whole house in 40 hours, which is what a crew of two can knock out in about 4 days. The labour math is real.
+
+## Where to start
+
+If you're planning interior painting for a Whistler home, our [interior painting service page](/services/interior-painting) has the longer scope breakdown. [Book a walkthrough](/contact) and we'll get you a specific proposal within about a week. For context on how we approach the work itself, [this walkthrough of a proper interior project](/blog/interior-painting-whistler-what-to-expect) explains the process in more depth.`,
+  },
+  {
+    slug: "painting-contractor-insurance-wcb-bc",
+    title: "Painting contractor insurance and WCB in BC: what to actually verify before you hire",
+    publishedAt: "2025-06-12",
+    excerpt:
+      "Most homeowners ask if a painter is 'insured' and take yes for an answer. That's not enough. Here's what to actually check on a BC painting contractor's insurance and WorkSafeBC coverage — and why it matters if something goes wrong on your property.",
+    coverUrl: "/stock-images/portfolio/alpenglow-painter-ladder-window-whistler.jpg",
+    category: "Cost & hiring",
+    content: `A painter slips off a ladder on your property and breaks their wrist. Who pays for the hospital bill, the rehab, and the time off work?
+
+If the painter is a WorkSafeBC-registered business with active coverage, WorkSafeBC does. If they're not, the answer can get complicated — and in some cases, as the property owner, you can end up partially on the hook. That's not a scenario most homeowners understand until it's actually happening.
+
+This post walks through what insurance and WCB coverage a painting contractor in BC should actually have, how to verify it, and what the gaps look like.
+
+## The two coverages that matter
+
+Every legitimate painting contractor in British Columbia carries two separate forms of coverage:
+
+**Commercial General Liability (CGL) insurance.** This covers damage the contractor causes to property or injury they cause to third parties. If a sprayer overspray drifts onto your neighbour's car, CGL handles it. If a ladder falls through your window, CGL handles it. Minimum useful coverage is $2M per occurrence. We carry $5M because we do commercial and strata work where the stakes are higher.
+
+**WorkSafeBC (WCB) coverage.** This covers the painter themselves if they're injured on the job. It's mandatory for any business with employees in BC and strongly advised even for solo operators. If a painter falls off a ladder on your property, WCB is what pays their medical costs and lost income.
+
+Both coverages are separate. A contractor can have one without the other. Ask specifically about each.
+
+## What to verify, not just ask
+
+"Are you insured?" is the wrong question. The right question is: "Can you send me the certificate of insurance and your WCB clearance letter?"
+
+Both are documents, not verbal statements. They're easy to produce if the contractor has them, and they take about a business day to generate. If they can't produce them:
+
+- The policy doesn't exist.
+- The policy has lapsed.
+- They don't know what you're asking for.
+
+None of those are acceptable.
+
+## What a CGL certificate of insurance shows
+
+A certificate of insurance (COI) is a one-page document from the insurance company listing:
+
+- The insured business name (make sure it matches the contractor you're hiring).
+- The coverage limits (per occurrence and aggregate).
+- The policy period (active dates).
+- The insurer.
+- Often: any additional insureds (you can often request to be named as additional insured for a big project).
+
+Things to check on a COI:
+
+- Is the business name on the COI the same business name on the contract?
+- Is the policy currently active (not expired)?
+- Is the per-occurrence limit at least $2M?
+- Is the policy type "Commercial General Liability" and not "Personal Liability"?
+
+If anything doesn't match, ask.
+
+## What a WCB clearance letter shows
+
+WorkSafeBC provides a clearance letter that confirms a business is in good standing and current on premiums. Anyone can request one for any BC business by their account number.
+
+The letter shows:
+
+- Business name.
+- Classification (painting contractors fall under a specific code).
+- Status (active and in good standing, vs. in arrears or inactive).
+- Issue date and expiry.
+
+Key thing: the clearance letter expires. An old clearance letter doesn't prove current coverage. Ask for one dated within the last 30 days.
+
+If a contractor says "I'm WCB exempt because I'm a sole proprietor" — that's a choice some operators make, and it's legal in BC. But it means there's no WCB coverage if they're injured on your property. You want to understand that gap before hiring.
+
+## Why this matters on your property
+
+Three scenarios come up most often:
+
+**Scenario 1: Painter slips and falls.** If WCB is active, WCB handles it, and the painter can't sue you for personal injury. If WCB isn't active, your homeowner's insurance may be on the hook for medical costs and lost wages. Some homeowner's policies exclude injuries to contractors.
+
+**Scenario 2: Accidental property damage.** Painter knocks over an expensive piece of art. If CGL is active, it's claimed against the painter's policy. If not, you're chasing the contractor personally, and good luck if they don't have assets.
+
+**Scenario 3: Overspray or runoff damage to a neighbour's property.** Neighbour's property damage is covered under CGL. Without it, it becomes your problem as the property where the work was being done.
+
+None of these are rare. Property damage claims happen on painting jobs regularly. The insurance just handles it quietly.
+
+## What we carry, for reference
+
+So you have a comparison:
+
+- **CGL**: $5M per occurrence, $10M aggregate.
+- **WCB**: active, classified under 763002 (Painting Contractors), premiums current.
+- **Additional**: named additional insureds on request for strata, commercial, and custom home builder projects.
+- **Certificates**: available on request. We typically send them attached to the signed proposal.
+
+Most legitimate contractors in Whistler carry something similar. The ones who don't are the ones you want to know about before hiring, not after.
+
+## One more question worth asking
+
+"What happens if something goes wrong?" is different from "are you insured?" A professional answer sounds like: "Here's the process, here's who you call, here's what my insurer will cover." An unprofessional answer sounds like: "Don't worry, nothing will go wrong."
+
+Painting contracts in the Sea to Sky aren't risky in absolute terms, but the sites involve ladders, lifts, high elevations, and expensive homes. Stuff happens. The difference between a contractor who handles it and one who ghosts you when it does is mostly about what they put in place before anyone picked up a brush.
+
+## Where to start
+
+If you're lining up bids, ask every contractor for their COI and WCB clearance as part of the quote package. The professional ones will have them ready.
+
+For a full list of what else to ask, [our six questions for any painting contractor](/blog/what-to-ask-a-painting-contractor) pairs well with this one. If you'd like our COI and WCB clearance, we include them with every signed proposal. [Reach out](/contact) to start.`,
+  },
+  {
+    slug: "why-exterior-paint-fails-early-mountains",
+    title: "Why exterior paint fails early in the mountains (and how we prevent it)",
+    publishedAt: "2025-05-28",
+    excerpt:
+      "A paint job that lasts 8 years in Vancouver sometimes lasts 3 in Whistler. That's not a product problem. It's almost always an application and prep problem tied to mountain conditions. Here's what goes wrong, and how to avoid it.",
+    coverUrl: "/stock-images/portfolio/chalet-bay-window-before-whistler.jpg",
+    category: "Process",
+    content: `We get called out to exteriors in Whistler that are peeling three, four, five years after their last repaint. The owner is frustrated because they paid for premium paint. Sometimes they still have the receipts. The product was fine. What went wrong is almost always upstream of the paint.
+
+Here are the failure patterns we see most, and what prevents them.
+
+## Failure 1: Paint applied too late in the season
+
+Most common cause of early failure on Whistler exteriors.
+
+Acrylic paints need a cure window above about 10°C for 24–48 hours after application. In Whistler, overnight temperatures dip below that threshold by the first or second week of October in most years. Paint applied in late September through October sometimes feels dry to the touch but hasn't fully coalesced — the polymer chains haven't finished cross-linking.
+
+A partially-cured film is soft, has weaker adhesion, and is vulnerable to the first hard frost. The next spring, the homeowner sees peeling on south-facing surfaces that don't make sense for a 1-year-old coating.
+
+**Prevention:** we don't book new exterior work past mid-September in most years. Any exception requires a weather window we can verify in advance.
+
+## Failure 2: Prep cut short
+
+The invisible failure mode. A contractor under time or money pressure cuts prep. You don't see it on day one — the finish looks great. Two years later, paint peels in sheets where it was applied over a chalky, dirty, or unprimed substrate.
+
+What proper prep includes, and where shortcuts typically happen:
+
+- **Pressure washing.** Easy to skip on parts of the exterior that "don't look dirty." They're dirty. UV and airborne silicates coat every surface over time. Unwashed surfaces develop chalk, which paint won't bond to.
+- **Scraping and sanding failed areas.** Slow, tedious work. Often skipped on hard-to-reach areas like gable peaks.
+- **Spot-priming bare wood.** Skipped when the finish coat is tinted dark enough to hide the bare spots visually.
+- **Caulking.** Usually gets done on the visible front elevation and skipped on sides and back.
+
+**Prevention:** we spec prep in writing, with photos of failed areas, before any finish coat goes on. Our crew documents prep in progress so we can show what was done.
+
+## Failure 3: Too thick, applied too fast
+
+A paint film that's too thick doesn't cure evenly. The surface skins over while the lower layers stay fluid. As the whole film tries to cure, you get cracking, wrinkling, or extremely slow drying. On exteriors, this usually shows up as cracking in the first year along caulked joints or thickly-built corners.
+
+**Prevention:** we apply to spec. Most exterior acrylics want two coats at 4–5 mils wet per coat. Heavy application on a bad area doesn't fix the problem, it creates new ones.
+
+## Failure 4: Coating over a failing substrate
+
+If the wood beneath the paint is rotten, the paint film goes with it. You can prime and paint over soft wood, and it'll look great for a season. Then the wood continues to fail under the film and takes the paint with it.
+
+**Prevention:** we probe suspect areas before prep. Anything that's spongy gets repaired or replaced (often through our [light carpentry service](/services/light-carpentry)) before paint is specified. If the rot is extensive, we pause and have the conversation with the owner about proper replacement.
+
+## Failure 5: Wrong product for the substrate
+
+An acrylic paint applied over an oil-based previous coat without a bonding primer will fail at the adhesion layer. A film-forming stain applied over cedar that's been treated with oil will not bond. A breathable stain applied over an impermeable film will trap moisture and peel.
+
+**Prevention:** we test when we're not sure what's on the wall. A $3 bottle of solvent tells us whether existing paint is oil-based or latex. A simple water-drop test tells us whether cedar has been oiled. The product we spec matches what's already there.
+
+## Failure 6: UV-inappropriate tint
+
+Deep colours — rich reds, forest greens, strong browns — absorb far more UV than light colours. On south and west-facing walls at elevation, deep tints can fade visibly in 2–3 years in formulations not rated for high UV.
+
+**Prevention:** on high-UV exposures with deep colours, we spec UV-rated formulations (Benjamin Moore Aura Exterior has a "Color Lock" line; Sherwin-Williams has "Emerald" with specific UV stabilizers). Light neutrals are more forgiving on south and west elevations.
+
+## Failure 7: Missing the little things
+
+Small details that individually look cosmetic but collectively cut years off a paint job:
+
+- Gutter downspouts not disconnected from the wall during wash, trapping mud behind them.
+- Nail heads not set flush and spot-primed, rusting through the finish within 18 months.
+- Bare end grain on cut siding not sealed, wicking moisture behind the board.
+- Hardware (hinges, brackets) painted over without removal, trapping corrosion.
+
+**Prevention:** our project checklist catches these. Every exterior project has the same closeout inspection: walk the full perimeter with the owner, lighted torch in hand, looking at every detail.
+
+## What failure looks like vs. normal wear
+
+Normal wear on a well-done exterior: gradual chalking and UV fade over 7–10 years, usually worst on south and west faces. Touch-ups at year 5–6 extend life to 10–12 years.
+
+Early failure: visible peeling at year 1–3. Cracking along caulk lines. Colour shift on non-south-facing surfaces. Paint coming off in sheets rather than flaking.
+
+If you're seeing early failure on a recent paint job, it's worth a conversation. Sometimes it's warranty-recoverable. Sometimes the right answer is to plan a redo with someone who'll do it differently. Either way, it's diagnosable.
+
+## Where to start
+
+If you're noticing peeling, cracking, or colour shift on a paint job that's younger than 5 years, [book a site visit](/contact). We'll walk the exterior and tell you honestly what we see. For context on what we do differently, [our breakdown of exterior painting in the Sea to Sky](/blog/exterior-painters-whistler-mountain-climate) covers the full approach. Related reading: [the three environmental stressors that kill mountain paint](/blog/freeze-thaw-uv-condensation-mountain-paint-damage).`,
+  },
+  {
+    slug: "rough-sawn-cedar-prep-whistler",
+    title: "The right way to prep rough-sawn cedar in Whistler: what most painters skip",
+    publishedAt: "2025-05-14",
+    excerpt:
+      "Rough-sawn cedar is unforgiving. The texture that makes it beautiful is the same texture that traps failing finish, dirt, and moisture. Here's how we actually prep it — and what separates a 3-year finish from a 7-year one.",
+    coverUrl: "/stock-images/portfolio/cedar-ceiling-detail-whistler.jpg",
+    category: "Process",
+    content: `Rough-sawn cedar is the signature siding of mountain homes. It has character, it weathers naturally if you want it to, and it holds stain with a depth that smooth cedar can't match. It's also one of the most demanding substrates to refinish properly. The very texture that makes it beautiful traps previous finish, grit, and moisture. Prep on rough-sawn cedar is a skill, and cutting corners on it is the fastest way to turn a 7-year finish into a 3-year one.
+
+Here's how we approach rough-sawn cedar prep on Sea to Sky exteriors, and what you should expect a contractor to do.
+
+## Step one: read what's already on the wall
+
+Before any tool touches the wood, we need to know what the existing finish is. On rough-sawn cedar, there are usually three possibilities:
+
+- **Penetrating oil** (Cabot, Sikkens Cetol SRD, Armstrong-Clark). Doesn't film, weathers out rather than peels. Easier to recoat.
+- **Film-forming stain** (semi-transparent or solid). Sits on the surface. Fails by peeling. Harder to recoat without removing failed areas.
+- **Paint.** Uncommon on rough-sawn cedar but we see it. Typically peeling already.
+
+A quick water-drop test and a solvent test tell us what we're dealing with. We write this into the proposal so the recoat plan matches the substrate.
+
+## Step two: wash, but carefully
+
+Pressure washing is where most rough-sawn cedar prep goes wrong. Too much pressure and you erode the soft summer wood, leaving ridges where the harder winter growth stands out. Too little pressure and you leave dirt trapped in the texture.
+
+Our standard on rough-sawn cedar:
+
+- 500–1,200 PSI with a 25–40 degree tip.
+- Wand held at about 12–18 inches from the surface.
+- Always working with the grain, never against.
+- Start from the top, let runoff rinse lower sections.
+
+We typically use a cedar brightener (like Benjamin Moore Restore, or a dedicated oxalic-acid-based cleaner) mixed into the wash. It removes greyed surface cells and tannin staining, returning the wood to a healthy colour before any finish goes on.
+
+The wash has to be done at least 48 hours before any finish is applied. Wet cedar is darker than dry cedar, and a wall that looks ready isn't always ready.
+
+## Step three: scrape and sand selectively
+
+Where the existing finish is failing — peeling, checking, or heavily built up — we sand or scrape back to sound substrate. On rough-sawn cedar, "sound substrate" doesn't mean bare wood. It means wood that will hold the new coat.
+
+Tools we use depending on the condition:
+
+- **Carbide scrapers** for film-forming stains that are peeling in sheets. Fast, removes loose material without damaging wood.
+- **Festool Rotex sanders with dust extraction** for broader areas that need to be feathered. We use 60–80 grit on rough-sawn cedar — anything finer smooths the texture we want to preserve.
+- **Hand sanding** around trim, inside corners, and detail areas where power tools don't fit.
+
+The crew's judgment on when to stop sanding matters. Sanding too aggressively destroys the rough-sawn character. Not sanding enough leaves failed finish that the new coat will fail with.
+
+## Step four: spot-treat end grain and damage
+
+Rough-sawn cedar has a lot of end grain at cut ends, under trim returns, and around penetrations. End grain wicks moisture 10x faster than face grain. It has to be sealed properly or moisture creeps behind the finish from the cut edges.
+
+Before we stain or paint, we:
+
+- Treat end grain with a penetrating end-grain sealer (Cabot makes a good one).
+- Fill nail holes with an exterior-grade filler that takes stain.
+- Repair small damaged areas with a cedar-compatible epoxy for larger damage, or let significant damage drive a carpentry replacement.
+
+Nail heads that are proud of the surface get set flush and spot-primed. Rust bleeds through any finish within months if they're not.
+
+## Step five: let the substrate acclimate
+
+A freshly washed wall is wet. A wall we've just sanded has open grain. We give it 48–72 hours in dry conditions before any finish goes on. If weather doesn't cooperate, we wait. The cost of starting too early is a premature finish failure and we know exactly how that conversation goes with a homeowner.
+
+## Step six: finish selection tied to the prep
+
+The stain or paint we apply is chosen for the substrate we've prepped. For rough-sawn cedar in the Sea to Sky, we default to **Sikkens Cetol SRD Plus** (penetrating oil, flexes with the substrate, doesn't peel) or **Sansin ENS** (higher-film stain with strong UV performance) depending on the look the client wants.
+
+What we don't do on rough-sawn cedar: solid film-forming paints unless specifically requested, in which case we have a longer conversation about maintenance expectations.
+
+More on finish selection in [our post on oil vs stain for cedar](/blog/cedar-oil-vs-stain-which-is-right).
+
+## What this takes in hours
+
+Proper prep on a typical 2,500 sqft Whistler chalet with rough-sawn cedar siding takes roughly:
+
+- 8–12 hours: wash and brighten.
+- 20–40 hours: scrape, sand, repair.
+- 4–6 hours: end-grain sealing and spot-priming.
+- 4–8 hours: acclimation wait (no labour but schedule time).
+
+That's 40–60 hours of prep before any finish goes on. On a three-week project, prep is roughly the first week and a half.
+
+A contractor quoting the same project with 8–15 hours of prep isn't doing prep to the standard that produces a 7-year finish. They're doing prep to the standard that produces a 3-year one.
+
+## Where to start
+
+If you have a cedar home in the Sea to Sky coming up for a refinish, [book a site visit](/contact). Our [wood restoration service page](/services/wood-restoration) covers the longer service scope. For context on how mountain conditions drive the approach, [our breakdown of why paint fails early in the mountains](/blog/why-exterior-paint-fails-early-mountains) pairs with this post.`,
+  },
+  {
+    slug: "freeze-thaw-uv-condensation-mountain-paint-damage",
+    title: "Freeze-thaw, UV, and condensation: the three things that kill mountain paint",
+    publishedAt: "2025-04-30",
+    excerpt:
+      "Exterior paint in the Sea to Sky fails from three stressors in roughly this order: UV, freeze-thaw, condensation. Here's what each one does, how to identify which is driving your failure, and how we design against all three.",
+    coverUrl: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg",
+    category: "Process",
+    content: `Paint on a Sea to Sky exterior has three enemies. Understand what each does and how to fight it, and you understand most of why mountain paint jobs last as long (or as short) as they do.
+
+In the order they typically cause the most damage: UV, freeze-thaw, and condensation. Every paint system we spec up here is designed to push back on all three.
+
+## UV at elevation is the biggest driver
+
+Ultraviolet light breaks down the polymer binders in paint over time. At elevation, UV dose is higher — about 10% more at 750 metres than at sea level, and meaningfully more again at 1,200 metres. Add a short but intense summer sun exposure and thin air, and Whistler exteriors take roughly 20–30% more UV per year than a comparable Vancouver home.
+
+### What UV damage looks like
+
+- **Chalking.** A powdery residue you can wipe off with your finger. Means the binder has degraded and is releasing the pigment.
+- **Colour fade.** Reds, blues, and deep browns fade the fastest. White and light beige are nearly UV-proof.
+- **Surface embrittlement.** Paint becomes less flexible, then cracks along caulk lines and substrate joints.
+
+### How we design against it
+
+- Specify UV-rated exterior coatings for south and west elevations (Benjamin Moore Aura Exterior with its Color Lock formula, Sherwin-Williams Emerald Exterior, Sikkens Cetol SRD Plus).
+- Push clients gently toward lighter colours on high-UV walls when they have flexibility.
+- Apply full two-coat film thickness — thin coats chalk faster.
+- Schedule routine maintenance at 5–6 years, not waiting until year 10.
+
+## Freeze-thaw stresses every joint
+
+The Sea to Sky sees roughly 150–200 freeze-thaw cycles a year, depending on elevation. Each cycle the substrate beneath the paint expands and contracts. The paint film has to flex with it.
+
+### What freeze-thaw damage looks like
+
+- **Cracking along caulked joints.** Caulk shrinks in cold, the paint film bridging the caulk cracks when the joint opens.
+- **Failure at material transitions.** Where cedar meets stucco, where wood meets metal flashing — the two substrates expand at different rates, and the paint film takes the difference.
+- **Peeling around windows.** Condensation behind the glass combines with freeze-thaw at the frame to lift paint in strips.
+
+### How we design against it
+
+- Flexible, elastomeric caulks at all moving joints. We use Sherwin-Williams Loxon or OSI Quad depending on the joint type.
+- Product selection biased toward flexible finishes rather than hard ones on areas with significant expansion potential.
+- Film thickness controlled — thin coats flex better than heavy ones.
+- Metal flashings and trim primed separately with a metal-specific primer before the finish coat.
+
+## Condensation is the sneaky one
+
+Condensation is the hardest of the three to identify because you usually can't see it. Moisture trapped behind a paint film from inside the wall — from interior humidity, from snow melt, from ground moisture — will eventually find a way out. If the paint film isn't breathable enough, it pushes off the substrate.
+
+### Where condensation damage shows up
+
+- **Peeling on the lower 18 inches of a wall** where ground moisture wicks up through the siding.
+- **Cedar that's black behind the paint** on shaded north-facing walls — trapped moisture plus fungal growth.
+- **Paint lifting under eaves and soffits** where condensed moisture runs down from the roof deck.
+- **Blistering in summer** — moisture in the substrate heats up, vaporizes, lifts the paint.
+
+### How we design against it
+
+- Use breathable finishes where appropriate (penetrating oils on cedar, acrylics designed for "permeance").
+- Ensure the substrate is dry before finish is applied — moisture meter readings below 15% on wood before any coat.
+- Identify and address source: flashing that's diverting water into the wall, gutters that dump runoff against siding, ground grading that sends water toward the foundation.
+- Communicate with clients when the actual problem is above our scope (roof leak, interior humidity) rather than painting over it.
+
+## How to tell which one is driving your failure
+
+Walking an exterior that's failing, the failure pattern tells you which stressor is dominant:
+
+- **Uniform chalking, worst on south/west faces:** UV. Re-coat with a UV-rated product.
+- **Cracking at caulk joints, nowhere else:** Freeze-thaw. Recaulk with flexible sealant and re-coat.
+- **Peeling at the bottom of walls or under eaves:** Condensation. Fix the source first.
+- **Peeling with blackened wood behind it:** Condensation plus fungal growth. Address the moisture source and treat the wood before repainting.
+- **Random peeling unrelated to exposure:** Usually a prep failure from the last paint job, not an environmental issue.
+
+Most exteriors we see are hit by all three to some degree. The question is which is dominant, and that drives the repair approach.
+
+## Why this matters
+
+A painting contractor who doesn't think about these three stressors is specifying products and prep that aren't appropriate for where the paint is going. The result is a perfectly adequate Vancouver-grade paint job that fails early in the mountains. The owner blames the paint. The paint was fine. The spec was wrong for the location.
+
+We've been painting in the Sea to Sky long enough to have strong opinions about what works and what doesn't. Most of our spec choices are driven by one of these three stressors.
+
+## Where to start
+
+If your exterior is showing early failure, a site visit lets us identify which stressor is driving it. [Get in touch](/contact) for a walkthrough. For context on how we prevent failure on new projects, [our post on why exterior paint fails early in the mountains](/blog/why-exterior-paint-fails-early-mountains) covers the prep side. Related: [how long exterior paint should actually last in Whistler](/blog/how-long-does-exterior-paint-last-whistler).`,
+  },
+  {
     slug: "how-long-does-exterior-paint-last-whistler",
     title: "How long does exterior paint last in Whistler? (And what shortens it)",
     publishedAt: "2024-09-15",
