@@ -114,11 +114,31 @@ const VALUE_PROPS = [
   },
 ];
 
-const PROCESS_STEPS: { n: string; label: string; icon: LucideIcon }[] = [
-  { n: "01", icon: MessageSquare,  label: "Request a quote" },
-  { n: "02", icon: Ruler,          label: "Proposal & walkthrough" },
-  { n: "03", icon: Paintbrush,     label: "Paint — with your home protected" },
-  { n: "04", icon: BookOpen,       label: "Final report & warranty" },
+const PROCESS_STEPS: { n: string; label: string; body: string; icon: LucideIcon }[] = [
+  {
+    n: "01",
+    icon: MessageSquare,
+    label: "Request a quote",
+    body: "Tell us about the project online or by phone. We respond same-day on weekdays.",
+  },
+  {
+    n: "02",
+    icon: Ruler,
+    label: "Proposal & walkthrough",
+    body: "We come see the space, ask the right questions, and send a detailed written proposal — usually the day of the visit.",
+  },
+  {
+    n: "03",
+    icon: Paintbrush,
+    label: "Paint — with your home protected",
+    body: "Clean crews, premium products, daily updates. Your home stays livable from day one to walkthrough.",
+  },
+  {
+    n: "04",
+    icon: BookOpen,
+    label: "Final report & warranty",
+    body: "We walk every space with you, fix any touch-ups on the spot, and hand off documentation for the warranty.",
+  },
 ];
 
 export default function HomePage() {
@@ -188,6 +208,12 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
+          <FadeIn delay={0.2}>
+            <div className="mt-10 md:mt-14 flex flex-wrap items-center gap-x-8 gap-y-3">
+              <Button href="/contact">Get a Quote</Button>
+              <Button href="/work" variant="text">See recent work →</Button>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 
@@ -255,6 +281,9 @@ export default function HomePage() {
                     ]}
                   />
                 </div>
+                <div className="mt-8">
+                  <Button href="/contact" size="lg">Get a Quote</Button>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -275,7 +304,7 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start">
+          <div className="grid gap-8 md:gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start">
             {PROCESS_STEPS.map((s, i) => (
               <Fragment key={s.n}>
                 <FadeIn delay={i * 0.08}>
@@ -285,6 +314,9 @@ export default function HomePage() {
                     </div>
                     <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
                     <div className="text-background font-medium">{s.label}</div>
+                    <p className="mt-2 text-background/65 text-sm leading-relaxed">
+                      {s.body}
+                    </p>
                   </div>
                 </FadeIn>
                 {i < PROCESS_STEPS.length - 1 && (
