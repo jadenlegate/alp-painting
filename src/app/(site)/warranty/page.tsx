@@ -6,28 +6,34 @@ import { ShieldCheck, FileText } from "lucide-react";
 export const metadata: Metadata = {
   title: "Painting Warranty — Up to 10 Years in Writing",
   description:
-    "Alpenglow Painting's written warranty — 3-year standard, up to 10 years on qualifying projects across Whistler, Pemberton, and Squamish. Coverage tiers, exclusions, and how to register a claim.",
+    "Alpenglow Painting's written warranty — 10 years on interior painting, 5 years on exterior solid finishes and cabinet refinishing, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
   alternates: { canonical: "/warranty" },
 };
 
 const WARRANTY_TIERS = [
   {
-    years: "3",
-    label: "Standard",
-    description: "Included on all projects at no extra cost. Covers peeling, flaking, and premature finish failure under normal conditions.",
-    highlight: false,
-  },
-  {
-    years: "7",
-    label: "Extended",
-    description: "Available on most exterior and interior projects when premium products are specified. Requires a surface assessment at quoting.",
-    highlight: false,
-  },
-  {
     years: "10",
-    label: "Maximum",
-    description: "Available on select projects where surface conditions and product choice support it.",
+    label: "Interior painting",
+    description: "Walls, trim, ceilings, doors — every interior painting project. Covers peeling, flaking, and premature finish failure under normal interior conditions.",
     highlight: true,
+  },
+  {
+    years: "5",
+    label: "Exterior — solid finishes",
+    description: "Solid paint and solid-body stain on siding, trim, and exterior wood. Covers peeling, flaking, and premature finish failure.",
+    highlight: false,
+  },
+  {
+    years: "2",
+    label: "Exterior — semi-transparent & translucent stain",
+    description: "Penetrating stains wear gracefully but faster than solid finishes — so the warranty matches how the product actually performs in mountain sun.",
+    highlight: false,
+  },
+  {
+    years: "5",
+    label: "Cabinet refinishing",
+    description: "Spray-applied cabinet finishes — kitchens, vanities, built-ins. Covers peeling, chipping, and premature finish failure under normal household use.",
+    highlight: false,
   },
 ];
 
@@ -47,10 +53,11 @@ const FINE_PRINT = [
   "Guarantee work must be requested within the warranty window, from the date of project completion.",
   "The guarantee is non-transferable — if the property is sold, it ends.",
   "Coverage applies to the work we performed, repainting the failed area.",
-  "We warranty work done with approved products (Sherwin-Williams, Benjamin Moore, and a few others). Other brands can be used on request but sit outside our warranty.",
+  "We warranty work done with approved products (Sherwin-Williams, Benjamin Moore, Sikkens, Sansin, and a few others). Other brands can be used on request but sit outside our warranty.",
   "Pressure washing is not covered — no permanent material is being applied.",
   "Stain work requires two or more coats to be guaranteed. Exterior varnish carries a one-year warranty.",
-  "Horizontal and walked-on surfaces (decks, floors, steps, railings, roofs), fences, foundations, eaves, and downspouts are excluded.",
+  "Horizontal and walked-on wood surfaces (decks, steps, landings, railings) carry the 2-year stain warranty regardless of product, because foot traffic and pooling water wear them faster than vertical surfaces.",
+  "Fences, foundations, eaves, and downspouts sit outside the standard warranty — they wear differently and we quote them as their own line.",
 ];
 
 export default function WarrantyPage() {
@@ -65,7 +72,7 @@ export default function WarrantyPage() {
               A written guarantee on every project.
             </h1>
             <p className="mt-6 text-ink text-lg leading-relaxed">
-              Every Alpenglow project comes with a written workmanship warranty. Standard coverage is 3 years, included at no extra cost, with extended options available on projects where the surface and products support it.
+              Every Alpenglow project comes with a written workmanship warranty — included at no extra cost. The term is matched to the service and the substrate, so the coverage reflects how the finish actually performs, not a one-size-fits-all number.
             </p>
           </div>
         </Container>
@@ -95,19 +102,19 @@ export default function WarrantyPage() {
       {/* Warranty tiers */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Coverage tiers</div>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Coverage by service</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Three, seven, or ten years.
+              The term matches the work.
             </h2>
             <p className="mt-4 text-ink leading-relaxed">
-              The level of coverage depends on the surface, the products specified, and the prep the project gets. We&rsquo;ll walk you through which tier applies at the quote.
+              Interior paint, exterior solid finishes, and cabinet refinishings hold up differently than penetrating stains in the mountain sun. So each service carries its own warranty, set to how the finish actually performs.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {WARRANTY_TIERS.map((tier) => (
               <div
-                key={tier.years}
+                key={tier.label}
                 className={`rounded-sm border p-6 md:p-7 ${
                   tier.highlight
                     ? "border-navy bg-navy text-background"
@@ -120,7 +127,7 @@ export default function WarrantyPage() {
                   </span>
                   <span className={`text-sm ${tier.highlight ? "text-background/70" : "text-muted"}`}>years</span>
                 </div>
-                <div className={`font-medium mb-2 ${tier.highlight ? "text-background" : "text-navy"}`}>
+                <div className={`font-medium mb-2 leading-snug ${tier.highlight ? "text-background" : "text-navy"}`}>
                   {tier.label}
                 </div>
                 <p className={`text-sm leading-relaxed ${tier.highlight ? "text-background/80" : "text-ink"}`}>
@@ -129,6 +136,9 @@ export default function WarrantyPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-sm text-muted leading-relaxed max-w-3xl">
+            Light carpentry repairs carry a 2-year workmanship warranty on the joinery, fastening, and weatherproofing of the repair itself. Wood failure caused by moisture, structural movement, or defects outside our control sits outside the warranty — same as any exterior wood.
+          </p>
         </Container>
       </section>
 

@@ -110,7 +110,7 @@ const VALUE_PROPS = [
   {
     icon: ShieldCheck,
     title: "Work that lasts",
-    body: "Three years standard on every job. Up to ten on select projects. In writing — not just a handshake.",
+    body: "Up to 10 years on interior, 5 years on exterior solid finishes. In writing — not just a handshake.",
   },
 ];
 
@@ -251,7 +251,7 @@ export default function HomePage() {
                       "Fixed pricing that only moves if the scope actually changes",
                       "A thorough final walkthrough before you sign off",
                       "$5M liability insurance and full WorkSafeBC coverage",
-                      "A written 3-year warranty, with extensions on select projects",
+                      "A written warranty — 10 years on interior, 5 on exterior solid, matched to the service",
                     ]}
                   />
                 </div>

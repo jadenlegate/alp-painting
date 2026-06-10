@@ -87,7 +87,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What warranty do you offer?",
-        a: "Standard 3-year warranty on all projects, included at no extra cost. Extended 7-year and 10-year options are available on select projects where surface conditions and product choice support it. Nobody else in the Sea to Sky offers a 10-year warranty.",
+        a: "Written warranty on every project, matched to the service: 10 years on interior painting, 5 years on exterior solid finishes and cabinet refinishing, 2 years on exterior semi-transparent and translucent stains, and 2 years of workmanship on light carpentry repairs. Nobody else in the Sea to Sky offers a 10-year warranty on interior work.",
       },
       {
         q: "What does the warranty cover?",

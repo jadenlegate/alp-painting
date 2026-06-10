@@ -81,22 +81,22 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
 
 const WARRANTY_TIERS = [
   {
-    years: "3",
-    label: "Standard",
-    description: "Included on all projects at no extra cost. Covers peeling, flaking, and premature finish failure under normal conditions.",
-    highlight: false,
-  },
-  {
-    years: "7",
-    label: "Extended",
-    description: "Available on most exterior and interior projects when premium products are specified. Requires a surface assessment at the time of quoting.",
-    highlight: false,
-  },
-  {
     years: "10",
-    label: "Maximum",
-    description: "Available on select projects where surface conditions and product choice support it.",
+    label: "Interior painting",
+    description: "Walls, trim, ceilings, doors. Covers peeling, flaking, and premature finish failure under normal interior conditions.",
     highlight: true,
+  },
+  {
+    years: "5",
+    label: "Exterior — solid",
+    description: "Solid paint and solid-body stain on exterior siding and trim. Covers peeling and premature finish failure.",
+    highlight: false,
+  },
+  {
+    years: "2",
+    label: "Exterior — stain",
+    description: "Semi-transparent and translucent stains. They wear gracefully but faster than solid finishes — so the warranty matches.",
+    highlight: false,
   },
 ];
 
@@ -177,13 +177,13 @@ export default function ProcessPage() {
       {/* Warranty tiers */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
+          <div className="max-w-2xl mb-10 md:mb-14">
             <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Warranty</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Three, seven, or ten years.
+              The term matches the work.
             </h2>
             <p className="mt-4 text-ink leading-relaxed">
-              Standard 3-year coverage is included on every project at no extra cost. Extended terms are available when the surface and product choice support it.
+              Written warranty on every project, included at no extra cost. The term reflects how the finish actually performs — longer for protected interior surfaces, shorter for high-exposure exterior stains.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
