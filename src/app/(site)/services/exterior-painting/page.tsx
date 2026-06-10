@@ -5,6 +5,8 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -37,6 +39,17 @@ const INCLUDED = [
   "Premium exterior coatings — Sikkens, Benjamin Moore Aura Exterior, Sherwin-Williams Duration",
   "Two full coats standard; three on weathered or bare surfaces",
   "Final inspection walkthrough with written project report",
+];
+
+const SURFACES = [
+  "Siding — cedar, Hardie, T&G, board-and-batten",
+  "Trim, fascia, and soffits",
+  "Doors, garage doors, and frames",
+  "Windows and shutters",
+  "Decks, railings, and pickets",
+  "Fences, gates, and arbours",
+  "Stucco and concrete board",
+  "Color consultation for mountain light",
 ];
 
 const APPROACH = [
@@ -99,11 +112,23 @@ const FAQS = [
   },
   {
     q: "How long will the paint last?",
-    a: "With proper prep and premium products, 7–12 years is realistic on most Whistler exteriors. We back that with up to a 10-year warranty so you're not just taking our word for it.",
+    a: "With proper prep and premium products, 7–12 years is realistic on most Whistler exteriors. Solid paint and stain finishes carry a 5-year written warranty; semi-transparent and translucent stains carry a 2-year warranty because they wear differently in the sun.",
   },
   {
-    q: "Do you do stucco and Hardi board as well as wood siding?",
-    a: "Yes. We work on all common Whistler exterior substrates — cedar, Hardi, stucco, concrete board, and log. Product and prep vary by substrate; we spec this out on the site visit.",
+    q: "Do you do stucco and Hardie as well as wood siding?",
+    a: "Yes. We work on all common Whistler exterior substrates — cedar, Hardie, stucco, concrete board, and log. Product and prep vary by substrate; we spec this out on the site visit.",
+  },
+  {
+    q: "What prep do you actually do?",
+    a: "Pressure wash the whole structure, scrape any failing paint, sand to feather the edges, caulk gaps and seams, spot-prime bare wood, and mask windows, doors, lights, and landscaping. Prep is 80% of an exterior job — we don't skip it to come in cheap.",
+  },
+  {
+    q: "What if the weather doesn't cooperate?",
+    a: "We plan buffer days into every project. If a forecast shifts and we lose a window, we tell you the same day and reshuffle — we don't paint into rain or below-spec temperatures just to keep moving. Exterior work that's rushed onto a bad surface fails in the first season.",
+  },
+  {
+    q: "Do you protect plants and landscaping?",
+    a: "Yes — drop cloths and breathable masking on plants close to the house, plus pre-job photos so we know what was there before. Anything fragile we'd rather move than mask gets coordinated with you at the walkthrough.",
   },
 ];
 
@@ -156,6 +181,40 @@ export default function ExteriorPaintingPage() {
         </Container>
       </section>
 
+      {/* Surfaces & details we finish */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Surfaces & details</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
+                Every exterior surface — siding to soffits.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                A full exterior is rarely one substrate. Most Whistler homes are
+                a mix of cedar, Hardie, stucco, and exposed timber — each with its
+                own prep and product. We&rsquo;ll spec each surface on the
+                proposal so you know exactly what&rsquo;s included.
+              </p>
+              <p className="mt-4 text-ink leading-relaxed">
+                If you see a surface on your house that isn&rsquo;t on this list,
+                ask. There&rsquo;s a good chance we paint it too.
+              </p>
+            </div>
+            <div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {SURFACES.map((s) => (
+                  <li key={s} className="flex items-start gap-3">
+                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
+                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
@@ -197,6 +256,39 @@ export default function ExteriorPaintingPage() {
         </Container>
       </section>
 
+      {/* Before / after */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Before & after</div>
+            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              Drag to see the difference.
+            </h2>
+            <p className="mt-4 text-ink leading-relaxed">
+              Two recent exteriors — full prep, premium product, no shortcuts. Slide the handle to compare.
+            </p>
+          </div>
+          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/cedar-chalet-exterior-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg"
+              beforeAlt="Faded cedar chalet exterior before repaint, Whistler"
+              afterAlt="Cedar chalet exterior after full repaint, Whistler"
+              caption="Pressure washed, flaking paint scraped and sanded, 2 coats of premium solid stain."
+            />
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/family-home-exterior-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/exterior-repaint-finished-whistler.jpg"
+              beforeAlt="Faded family home exterior before repaint, Whistler"
+              afterAlt="Family home after full exterior repaint, Whistler"
+              caption="Two-tone solid finish over a full prep — siding, trim, and fascia."
+            />
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
@@ -219,6 +311,11 @@ export default function ExteriorPaintingPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="5-year warranty on solid finishes. 2 years on semi-transparent stains."
+        body="Different surfaces wear differently in mountain sun — so each finish gets a warranty matched to the product. Standard on every exterior project, in writing."
+      />
 
       <CtaBlock
         eyebrow="Get in touch"

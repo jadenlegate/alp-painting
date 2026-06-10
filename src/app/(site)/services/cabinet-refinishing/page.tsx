@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -38,6 +39,17 @@ const INCLUDED = [
   "Two coats of premium finish in your chosen sheen",
   "Reinstallation, adjustment, and final inspection",
   "Project report with exact product and color for future touch-ups",
+];
+
+const SURFACES = [
+  "Kitchen cabinets — uppers, lowers, and islands",
+  "Bathroom vanities and medicine cabinets",
+  "Built-in bookcases, desks, and entertainment units",
+  "Closet built-ins and wardrobes",
+  "Pantry and mudroom casework",
+  "Mantels and fireplace surrounds",
+  "Laundry room cabinets",
+  "Color consultation and sample drawdowns",
 ];
 
 const APPROACH = [
@@ -92,19 +104,31 @@ const FAQS = [
   },
   {
     q: "What finishes and sheens do you offer?",
-    a: "Matte, eggshell, satin, and semi-gloss — all available. Satin is most popular for kitchens (easy to wipe, not too shiny). We can discuss what works best for your space.",
+    a: "Matte, eggshell, satin, and semi-gloss — all available. Satin is most popular for kitchens (easy to wipe, not too shiny). We can bring samples and test patches in your actual kitchen light before you commit.",
   },
   {
     q: "How long does cabinet refinishing take?",
     a: "Most kitchens are done in 3–5 working days. Day one is prep and door removal; days two through four are spray and dry cycles; day five is reinstallation and touch-up.",
   },
   {
-    q: "Can you do just the upper or lower cabinets?",
-    a: "Yes. Some clients do a phased approach — uppers first, lowers later. Color matching is easy when you document exactly what product and color was used, which we always do.",
+    q: "Can we use the kitchen during the project?",
+    a: "Yes, in most cases. We phase the work so the boxes stay in place and one section stays functional at a time. You'll be without certain doors and drawers for a few days, but the sink, stove, and fridge stay accessible throughout.",
   },
   {
-    q: "How durable is a refinished cabinet?",
-    a: "With proper prep and premium products, refinished cabinets hold up for 8–12 years under normal kitchen use. The key is surface prep — without it, even good paint fails in high-traffic areas within a couple of years.",
+    q: "Can you do just the upper or lower cabinets?",
+    a: "Yes. Some clients do a phased approach — uppers first, lowers later. Color matching is easy because we document the exact product and color in your project report.",
+  },
+  {
+    q: "Will the finish hold up to daily use?",
+    a: "Cabinet-specific waterborne and alkyd finishes are harder, more washable, and more chip-resistant than wall paint. Properly prepped and sprayed, refinished cabinets hold up for 8–12 years under normal use.",
+  },
+  {
+    q: "What does the warranty cover?",
+    a: "Peeling, chipping, and premature finish failure under normal household use. Cabinet refinishing carries a 5-year written warranty — matched to how cabinet finishes actually perform under daily contact.",
+  },
+  {
+    q: "Do you spray on-site or in a shop?",
+    a: "Doors and drawer fronts go to our shop where they're sprayed in a controlled environment — no dust, even airflow, factory-level finish. Boxes get spray-prepped on-site with masking and an HVLP setup so overspray stays contained. Best of both.",
   },
 ];
 
@@ -149,6 +173,43 @@ export default function CabinetRefinishingPage() {
                   <li key={item} className="flex items-start gap-3">
                     <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
                     <span className="text-ink">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Surfaces & details */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we refinish</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
+                Cabinets, vanities, built-ins — anywhere there&rsquo;s a casework finish.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                Most clients come to us about kitchens, but the same spray
+                process works on anything with a finished surface — bathroom
+                vanities, mudroom benches, walk-in closet built-ins, mantels,
+                and laundry room storage. A coordinated refinish across the
+                house can transform the look without renovating a single
+                cabinet box.
+              </p>
+              <p className="mt-4 text-ink leading-relaxed">
+                Not sure if a built-in is a candidate? Ask. The answer is
+                usually yes — and we&rsquo;ll tell you what&rsquo;s realistic
+                at the site visit.
+              </p>
+            </div>
+            <div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {SURFACES.map((s) => (
+                  <li key={s} className="flex items-start gap-3">
+                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
+                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
                   </li>
                 ))}
               </ul>
@@ -217,6 +278,11 @@ export default function CabinetRefinishingPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="A 5-year written warranty on cabinet refinishing."
+        body="Cabinets take more daily wear than walls — so the warranty is matched to how cabinet finishes actually perform under real use. Standard on every project."
+      />
 
       <CtaBlock
         eyebrow="Get in touch"

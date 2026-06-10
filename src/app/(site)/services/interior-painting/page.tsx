@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -42,6 +43,17 @@ const INCLUDED = [
   "Two-coat finish standard, three if the color demands it",
   "Daily cleanup so your home stays livable",
   "Final walkthrough with a written project report",
+];
+
+const SURFACES = [
+  "Walls — smooth, textured, and accent walls",
+  "Ceilings — flat, vaulted, and beam-detailed",
+  "Trim, baseboards, and crown moulding",
+  "Doors, frames, and jambs",
+  "Stair railings, spindles, and risers",
+  "Closet interiors and built-in shelving",
+  "Wallpaper removal and wall repair",
+  "Color consultation and sample drawdowns",
 ];
 
 const APPROACH = [
@@ -104,16 +116,28 @@ const FAQS = [
     a: "Almost always, yes. We use low-VOC products and work one area at a time so you have a clean, dry space to live in. We'll walk through the logistics on the site visit.",
   },
   {
+    q: "What's included in the quote?",
+    a: "Everything that goes into the project — prep, materials, labour, drop cloths, masking, two-coat finish, daily cleanup, and the final walkthrough. The proposal itemizes each room so you can see exactly what's covered. No vague lump sums.",
+  },
+  {
     q: "Do you move furniture?",
-    a: "We move light-to-medium furniture to the center of the room and cover it. For large or fragile pieces we'll coordinate in advance.",
+    a: "We move light-to-medium furniture to the center of the room and cover it. For large or fragile pieces we'll coordinate in advance — usually you move the antiques, we handle everything else.",
   },
   {
     q: "How do you handle color selection?",
-    a: "We can test swatches on your walls and compare in your light. If you want outside help, we partner with a local color consultant who knows Sea-to-Sky light conditions.",
+    a: "We can test swatches on your walls and compare in your light. If you want outside help, we partner with a local color consultant who knows Sea-to-Sky light conditions. Either way, you'll see the colors on your wall before they go on the wall.",
+  },
+  {
+    q: "What prep work is included before painting?",
+    a: "Hole filling, sanding, spot-priming, caulking where needed, and protecting floors, furniture, and fixtures. Prep is where a paint job is won or lost — we don't shortcut it.",
   },
   {
     q: "What does the warranty cover?",
-    a: "Peeling, flaking, and premature failure of the paint finish. Standard 3-year coverage, with 7- and 10-year tiers available on most interior projects.",
+    a: "Peeling, flaking, and premature failure of the paint finish under normal interior conditions. Interior projects carry a 10-year written warranty when we apply approved products with standard prep.",
+  },
+  {
+    q: "What happens at the final walkthrough?",
+    a: "We walk the project with you room by room, address any touch-ups on the spot, and hand off a project report listing the exact products, colors, and sheens we used. So if you need to touch up years later, it's not guesswork.",
   },
 ];
 
@@ -176,6 +200,44 @@ export default function InteriorPaintingPage() {
                       className="text-navy mt-0.5 flex-shrink-0"
                     />
                     <span className="text-ink">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Surfaces & details we finish */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
+                Surfaces & details
+              </div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
+                Everything inside the house — from baseboards to vaulted ceilings.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                Homeowners often ask if we&rsquo;ll paint the closet interiors,
+                the stair spindles, or the inside of the door frames.
+                The answer is yes — and we&rsquo;ll show you on the proposal
+                exactly what&rsquo;s in scope so nothing gets skipped or
+                surprises you on invoice day.
+              </p>
+              <p className="mt-4 text-ink leading-relaxed">
+                If it&rsquo;s a finished surface and you want it painted, we
+                paint it. If you&rsquo;re not sure whether something can be
+                refinished, ask — we&rsquo;ll tell you honestly.
+              </p>
+            </div>
+            <div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {SURFACES.map((s) => (
+                  <li key={s} className="flex items-start gap-3">
+                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
+                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
                   </li>
                 ))}
               </ul>
@@ -281,6 +343,11 @@ export default function InteriorPaintingPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="A 10-year written warranty on interior painting."
+        body="Standard on every interior project — covers peeling, flaking, and premature finish failure under normal conditions, when work is done with approved products."
+      />
 
       <CtaBlock
         eyebrow="Get in touch"

@@ -5,6 +5,8 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -37,6 +39,17 @@ const INCLUDED = [
   "Application of penetrating stain or film-forming finish — specified for the wood and exposure",
   "Two coats on all horizontal surfaces (decks, railings) for maximum durability",
   "Project report documenting products, application method, and re-coat schedule",
+];
+
+const SURFACES = [
+  "Cedar siding and cedar shingles",
+  "Decks, railings, and pickets",
+  "Pergolas, gazebos, and arbours",
+  "Timber-frame beams and exposed posts",
+  "Fascia, soffits, and roof overhangs",
+  "Pine ceilings and covered deck soffits",
+  "Stairs, landings, and boardwalks",
+  "Fences, gates, and garden structures",
 ];
 
 const APPROACH = [
@@ -94,16 +107,28 @@ const FAQS = [
     a: "Usually yes, if you know the product and color. If not, we can bring samples and test patches on a less visible area to match closely. On very weathered wood the base color has shifted, which affects how new stain reads.",
   },
   {
+    q: "Can you change the stain color — go darker or lighter?",
+    a: "Going darker is straightforward. Going lighter is harder and usually requires stripping the previous finish back to bare wood before staining. We'll be honest at the site visit about what's realistic for your wood and what it'll cost.",
+  },
+  {
     q: "How long does a deck staining project take?",
     a: "A standard deck is typically 2–3 days — one day for prep and cleaning, one to two for staining with proper dry time between coats. Larger or more complex decks take longer.",
   },
   {
     q: "How long will the stain last?",
-    a: "Horizontal surfaces (decks, handrails) take the most punishment and typically need re-coating every 2–4 years. Vertical surfaces like siding last 5–8 years with quality products. We'll give you a specific window in the project report.",
+    a: "Horizontal surfaces (decks, handrails) take the most punishment and typically need re-coating every 2–4 years. Vertical surfaces like siding last 5–8 years with quality products. Your project report will include a recommended re-coat window for each surface.",
+  },
+  {
+    q: "What does the warranty cover for stain work?",
+    a: "Solid stains and paints carry a 5-year written warranty against peeling and finish failure. Semi-transparent and translucent stains carry a 2-year warranty — they wear gracefully but faster, which is the trade-off for keeping the wood grain visible.",
   },
   {
     q: "Do you do log homes?",
     a: "Yes. Log home restoration is a specialty — chinking inspection, checking for checking (splits), proper borate treatment if needed, and Sansin or similar penetrating finish. It's more involved than a standard exterior but we've done it.",
+  },
+  {
+    q: "Can you stain pressure-treated lumber?",
+    a: "Yes, but pressure-treated has to dry out first — usually 3–6 months after installation depending on the season. Staining wet PT traps moisture under the finish and causes peeling. If your deck is brand new, we'll tell you when it's ready.",
   },
 ];
 
@@ -156,6 +181,41 @@ export default function WoodRestorationPage() {
         </Container>
       </section>
 
+      {/* Surfaces & details */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Surfaces & details</div>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
+                Every piece of exposed wood — siding, decks, beams, ceilings.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                If it&rsquo;s wood and it&rsquo;s exposed to weather (or air, in the case
+                of covered ceilings and timber frames), we restore and finish it. Different
+                species, exposures, and conditions call for different products
+                — we&rsquo;ll spec each surface on the proposal.
+              </p>
+              <p className="mt-4 text-ink leading-relaxed">
+                Not sure if your wood is salvageable? Ask us. The honest answer
+                is sometimes &ldquo;replace it&rdquo; — and we&rsquo;ll tell you
+                that on the site visit before you spend a dollar restoring.
+              </p>
+            </div>
+            <div>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {SURFACES.map((s) => (
+                  <li key={s} className="flex items-start gap-3">
+                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
+                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
@@ -194,6 +254,39 @@ export default function WoodRestorationPage() {
         </Container>
       </section>
 
+      {/* Before / after */}
+      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+        <Container>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Before & after</div>
+            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              Drag to see the difference.
+            </h2>
+            <p className="mt-4 text-ink leading-relaxed">
+              Real Whistler wood — stripped, sanded, and stained back to better than new. Slide the handle to compare.
+            </p>
+          </div>
+          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/cedar-ceiling-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
+              beforeAlt="Weathered cedar ceiling before restoration, Whistler"
+              afterAlt="Cedar ceiling after cleaning and re-staining, Whistler"
+              caption="Old finish stripped, wood sanded smooth, 4 coats of spar urethane applied."
+            />
+            <BeforeAfterSlider
+              aspectClass="aspect-[4/3]"
+              beforeUrl="/stock-images/portfolio/cedar-deck-before-whistler.jpg"
+              afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
+              beforeAlt="Weathered cedar deck before restoration, Whistler"
+              afterAlt="Freshly stained cedar deck and rail, Whistler"
+              caption="Pressure washed, sanded to bare, semi-solid stain applied in two coats."
+            />
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
@@ -216,6 +309,11 @@ export default function WoodRestorationPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="5-year warranty on solid stain. 2 years on semi-transparent and translucent finishes."
+        body="Penetrating stains wear gracefully but faster than solid finishes — so each product gets a warranty matched to how it performs in mountain weather. Documented in your project report."
+      />
 
       <CtaBlock
         eyebrow="Wood done right"

@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { Check, Building2, Users, Clock, CalendarCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -80,8 +81,20 @@ const FAQS = [
     a: "$5M commercial general liability insurance, full WorkSafeBC coverage for all workers. We can provide certificates of insurance for your records before the project starts.",
   },
   {
+    q: "What does your warranty look like for commercial work?",
+    a: "The warranty matches the substrate. Interior painting: 10 years. Exterior solid finishes: 5 years. Exterior semi-transparent and translucent stains: 2 years. Cabinet refinishing: 5 years. Same written terms as our residential work — we don't water it down for B2B.",
+  },
+  {
     q: "How do you handle deficiencies or callbacks?",
     a: "Formally, in writing, within 5 business days of substantial completion. If a deficiency shows up after that, contact us — we stand behind the work within the warranty period.",
+  },
+  {
+    q: "Do you work directly with general contractors?",
+    a: "Yes. For new builds and major renovations we integrate with the GC's schedule, hit our painting milestones, and provide invoicing and progress updates in whatever format the GC's accounting needs. We've worked under several Sea-to-Sky builders.",
+  },
+  {
+    q: "Can you handle multi-building or multi-phase contracts?",
+    a: "Yes. We've delivered phased multi-building work for strata clients and property developers, with documentation handed back at each phase close so the client always knows what's been completed and what's pending.",
   },
 ];
 
@@ -184,6 +197,11 @@ export default function CommercialPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="Written warranty on every commercial project — matched to the substrate."
+        body="Interior 10 years, exterior solid 5 years, exterior stain 2 years, cabinet refinishing 5 years. Same terms as our residential work — documented in the project agreement."
+      />
 
       <CtaBlock
         eyebrow="Commercial inquiry"

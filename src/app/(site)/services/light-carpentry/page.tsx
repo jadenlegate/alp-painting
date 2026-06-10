@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { BulletList } from "@/components/BulletList";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -75,16 +76,24 @@ const FAQS = [
     a: "We stop and tell you immediately. Nothing gets built or billed without a written change order. Hidden rot is one of the most common reasons exterior projects go over budget — we'd rather pause and re-scope than push through and surprise you.",
   },
   {
+    q: "How do you match the new material to the existing siding?",
+    a: "Same species, same profile, same dimension wherever possible. For cedar that's typically rough or smooth in matching widths; for Hardie, the same product line and texture. Once the finish goes on, the repair disappears.",
+  },
+  {
     q: "Do you do interior carpentry too?",
     a: "Only incidental — baseboard and trim swaps as part of an interior paint job, for example. We don't take on cabinetry, built-ins, or finish carpentry as standalone work.",
   },
   {
     q: "Is the repair work covered under your warranty?",
-    a: "The workmanship on the carpentry repair is covered. Wood that fails later due to moisture, structural movement, or defects outside our control isn't — same exclusions that apply to any exterior work. Details are in our full warranty page.",
+    a: "The workmanship on the carpentry repair is covered for 2 years. Wood that fails later due to moisture, structural movement, or defects outside our control isn't — same exclusions that apply to any exterior work. Details are in our full warranty page.",
   },
   {
     q: "Can you just do the carpentry and we'll paint it ourselves?",
     a: "We prefer to pair the two — and there's a real reason for it. A big part of the value of fixing rot or trim before a paint job is making sure the repair is sealed and protected properly, which happens in the way the paint or stain is applied right after. When both sides are handled by the same team, the repair blends in, the warranty stays clean, and you get one crew accountable for the result. If a carpentry-only job is really what you need, we're happy to recommend someone in the corridor.",
+  },
+  {
+    q: "How long does a typical repair add to the project?",
+    a: "Most rot and trim repairs add 1–3 days to the front end of a paint project, depending on the scope. We sequence the repair, give it the right cure or dry time, then move into prep and finish — so the surface is ready and the new wood blends in.",
   },
 ];
 
@@ -184,6 +193,11 @@ export default function LightCarpentryPage() {
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
+
+      <WarrantyBanner
+        heading="2-year workmanship warranty on every repair."
+        body="Covers the work we performed — joinery, fastening, weatherproofing, and finish prep. Wood that fails later due to moisture or movement outside our control sits outside the warranty, same as any exterior wood."
+      />
 
       <CtaBlock
         heading="Got rot or failing trim?"
