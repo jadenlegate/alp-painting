@@ -7,7 +7,8 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { Check } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Exterior Painters — Whistler, Pemberton & Squamish",
@@ -32,24 +33,46 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/exterior-painting",
 };
 
-const INCLUDED = [
-  "Full pressure wash and surface prep before a single coat goes on",
-  "Caulking, filling, and spot-priming all failing areas",
-  "Window and door masking, landscaping protection",
-  "Premium exterior coatings — Sikkens, Benjamin Moore Aura Exterior, Sherwin-Williams Duration",
-  "Two full coats standard; three on weathered or bare surfaces",
-  "Final inspection walkthrough with written project report",
+const PILLARS = [
+  "Pressure wash & full prep",
+  "Two coats standard",
+  "Weather buffer days planned",
+  "Landscaping protected",
+  "Premium, climate-rated coatings",
+  "5-year written warranty",
 ];
 
-const SURFACES = [
-  "Siding — cedar, Hardie, T&G, board-and-batten",
-  "Trim, fascia, and soffits",
-  "Doors, garage doors, and frames",
-  "Windows and shutters",
-  "Decks, railings, and pickets",
-  "Fences, gates, and arbours",
-  "Stucco and concrete board",
-  "Color consultation for mountain light",
+const SURFACE_CARDS = [
+  {
+    n: "01",
+    title: "Full-home repaints.",
+    body: "A full repaint is the right call when colour is fading, the finish is chalking, or wear is showing across multiple elevations at once. We assess each surface, prep what's failing, and apply two coats so the colour reads consistent from every angle and every elevation. The result holds for years, not seasons.",
+  },
+  {
+    n: "02",
+    title: "Trim, fascia & soffits.",
+    body: "Trim and roofline details are where exterior painting either looks professional or rushed. Peeling fascia, tired soffits, and cracking edges around windows can make a freshly-painted home still look neglected. We prep these areas carefully and cut every line by hand — the eye naturally goes to the borders.",
+  },
+  {
+    n: "03",
+    title: "Doors, garage doors & shutters.",
+    body: "Front doors, garage doors, and shutters are high-visibility features that take the most sun and handling on the house. We help homeowners choose finishes that suit the home's style — classic, understated, or a bolder accent that adds character. Hard finishes that hold up to daily contact.",
+  },
+  {
+    n: "04",
+    title: "Surface prep & priming.",
+    body: "Prep isn't the extra step — it's the step that determines whether the finish holds up through Sea-to-Sky seasons. We address loose paint, raised grain, exposed wood, and failing areas, then prime where needed. Homeowners don't see prep once the job is done. They feel it later, in how long the finish lasts.",
+  },
+  {
+    n: "05",
+    title: "Caulking & sealing.",
+    body: "Most exterior problems start small: a gap at a joint, a failing bead of caulk, a seam letting moisture in over winter. With freeze-thaw cycles, those gaps grow and paint failure follows. We seal and caulk where it matters — tightening the building envelope before the finish coat goes on.",
+  },
+  {
+    n: "06",
+    title: "Site protection & cleanup.",
+    body: "Exterior painting happens in full view, and your property should still feel respected at the end of each day. We protect landscaping, keep materials organised, and maintain tidy site habits so your yard, walkways, and outdoor spaces don't feel like collateral damage from the project.",
+  },
 ];
 
 const APPROACH = [
@@ -59,7 +82,7 @@ const APPROACH = [
   },
   {
     title: "Coatings rated for mountain weather.",
-    body: "Whistler exteriors get UV, rain, freeze-thaw cycles, and heavy snow load. We specify products proven to handle it — not whatever's on sale.",
+    body: "Whistler exteriors get UV, rain, freeze-thaw cycles, and heavy snow load. We specify products proven to handle it — not whatever's on sale at the hardware store.",
   },
   {
     title: "We work around your schedule.",
@@ -151,83 +174,130 @@ export default function ExteriorPaintingPage() {
         </Button>
       </Hero>
 
+      {/* Intro — editorial display + pillars */}
+      <section className="py-16 md:py-28">
+        <Container>
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Exterior painting in the Sea to Sky
+                </span>
+              </div>
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                A finish that <em className="text-alpine not-italic font-medium">lasts</em><br />— and a process that earns it.
+              </h2>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Sea-to-Sky homes face conditions that expose every shortcut in
+                  an exterior paint job. High UV in summer, freeze-thaw in
+                  shoulder seasons, heavy snow load on horizontal surfaces. The
+                  only way to get paint that lasts is to do the prep properly
+                  and use products rated for the climate.
+                </p>
+                <p>
+                  Every exterior project starts with a thorough assessment of
+                  what the surface needs before we open a can.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get a Quote</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                What every exterior includes
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Surfaces & details — 3x2 card grid */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
+        <Container>
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                What we cover
+              </span>
+            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Every part of the exterior — siding to soffits.
+            </h2>
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
+              A full exterior is rarely one substrate. Most Whistler homes are
+              a mix of cedar, Hardie, stucco, and exposed timber — each with its
+              own prep and product. The proposal lists every surface so you
+              know exactly what&rsquo;s included.
+            </p>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SURFACE_CARDS.map((c) => (
+              <article
+                key={c.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                  {c.n}
+                </div>
+                <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {c.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {c.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Approach */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we do</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                A finish that lasts — and a process that earns it.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Sea-to-Sky homes face conditions that expose every shortcut in an exterior paint job. High UV in summer, freeze-thaw in shoulder seasons, and heavy snow load on horizontal surfaces. The only way to get paint that lasts is to do the prep properly and use products rated for the climate.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                Every exterior project starts with a thorough assessment of what the surface needs before we open a can.
-              </p>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                Our approach
+              </span>
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Included in every project</div>
-              <ul className="space-y-3">
-                {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                    <span className="text-ink">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Surfaces & details we finish */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
-        <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Surfaces & details</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Every exterior surface — siding to soffits.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                A full exterior is rarely one substrate. Most Whistler homes are
-                a mix of cedar, Hardie, stucco, and exposed timber — each with its
-                own prep and product. We&rsquo;ll spec each surface on the
-                proposal so you know exactly what&rsquo;s included.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                If you see a surface on your house that isn&rsquo;t on this list,
-                ask. There&rsquo;s a good chance we paint it too.
-              </p>
-            </div>
-            <div>
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {SURFACES.map((s) => (
-                  <li key={s} className="flex items-start gap-3">
-                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
-                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-24 bg-stone-light/30">
-        <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our approach</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Where most exterior jobs fail — and how we don't.
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+              Where most exterior jobs fail — and how we don&rsquo;t.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
-              <div key={a.title} className="border border-border rounded-sm bg-surface p-6 md:p-7">
-                <h3 className="font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
+              <div
+                key={a.title}
+                className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8"
+              >
+                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </div>
             ))}
           </div>
@@ -237,35 +307,53 @@ export default function ExteriorPaintingPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      {/* Products */}
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
-          <div className="max-w-xl mb-8">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Products we use</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-              Rated for mountain climates.
-            </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              We don't use one product for every exterior. Sikkens for cedar, Sansin for log, Benjamin Moore Aura for painted siding. The right product for the substrate.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {PRODUCTS.map((p) => (
-              <div key={p} className="px-5 py-3 border border-border rounded-sm bg-surface font-serif text-navy">{p}</div>
-            ))}
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Products we use</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
+                Rated for mountain climates.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                We don&rsquo;t use one product for every exterior. Sikkens for
+                cedar, Sansin for log, Benjamin Moore Aura for painted siding.
+                The right product for the substrate — documented in the project
+                report.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              {PRODUCTS.map((p) => (
+                <div
+                  key={p}
+                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
+                >
+                  {p}
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
       {/* Before / after */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Before & after</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Before & after</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Drag to see the difference.
             </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              Two recent exteriors — full prep, premium product, no shortcuts. Slide the handle to compare.
+            <p className="mt-5 text-ink leading-relaxed">
+              Two recent exteriors — full prep, premium product, no shortcuts.
+              Slide the handle to compare.
             </p>
           </div>
           <div className="grid gap-8 md:gap-10 md:grid-cols-2">
@@ -289,12 +377,16 @@ export default function ExteriorPaintingPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* Related projects */}
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Recent exterior work</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">Projects that hold up.</h2>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Recent exterior work</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Projects that hold up.</h2>
             </div>
             <Button href="/work" variant="text">See all work →</Button>
           </div>
@@ -306,15 +398,19 @@ export default function ExteriorPaintingPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Exterior painting questions.</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
+          </div>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Exterior painting questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
 
       <WarrantyBanner
-        heading="5-year warranty on solid finishes. 2 years on semi-transparent stains."
-        body="Different surfaces wear differently in mountain sun — so each finish gets a warranty matched to the product. Standard on every exterior project, in writing."
+        years="5"
+        heading="Years on solid exterior finishes. Two on semi-transparent stains."
+        body="Different surfaces wear differently in mountain sun, so each finish gets a warranty matched to the product. Solid paint and stain hold the longest; penetrating stains wear gracefully but faster. Both in writing, on every project."
       />
 
       <CtaBlock

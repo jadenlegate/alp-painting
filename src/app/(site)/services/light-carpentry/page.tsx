@@ -4,9 +4,9 @@ import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { BulletList } from "@/components/BulletList";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { AlertTriangle } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { AlertTriangle, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Light Carpentry & Repair — Whistler, Pemberton & Squamish",
@@ -31,13 +31,46 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/light-carpentry",
 };
 
-const SCOPES = [
-  "Rotted siding boards and trim replacement",
-  "Fascia, soffit, and rake board repair",
-  "Window and door trim rebuilds",
-  "Deck board, railing, and balustrade replacement",
-  "Small cedar and Hardie repairs",
-  "Caulking, flashing, and weatherproofing touch-ups",
+const PILLARS = [
+  "Identified at the quote",
+  "Matched species & profile",
+  "Paired with painting",
+  "Coordinated by one crew",
+  "Weatherproofed properly",
+  "2-year workmanship warranty",
+];
+
+const SCOPE_CARDS = [
+  {
+    n: "01",
+    title: "Rotted siding & trim replacement.",
+    body: "When prep reveals rot, replacing the failing board is part of the work — not a separate project. We pull the damaged piece, match the species and profile, fasten it correctly, and seal the joinery before the new finish goes on. Done as part of painting so the repair blends in once colour lands.",
+  },
+  {
+    n: "02",
+    title: "Fascia, soffit & rake board repair.",
+    body: "Failed fascia and soffit are the most common reason exterior paint jobs fail at the roofline. We replace damaged sections with matched material, re-flash where needed, and prime the new wood so the topcoat reads consistent with the existing finish. The roofline is where the eye lands first.",
+  },
+  {
+    n: "03",
+    title: "Window & door trim rebuilds.",
+    body: "Window and door trim takes water, sun, and impact. Rotted casings, split sills, and failing mitres get replaced in matched profile before priming and painting. The repair is invisible because it's measured, fastened, and finished by the same crew doing the paint — not handed off to a sub.",
+  },
+  {
+    n: "04",
+    title: "Deck boards, railings & balustrades.",
+    body: "Loose boards, soft pickets, and rotten rail caps don't get covered up with stain. We swap the failing pieces, re-fasten the deck where needed, and finish the new wood to match the existing. The deck reads as a single restoration project, not a patchwork of new and old.",
+  },
+  {
+    n: "05",
+    title: "Cedar & Hardie repairs.",
+    body: "Cedar and Hardie don't behave the same — cedar splits along the grain, Hardie cracks and crumbles. We use the right cut, fastener, and caulk for each, then finish to match the existing siding. Repairs disappear once the paint goes on, even on the south-facing wall.",
+  },
+  {
+    n: "06",
+    title: "Caulking, flashing & weatherproofing.",
+    body: "Most exterior failures start at the joints — a bad caulk bead, a missing kick-out flashing, a gap where water can sit. As part of every repair we tighten the building envelope around the work: caulk, flashing, sealant. The result is a repair that doesn't recur the next winter.",
+  },
 ];
 
 const OUT_OF_SCOPE = [
@@ -58,7 +91,7 @@ const APPROACH = [
   },
   {
     title: "Matched to the surrounding materials.",
-    body: "Repairs are done with the same siding species, profile, and finish as the rest of the house — cedar with cedar, Hardie with Hardie — so the work blends in once the paint or stain goes on, not a patch that stands out from across the yard.",
+    body: "Repairs are done with the same siding species, profile, and finish as the rest of the house — cedar with cedar, Hardie with Hardie — so the work blends in once the paint or stain goes on.",
   },
   {
     title: "Paired with paint, not sold alone.",
@@ -116,54 +149,140 @@ export default function LightCarpentryPage() {
         </Button>
       </Hero>
 
-      <section className="py-16 md:py-24">
+      {/* Intro */}
+      <section className="py-16 md:py-28">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2">
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we do</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Repair-level carpentry to support <span className="text-alpine">painting and restoration</span> projects.
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Repair-level carpentry
+                </span>
+              </div>
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                Fix the wood,<br /><em className="text-alpine not-italic font-medium">then</em> paint it.
               </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                <strong className="text-navy font-semibold">Rot, rotted trim, and failing fascia don&rsquo;t wait for the painter.</strong> On Sea-to-Sky homes, moisture and freeze-thaw cycles quietly undo exterior surfaces year after year — and if you paint over compromised wood, the paint fails. So we fix it first.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                This is scope we coordinate as part of painting and wood restoration projects. Small-to-medium repair work: siding boards, trim, fascia, soffits, deck boards, railings, and the weatherproofing details that surround them.
-              </p>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Rot, rotted trim, and failing fascia don&rsquo;t wait for the
+                  painter. On Sea-to-Sky homes, moisture and freeze-thaw cycles
+                  quietly undo exterior surfaces year after year — and if you
+                  paint over compromised wood, the paint fails.
+                </p>
+                <p>
+                  We scope and coordinate the repair as part of your painting or
+                  wood restoration project. Small-to-medium repair work on
+                  siding, trim, fascia, soffits, deck boards, and the
+                  weatherproofing details that surround them.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get a Quote</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What&rsquo;s in scope</div>
-              <BulletList items={SCOPES} />
 
-              <div className="mt-8 pt-8 border-t border-border">
-                <div className="text-xs uppercase tracking-[0.2em] text-muted mb-4">What&rsquo;s not</div>
-                <ul className="space-y-3">
-                  {OUT_OF_SCOPE.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-muted leading-relaxed text-[0.95rem]">
-                      <span className="mt-2 w-1 h-1 rounded-full bg-muted flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div>
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                How every repair runs
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* What's in scope — 3x2 card grid */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">How we approach it</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                What&rsquo;s in scope
+              </span>
+            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Repair work that disappears under the finish.
+            </h2>
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
+              Six categories of repair we handle as part of paint and wood
+              restoration projects. If your scope falls outside these, we&rsquo;ll
+              tell you at the site visit and point you to someone we trust.
+            </p>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SCOPE_CARDS.map((c) => (
+              <article
+                key={c.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                  {c.n}
+                </div>
+                <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {c.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {c.body}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          {/* Out of scope list */}
+          <div className="mt-12 md:mt-16 max-w-3xl border-t border-navy/10 pt-10">
+            <div className="text-[0.7rem] uppercase tracking-[0.3em] text-muted mb-5 font-medium">
+              What&rsquo;s not
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+              {OUT_OF_SCOPE.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted leading-relaxed text-[0.95rem]">
+                  <span className="mt-2.5 w-1 h-1 rounded-full bg-muted flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      {/* Approach */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">How we approach it</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Repair work that disappears — not patches that announce themselves.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
-              <div key={a.title} className="border border-border rounded-sm bg-surface p-6 md:p-7">
-                <h3 className="font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
+              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
+                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </div>
             ))}
           </div>
@@ -175,12 +294,19 @@ export default function LightCarpentryPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <AlertTriangle size={24} className="mx-auto mb-5 text-alpine" />
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Honest about scope</div>
-            <h2 className="font-serif text-background font-bold text-[1.75rem] md:text-[2.5rem] leading-[1.1] tracking-tight">
+            <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+              Honest about scope
+            </div>
+            <h2 className="font-serif text-background font-medium text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight">
               If the repair is big enough to be its own project, we&rsquo;ll say so.
             </h2>
-            <p className="mt-5 text-background/75 text-lg leading-relaxed">
-              There&rsquo;s a line where a repair becomes a build — and on the other side of that line, you&rsquo;re better served by a dedicated carpenter or GC. We won&rsquo;t take on work we can&rsquo;t do at the same standard as our painting. If your project needs more than repair-level carpentry, we&rsquo;ll tell you at the site visit and recommend someone in the corridor we&rsquo;d use ourselves.
+            <p className="mt-6 text-background/75 text-lg leading-relaxed">
+              There&rsquo;s a line where a repair becomes a build — and on the
+              other side of that line, you&rsquo;re better served by a dedicated
+              carpenter or GC. We won&rsquo;t take on work we can&rsquo;t do at
+              the same standard as our painting. If your project needs more than
+              repair-level carpentry, we&rsquo;ll tell you at the site visit and
+              recommend someone in the corridor we&rsquo;d use ourselves.
             </p>
           </div>
         </Container>
@@ -188,15 +314,19 @@ export default function LightCarpentryPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Light carpentry questions.</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
+          </div>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Light carpentry questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
 
       <WarrantyBanner
-        heading="2-year workmanship warranty on every repair."
-        body="Covers the work we performed — joinery, fastening, weatherproofing, and finish prep. Wood that fails later due to moisture or movement outside our control sits outside the warranty, same as any exterior wood."
+        years="2"
+        heading="Years of workmanship warranty on every repair."
+        body="Covers the work we performed — joinery, fastening, weatherproofing, and finish prep. Wood that fails later due to moisture, structural movement, or defects outside our control sits outside the warranty, same as any exterior wood."
       />
 
       <CtaBlock

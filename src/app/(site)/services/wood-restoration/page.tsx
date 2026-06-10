@@ -7,7 +7,8 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { Check } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Wood Restoration & Staining — Whistler, Pemberton & Squamish",
@@ -32,37 +33,59 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/wood-restoration",
 };
 
-const INCLUDED = [
-  "Full assessment: check for rot, raised grain, UV graying, and failing previous coatings",
-  "Pressure wash and brightening to open the wood grain",
-  "Spot repairs and sanding where needed",
-  "Application of penetrating stain or film-forming finish — specified for the wood and exposure",
-  "Two coats on all horizontal surfaces (decks, railings) for maximum durability",
-  "Project report documenting products, application method, and re-coat schedule",
+const PILLARS = [
+  "Cleaned & brightened first",
+  "Product matched to species",
+  "Two coats on horizontals",
+  "Penetrating finishes default",
+  "Written re-coat schedule",
+  "5-year warranty on solid",
 ];
 
-const SURFACES = [
-  "Cedar siding and cedar shingles",
-  "Decks, railings, and pickets",
-  "Pergolas, gazebos, and arbours",
-  "Timber-frame beams and exposed posts",
-  "Fascia, soffits, and roof overhangs",
-  "Pine ceilings and covered deck soffits",
-  "Stairs, landings, and boardwalks",
-  "Fences, gates, and garden structures",
+const SURFACE_CARDS = [
+  {
+    n: "01",
+    title: "Cedar siding & shingles.",
+    body: "Sea-to-Sky cedar tells you exactly how long it's been since the last finish — UV graying, raised grain, peeling stain over weathered substrate. We clean and brighten first so new stain bonds with the wood, not just sits on top. Penetrating finishes for most applications because they fail gracefully, not in sheets.",
+  },
+  {
+    n: "02",
+    title: "Decks, railings & spindles.",
+    body: "Decks take the most punishment of any wood on the house — sun, foot traffic, snow load, pooling water. We strip back failing finishes, sand to a clean surface, and apply two coats of product matched to traffic and exposure. Most horizontal surfaces re-coat every 2–4 years, and we tell you when.",
+  },
+  {
+    n: "03",
+    title: "Timber frames, beams & posts.",
+    body: "Exposed timber frames are the defining detail of mountain architecture — and the most expensive to replace if they fail. We assess for checking, raised grain, and previous finish behaviour, then specify Sansin or a similar penetrating finish that protects the wood without changing how it reads in natural light.",
+  },
+  {
+    n: "04",
+    title: "Pine ceilings & deck soffits.",
+    body: "Covered ceilings — pine T&G, cedar V-joint, deck soffits — develop a yellow-to-orange cast with age that most homeowners want to refresh. We assess, sand back where needed, and apply a finish that maintains the wood's natural grain. Spar urethane where durability matters; penetrating stains where appearance does.",
+  },
+  {
+    n: "05",
+    title: "Fences, gates & garden structures.",
+    body: "Fences age fast and inconsistently — exposed pickets gray while sheltered sections stay sound. We strip and brighten the failing wood, replace boards where needed, and finish with a stain matched to the original — or shifted intentionally if you want a different look. Most fences need a refresh every 3–5 years.",
+  },
+  {
+    n: "06",
+    title: "Re-coat scheduling & maintenance.",
+    body: "Wood restoration done once doesn't stay done forever. Every project closes with a written maintenance schedule in your final report. Most penetrating finishes hold 2–5 years depending on exposure; proactive re-coats cost a fraction of a full restoration. We tell you when to call us back.",
+  },
 ];
 
 const APPROACH = [
   {
     title: "Restoration before staining.",
-    body: "Stain over weathered, gray wood doesn't penetrate properly. We clean and brighten the surface first so the product actually bonds with the wood, not just coats the top.",
+    body: "Stain over weathered, gray wood doesn't penetrate properly. We clean and brighten the surface first so the product actually bonds with the wood — not just coats the top.",
   },
   {
-    title: "Penetrating stains over film-formers on most applications.",
+    title: "Penetrating finishes by default.",
     body: "Film-forming finishes peel. Penetrating products absorb into the wood and fail gracefully — they don't crack or lift. On most Sea-to-Sky exteriors, that's the right call.",
   },
   {
-    title: "We spec the right product for your species.",
+    title: "Product matched to species.",
     body: "Cedar, Douglas fir, pine, and pressure-treated all behave differently. Sansin for raw timber, Messmer's for smooth cedar, Sikkens for high-traffic decks. Not one-size-fits-all.",
   },
   {
@@ -103,11 +126,11 @@ const FAQS = [
     a: "Gray, weathered wood with raised grain or previous finish peeling needs restoration first. Wood that's just fading but still structurally sound and clean usually just needs a re-coat. We assess this on the site visit and recommend accordingly.",
   },
   {
-    q: "Can you match the original stain color?",
-    a: "Usually yes, if you know the product and color. If not, we can bring samples and test patches on a less visible area to match closely. On very weathered wood the base color has shifted, which affects how new stain reads.",
+    q: "Can you match the original stain colour?",
+    a: "Usually yes, if you know the product and colour. If not, we can bring samples and test patches on a less visible area to match closely. On very weathered wood the base colour has shifted, which affects how new stain reads.",
   },
   {
-    q: "Can you change the stain color — go darker or lighter?",
+    q: "Can you change the stain colour — go darker or lighter?",
     a: "Going darker is straightforward. Going lighter is harder and usually requires stripping the previous finish back to bare wood before staining. We'll be honest at the site visit about what's realistic for your wood and what it'll cost.",
   },
   {
@@ -151,119 +174,179 @@ export default function WoodRestorationPage() {
         </Button>
       </Hero>
 
+      {/* Intro */}
+      <section className="py-16 md:py-28">
+        <Container>
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Wood restoration in the Sea to Sky
+                </span>
+              </div>
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                Wood that looks the way <em className="text-alpine not-italic font-medium">it should</em> — and stays that way.
+              </h2>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Wood is the defining material of Sea-to-Sky architecture.
+                  Cedar siding, exposed timber frames, wraparound decks —
+                  they&rsquo;re beautiful when maintained and problematic when
+                  they&rsquo;re not. UV graying, moisture damage, and failing
+                  previous finishes are all fixable, but only if the restoration
+                  is done in the right order.
+                </p>
+                <p>
+                  We work on cedar, Douglas fir, pine, pressure-treated, and log
+                  construction. Decks, siding, railings, fences, gazebos, and
+                  exterior timber framing.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get a Quote</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                What every wood project includes
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Surfaces */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
+        <Container>
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                What we cover
+              </span>
+            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Every piece of exposed wood — siding to soffits.
+            </h2>
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
+              If it&rsquo;s wood and it&rsquo;s exposed to weather (or air, in
+              the case of covered ceilings and timber frames), we restore and
+              finish it. Different species, exposures, and conditions call for
+              different products — we&rsquo;ll spec each surface on the proposal.
+            </p>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SURFACE_CARDS.map((c) => (
+              <article
+                key={c.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                  {c.n}
+                </div>
+                <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {c.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {c.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Approach */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we do</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Wood that looks the way it should — and stays that way.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Wood is the defining material of Sea-to-Sky architecture. Cedar siding, exposed timber frames, wraparound decks — they're beautiful when maintained and problematic when they're not. UV graying, moisture damage, and failing previous finishes are all fixable, but only if the restoration is done in the right order.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                We work on cedar, Douglas fir, pine, pressure-treated, and log construction. Decks, siding, railings, fences, gazebos, and exterior timber framing.
-              </p>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Our approach</span>
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Included in every project</div>
-              <ul className="space-y-3">
-                {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                    <span className="text-ink">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Surfaces & details */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
-        <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Surfaces & details</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Every piece of exposed wood — siding, decks, beams, ceilings.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                If it&rsquo;s wood and it&rsquo;s exposed to weather (or air, in the case
-                of covered ceilings and timber frames), we restore and finish it. Different
-                species, exposures, and conditions call for different products
-                — we&rsquo;ll spec each surface on the proposal.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                Not sure if your wood is salvageable? Ask us. The honest answer
-                is sometimes &ldquo;replace it&rdquo; — and we&rsquo;ll tell you
-                that on the site visit before you spend a dollar restoring.
-              </p>
-            </div>
-            <div>
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {SURFACES.map((s) => (
-                  <li key={s} className="flex items-start gap-3">
-                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
-                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-24 bg-stone-light/30">
-        <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our approach</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Why wood restoration done right lasts twice as long.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
-              <div key={a.title} className="border border-border rounded-sm bg-surface p-6 md:p-7">
-                <h3 className="font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
+              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
+                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      {/* Products */}
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
-          <div className="max-w-xl mb-8">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Products we use</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-              Penetrating stains that last.
-            </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              Sansin for raw and natural log work, Messmer's for smooth cedar, Sikkens for high-traffic horizontal surfaces. Product choice follows the wood — not the other way around.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {PRODUCTS.map((p) => (
-              <div key={p} className="px-5 py-3 border border-border rounded-sm bg-surface font-serif text-navy">{p}</div>
-            ))}
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Products we use</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
+                Penetrating stains that last.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                Sansin for raw and natural log work, Messmer&rsquo;s for smooth
+                cedar, Sikkens for high-traffic horizontal surfaces. Product
+                choice follows the wood — not the other way around.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              {PRODUCTS.map((p) => (
+                <div
+                  key={p}
+                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
+                >
+                  {p}
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
       {/* Before / after */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Before & after</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Before & after</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Drag to see the difference.
             </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              Real Whistler wood — stripped, sanded, and stained back to better than new. Slide the handle to compare.
+            <p className="mt-5 text-ink leading-relaxed">
+              Real Whistler wood — stripped, sanded, and stained back to better
+              than new. Slide the handle to compare.
             </p>
           </div>
           <div className="grid gap-8 md:gap-10 md:grid-cols-2">
@@ -287,12 +370,16 @@ export default function WoodRestorationPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* Related */}
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Recent wood work</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">Restoration we're proud of.</h2>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Recent wood work</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Restoration we&rsquo;re proud of.</h2>
             </div>
             <Button href="/work" variant="text">See all work →</Button>
           </div>
@@ -304,15 +391,19 @@ export default function WoodRestorationPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Wood restoration questions.</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
+          </div>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Wood restoration questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
 
       <WarrantyBanner
-        heading="5-year warranty on solid stain. 2 years on semi-transparent and translucent finishes."
-        body="Penetrating stains wear gracefully but faster than solid finishes — so each product gets a warranty matched to how it performs in mountain weather. Documented in your project report."
+        years="5"
+        heading="Years on solid stain. Two on semi-transparent and translucent finishes."
+        body="Penetrating stains wear gracefully but faster than solid finishes — so each product gets a warranty matched to how it actually performs in mountain weather. Documented in your project report so you know what's covered, and for how long."
       />
 
       <CtaBlock

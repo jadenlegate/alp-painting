@@ -5,8 +5,8 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
-import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { Check } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Cabinet Refinishing — Whistler, Pemberton & Squamish",
@@ -31,25 +31,46 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/cabinet-refinishing",
 };
 
-const INCLUDED = [
-  "Full degloss, clean, and sand of all cabinet surfaces",
-  "Door and drawer removal, labelled and tracked",
-  "Grain filling on MDF or wood doors where needed",
-  "Spray-applied primer — no brush marks, no roller texture",
-  "Two coats of premium finish in your chosen sheen",
-  "Reinstallation, adjustment, and final inspection",
-  "Project report with exact product and color for future touch-ups",
+const PILLARS = [
+  "Doors sprayed in shop",
+  "Boxes prepped on-site",
+  "Cabinet-grade finishes",
+  "Phased so kitchen stays usable",
+  "Colour samples on real doors",
+  "Documented for touch-ups",
 ];
 
-const SURFACES = [
-  "Kitchen cabinets — uppers, lowers, and islands",
-  "Bathroom vanities and medicine cabinets",
-  "Built-in bookcases, desks, and entertainment units",
-  "Closet built-ins and wardrobes",
-  "Pantry and mudroom casework",
-  "Mantels and fireplace surrounds",
-  "Laundry room cabinets",
-  "Color consultation and sample drawdowns",
+const SURFACE_CARDS = [
+  {
+    n: "01",
+    title: "Kitchen cabinets — uppers, lowers, islands.",
+    body: "The full kitchen, sprayed in our shop for a factory-smooth finish you can't get with brush or roller. Doors and drawer fronts come off, get prepped and finished off-site; boxes get spray-prepped on-site with HVLP and full masking. We phase the work so the sink, stove, and fridge stay accessible throughout.",
+  },
+  {
+    n: "02",
+    title: "Bathroom vanities & medicine cabinets.",
+    body: "Bathrooms get humidity, daily contact, and the most concentrated wear of any room. Vanity refinishing uses cabinet-grade waterborne or alkyd finishes that take the abuse — hard, washable, and resistant to chipping at the door pulls. A refinished vanity reads as new without the cost of replacement.",
+  },
+  {
+    n: "03",
+    title: "Built-ins, bookcases & media units.",
+    body: "Built-in bookcases, desks, and media units are usually high-detail pieces that benefit from a controlled finish. Doors and removable elements come off; fixed pieces get masked and finished in place. The result is a built-in that reads custom — not refinished — and matches whatever else is being painted in the room.",
+  },
+  {
+    n: "04",
+    title: "Closet built-ins & wardrobes.",
+    body: "Walk-in built-ins, mudroom storage, and freestanding wardrobes all refinish the same way as kitchens, just in different scale. We pick a finish appropriate to the use — washable for mudrooms, soft-sheen for primary closets — and document the exact products so future touch-ups are easy.",
+  },
+  {
+    n: "05",
+    title: "Mantels & fireplace surrounds.",
+    body: "Mantels and fireplace surrounds are focal-point woodwork most homeowners hesitate to touch because they're afraid of changing the room's character. We test colour and sheen on samples first, then refinish using high-heat-tolerant finishes where appropriate. The fireplace stays the room's anchor.",
+  },
+  {
+    n: "06",
+    title: "Colour consultation & drawdowns.",
+    body: "Cabinet colour is the biggest decision in any kitchen project, and the hardest to undo. We bring sample drawdowns and test them on a removed door in your actual kitchen light before committing to the full project. Better to spend an extra day picking than two years living with the wrong colour.",
+  },
 ];
 
 const APPROACH = [
@@ -66,8 +87,8 @@ const APPROACH = [
     body: "We work in phases so you're never without a functional kitchen for more than a day or two. Doors come off in sections, get sprayed, and go back before the next section comes down.",
   },
   {
-    title: "Color consultation included.",
-    body: "Cabinet color is a big decision. We bring samples and can test small patches in your actual kitchen light before committing to the full project.",
+    title: "Colour consultation included.",
+    body: "Cabinet colour is a big decision. We bring samples and can test small patches in your actual kitchen light before committing to the full project.",
   },
 ];
 
@@ -116,15 +137,11 @@ const FAQS = [
   },
   {
     q: "Can you do just the upper or lower cabinets?",
-    a: "Yes. Some clients do a phased approach — uppers first, lowers later. Color matching is easy because we document the exact product and color in your project report.",
+    a: "Yes. Some clients do a phased approach — uppers first, lowers later. Colour matching is easy because we document the exact product and colour in your project report.",
   },
   {
     q: "Will the finish hold up to daily use?",
     a: "Cabinet-specific waterborne and alkyd finishes are harder, more washable, and more chip-resistant than wall paint. Properly prepped and sprayed, refinished cabinets hold up for 8–12 years under normal use.",
-  },
-  {
-    q: "What does the warranty cover?",
-    a: "Peeling, chipping, and premature finish failure under normal household use. Cabinet refinishing carries a 5-year written warranty — matched to how cabinet finishes actually perform under daily contact.",
   },
   {
     q: "Do you spray on-site or in a shop?",
@@ -151,117 +168,175 @@ export default function CabinetRefinishingPage() {
         </Button>
       </Hero>
 
+      {/* Intro */}
+      <section className="py-16 md:py-28">
+        <Container>
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Cabinet refinishing in the Sea to Sky
+                </span>
+              </div>
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                New kitchen,<br />a <em className="text-alpine not-italic font-medium">fraction</em> of the cost.
+              </h2>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Cabinet replacement is one of the most disruptive and
+                  expensive renovations in a home. Refinishing gets you 90% of
+                  the visual result for 10–20% of the cost — and you&rsquo;re
+                  back in your kitchen within a week.
+                </p>
+                <p>
+                  We work on painted wood, MDF, thermofoil (delamination
+                  permitting), and factory-finished cabinets. If the boxes are
+                  solid and the layout works, refinishing is almost always the
+                  right call.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get a Quote</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                What every cabinet project includes
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Surfaces */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
+        <Container>
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                What we refinish
+              </span>
+            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Cabinets, vanities, built-ins — anywhere there&rsquo;s a casework finish.
+            </h2>
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
+              Most clients come to us about kitchens, but the same spray process
+              works on anything with a finished surface — bathroom vanities,
+              mudroom benches, walk-in closet built-ins, mantels, and laundry
+              room storage. A coordinated refinish across the house can
+              transform the look without renovating a single box.
+            </p>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SURFACE_CARDS.map((c) => (
+              <article
+                key={c.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                  {c.n}
+                </div>
+                <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {c.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {c.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Approach */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we do</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                New kitchen, fraction of the cost.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Cabinet replacement is one of the most disruptive and expensive renovations in a home. Refinishing gets you 90% of the visual result for 10–20% of the cost — and you're back in your kitchen within a week.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                We work on painted wood, MDF, thermofoil (delamination permitting), and factory-finished cabinets. If the boxes are solid and the layout works, refinishing is almost always the right call.
-              </p>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Our approach</span>
             </div>
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Included in every project</div>
-              <ul className="space-y-3">
-                {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                    <span className="text-ink">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Surfaces & details */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
-        <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What we refinish</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Cabinets, vanities, built-ins — anywhere there&rsquo;s a casework finish.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Most clients come to us about kitchens, but the same spray
-                process works on anything with a finished surface — bathroom
-                vanities, mudroom benches, walk-in closet built-ins, mantels,
-                and laundry room storage. A coordinated refinish across the
-                house can transform the look without renovating a single
-                cabinet box.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                Not sure if a built-in is a candidate? Ask. The answer is
-                usually yes — and we&rsquo;ll tell you what&rsquo;s realistic
-                at the site visit.
-              </p>
-            </div>
-            <div>
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {SURFACES.map((s) => (
-                  <li key={s} className="flex items-start gap-3">
-                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
-                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-24 bg-stone-light/30">
-        <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our approach</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Why our cabinet finish looks different from a brushed repaint.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
-              <div key={a.title} className="border border-border rounded-sm bg-surface p-6 md:p-7">
-                <h3 className="font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
+              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
+                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      {/* Products */}
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
-          <div className="max-w-xl mb-8">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Products we use</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-              Premium cabinet finishes only.
-            </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              We use cabinet-specific alkyd and waterborne finishes designed for high-traffic surfaces — harder, more washable, and more chip-resistant than standard wall paint.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {PRODUCTS.map((p) => (
-              <div key={p} className="px-5 py-3 border border-border rounded-sm bg-surface font-serif text-navy">{p}</div>
-            ))}
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Products we use</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
+                Premium cabinet finishes only.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                Cabinet-specific alkyd and waterborne finishes designed for
+                high-traffic surfaces — harder, more washable, and more
+                chip-resistant than standard wall paint.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              {PRODUCTS.map((p) => (
+                <div
+                  key={p}
+                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
+                >
+                  {p}
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* Related */}
+      <section className="py-16 md:py-24">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Recent cabinet work</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">Before and after.</h2>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Recent cabinet work</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Before and after.</h2>
             </div>
             <Button href="/work" variant="text">See all work →</Button>
           </div>
@@ -271,18 +346,16 @@ export default function CabinetRefinishingPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Cabinet refinishing questions.</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
+          </div>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Cabinet refinishing questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
-
-      <WarrantyBanner
-        heading="A 5-year written warranty on cabinet refinishing."
-        body="Cabinets take more daily wear than walls — so the warranty is matched to how cabinet finishes actually perform under real use. Standard on every project."
-      />
 
       <CtaBlock
         eyebrow="Get in touch"

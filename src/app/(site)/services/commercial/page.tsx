@@ -5,7 +5,8 @@ import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { Check, Building2, Users, Clock, CalendarCheck } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { Check, Building2, Users, Clock, CalendarCheck, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Commercial, Strata & Hotel Painting — Whistler & Sea to Sky",
@@ -30,26 +31,39 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/commercial",
 };
 
+const PILLARS = [
+  "Phased to keep buildings running",
+  "Strata coordination included",
+  "$5M liability insurance",
+  "WorkSafeBC coverage on every worker",
+  "Resident & guest notification",
+  "Warranty matched to substrate",
+];
+
 const AUDIENCES = [
   {
+    n: "01",
     icon: Building2,
-    title: "Strata councils & property managers",
-    body: "Multi-unit projects require coordination with residents, clear communication to the council, and a crew that shows up professional. We've done it and know what strata work actually involves.",
+    title: "Strata councils & property managers.",
+    body: "Multi-unit projects require coordination with residents, clear communication to the council, and a crew that shows up professional. We've done strata work and know what it actually involves — scheduling around moves, keeping common areas accessible, formal progress updates at council meetings.",
   },
   {
+    n: "02",
     icon: Clock,
-    title: "Hotels & commercial properties",
-    body: "Your revenue doesn't stop for a paint job. We work around your operations — phased by floor, by wing, or by time of day. Night work available for high-priority areas.",
+    title: "Hotels & commercial properties.",
+    body: "Your revenue doesn't stop for a paint job. We work around your operations — phased by floor, by wing, or by time of day. Night work is available for high-priority guest areas. We've delivered work in occupied hotel buildings without disrupting check-ins or housekeeping rhythms.",
   },
   {
+    n: "03",
     icon: Users,
-    title: "Custom home builders",
-    body: "Deadline-driven, specification-precise, no drama. We integrate with your build schedule, hit our milestones, and communicate with your site super directly.",
+    title: "Custom home builders.",
+    body: "Deadline-driven, specification-precise, no drama. We integrate with your build schedule, hit our milestones, and communicate with your site super directly. Several Sea-to-Sky builders use us as their go-to painting partner because we don't slip and we don't surprise them.",
   },
   {
+    n: "04",
     icon: CalendarCheck,
-    title: "Property developers",
-    body: "Pre-sale condition work, suite turns, common area refreshes. Fast turnarounds, consistent quality across multiple units, and documentation you can hand to buyers.",
+    title: "Property developers.",
+    body: "Pre-sale condition work, suite turns, common area refreshes. Fast turnarounds, consistent quality across multiple units, and documentation you can hand to buyers. Multi-building and multi-phase contracts handled with progress documentation at every close.",
   },
 ];
 
@@ -82,7 +96,7 @@ const FAQS = [
   },
   {
     q: "What does your warranty look like for commercial work?",
-    a: "The warranty matches the substrate. Interior painting: 10 years. Exterior solid finishes: 5 years. Exterior semi-transparent and translucent stains: 2 years. Cabinet refinishing: 5 years. Same written terms as our residential work — we don't water it down for B2B.",
+    a: "The warranty matches the substrate. Interior painting: 10 years. Exterior solid finishes: 5 years. Exterior semi-transparent and translucent stains: 2 years. Same written terms as our residential work — we don't water it down for B2B.",
   },
   {
     q: "How do you handle deficiencies or callbacks?",
@@ -115,56 +129,134 @@ export default function CommercialPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-        <Button href="/contact" variant="text" className="!text-background">
-          Request a site visit →
-        </Button>
       </Hero>
 
-      {/* Who we work with */}
-      <section className="py-16 md:py-24">
+      {/* Intro */}
+      <section className="py-16 md:py-28">
         <Container>
-          <div className="max-w-2xl mb-12">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Who we work with</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              B2B clients have different needs. We plan around them.
-            </h2>
-            <p className="mt-5 text-ink text-lg leading-relaxed">
-              Commercial painting isn't harder than residential — it's different. The scheduling is tighter, the communication has to be more formal, and the cost of disruption is higher. We've done the work to understand what that means in practice.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {AUDIENCES.map((a) => (
-              <div key={a.title} className="border border-border rounded-sm bg-surface p-6 md:p-7">
-                <a.icon size={22} className="text-navy" />
-                <h3 className="mt-4 font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Commercial painting in the Sea to Sky
+                </span>
               </div>
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                B2B clients have different needs.<br />We plan around <em className="text-alpine not-italic font-medium">them</em>.
+              </h2>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Commercial painting isn&rsquo;t harder than residential —
+                  it&rsquo;s different. The scheduling is tighter, the
+                  communication has to be more formal, and the cost of
+                  disruption is higher. We&rsquo;ve done the work to understand
+                  what that means in practice.
+                </p>
+                <p>
+                  Strata buildings, hotels, builders, developers — each
+                  one runs on a different rhythm. Our job is to fit into yours.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get in Touch</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                What every commercial project includes
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Who we work with — audience cards */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
+        <Container>
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                Who we work with
+              </span>
+            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Four B2B audiences. One approach.
+            </h2>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2">
+            {AUDIENCES.map((a) => (
+              <article
+                key={a.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                    {a.n}
+                  </div>
+                  <a.icon size={20} className="text-navy/40" />
+                </div>
+                <h3 className="font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {a.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {a.body}
+                </p>
+              </article>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* What's included */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* What's standard */}
+      <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">What's standard on every commercial project</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                The process that keeps B2B projects on track.
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Standard on every commercial project</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
+                Structure that keeps B2B projects on track.
               </h2>
               <p className="mt-5 text-ink leading-relaxed">
-                The biggest frustration in commercial painting is miscommunication. Unclear scope, missed milestones, nobody to call when something's wrong. We address that with structure from day one.
+                The biggest frustration in commercial painting is
+                miscommunication. Unclear scope, missed milestones, nobody to
+                call when something&rsquo;s wrong. We address that with
+                structure from day one.
               </p>
               <div className="mt-8">
                 <Button href="/process" variant="secondary">See our full process</Button>
               </div>
             </div>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {INCLUDED.map((item) => (
-                <li key={item} className="flex items-start gap-3">
+                <li key={item} className="flex items-start gap-4 border-l-2 border-alpine pl-5 py-1">
                   <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                  <span className="text-ink">{item}</span>
+                  <span className="text-ink leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -173,17 +265,20 @@ export default function CommercialPage() {
       </section>
 
       {/* Insurance callout */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-stone-light/50">
         <Container>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-4 md:gap-5 md:grid-cols-3">
             {[
-              { label: "$5M liability insurance", sub: "Certificates available on request" },
-              { label: "Full WorkSafeBC coverage", sub: "All workers on every site" },
-              { label: "Licensed contractor", sub: "Whistler Chamber · PCA member" },
+              { label: "$5M", sub: "Commercial general liability", note: "Certificates available on request" },
+              { label: "WorkSafeBC", sub: "Full coverage", note: "Every worker, every site" },
+              { label: "Licensed", sub: "Whistler Chamber · PCA member", note: "Insured & accountable" },
             ].map((item) => (
-              <div key={item.label} className="border border-border rounded-sm bg-surface p-6 text-center">
-                <div className="font-serif text-xl text-navy">{item.label}</div>
-                <div className="mt-1 text-sm text-muted">{item.sub}</div>
+              <div key={item.label} className="border border-navy/15 bg-background p-7 md:p-8">
+                <div className="font-serif text-navy text-[1.75rem] md:text-[2rem] leading-none tracking-tight font-medium">
+                  {item.label}
+                </div>
+                <div className="mt-3 text-navy text-sm font-medium">{item.sub}</div>
+                <div className="mt-1 text-sm text-muted">{item.note}</div>
               </div>
             ))}
           </div>
@@ -192,15 +287,19 @@ export default function CommercialPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Frequently asked</div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">Commercial project questions.</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
+          </div>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Commercial project questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
 
       <WarrantyBanner
-        heading="Written warranty on every commercial project — matched to the substrate."
-        body="Interior 10 years, exterior solid 5 years, exterior stain 2 years, cabinet refinishing 5 years. Same terms as our residential work — documented in the project agreement."
+        years="10"
+        heading="Years on interior. Five on exterior solid. Two on exterior stain."
+        body="Written warranty on every commercial project, matched to the substrate. Same terms as our residential work — we don't water it down for B2B. Documented in the project agreement."
       />
 
       <CtaBlock

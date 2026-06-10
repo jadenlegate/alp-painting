@@ -6,7 +6,7 @@ import { ShieldCheck, FileText } from "lucide-react";
 export const metadata: Metadata = {
   title: "Painting Warranty — Up to 10 Years in Writing",
   description:
-    "Alpenglow Painting's written warranty — 10 years on interior painting, 5 years on exterior solid finishes and cabinet refinishing, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
+    "Alpenglow Painting's written warranty — 10 years on interior painting, 5 years on exterior solid finishes, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
   alternates: { canonical: "/warranty" },
 };
 
@@ -27,12 +27,6 @@ const WARRANTY_TIERS = [
     years: "2",
     label: "Exterior — semi-transparent & translucent stain",
     description: "Penetrating stains wear gracefully but faster than solid finishes — so the warranty matches how the product actually performs in mountain sun.",
-    highlight: false,
-  },
-  {
-    years: "5",
-    label: "Cabinet refinishing",
-    description: "Spray-applied cabinet finishes — kitchens, vanities, built-ins. Covers peeling, chipping, and premature finish failure under normal household use.",
     highlight: false,
   },
 ];
@@ -111,7 +105,7 @@ export default function WarrantyPage() {
               Interior paint, exterior solid finishes, and cabinet refinishings hold up differently than penetrating stains in the mountain sun. So each service carries its own warranty, set to how the finish actually performs.
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-3">
             {WARRANTY_TIERS.map((tier) => (
               <div
                 key={tier.label}

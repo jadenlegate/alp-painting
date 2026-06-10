@@ -6,7 +6,8 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { Check } from "lucide-react";
+import { SITE } from "@/lib/site";
+import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Interior Painters — Whistler, Pemberton & Squamish",
@@ -31,29 +32,46 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/interior-painting",
 };
 
-// Interior Painting service page — matches brief §7.2 template:
-// Hero → What we do → Approach → Products → Related projects → FAQ → CTA.
-// Once Sanity schemas are live, pull `service` doc by slug and render the
-// same structure. For now, content lives inline in this file.
-
-const INCLUDED = [
-  "Full-coverage drop cloths and plastic masking",
-  "Wall prep: filling, sanding, priming as needed",
-  "Trim, doors, ceilings, closets — whatever's in scope",
-  "Two-coat finish standard, three if the color demands it",
-  "Daily cleanup so your home stays livable",
-  "Final walkthrough with a written project report",
+const PILLARS = [
+  "Two-coat finish standard",
+  "Low-VOC, premium products",
+  "Furniture protected & moved",
+  "Daily cleanup, livable home",
+  "Written project report",
+  "10-year written warranty",
 ];
 
-const SURFACES = [
-  "Walls — smooth, textured, and accent walls",
-  "Ceilings — flat, vaulted, and beam-detailed",
-  "Trim, baseboards, and crown moulding",
-  "Doors, frames, and jambs",
-  "Stair railings, spindles, and risers",
-  "Closet interiors and built-in shelving",
-  "Wallpaper removal and wall repair",
-  "Color consultation and sample drawdowns",
+const SURFACE_CARDS = [
+  {
+    n: "01",
+    title: "Walls — every room, every sheen.",
+    body: "Bedrooms want flat. Kitchens and baths want a scrubbable eggshell. Accent walls want a finish that holds the saturated colour. We pick sheen by room, prep so the coat lays even, and roll two coats standard — three when the colour demands it. Lines stay sharp against trim, ceilings, and corners in any light.",
+  },
+  {
+    n: "02",
+    title: "Ceilings — including the vaulted ones.",
+    body: "Ceilings get noticed when they're done wrong — roller spatter on the wall, an uneven line at the cornice, paint on the trim. We mask, sheet, and cut every edge by hand. Vaulted and beam-detailed ceilings get extra care to manage spray drift and protect timber. Done properly, the ceiling reads as part of the room.",
+  },
+  {
+    n: "03",
+    title: "Trim, baseboards & crown moulding.",
+    body: "Trim is where careful painters separate from quick ones. We caulk every gap, sand previous coats so the new finish lays smooth, and hand-cut every line against wall and floor. Cabinet-grade alkyds on door casings, baseboards, and handrails — the surfaces you'll touch — so the finish stays hard and washable for years.",
+  },
+  {
+    n: "04",
+    title: "Doors, frames & jambs.",
+    body: "Doors take more handling than any other interior surface, which means the finish has to hold. We remove doors when sensible, sand and prime the slab, and spray or hand-finish for a hardware-grade result. Frames and jambs get the same hard finish — they're the surfaces people brush past every day.",
+  },
+  {
+    n: "05",
+    title: "Stair railings, spindles & risers.",
+    body: "Staircases are tedious and visible — exactly the kind of work that exposes a corner-cutting crew. We hand-sand every spindle, mask risers separately, and refinish handrails with a hard topcoat that takes daily contact. The result is the staircase the house wants to remember itself by.",
+  },
+  {
+    n: "06",
+    title: "Closets, repair & colour guidance.",
+    body: "Closet interiors, drywall patches, water-damage repair, and on-wall colour testing are all included when they come up — we don't quote them separately at invoice time. If you want help picking a colour, we'll bring drawdowns and test them in your actual light, not under the showroom's.",
+  },
 ];
 
 const APPROACH = [
@@ -67,11 +85,11 @@ const APPROACH = [
   },
   {
     title: "Low-VOC products by default.",
-    body: "Benjamin Moore Aura, Sherwin-Williams Emerald, and similar premium lines — low odor, safe to sleep in the same night.",
+    body: "Benjamin Moore Aura, Sherwin-Williams Emerald, and similar premium lines — low odour, safe to sleep in the same night.",
   },
   {
     title: "Closeout you'll actually use.",
-    body: "Every project ends with a document listing the exact products, colors, and sheens we used — so repairs or touch-ups, years later, aren't guesswork.",
+    body: "Every project ends with a document listing the exact products, colours, and sheens we used — so repairs or touch-ups, years later, aren't guesswork.",
   },
 ];
 
@@ -124,8 +142,8 @@ const FAQS = [
     a: "We move light-to-medium furniture to the center of the room and cover it. For large or fragile pieces we'll coordinate in advance — usually you move the antiques, we handle everything else.",
   },
   {
-    q: "How do you handle color selection?",
-    a: "We can test swatches on your walls and compare in your light. If you want outside help, we partner with a local color consultant who knows Sea-to-Sky light conditions. Either way, you'll see the colors on your wall before they go on the wall.",
+    q: "How do you handle colour selection?",
+    a: "We can test swatches on your walls and compare in your light. If you want outside help, we partner with a local colour consultant who knows Sea-to-Sky light conditions. Either way, you'll see the colours on your wall before they go on the wall.",
   },
   {
     q: "What prep work is included before painting?",
@@ -137,7 +155,7 @@ const FAQS = [
   },
   {
     q: "What happens at the final walkthrough?",
-    a: "We walk the project with you room by room, address any touch-ups on the spot, and hand off a project report listing the exact products, colors, and sheens we used. So if you need to touch up years later, it's not guesswork.",
+    a: "We walk the project with you room by room, address any touch-ups on the spot, and hand off a project report listing the exact products, colours, and sheens we used. So if you need to touch up years later, it's not guesswork.",
   },
 ];
 
@@ -151,7 +169,7 @@ export default function InteriorPaintingPage() {
       <Hero
         eyebrow="Services"
         headline="Interior Painting"
-        subline="Walls, trim, ceilings, cabinets. A clean process that respects your home — and a finish that holds up."
+        subline="Walls, trim, ceilings, doors. A clean process that respects your home — and a finish that holds up."
         imageUrl="/stock-images/empty-dark-blue-wall-modern-living-room-mock-up-interior-contemporary-style-free-space-picture-poster-leather-sofa-armchair-fireplace-plant-3d-rendering_429124-1653.avif"
         imageAlt="Interior of a Whistler home mid-repaint"
       >
@@ -164,107 +182,133 @@ export default function InteriorPaintingPage() {
         </Button>
       </Hero>
 
-      {/* What we do */}
-      <section className="py-16 md:py-24">
+      {/* Intro — editorial display + pillars */}
+      <section className="py-16 md:py-28">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1fr]">
+          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
-                What we do
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Interior painting in the Sea to Sky
+                </span>
               </div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                The full interior, done properly.
+              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
+                The full interior,<br />done <em className="text-alpine not-italic font-medium">properly</em>.
               </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Most homes we paint in Whistler are lived in — primary
-                residences, long-term rentals, second homes used every weekend.
-                That means the job has to be precise, low-disruption, and
-                finished cleanly enough that the house is better than before
-                we arrived.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                Whether it&rsquo;s a single accent wall or a whole-house repaint,
-                the standard is the same.
-              </p>
+              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
+                <p>
+                  Most homes we paint in Whistler are lived in — primary
+                  residences, long-term rentals, second homes used every
+                  weekend. That means the job has to be precise, low-disruption,
+                  and finished cleanly enough that the house is better than
+                  before we arrived.
+                </p>
+                <p>
+                  Whether it&rsquo;s a single accent wall or a whole-house
+                  repaint, the standard is the same.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Button href="/contact" size="lg">Get a Quote</Button>
+                <a
+                  href={`tel:${SITE.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
+                >
+                  <Phone size={15} />
+                  {SITE.phone}
+                </a>
+              </div>
             </div>
 
+            {/* Pillars — outlined editorial boxes */}
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
-                Included in every project
+              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+                What every project includes
               </div>
-              <ul className="space-y-3">
-                {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Check
-                      size={18}
-                      className="text-navy mt-0.5 flex-shrink-0"
-                    />
-                    <span className="text-ink">{item}</span>
-                  </li>
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {PILLARS.map((p) => (
+                  <div
+                    key={p}
+                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
+                  >
+                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
+                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
+                      {p}
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Surfaces & details we finish */}
-      <section className="pb-16 md:pb-24 border-t border-border/60 pt-16 md:pt-24">
+      {/* Surfaces & details — 3x2 card grid */}
+      <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-[1fr_1.2fr] md:items-start">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
                 Surfaces & details
-              </div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Everything inside the house — from baseboards to vaulted ceilings.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Homeowners often ask if we&rsquo;ll paint the closet interiors,
-                the stair spindles, or the inside of the door frames.
-                The answer is yes — and we&rsquo;ll show you on the proposal
-                exactly what&rsquo;s in scope so nothing gets skipped or
-                surprises you on invoice day.
-              </p>
-              <p className="mt-4 text-ink leading-relaxed">
-                If it&rsquo;s a finished surface and you want it painted, we
-                paint it. If you&rsquo;re not sure whether something can be
-                refinished, ask — we&rsquo;ll tell you honestly.
-              </p>
+              </span>
             </div>
-            <div>
-              <ul className="grid gap-3 sm:grid-cols-2">
-                {SURFACES.map((s) => (
-                  <li key={s} className="flex items-start gap-3">
-                    <Check size={18} className="text-alpine mt-0.5 flex-shrink-0" />
-                    <span className="text-ink leading-relaxed text-[0.95rem]">{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
+              Everything inside the house — from baseboards to vaulted ceilings.
+            </h2>
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
+              Homeowners often ask if we&rsquo;ll paint the closet interiors,
+              the stair spindles, or the inside of the door frames. The answer
+              is yes — and the proposal will show you exactly what&rsquo;s in
+              scope so nothing is skipped and nothing surprises you on invoice day.
+            </p>
+          </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SURFACE_CARDS.map((c) => (
+              <article
+                key={c.n}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+              >
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
+                  {c.n}
+                </div>
+                <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {c.title}
+                </h3>
+                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
+                  {c.body}
+                </p>
+              </article>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
-              Our approach
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                Our approach
+              </span>
             </div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               The details other painters skip.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
               <div
                 key={a.title}
-                className="border border-border rounded-sm bg-surface p-6 md:p-7"
+                className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8"
               >
-                <h3 className="font-serif text-xl text-navy">{a.title}</h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">
+                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">
+                  {a.title}
+                </h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">
                   {a.body}
                 </p>
               </div>
@@ -279,43 +323,52 @@ export default function InteriorPaintingPage() {
       </section>
 
       {/* Products */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
-          <div className="max-w-xl mb-8">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
-              Products we use
-            </div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-              Premium lines, specified for the job.
-            </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              We don&rsquo;t upcharge for a brand name — we use the right
-              product for the surface, the sheen, and the wear you&rsquo;ll put
-              it through.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4 md:gap-6">
-            {PRODUCTS.map((p) => (
-              <div
-                key={p}
-                className="px-5 py-3 border border-border rounded-sm bg-surface font-serif text-navy"
-              >
-                {p}
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Products we use
+                </span>
               </div>
-            ))}
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
+                Premium lines, specified for the job.
+              </h2>
+              <p className="mt-5 text-ink leading-relaxed">
+                We don&rsquo;t upcharge for a brand name. We use the right
+                product for the surface, the sheen, and the wear you&rsquo;ll
+                put it through — and document the exact specification in the
+                project report.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              {PRODUCTS.map((p) => (
+                <div
+                  key={p}
+                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
+                >
+                  {p}
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
       {/* Related projects */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
-                Recent interior work
+            <div className="max-w-xl">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+                  Recent interior work
+                </span>
               </div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
                 A few projects we&rsquo;ve loved.
               </h2>
             </div>
@@ -332,12 +385,15 @@ export default function InteriorPaintingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">
-            Frequently asked
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-10 bg-alpine" aria-hidden />
+            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
+              Frequently asked
+            </span>
           </div>
-          <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15] mb-8">
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">
             Interior painting questions.
           </h2>
           <FAQAccordion items={FAQS} />
@@ -345,8 +401,9 @@ export default function InteriorPaintingPage() {
       </section>
 
       <WarrantyBanner
-        heading="A 10-year written warranty on interior painting."
-        body="Standard on every interior project — covers peeling, flaking, and premature finish failure under normal conditions, when work is done with approved products."
+        years="10"
+        heading="Years on every interior painting project, in writing."
+        body="Standard on every interior project — covers peeling, flaking, and premature finish failure under normal conditions, when work is done with approved products. If something fails inside the window, we come back and fix it. That's the whole deal."
       />
 
       <CtaBlock
