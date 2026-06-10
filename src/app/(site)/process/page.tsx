@@ -213,7 +213,7 @@ export default function ProcessPage() {
           </div>
           <div className="mt-6 flex items-start gap-2 text-sm text-muted max-w-xl">
             <ShieldCheck size={16} className="text-navy mt-0.5 flex-shrink-0" />
-            <span>Warranty covers peeling, flaking, and premature finish failure under normal use. Does not cover damage from impact, flooding, or structural movement.</span>
+            <span>Cabinet refinishing carries a 5-year warranty; light carpentry repairs carry 2 years of workmanship coverage. Full terms on the warranty page.</span>
           </div>
           <div className="mt-8">
             <Button href="/warranty" variant="secondary">See full warranty details</Button>
