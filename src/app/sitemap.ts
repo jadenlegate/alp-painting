@@ -9,7 +9,7 @@ const STATIC_ROUTES = [
   "/contact",
   "/process",
   "/work",
-  "/reviews",
+  "/testimonials",
   "/faq",
   "/warranty",
   "/blog",
@@ -20,8 +20,11 @@ const STATIC_ROUTES = [
   "/services/interior-painting",
   "/services/exterior-painting",
   "/services/wood-restoration",
+  "/services/log-restoration",
+  "/services/deck-fence-staining",
   "/services/cabinet-refinishing",
   "/services/light-carpentry",
+  "/services/new-construction",
   "/services/commercial",
 ];
 

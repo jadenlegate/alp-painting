@@ -236,9 +236,7 @@ export default function LightCarpentryPage() {
                 key={c.n}
                 className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
               >
-                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
-                  {c.n}
-                </div>
+                <div className="h-px w-7 bg-alpine" aria-hidden />
                 <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {c.title}
                 </h3>

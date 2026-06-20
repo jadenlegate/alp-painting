@@ -27,9 +27,8 @@ export default function ContactPage() {
               Let&rsquo;s talk about your project.
             </h1>
             <p className="mt-5 text-ink text-lg leading-relaxed">
-              Most quotes are delivered the day of your site visit. Tell us a bit about the
-              project and we&rsquo;ll get back to you within 24 hours on
-              weekdays.
+              We respond within 24 hours on weekdays to book a free site visit.
+              Most quotes are delivered the day of that visit.
             </p>
           </div>
         </Container>
@@ -66,16 +65,6 @@ export default function ContactPage() {
                     value={`${SITE.address.city}, ${SITE.address.region}`}
                   />
                 </div>
-              </div>
-
-              <div className="border border-border rounded-sm bg-stone-light/30 p-6">
-                <h3 className="font-serif text-xl text-navy">
-                  Not sure what you need?
-                </h3>
-                <p className="mt-2 text-ink leading-relaxed text-[0.95rem]">
-                  That&rsquo;s fine. Describe what you&rsquo;re thinking in the
-                  form — we&rsquo;ll talk through options at the walkthrough.
-                </p>
               </div>
             </aside>
           </div>

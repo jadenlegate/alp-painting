@@ -5,7 +5,7 @@ export const SITE = {
   name: "Alpenglow Painting",
   legalName: "Alpenglow Painting Inc.",
   tagline: "The Sea to Sky's Trusted Painters",
-  subline: "For top-rated interior and exterior finishes",
+  subline: "For Top-Rated Interior and Exterior Finishes",
   phone: "(604) 938-4037",
   phoneRaw: "+16049384037",
   email: "hello@alpenglowpainting.ca",

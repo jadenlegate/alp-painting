@@ -361,7 +361,7 @@ export default function HomePage() {
           </div>
           <FadeIn delay={0.2}>
             <div className="mt-10">
-              <Button href="/reviews" variant="text">See all reviews →</Button>
+              <Button href="/testimonials" variant="text">See all testimonials →</Button>
             </div>
           </FadeIn>
         </Container>

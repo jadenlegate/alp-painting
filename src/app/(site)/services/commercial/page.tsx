@@ -212,12 +212,7 @@ export default function CommercialPage() {
                 key={a.n}
                 className="group relative border border-navy/15 bg-background p-7 md:p-9 transition-colors hover:border-navy/40"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium tabular-nums">
-                    {a.n}
-                  </div>
-                  <a.icon size={20} className="text-navy/40" />
-                </div>
+                <a.icon size={22} className="text-navy/50 mb-4" />
                 <h3 className="font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {a.title}
                 </h3>

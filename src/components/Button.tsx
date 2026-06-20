@@ -22,11 +22,11 @@ type Props = {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-navy text-background hover:bg-navy-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy",
+    "font-semibold bg-navy text-background hover:bg-navy-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy",
   secondary:
-    "border border-navy text-navy hover:bg-navy hover:text-background",
+    "font-semibold border border-navy text-navy hover:bg-navy hover:text-background",
   text:
-    "text-navy underline underline-offset-4 decoration-[0.5px] hover:decoration-2",
+    "font-medium text-navy underline underline-offset-4 decoration-[0.5px] hover:decoration-2",
 };
 
 const sizeClasses: Record<Size, string> = {
@@ -46,7 +46,7 @@ export function Button({
   target,
 }: Props) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-medium tracking-wide transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center gap-2 tracking-wide transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
   const radius = variant === "text" ? "" : "rounded-sm";
   const classes = `${base} ${radius} ${variant !== "text" ? sizeClasses[size] : ""} ${variantClasses[variant]} ${className}`;
 

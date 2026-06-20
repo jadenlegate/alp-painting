@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { CtaBlock } from "@/components/CtaBlock";
-import { Check, DollarSign, Calendar, Users, MapPin, FileText } from "lucide-react";
+import { Check, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Painter Jobs in Whistler — Careers at Alpenglow Painting",
   description:
-    "Alpenglow Painting is hiring painters in Whistler and the Sea to Sky. Competitive pay ($25–40+/hr), 4-day weeks, performance bonuses, and a crew that shows up.",
+    "Alpenglow Painting is hiring painters in Whistler and the Sea to Sky. Performance-based pay, 4-day weeks, bonuses, training, and a crew that shows up.",
   alternates: { canonical: "/careers" },
 };
 
@@ -15,11 +15,31 @@ export const metadata: Metadata = {
 // This needs to be honest and specific — painters have been burned by
 // vague job postings. Real pay ranges, real schedule, real expectations.
 
-const PERKS = [
-  { icon: DollarSign, label: "Performance-based pay", detail: "$25–40+/hr depending on role and performance" },
-  { icon: Calendar, label: "4-day work weeks", detail: "Standard schedule is Mon–Thu, long weekends standard" },
-  { icon: Users, label: "Team that shows up", detail: "Professional crew, good culture, no drama" },
-  { icon: MapPin, label: "Work in Whistler", detail: "Live and work in one of the best places in Canada" },
+const BENEFITS = [
+  {
+    title: "Positive Work Environment",
+    body: "A good work environment makes all the difference, and we’re all about creating a place where you can do great work and have a good time while doing it.",
+  },
+  {
+    title: "Long Weekend Every Week",
+    body: "Work hard 4 days, then play hard or relax for 3. Our schedule gives you more time to enjoy the Sea to Sky corridor and all the outdoor activities it has to offer.",
+  },
+  {
+    title: "Performance-Based Pay",
+    body: "We’ve set up a pay system that rewards you for working efficiently and maintaining high-quality standards. Instead of a fixed hourly wage, your earnings are based on your performance.",
+  },
+  {
+    title: "Bonuses and Incentives",
+    body: "We love rewarding hard work. Stick with us, bring in a new painter or project, or help earn a 5-star review — boom, bonus. Work hard, get paid, simple as that.",
+  },
+  {
+    title: "Training and Development",
+    body: "We make sure you have the skills to succeed, providing the knowledge and support needed to do quality work. Whether you’re new or experienced, we’ll teach you the techniques and standards to get the job done right.",
+  },
+  {
+    title: "Safety First",
+    body: "We take safety seriously — because no job is worth getting hurt over. We make sure you’ve got the right training, proper gear, and a team that’s always looking out for each other.",
+  },
 ];
 
 const PAY_TIERS = [
@@ -52,7 +72,8 @@ const HIRING_STEPS = [
   { n: "01", label: "Apply", detail: "Submit the form below — a few questions to get things started." },
   { n: "02", label: "Virtual interview", detail: "15–20 minutes over video. We ask about your experience, you ask us whatever you want." },
   { n: "03", label: "Offer", detail: "If it's a fit, we send an offer with your start date, rate, and schedule." },
-  { n: "04", label: "Start working", detail: "Orientation, gear, and intro to the crew. You're ready for your first day on the job." },
+  { n: "04", label: "Training", detail: "Before your first job we get you up to speed — safety, our process, and the techniques and standards we paint to." },
+  { n: "05", label: "Start working", detail: "Gear, an intro to the crew, and your first project — with on-the-job training so you keep learning as you go." },
 ];
 
 export default function CareersPage() {
@@ -95,45 +116,56 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      {/* Why Alpenglow */}
+      {/* Why join us — benefits */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Why Alpenglow</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+          <div className="max-w-2xl mb-12 md:mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Why join us</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               A crew worth being on.
             </h2>
-            <p className="mt-4 text-ink leading-relaxed">
-              We don&rsquo;t hire everyone who applies. We hire people who fit a specific standard and pay them well for it. Small crew, strong culture, no tolerance for people who make everyone else&rsquo;s job harder.
+            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem]">
+              Are you interested in working with a dynamic and fun crew? Do you want to be rewarded for the effort you put in? Do you have a keen attention to detail? We&rsquo;re looking for hard-working, enthusiastic individuals to join our team.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-            {PERKS.map((p) => (
-              <div key={p.label} className="border border-border rounded-sm bg-surface p-5 md:p-6">
-                <p.icon size={20} className="text-navy mb-3" />
-                <div className="font-serif text-lg text-navy">{p.label}</div>
-                <div className="mt-1 text-sm text-ink">{p.detail}</div>
-              </div>
+          <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {BENEFITS.map((b) => (
+              <article
+                key={b.title}
+                className="border border-navy/15 bg-background p-7 md:p-8 transition-colors hover:border-navy/40"
+              >
+                <div className="h-px w-7 bg-alpine mb-4" aria-hidden />
+                <h3 className="font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
+                  {b.title}
+                </h3>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{b.body}</p>
+              </article>
             ))}
           </div>
         </Container>
       </section>
 
       {/* Pay structure */}
-      <section id="pay" className="py-16 md:py-24 bg-stone-light/30">
+      <section id="pay" className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Pay structure</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Pay structure</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Real numbers. No surprises.
             </h2>
-            <p className="mt-4 text-ink leading-relaxed">
+            <p className="mt-5 text-ink leading-relaxed">
               Performance matters here. Base rates are competitive, and top performers earn more through our bonus structure. We also offer retention bonuses for painters who return for a second season and referral bonuses when you bring in someone good.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {PAY_TIERS.map((tier) => (
-              <div key={tier.role} className="border border-border rounded-sm bg-surface p-6 md:p-7">
+              <div key={tier.role} className="border border-navy/15 bg-background p-6 md:p-7">
                 <div className="font-serif text-3xl text-navy tabular-nums">{tier.range}</div>
                 <div className="mt-2 font-medium text-navy">{tier.role}</div>
                 <p className="mt-3 text-sm text-ink leading-relaxed">{tier.description}</p>
@@ -151,11 +183,14 @@ export default function CareersPage() {
         <Container>
           <div className="grid gap-12 md:grid-cols-2 items-start">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What we look for</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">What we look for</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
                 The traits that actually matter.
               </h2>
-              <p className="mt-4 text-ink leading-relaxed">
+              <p className="mt-5 text-ink leading-relaxed">
                 Painting skill can be developed. Reliability, attitude, and respect for the work can&rsquo;t be trained. That&rsquo;s what we screen for.
               </p>
               <ul className="mt-6 space-y-3">
@@ -168,11 +203,14 @@ export default function CareersPage() {
               </ul>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Life in Whistler</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-alpine" aria-hidden />
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Life in Whistler</span>
+              </div>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.25rem] leading-[1.1] tracking-tight font-medium">
                 Not just a job.
               </h2>
-              <p className="mt-4 text-ink leading-relaxed">
+              <p className="mt-5 text-ink leading-relaxed">
                 Whistler is one of the best places in the country to live — skiing and boarding in winter, hiking and mountain biking in summer, and long evenings in between. If you&rsquo;re considering relocating, the lifestyle up here does it well.
               </p>
               <p className="mt-3 text-ink leading-relaxed">
@@ -184,15 +222,15 @@ export default function CareersPage() {
       </section>
 
       {/* Detailed job description callout */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-stone-light/50">
         <Container>
-          <div className="border border-navy/15 rounded-sm bg-surface p-6 md:p-8 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
+          <div className="border border-navy/15 bg-background p-6 md:p-8 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
             <div className="flex items-start gap-5 lg:gap-6 flex-1 min-w-0">
               <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-navy/5 flex items-center justify-center">
                 <FileText size={22} className="text-navy" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">Full job description</div>
+                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine mb-2 font-medium">Full job description</div>
                 <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
                   Prefer the full details up front?
                 </h3>
@@ -217,15 +255,18 @@ export default function CareersPage() {
       </section>
 
       {/* Hiring process */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">How it works</div>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px w-10 bg-alpine" aria-hidden />
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">How it works</span>
+            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               The hiring process, start to finish.
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {HIRING_STEPS.map((s) => (
               <div key={s.n} className="border-t border-navy/30 pt-4">
                 <div className="font-serif text-navy text-sm tabular-nums">{s.n}</div>

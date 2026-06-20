@@ -23,6 +23,7 @@ const SERVICES = [
 const ABOUT_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Our Process", href: "/process" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },

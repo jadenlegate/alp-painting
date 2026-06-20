@@ -4,14 +4,14 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Reviews — Whistler Painters with 5.0 Google Rating",
+  title: "Testimonials — Whistler Painters with 5.0 Google Rating",
   description:
-    "Reviews from homeowners and property managers across Whistler, Pemberton, and Squamish. 5.0 on Google — see what clients say about working with Alpenglow Painting.",
-  alternates: { canonical: "/reviews" },
+    "Testimonials from homeowners and property managers across Whistler, Pemberton, and Squamish. 5.0 on Google — see what clients say about working with Alpenglow Painting.",
+  alternates: { canonical: "/testimonials" },
 };
 
-// Reviews page. Placeholder reviews — replace with live Google reviews embed
-// or structured review data pulled from Google Business Profile API.
+// Testimonials page. Placeholder testimonials — replace with live Google
+// reviews embed or structured review data pulled from Google Business Profile API.
 
 type Review = {
   name: string;
@@ -85,7 +85,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function ReviewsPage() {
+export default function TestimonialsPage() {
   const avgRating = (REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length).toFixed(1);
 
   return (
@@ -93,7 +93,7 @@ export default function ReviewsPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Reviews</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Testimonials</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               What clients say.
             </h1>
