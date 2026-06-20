@@ -12,6 +12,8 @@ type Props = {
   children?: ReactNode;
   variant?: "home" | "inner";
   align?: "left" | "center";
+  /** Override the image darkening overlay — e.g. a heavier scrim for bright photos. */
+  overlayClass?: string;
 };
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -35,6 +37,7 @@ export function Hero({
   children,
   variant = "inner",
   align = "left",
+  overlayClass,
 }: Props) {
   const isHome = variant === "home";
   const heightClass = isHome
@@ -50,9 +53,10 @@ export function Hero({
           <img src={imageUrl} alt={imageAlt} className="w-full h-full object-cover" />
           <div
             className={`absolute inset-0 ${
-              isHome
+              overlayClass ??
+              (isHome
                 ? "bg-gradient-to-t from-black/85 via-black/55 to-black/40"
-                : "bg-gradient-to-t from-black/60 via-black/25 to-black/30"
+                : "bg-gradient-to-t from-black/60 via-black/25 to-black/30")
             }`}
           />
         </div>

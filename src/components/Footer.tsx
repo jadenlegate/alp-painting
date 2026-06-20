@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { Container } from "./Container";
 import { SITE } from "@/lib/site";
-import { SERVICES as SERVICE_LINKS } from "@/lib/services";
+import { SERVICE_GROUPS } from "@/lib/services";
 
 // Four-column footer per brief §6: Brand / Services / Company / Contact.
 // Bottom bar holds legal + association logos. Service links come from
@@ -68,15 +68,24 @@ export function Footer() {
             <div className="text-xs uppercase tracking-widest text-navy mb-4">
               Services
             </div>
-            <ul className="space-y-2.5">
-              {SERVICE_LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="text-sm text-ink hover:text-navy">
-                    {l.label}
-                  </Link>
-                </li>
+            <div className="space-y-5">
+              {SERVICE_GROUPS.map((group) => (
+                <div key={group.heading}>
+                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2.5">
+                    {group.heading}
+                  </div>
+                  <ul className="space-y-2.5">
+                    {group.items.map((l) => (
+                      <li key={l.href}>
+                        <Link href={l.href} className="text-sm text-ink hover:text-navy">
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           <div>

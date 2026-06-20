@@ -179,40 +179,24 @@ export default function CareersPage() {
       {/* What we look for */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 md:grid-cols-2 items-start">
-            <div>
-              <div className="mb-5">
-                <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">What we look for</span>
-              </div>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-                The traits that actually matter.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Painting skill can be developed. Reliability, attitude, and respect for the work can&rsquo;t be trained. That&rsquo;s what we screen for.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {TRAITS.map((t) => (
-                  <li key={t} className="flex items-start gap-3">
-                    <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                    <span className="text-ink">{t}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="max-w-2xl">
+            <div className="mb-5">
+              <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">What we look for</span>
             </div>
-            <div>
-              <div className="mb-5">
-                <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Life in Whistler</span>
-              </div>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.25rem] leading-[1.1] tracking-tight font-medium">
-                Not just a job.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Whistler is one of the best places in the country to live — skiing and boarding in winter, hiking and mountain biking in summer, and long evenings in between. If you&rsquo;re considering relocating, the lifestyle up here does it well.
-              </p>
-              <p className="mt-3 text-ink leading-relaxed">
-                4-day weeks mean you get long weekends.
-              </p>
-            </div>
+            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+              The traits that actually matter.
+            </h2>
+            <p className="mt-5 text-ink leading-relaxed">
+              Painting skill can be developed. Reliability, attitude, and respect for the work can&rsquo;t be trained. That&rsquo;s what we screen for.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {TRAITS.map((t) => (
+                <li key={t} className="flex items-start gap-3">
+                  <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
+                  <span className="text-ink">{t}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>

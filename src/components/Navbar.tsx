@@ -35,6 +35,8 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
   const isHome = pathname === "/";
 
@@ -44,6 +46,19 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Lock background scroll while the mobile menu is open, and collapse the
+  // Services accordion each time the menu closes.
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (!mobileOpen) {
+      setMobileServicesOpen(false);
+      setMobileAboutOpen(false);
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const solid = !isHome || scrolled || mobileOpen;
 
@@ -170,7 +185,7 @@ export function Navbar() {
               onClick={() => setMobileOpen((o) => !o)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </Container>
@@ -180,74 +195,107 @@ export function Navbar() {
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 top-16 z-40 bg-background overflow-y-auto">
           <Container className="py-8">
-            <div className="space-y-6">
-              <div className="space-y-5">
-                <div className="text-xs uppercase tracking-widest text-muted">
-                  Services
-                </div>
-                {SERVICE_GROUPS.map((group) => (
-                  <div key={group.heading}>
-                    <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-medium mb-2">
-                      {group.heading}
-                    </div>
-                    <div className="space-y-2">
-                      {group.items.map((s) => (
-                        <Link
-                          key={s.href}
-                          href={s.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="block font-serif text-lg text-navy"
-                        >
-                          {s.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-6 border-t border-border space-y-3">
-                {MAIN_LINKS.map((l) => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block font-serif text-xl text-navy"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="pt-6 border-t border-border">
-                <div className="text-xs uppercase tracking-widest text-muted mb-3">
-                  About
-                </div>
-                <div className="space-y-3">
-                  {ABOUT_LINKS.map((l) => (
-                    <Link
-                      key={l.href}
-                      href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block font-serif text-xl text-navy"
-                    >
-                      {l.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-border space-y-4">
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="flex items-center gap-2 text-ink"
+            <nav className="divide-y divide-border">
+              {/* Services accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileServicesOpen((o) => !o)}
+                  className="w-full flex items-center justify-between py-4 font-serif text-xl text-navy"
+                  aria-expanded={mobileServicesOpen}
                 >
-                  <Phone size={16} /> {SITE.phone}
-                </a>
-                <Button href="/contact" size="lg" className="w-full">
-                  Get a Quote
-                </Button>
+                  Services
+                  <ChevronDown
+                    size={20}
+                    className={`text-muted transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {mobileServicesOpen && (
+                  <div className="pb-5 space-y-5">
+                    {SERVICE_GROUPS.map((group) => (
+                      <div key={group.heading}>
+                        <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2">
+                          {group.heading}
+                        </div>
+                        <div className="space-y-2.5 pl-1">
+                          {group.items.map((s) => (
+                            <Link
+                              key={s.href}
+                              href={s.href}
+                              onClick={() => setMobileOpen(false)}
+                              className="block font-serif text-lg text-navy"
+                            >
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
+
+              {/* Our Work */}
+              <Link
+                href={MAIN_LINKS[0].href}
+                onClick={() => setMobileOpen(false)}
+                className="block py-4 font-serif text-xl text-navy"
+              >
+                {MAIN_LINKS[0].label}
+              </Link>
+
+              {/* About accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileAboutOpen((o) => !o)}
+                  className="w-full flex items-center justify-between py-4 font-serif text-xl text-navy"
+                  aria-expanded={mobileAboutOpen}
+                >
+                  About
+                  <ChevronDown
+                    size={20}
+                    className={`text-muted transition-transform ${mobileAboutOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {mobileAboutOpen && (
+                  <div className="pb-5 space-y-2.5 pl-1">
+                    {ABOUT_LINKS.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block font-serif text-lg text-navy"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Careers + Contact */}
+              {MAIN_LINKS.slice(1).map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-4 font-serif text-xl text-navy"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Phone + quote */}
+            <div className="mt-8 pt-6 border-t border-border space-y-4">
+              <a
+                href={`tel:${SITE.phoneRaw}`}
+                className="flex items-center gap-2 text-ink"
+              >
+                <Phone size={16} /> {SITE.phone}
+              </a>
+              <Button href="/contact" size="lg" className="w-full">
+                Get a Quote
+              </Button>
             </div>
           </Container>
         </div>

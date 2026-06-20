@@ -135,8 +135,9 @@ export default function NewConstructionPage() {
         eyebrow="Services"
         headline="New Construction Painting"
         subline="For general contractors and custom home builders. Schedule-integrated, spec-precise finishing — and a painting line that never slips your timeline."
-        imageUrl="/stock-images/6ModernMountainHomeStudioMcGee.jpg"
-        imageAlt="Newly built modern mountain home interior, freshly painted"
+        imageUrl="/working-images/new-construction-painting-whistler.jpg"
+        imageAlt="Alpenglow painter spray-priming the ceiling of a new-construction interior in Whistler"
+        overlayClass="bg-gradient-to-t from-black/85 via-black/65 to-black/55"
       >
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
