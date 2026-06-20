@@ -17,7 +17,7 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   {
     heading: "Wood & Restoration",
     items: [
-      { label: "Wood Restoration & Staining", href: "/services/wood-restoration" },
+      { label: "Wood Refinishing & Staining", href: "/services/wood-restoration" },
       { label: "Log Restoration", href: "/services/log-restoration" },
       { label: "Deck & Fence Staining", href: "/services/deck-fence-staining" },
       { label: "Light Carpentry & Repair", href: "/services/light-carpentry" },

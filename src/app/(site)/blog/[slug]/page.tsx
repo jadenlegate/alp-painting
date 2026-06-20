@@ -108,7 +108,7 @@ export default async function BlogPostPage({
             All posts
           </Link>
 
-          <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">{post.category}</div>
+          <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">{post.category}</div>
           <h1 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
             {post.title}
           </h1>
@@ -182,7 +182,7 @@ export default async function BlogPostPage({
       {related.length > 0 && (
         <section className="pb-16 md:pb-24 border-t border-border pt-16 md:pt-20">
           <Container>
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Related reading</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Related reading</div>
             <h2 className="font-serif text-navy text-[1.5rem] md:text-[2rem] leading-[1.15] mb-10">
               More from the blog.
             </h2>
@@ -199,7 +199,7 @@ export default async function BlogPostPage({
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     />
                   </div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">{p.category}</div>
+                  <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-2">{p.category}</div>
                   <h3 className="font-serif text-navy text-lg leading-[1.3] group-hover:underline underline-offset-4 decoration-[0.5px]">
                     {p.title}
                   </h3>

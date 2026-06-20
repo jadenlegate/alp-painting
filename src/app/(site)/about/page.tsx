@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
-import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "About — Whistler Painting Company",
@@ -33,12 +32,6 @@ const VALUES = [
   },
 ];
 
-const MEMBERSHIPS = [
-  { name: "Whistler Chamber of Commerce", role: "Member" },
-  { name: "Painting Contractors Association (PCA)", role: "Member" },
-  { name: "AMPP", role: "Member" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -68,7 +61,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid gap-12 md:gap-16 lg:grid-cols-[1fr_1fr] items-start">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">The founder</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">The founder</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 Jaden Legate, Owner
               </h2>
@@ -101,7 +94,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">How we work</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">How we work</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Values stated as behaviors — not platitudes.
             </h2>
@@ -121,7 +114,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">The team</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">The team</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               The people on your job site.
             </h2>
@@ -145,40 +138,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Community */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
-        <Container>
-          <div className="grid gap-10 md:grid-cols-2 items-start">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Community</div>
-              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Locally owned. Locally invested.
-              </h2>
-              <p className="mt-4 text-ink leading-relaxed">
-                We live and work in the Sea to Sky. The clients we serve are our neighbors. That matters to how we operate — we&rsquo;re not a franchise or a regional chain. Every job has our name on it.
-              </p>
-              <p className="mt-3 text-ink leading-relaxed">
-                We donate 1% of annual profits to local environmental and community organizations. It&rsquo;s a small thing — we mention it once, not loudly.
-              </p>
-              <div className="mt-6">
-                <Button href="/giving-back" variant="text">Learn more →</Button>
-              </div>
-            </div>
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Memberships</div>
-              <div className="space-y-3">
-                {MEMBERSHIPS.map((m) => (
-                  <div key={m.name} className="flex items-center justify-between border border-border rounded-sm bg-surface px-5 py-3.5">
-                    <span className="text-ink">{m.name}</span>
-                    <span className="text-xs text-muted">{m.role}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </Container>
       </section>

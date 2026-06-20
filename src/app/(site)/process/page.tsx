@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
 import { Button } from "@/components/Button";
+import { Eyebrow } from "@/components/Eyebrow";
+import { WarrantyTiers } from "@/components/WarrantyTiers";
 import {
   FileText, ShieldCheck, MessageSquare, Ruler, CalendarCheck,
   HardHat, Paintbrush, ClipboardCheck, BookOpen, HeartHandshake,
@@ -79,27 +81,6 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
   },
 ];
 
-const WARRANTY_TIERS = [
-  {
-    years: "10",
-    label: "Interior painting",
-    description: "Walls, trim, ceilings, doors. Covers peeling, flaking, and premature finish failure under normal interior conditions.",
-    highlight: true,
-  },
-  {
-    years: "5",
-    label: "Exterior — solid",
-    description: "Solid paint and solid-body stain on exterior siding and trim. Covers peeling and premature finish failure.",
-    highlight: false,
-  },
-  {
-    years: "2",
-    label: "Exterior — stain",
-    description: "Semi-transparent and translucent stains. They wear gracefully but faster than solid finishes — so the warranty matches.",
-    highlight: false,
-  },
-];
-
 export default function ProcessPage() {
   return (
     <>
@@ -107,7 +88,7 @@ export default function ProcessPage() {
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Our process</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Our process</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               From first call to final walkthrough — <span className="text-alpine">here&rsquo;s exactly what to expect</span>.
             </h1>
@@ -155,7 +136,7 @@ export default function ProcessPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center">
             <FileText size={28} className="mx-auto mb-5 text-alpine" />
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Every project</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Every project</div>
             <h2 className="font-serif text-background font-bold text-[1.75rem] md:text-[2.5rem] leading-[1.1] tracking-tight">
               The Alpenglow Project Report
             </h2>
@@ -178,7 +159,7 @@ export default function ProcessPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Warranty</div>
+            <Eyebrow className="mb-3">Warranty</Eyebrow>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               The term matches the work.
             </h2>
@@ -186,31 +167,7 @@ export default function ProcessPage() {
               Written warranty on every project, included at no extra cost. The term reflects how the finish actually performs — longer for protected interior surfaces, shorter for high-exposure exterior stains.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {WARRANTY_TIERS.map((tier) => (
-              <div
-                key={tier.years}
-                className={`rounded-sm border p-6 md:p-7 ${
-                  tier.highlight
-                    ? "border-navy bg-navy text-background"
-                    : "border-border bg-surface"
-                }`}
-              >
-                <div className={`flex items-baseline gap-1.5 mb-4`}>
-                  <span className={`font-serif text-5xl tabular-nums ${tier.highlight ? "text-background" : "text-navy"}`}>
-                    {tier.years}
-                  </span>
-                  <span className={`text-sm ${tier.highlight ? "text-background/70" : "text-muted"}`}>years</span>
-                </div>
-                <div className={`font-medium mb-2 ${tier.highlight ? "text-background" : "text-navy"}`}>
-                  {tier.label}
-                </div>
-                <p className={`text-sm leading-relaxed ${tier.highlight ? "text-background/80" : "text-ink"}`}>
-                  {tier.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <WarrantyTiers />
           <div className="mt-6 flex items-start gap-2 text-sm text-muted max-w-xl">
             <ShieldCheck size={16} className="text-navy mt-0.5 flex-shrink-0" />
             <span>Light carpentry repairs carry 2 years of workmanship coverage. Full terms — including exclusions — live on the warranty page.</span>

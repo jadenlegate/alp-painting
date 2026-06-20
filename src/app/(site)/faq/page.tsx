@@ -149,7 +149,7 @@ export default function FAQPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container size="prose">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">FAQ</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">FAQ</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               Common questions.
             </h1>

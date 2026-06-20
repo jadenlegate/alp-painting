@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
+import { WarrantyTiers } from "@/components/WarrantyTiers";
 import { ShieldCheck, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -10,24 +11,6 @@ export const metadata: Metadata = {
     "Alpenglow Painting's written warranty — up to 10 years on interior painting, 5 years on exterior solid finishes, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
   alternates: { canonical: "/warranty" },
 };
-
-const WARRANTY_TIERS = [
-  {
-    years: "10",
-    label: "Interior painting",
-    description: "Walls, trim, ceilings, doors — every interior painting project. Covers peeling, flaking, and premature finish failure under normal interior conditions.",
-  },
-  {
-    years: "5",
-    label: "Exterior — solid finishes",
-    description: "Solid paint and solid-body stain on siding, trim, and exterior wood. Covers peeling, flaking, and premature finish failure.",
-  },
-  {
-    years: "2",
-    label: "Exterior — semi-transparent & translucent stain",
-    description: "Penetrating stains wear gracefully but faster than solid finishes — so the warranty matches how the product actually performs in mountain sun.",
-  },
-];
 
 const FINE_PRINT = [
   "Your project must be paid in full to activate the guarantee.",
@@ -98,27 +81,7 @@ export default function WarrantyPage() {
               own warranty, set to how the finish actually performs.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {WARRANTY_TIERS.map((tier) => (
-              <div
-                key={tier.label}
-                className="rounded-sm bg-navy text-background p-7 md:p-8"
-              >
-                <div className="flex items-baseline gap-1.5 mb-4">
-                  <span className="font-serif text-5xl tabular-nums text-background">
-                    {tier.years}
-                  </span>
-                  <span className="text-sm text-background/70">years</span>
-                </div>
-                <div className="font-medium mb-2 leading-snug text-background">
-                  {tier.label}
-                </div>
-                <p className="text-sm leading-relaxed text-background/80">
-                  {tier.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <WarrantyTiers />
         </Container>
       </section>
 

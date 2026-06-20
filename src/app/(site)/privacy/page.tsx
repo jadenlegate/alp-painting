@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <section className="pt-32 md:pt-40 pb-24">
       <Container size="prose">
-        <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Legal</div>
+        <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Legal</div>
         <h1 className="font-serif text-navy text-[2rem] md:text-[2.5rem] leading-[1.1] mb-10">
           Privacy Policy
         </h1>

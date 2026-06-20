@@ -71,7 +71,7 @@ export function Footer() {
             <div className="space-y-5">
               {SERVICE_GROUPS.map((group) => (
                 <div key={group.heading}>
-                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted font-semibold mb-2.5">
+                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2.5">
                     {group.heading}
                   </div>
                   <ul className="space-y-2.5">

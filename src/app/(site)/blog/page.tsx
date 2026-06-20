@@ -29,7 +29,7 @@ export default function BlogPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Blog</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Blog</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               Practical advice for Sea to Sky homeowners.
             </h1>
@@ -52,7 +52,7 @@ export default function BlogPage() {
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
                 </div>
-                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-2">{post.category}</div>
+                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-2">{post.category}</div>
                 <h2 className="font-serif text-navy text-xl leading-[1.3] group-hover:underline underline-offset-4 decoration-[0.5px]">
                   {post.title}
                 </h2>

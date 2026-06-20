@@ -8,21 +8,20 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
-  title: "Wood Restoration & Staining — Whistler, Pemberton & Squamish",
+  title: "Wood Refinishing & Staining — Whistler, Pemberton & Squamish",
   description:
-    "Cedar siding, decks, timber-frame beams, and fences. Wood restoration and staining across Whistler, Pemberton, and Squamish with penetrating finishes built for mountain exposure.",
+    "Cedar siding, decks, timber-frame beams, and fences. Wood refinishing and staining across Whistler, Pemberton, and Squamish with penetrating finishes built for mountain exposure.",
   alternates: { canonical: "/services/wood-restoration" },
 };
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Wood Restoration & Staining",
-  serviceType: "Wood Restoration and Staining",
+  name: "Wood Refinishing & Staining",
+  serviceType: "Wood Refinishing and Staining",
   provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
   areaServed: [
     { "@type": "City", name: "Whistler" },
@@ -30,18 +29,9 @@ const serviceJsonLd = {
     { "@type": "City", name: "Squamish" },
   ],
   description:
-    "Wood restoration and staining for cedar siding, decks, timber-frame beams, and fences across Whistler and the Sea to Sky.",
+    "Wood refinishing and staining for cedar siding, decks, timber-frame beams, and fences across Whistler and the Sea to Sky.",
   url: "https://alpenglowpainting.ca/services/wood-restoration",
 };
-
-const PILLARS = [
-  "Cleaned & brightened first",
-  "Product matched to species",
-  "Two coats on horizontals",
-  "Penetrating finishes default",
-  "Written re-coat schedule",
-  "5-year warranty on solid",
-];
 
 const SURFACE_CARDS = [
   {
@@ -70,22 +60,43 @@ const SURFACE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Drop a real photo in by adding `image` (+ `imageAlt`) to a step, e.g.
+// image: "/working-images/wood-refinishing-step-washing-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "Restoration before staining.",
-    body: "Stain over weathered grey wood doesn't bond. We clean and brighten first so the product penetrates.",
+    n: "01",
+    title: "Protection & furniture moving",
+    body: "Before any prep starts, we clear and protect the work zone. Patio furniture, planters, BBQs, and anything moveable gets shifted well clear of the wood we're refinishing, and adjacent walkways and surfaces are covered. The goal is a clean, unobstructed work area — and your belongings back exactly where you left them when we're done.",
   },
   {
-    title: "Penetrating finishes by default.",
-    body: "Film-formers peel. Penetrating products absorb and fail gracefully — the right call on most exteriors here.",
+    n: "02",
+    title: "Washing",
+    body: "Weathered, greyed wood and old failing finish won't accept new stain, so everything starts with a thorough wash. We pressure wash and, where needed, apply a wood brightener to strip away dirt, mildew, and oxidized fibres and open the grain back up. This is what lets the new product actually penetrate instead of sitting on top. Then we let the wood dry fully to the right moisture content before moving on.",
   },
   {
-    title: "Product matched to species.",
-    body: "Cedar, fir, pine, and pressure-treated all behave differently. We spec to the wood, not one-size-fits-all.",
+    n: "03",
+    title: "Sanding",
+    body: "Once the wood is clean and dry, we sand to knock down raised grain, feather out any remaining finish, and leave a uniform surface that takes stain evenly. Horizontal surfaces like decks and railings get the most attention, since that's where wear shows first. Sanding is the difference between a finish that looks consistent and one that comes out blotchy. We vacuum and wipe down afterward so no dust contaminates the coat.",
   },
   {
-    title: "Maintenance scheduling included.",
-    body: "Your report includes a re-coat window. Proactive maintenance costs a fraction of a full restoration.",
+    n: "04",
+    title: "Protection — drop sheets & masking",
+    body: "Right before finish goes on, we mask and sheet everything that isn't getting stained — siding, glass, hardware, stonework, and adjacent painted surfaces. Drop sheets protect decking, walkways, and landscaping below. This finer round of protection keeps the lines crisp and the overspray off everything else. A few minutes of masking saves hours of cleanup and gives a sharper result.",
+  },
+  {
+    n: "05",
+    title: "Premium application",
+    body: "With the surface prepped and everything protected, we apply premium penetrating stain matched to your wood species and exposure. Horizontal, high-traffic surfaces get two coats for durability, and we back-brush where it counts so the product works into the grain rather than bridging over it. We watch conditions closely — temperature, humidity, and dry time all affect how the finish cures. The result is even colour and depth that holds up to mountain weather.",
+  },
+  {
+    n: "06",
+    title: "Clean-up & inspection",
+    body: "When the final coat is down and cured enough to handle, we pull all the masking and drop sheets and return your space to how it was — furniture back, site swept, nothing left behind. Then we walk the whole project looking for missed spots, thin areas, or drips, and touch up anything that isn't right. We'd rather catch it ourselves than have you find it later.",
+  },
+  {
+    n: "07",
+    title: "Project close-out",
+    body: "We finish with a walkthrough together so you can see the work up close and flag anything you'd like addressed. You also get a written project report documenting the exact products, colours, and the recommended re-coat window for each surface — so future maintenance isn't guesswork. Final payment happens once you're satisfied, and the wood is set for years with a clear plan to keep it that way.",
   },
 ];
 
@@ -115,8 +126,8 @@ const RELATED_PROJECTS: Project[] = [
 
 const FAQS = [
   {
-    q: "How do I know if my wood needs restoration or just a re-stain?",
-    a: "Grey, weathered wood with raised grain or peeling finish needs restoration first. Wood that's just fading but still sound usually needs a re-coat. We assess on the site visit and recommend accordingly.",
+    q: "How do I know if my wood needs refinishing or just a re-stain?",
+    a: "Grey, weathered wood with raised grain or peeling finish needs full refinishing first. Wood that's just fading but still sound usually needs a re-coat. We assess on the site visit and recommend accordingly.",
   },
   {
     q: "What products do you use?",
@@ -140,7 +151,7 @@ const FAQS = [
   },
 ];
 
-export default function WoodRestorationPage() {
+export default function WoodRefinishingPage() {
   return (
     <>
       <script
@@ -149,7 +160,7 @@ export default function WoodRestorationPage() {
       />
       <Hero
         eyebrow="Services"
-        headline="Wood Restoration & Staining"
+        headline="Wood Refinishing & Staining"
         subline="Cedar siding, decks, timber frames, fences. Properly cleaned, properly stained, and documented so you know when to come back."
         imageUrl="/stock-images/2beb0596b7d27d9ce6d5fac9d571f6bb--wood-stain-colors-deck-colors.jpg"
         imageAlt="Cedar siding and deck in natural mountain setting"
@@ -158,60 +169,6 @@ export default function WoodRestorationPage() {
           Get a Quote
         </Button>
       </Hero>
-
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Wood restoration in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                Wood that looks the way <em className="text-alpine not-italic font-medium">it should</em> — and stays that way.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Wood is the defining material of Sea-to-Sky architecture — and
-                  it&rsquo;s beautiful when maintained, problematic when
-                  it&rsquo;s not. UV graying, moisture, and failing finishes are
-                  all fixable, but only if the restoration is done in the right
-                  order.
-                </p>
-                <p>
-                  Cedar, fir, pine, pressure-treated, and log — siding, decks,
-                  railings, fences, and exterior timber framing.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every wood project includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       {/* Surfaces */}
       <section className="py-16 md:py-28 bg-stone-light/50">
@@ -248,25 +205,12 @@ export default function WoodRestorationPage() {
         body="Solid stains are backed for 5 years; semi-transparent and translucent finishes for 2, matched to how penetrating products actually wear in mountain weather — documented with a re-coat schedule."
       />
 
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Our approach</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Why wood restoration done right lasts twice as long.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-background p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        eyebrow="How we do it"
+        heading="The wood refinishing process, step by step."
+        intro="Order matters on wood. Each step sets up the next — skip the prep and the finish fails early. Here's exactly how a project runs, start to finish."
+        steps={PROCESS}
+      />
 
       {/* Before / after */}
       <section className="py-16 md:py-24">
@@ -304,7 +248,7 @@ export default function WoodRestorationPage() {
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
               <Eyebrow className="mb-5">Recent wood work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Restoration we&rsquo;re proud of.</h2>
+              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Refinishing we&rsquo;re proud of.</h2>
             </div>
             <Button href="/work" variant="text">See all work →</Button>
           </div>
@@ -317,14 +261,14 @@ export default function WoodRestorationPage() {
       <section className="py-16 md:py-24">
         <Container size="prose">
           <Eyebrow className="mb-5">Frequently asked</Eyebrow>
-          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Wood restoration questions.</h2>
+          <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Wood refinishing questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
 
       <CtaBlock
         eyebrow="Wood done right"
-        heading="Time to restore the wood?"
+        heading="Time to refinish the wood?"
         subline="We'll assess the condition on-site and recommend what actually needs to be done — not just what's billable."
       />
     </>

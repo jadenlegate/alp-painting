@@ -26,7 +26,7 @@ const SERVICES = [
     imageUrl: "/stock-images/exterior-painting-whistler.webp",
   },
   {
-    title: "Wood Restoration & Staining",
+    title: "Wood Refinishing & Staining",
     href: "/services/wood-restoration",
     blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
     imageUrl: "/working-images/wood-restoration-staining-cedar-whistler.jpg",

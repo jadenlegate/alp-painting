@@ -91,7 +91,7 @@ export default function WorkPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Portfolio</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Portfolio</div>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               A look at the work.
             </h1>
@@ -106,7 +106,7 @@ export default function WorkPage() {
       <section className="pb-16 md:pb-20">
         <Container>
           <div className="mb-10 md:mb-14 max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Before &amp; after</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Before &amp; after</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               Drag to see the difference.
             </h2>
@@ -183,7 +183,7 @@ export default function WorkPage() {
       <section className="pb-24">
         <Container>
           <div className="mb-10 md:mb-14 max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Selected work</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Selected work</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
               A broader look.
             </h2>
