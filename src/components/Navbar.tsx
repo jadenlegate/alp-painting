@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "./Button";
 import { Container } from "./Container";
+import { TextUsButton } from "./TextUsButton";
+import { CallUsButton } from "./CallUsButton";
 import { SITE } from "@/lib/site";
 import { SERVICE_GROUPS } from "@/lib/services";
 
@@ -17,14 +19,13 @@ import { SERVICE_GROUPS } from "@/lib/services";
 const ABOUT_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Our Process", href: "/process" },
-  { label: "Testimonials", href: "/testimonials" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
 ];
 
 const MAIN_LINKS = [
-  { label: "Portfolio", href: "/work" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
@@ -129,8 +130,12 @@ export function Navbar() {
                 )}
               </div>
 
-              <Link href="/work" className={linkClass}>
+              <Link href="/portfolio" className={linkClass}>
                 Portfolio
+              </Link>
+
+              <Link href="/testimonials" className={linkClass}>
+                Testimonials
               </Link>
 
               {/* About dropdown */}
@@ -196,7 +201,7 @@ export function Navbar() {
       {/* Mobile full-screen menu */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 top-16 z-40 bg-background overflow-y-auto">
-          <Container className="py-8">
+          <Container className="pt-3 pb-8">
             <nav className="divide-y divide-border">
               {/* Services accordion */}
               <div>
@@ -236,13 +241,22 @@ export function Navbar() {
                 )}
               </div>
 
-              {/* Our Work */}
+              {/* Portfolio */}
               <Link
                 href={MAIN_LINKS[0].href}
                 onClick={() => setMobileOpen(false)}
                 className="block py-4 font-serif text-xl text-navy"
               >
                 {MAIN_LINKS[0].label}
+              </Link>
+
+              {/* Testimonials */}
+              <Link
+                href="/testimonials"
+                onClick={() => setMobileOpen(false)}
+                className="block py-4 font-serif text-xl text-navy"
+              >
+                Testimonials
               </Link>
 
               {/* About accordion */}
@@ -287,14 +301,12 @@ export function Navbar() {
               ))}
             </nav>
 
-            {/* Phone + quote */}
-            <div className="mt-8 pt-6 border-t border-border space-y-4">
-              <a
-                href={`tel:${SITE.phoneRaw}`}
-                className="flex items-center gap-2 text-ink"
-              >
-                <Phone size={16} /> {SITE.phone}
-              </a>
+            {/* Call / Text / Quote */}
+            <div className="mt-8 pt-6 border-t border-border space-y-3">
+              <div className="flex gap-3">
+                <CallUsButton className="flex-1" />
+                <TextUsButton className="flex-1" />
+              </div>
               <Button href="/contact" size="lg" className="w-full">
                 Get a Quote
               </Button>

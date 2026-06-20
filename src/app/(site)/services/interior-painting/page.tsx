@@ -220,7 +220,7 @@ export default function InteriorPaintingPage() {
                 A few projects we&rsquo;ve loved.
               </h2>
             </div>
-            <Button href="/work" variant="text">See all work →</Button>
+            <Button href="/portfolio" variant="text">See all work →</Button>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {RELATED_PROJECTS.map((p) => (

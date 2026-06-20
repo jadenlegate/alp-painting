@@ -9,7 +9,7 @@ import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
-  title: "New Construction Painting for Builders — Whistler & Sea to Sky",
+  title: "New Construction & Renovation Painting — Whistler & Sea to Sky",
   description:
     "New construction painting for general contractors and custom home builders across Whistler and the Sea to Sky. Schedule-integrated, spec-precise finishing with clean handoffs.",
   alternates: { canonical: "/services/new-construction" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "New Construction Painting",
+  name: "New Construction & Renovation Painting",
   serviceType: "New Construction Painting",
   provider: { "@type": "LocalBusiness", name: "Alpenglow Painting", "@id": "https://alpenglowpainting.ca/#business" },
   areaServed: [
@@ -133,7 +133,7 @@ export default function NewConstructionPage() {
       />
       <Hero
         eyebrow="Services"
-        headline="New Construction Painting"
+        headline="New Construction & Renovation"
         subline="For general contractors and custom home builders. Schedule-integrated, spec-precise finishing — and a painting line that never slips your timeline."
         imageUrl="/working-images/new-construction-painting-whistler.jpg"
         imageAlt="Alpenglow painter spray-priming the ceiling of a new-construction interior in Whistler"

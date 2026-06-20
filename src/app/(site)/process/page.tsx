@@ -27,7 +27,7 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "01",
     icon: MessageSquare,
     title: "Request a quote",
-    body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll respond within 24 hours on weekdays.",
+    body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll get in touch soon to discuss it.",
     detail: null,
   },
   {

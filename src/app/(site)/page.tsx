@@ -55,7 +55,7 @@ const SERVICES = [
     imageUrl: "/stock-images/light-carpentry-repair-whistler.jpg",
   },
   {
-    title: "New Construction",
+    title: "New Construction & Renovation",
     href: "/services/new-construction",
     blurb: "Schedule-integrated, spec-precise finishing for general contractors and custom home builders.",
     imageUrl: "/working-images/new-construction-painting-whistler.jpg",
@@ -180,7 +180,7 @@ export default function HomePage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-        <Button href="/work" variant="text" className="!text-background/90 hover:!text-background">
+        <Button href="/portfolio" variant="text" className="!text-background/90 hover:!text-background">
           See our work →
         </Button>
       </Hero>
@@ -220,7 +220,7 @@ export default function HomePage() {
       <Section>
         <Container>
           <FadeIn>
-            <div className="mb-10 md:mb-14">
+            <div className="mb-6 md:mb-8">
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Services</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                 What we offer.
@@ -237,7 +237,7 @@ export default function HomePage() {
           <FadeIn delay={0.2}>
             <div className="mt-10 md:mt-14 flex flex-wrap items-center gap-x-8 gap-y-3">
               <Button href="/contact">Get a Quote</Button>
-              <Button href="/work" variant="text">See recent work →</Button>
+              <Button href="/portfolio" variant="text">See recent work →</Button>
             </div>
           </FadeIn>
         </Container>
@@ -254,7 +254,7 @@ export default function HomePage() {
                   Projects across the Sea to Sky.
                 </h2>
               </div>
-              <Button href="/work" variant="text">See all work →</Button>
+              <Button href="/portfolio" variant="text">See all work →</Button>
             </div>
           </FadeIn>
           <div className="grid gap-6 md:grid-cols-3">
@@ -330,16 +330,20 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
             {PROCESS_STEPS.map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
-                <div className="border-t border-background/20 pt-5">
-                  <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
-                    <s.icon size={20} className="text-background" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-alpine/15 flex items-center justify-center mb-5">
+                    <s.icon size={26} className="text-alpine" strokeWidth={1.5} />
                   </div>
-                  <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
-                  <div className="text-background font-medium">{s.label}</div>
-                  <p className="mt-2 text-background/65 text-sm leading-relaxed">
+                  <div className="text-alpine text-[0.7rem] font-semibold tabular-nums tracking-[0.22em] mb-2">
+                    STEP {s.n}
+                  </div>
+                  <h3 className="font-serif text-background text-lg md:text-xl leading-[1.2] tracking-tight font-medium">
+                    {s.label}
+                  </h3>
+                  <p className="mt-2.5 text-background/65 text-sm leading-relaxed">
                     {s.body}
                   </p>
                 </div>

@@ -19,9 +19,9 @@ const nextConfig: NextConfig = {
     return [
       // Common Wix URL patterns — update if Jaden shares actual Wix URLs
       { source: "/home", destination: "/", permanent: true },
-      { source: "/our-work", destination: "/work", permanent: true },
-      { source: "/gallery", destination: "/work", permanent: true },
-      { source: "/portfolio", destination: "/work", permanent: true },
+      { source: "/work", destination: "/portfolio", permanent: true },
+      { source: "/our-work", destination: "/portfolio", permanent: true },
+      { source: "/gallery", destination: "/portfolio", permanent: true },
       { source: "/our-services", destination: "/services/interior-painting", permanent: true },
       { source: "/services", destination: "/services/interior-painting", permanent: true },
       { source: "/interior-painting", destination: "/services/interior-painting", permanent: true },

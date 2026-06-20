@@ -125,7 +125,7 @@ const localBusinessLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Log Home Restoration", url: `${SITE_URL}/services/log-restoration` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining", url: `${SITE_URL}/services/deck-fence-staining` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Light Carpentry & Repair", url: `${SITE_URL}/services/light-carpentry` } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction Painting", url: `${SITE_URL}/services/new-construction` } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction & Renovation Painting", url: `${SITE_URL}/services/new-construction` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial, Strata & Hotel Painting", url: `${SITE_URL}/services/commercial` } },
     ],
   },

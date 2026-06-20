@@ -236,7 +236,7 @@ export default function DeckFenceStainingPage() {
               <Eyebrow className="mb-5">Recent deck & wood work</Eyebrow>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Decks we&rsquo;re proud of.</h2>
             </div>
-            <Button href="/work" variant="text">See all work →</Button>
+            <Button href="/portfolio" variant="text">See all work →</Button>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}

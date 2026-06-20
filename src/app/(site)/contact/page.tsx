@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ContactForm } from "@/components/ContactForm";
 import { TextUsButton } from "@/components/TextUsButton";
+import { CallUsButton } from "@/components/CallUsButton";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -28,8 +29,8 @@ export default function ContactPage() {
               Let&rsquo;s talk about your project.
             </h1>
             <p className="mt-5 text-ink text-lg leading-relaxed">
-              We respond within 24 hours on weekdays to book a free site visit.
-              Most quotes are delivered the day of that visit.
+              Tell us about your project and we&rsquo;ll get in touch soon to
+              discuss it and schedule a quote.
             </p>
           </div>
         </Container>
@@ -66,7 +67,8 @@ export default function ContactPage() {
                     value={`${SITE.address.city}, ${SITE.address.region}`}
                   />
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <CallUsButton />
                   <TextUsButton />
                 </div>
               </div>

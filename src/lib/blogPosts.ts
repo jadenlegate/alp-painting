@@ -2213,7 +2213,7 @@ A 3,800 sqft two-storey chalet with:
 - **Deck T&G ceiling:** Original finish still mostly intact but showing failure starting at the edges.
 - **Fascia and soffit:** Mixed condition. Two sections of fascia with soft wood indicating early rot.
 
-Before-and-after photos from this project are visible on our [work page](/work), including the bay window restoration which ran as one of our featured before/after sliders.
+Before-and-after photos from this project are visible on our [work page](/portfolio), including the bay window restoration which ran as one of our featured before/after sliders.
 
 ## The conversation with the owners
 

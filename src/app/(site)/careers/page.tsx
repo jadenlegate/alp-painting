@@ -262,7 +262,7 @@ export default function CareersPage() {
         <CtaBlock
           eyebrow="Apply"
           heading={<>Interested? Let&rsquo;s talk.</>}
-          subline="Fill out the application form — takes about 5 minutes. We respond within 24 hours."
+          subline="Fill out the application form — takes about 5 minutes. We'll be in touch soon."
           primaryLabel="Apply Now"
           primaryHref="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
           primaryNewTab

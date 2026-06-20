@@ -160,7 +160,7 @@ export default function LogRestorationPage() {
               <Eyebrow className="mb-5">Recent wood & log work</Eyebrow>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Wood we&rsquo;ve brought back.</h2>
             </div>
-            <Button href="/work" variant="text">See all work →</Button>
+            <Button href="/portfolio" variant="text">See all work →</Button>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}

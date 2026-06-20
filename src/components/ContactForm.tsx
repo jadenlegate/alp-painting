@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { Button } from "./Button";
-import { Check, AlertCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 type Errors = Partial<Record<"firstName" | "lastName" | "email" | "phone" | "project", string>>;
@@ -11,6 +11,16 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [submitErrorMsg, setSubmitErrorMsg] = useState<string>("");
   const [errors, setErrors] = useState<Errors>({});
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // On success the form is replaced by the confirmation — scroll it into
+  // view so mobile users (who may have submitted from the bottom of the
+  // form) actually see it instead of landing on the footer.
+  useEffect(() => {
+    if (status === "success") {
+      successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
 
   const validate = (payload: {
     firstName: string;
@@ -79,13 +89,10 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-border rounded-sm bg-surface p-8 md:p-10">
-        <div className="flex items-center gap-3 text-navy mb-3">
-          <Check size={22} />
-          <h3 className="font-serif text-2xl">Thanks — we got it.</h3>
-        </div>
-        <p className="text-ink leading-relaxed">
-          We&rsquo;ll be in touch within 24 hours on weekdays to book your free site visit — most quotes are delivered the day of that visit. If it&rsquo;s urgent, call us at{" "}
+      <div ref={successRef} className="scroll-mt-28 border border-border rounded-sm bg-surface p-8 md:p-10">
+        <h3 className="font-serif text-navy text-2xl">Thanks, we received your request.</h3>
+        <p className="mt-3 text-ink leading-relaxed">
+          We&rsquo;ll be in touch soon to discuss your project and schedule a free site visit. If it&rsquo;s urgent, call us at{" "}
           <a href="tel:+16049384037" className="text-navy underline">
             (604) 938-4037
           </a>

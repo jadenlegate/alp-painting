@@ -27,7 +27,7 @@ const LOCATIONS: LocationData[] = [
     region: "Sea to Sky",
     headline: "Painting contractors in Whistler, BC",
     intro: "Alpenglow Painting is based in Whistler. We've worked on chalets in Kadenwood, ski-in/ski-out properties in Creekside, and family homes throughout the valley. We know the specific conditions that affect exterior paint jobs here — UV at altitude, condensation under the eaves, freeze-thaw cycles that start earlier than you'd expect.",
-    details: "Most of our work is concentrated in Whistler, and we keep availability prioritized for local clients. Same-day response on quote requests. Site visits often same-week.",
+    details: "Most of our work is concentrated in Whistler, and we keep availability prioritized for local clients. We aim to get out for a site visit soon after you reach out.",
     imageUrl: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=2000&q=85",
     services: ["Exterior painting", "Interior painting", "Wood restoration and log homes", "Cabinet refinishing", "Strata and commercial"],
     neighborhoods: ["Creekside", "Village", "Whistler Cay", "Blueberry", "Kadenwood", "Alpine Meadows", "Emerald Estates", "Function Junction"],
@@ -197,9 +197,9 @@ export default async function LocationPage({
               </div>
 
               <div className="border border-border rounded-sm bg-surface p-6">
-                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Response time</div>
-                <div className="font-serif text-navy text-2xl">Same day</div>
-                <p className="mt-1 text-sm text-muted">On quote requests, weekdays</p>
+                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Site visit</div>
+                <div className="font-serif text-navy text-2xl">Free</div>
+                <p className="mt-1 text-sm text-muted">No-obligation quote</p>
               </div>
             </div>
           </div>

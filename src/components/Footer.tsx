@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { Container } from "./Container";
 import { TextUsButton } from "./TextUsButton";
+import { CallUsButton } from "./CallUsButton";
 import { SITE } from "@/lib/site";
 import { SERVICE_GROUPS } from "@/lib/services";
 
@@ -13,7 +14,7 @@ import { SERVICE_GROUPS } from "@/lib/services";
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Process", href: "/process" },
-  { label: "Portfolio", href: "/work" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
@@ -123,7 +124,8 @@ export function Footer() {
                 Based in Whistler, BC
               </li>
             </ul>
-            <div className="mt-5">
+            <div className="mt-5 flex flex-wrap gap-3">
+              <CallUsButton />
               <TextUsButton />
             </div>
           </div>

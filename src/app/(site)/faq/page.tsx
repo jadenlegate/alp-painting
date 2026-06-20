@@ -16,7 +16,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "How do I get a quote?",
-        a: "Fill out the form on our contact page or call us at (604) 938-4037. Tell us the rough scope, location, and timing. We respond within 24 hours on weekdays — usually the same day.",
+        a: "Fill out the form on our contact page or call us at (604) 938-4037. Tell us the rough scope, location, and timing, and we'll get in touch to discuss it and schedule a quote.",
       },
       {
         q: "Do you charge for quotes?",
@@ -178,7 +178,7 @@ export default function FAQPage() {
       <CtaBlock
         eyebrow="Still curious"
         heading="Still have questions?"
-        subline="Fill out the contact form and we'll get back to you within 24 hours on weekdays."
+        subline="Fill out the contact form and we'll get in touch soon to discuss your project."
         primaryLabel="Get in Touch"
       />
     </>

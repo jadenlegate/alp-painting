@@ -26,7 +26,7 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   {
     heading: "Commercial & Trade",
     items: [
-      { label: "New Construction", href: "/services/new-construction" },
+      { label: "New Construction & Renovation", href: "/services/new-construction" },
       { label: "Commercial, Strata & Hotels", href: "/services/commercial" },
     ],
   },

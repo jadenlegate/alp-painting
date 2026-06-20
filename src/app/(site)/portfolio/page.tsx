@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Portfolio — Painting Projects in Whistler & Sea to Sky",
   description:
     "Portfolio of painting and restoration work across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, cabinet refinishing, and commercial.",
-  alternates: { canonical: "/work" },
+  alternates: { canonical: "/portfolio" },
 };
 
 // ratio = height / width (the image's rendered aspect, EXIF-aware).
