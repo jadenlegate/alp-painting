@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
@@ -8,7 +7,7 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
-import { MessageSquare, UserCheck, ShieldCheck, Ruler, Paintbrush, BookOpen, ChevronRight, type LucideIcon } from "lucide-react";
+import { MessageSquare, UserCheck, ShieldCheck, Ruler, Paintbrush, BookOpen, HardHat, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { BulletList } from "@/components/BulletList";
 
@@ -26,22 +25,40 @@ const SERVICES = [
     imageUrl: "/stock-images/exterior-painting-whistler.webp",
   },
   {
-    title: "Wood Refinishing & Staining",
-    href: "/services/wood-restoration",
-    blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
-    imageUrl: "/working-images/wood-restoration-staining-cedar-whistler.jpg",
-  },
-  {
     title: "Cabinet Refinishing",
     href: "/services/cabinet-refinishing",
     blurb: "Factory-grade finishes without replacing the boxes. Spray-booth precision in your kitchen.",
     imageUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
+    title: "Wood Refinishing & Staining",
+    href: "/services/wood-restoration",
+    blurb: "Cedar siding, decks, timber-frame beams. Refinished, stained, sealed to last.",
+    imageUrl: "/working-images/wood-restoration-staining-cedar-whistler.jpg",
+  },
+  {
+    title: "Log Restoration",
+    href: "/services/log-restoration",
+    blurb: "Media blasting, borate treatment, chinking, and penetrating finishes — full log home restoration.",
+    imageUrl: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg",
+  },
+  {
+    title: "Deck & Fence Staining",
+    href: "/services/deck-fence-staining",
+    blurb: "Stripped, sanded, and stained to last — decks, railings, and fences built for daily use.",
+    imageUrl: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg",
+  },
+  {
     title: "Light Carpentry & Repair",
     href: "/services/light-carpentry",
     blurb: "Rot, trim, and fascia repair coordinated with your paint project — one team, one point of contact.",
     imageUrl: "/stock-images/light-carpentry-repair-whistler.jpg",
+  },
+  {
+    title: "New Construction",
+    href: "/services/new-construction",
+    blurb: "Schedule-integrated, spec-precise finishing for general contractors and custom home builders.",
+    imageUrl: "/working-images/new-construction-painting-whistler.jpg",
   },
   {
     title: "Commercial, Strata & Hotels",
@@ -110,7 +127,7 @@ const VALUE_PROPS = [
   {
     icon: ShieldCheck,
     title: "Work that lasts",
-    body: "Up to 10 years on interior, 5 years on exterior solid finishes. In writing — not just a handshake.",
+    body: "Up to a 5-year written warranty on interior and exterior finishes. Not just a handshake.",
   },
 ];
 
@@ -119,22 +136,28 @@ const PROCESS_STEPS: { n: string; label: string; body: string; icon: LucideIcon 
     n: "01",
     icon: MessageSquare,
     label: "Request a quote",
-    body: "Tell us about the project online or by phone. We respond same-day on weekdays.",
+    body: "Tell us about the project online or by phone.",
   },
   {
     n: "02",
     icon: Ruler,
     label: "Proposal & walkthrough",
-    body: "We come see the space, ask the right questions, and send a detailed written proposal — usually the day of the visit.",
+    body: "We come see the space, ask the right questions, and present a detailed written proposal — usually the day of the visit.",
   },
   {
     n: "03",
-    icon: Paintbrush,
-    label: "Paint — with your home protected",
-    body: "Clean crews, premium products, daily updates. Your home stays livable from day one to walkthrough.",
+    icon: HardHat,
+    label: "Professional preparation",
+    body: "We protect your space, then prep every surface — filling, sanding, caulking, priming. The prep is what makes the finish last.",
   },
   {
     n: "04",
+    icon: Paintbrush,
+    label: "Premium application",
+    body: "Clean crews, premium products, daily updates. Your home stays livable from day one to walkthrough.",
+  },
+  {
+    n: "05",
     icon: BookOpen,
     label: "Final report & warranty",
     body: "We walk every space with you, fix any touch-ups on the spot, and hand off documentation for the warranty.",
@@ -280,7 +303,7 @@ export default function HomePage() {
                       "Fixed pricing that only moves if the scope actually changes",
                       "A thorough final walkthrough before you sign off",
                       "$5M liability insurance and full WorkSafeBC coverage",
-                      "A written warranty — 10 years on interior, 5 on exterior solid, matched to the service",
+                      "A written warranty — up to 5 years, matched to the service",
                     ]}
                   />
                 </div>
@@ -303,34 +326,24 @@ export default function HomePage() {
                 From first call to <span className="text-alpine">final walkthrough</span>.
               </h2>
               <p className="mt-4 text-background/70 text-lg leading-relaxed">
-                <strong className="text-background font-semibold">Four stages, documented at every step.</strong> No surprises, no improvising.
+                <strong className="text-background font-semibold">Every step, documented.</strong> No surprises, no improvising.
               </p>
             </div>
           </FadeIn>
-          <div className="grid gap-8 md:gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-start">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {PROCESS_STEPS.map((s, i) => (
-              <Fragment key={s.n}>
-                <FadeIn delay={i * 0.08}>
-                  <div className="border-t border-background/20 pt-5">
-                    <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
-                      <s.icon size={20} className="text-background" />
-                    </div>
-                    <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
-                    <div className="text-background font-medium">{s.label}</div>
-                    <p className="mt-2 text-background/65 text-sm leading-relaxed">
-                      {s.body}
-                    </p>
+              <FadeIn key={s.n} delay={i * 0.08}>
+                <div className="border-t border-background/20 pt-5">
+                  <div className="w-10 h-10 rounded-sm bg-background/10 flex items-center justify-center mb-4">
+                    <s.icon size={20} className="text-background" />
                   </div>
-                </FadeIn>
-                {i < PROCESS_STEPS.length - 1 && (
-                  <div
-                    className="hidden md:flex items-center justify-center pt-8 text-background/30"
-                    aria-hidden="true"
-                  >
-                    <ChevronRight size={20} />
-                  </div>
-                )}
-              </Fragment>
+                  <div className="text-background/40 text-xs tabular-nums mb-1">{s.n}</div>
+                  <div className="text-background font-medium">{s.label}</div>
+                  <p className="mt-2 text-background/65 text-sm leading-relaxed">
+                    {s.body}
+                  </p>
+                </div>
+              </FadeIn>
             ))}
           </div>
           <FadeIn delay={0.3}>

@@ -34,7 +34,7 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "02",
     icon: Ruler,
     title: "Site visit & proposal",
-    body: "We come to the property to measure, look at the surfaces, and work through product and color options with you.",
+    body: "We come to the property to measure, look at the surfaces, and work through product and colour options with you.",
     detail: "Most proposals are presented on the spot. For larger projects that need more calculation, we usually have it ready within a day. If we can't meet in person, we'll schedule a video call to walk through it together.",
   },
   {
@@ -69,8 +69,8 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "07",
     icon: BookOpen,
     title: "The project report",
-    body: "Every Alpenglow project closes with a written report documenting the exact products used (manufacturer, product line, color name, sheen), areas covered, and application method.",
-    detail: "This document lives with the house. Years from now, when you need a touch-up or want to match a color, you'll know exactly what was used — instead of guessing.",
+    body: "Every Alpenglow project closes with a written report documenting the exact products used (manufacturer, product line, colour name, sheen), areas covered, and application method.",
+    detail: "This document lives with the house. Years from now, when you need a touch-up or want to match a colour, you'll know exactly what was used — instead of guessing.",
   },
   {
     n: "08",
@@ -141,7 +141,7 @@ export default function ProcessPage() {
               The Alpenglow Project Report
             </h2>
             <p className="mt-5 text-background/75 text-lg leading-relaxed">
-              Every project closes with a written record: the products we used, color codes, sheens, areas covered, and care notes.
+              Every project closes with a written record: the products we used, colour codes, sheens, areas covered, and care notes.
             </p>
             <p className="mt-4 text-background/65 leading-relaxed">
               It lives with the house. Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used.

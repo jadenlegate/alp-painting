@@ -24,7 +24,7 @@ const ABOUT_LINKS = [
 ];
 
 const MAIN_LINKS = [
-  { label: "Our Work", href: "/work" },
+  { label: "Portfolio", href: "/work" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
@@ -130,7 +130,7 @@ export function Navbar() {
               </div>
 
               <Link href="/work" className={linkClass}>
-                Our Work
+                Portfolio
               </Link>
 
               {/* About dropdown */}

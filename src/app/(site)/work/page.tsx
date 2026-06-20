@@ -5,7 +5,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 
 export const metadata: Metadata = {
-  title: "Our Work — Painting Projects in Whistler & Sea to Sky",
+  title: "Portfolio — Painting Projects in Whistler & Sea to Sky",
   description:
     "Portfolio of painting and restoration work across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, cabinet refinishing, and commercial.",
   alternates: { canonical: "/work" },

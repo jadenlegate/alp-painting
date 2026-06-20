@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const BENEFITS = [
   {
     title: "Positive Work Environment",
-    body: "A good work environment makes all the difference, and we’re all about creating a place where you can do great work and have a good time while doing it.",
+    body: "A good work environment makes all the difference, and we’re all about creating a place where you can do great work and have a good time while doing it — including company appreciation events through the season to celebrate the crew and the wins.",
   },
   {
     title: "Long Weekend Every Week",
@@ -62,15 +62,15 @@ const PAY_TIERS = [
 
 const TRAITS = [
   "Shows up on time, every time — without being reminded",
-  "Takes pride in the work, not just the paycheque",
+  "Takes pride in the work, not just here for the paycheque",
   "Communicates clearly when something's wrong",
-  "Respects the client's home the way you'd want someone to respect yours",
+  "Respects our clients' properties the way you'd want someone to respect yours",
   "Can work independently and as part of a team",
 ];
 
 const HIRING_STEPS = [
   { n: "01", label: "Apply", detail: "Submit the form below — a few questions to get things started." },
-  { n: "02", label: "Virtual interview", detail: "15–20 minutes over video. We ask about your experience, you ask us whatever you want." },
+  { n: "02", label: "Virtual interview", detail: "20 minutes over video. We ask about your experience, you ask us whatever you want." },
   { n: "03", label: "Offer", detail: "If it's a fit, we send an offer with your start date, rate, and schedule." },
   { n: "04", label: "Training", detail: "Before your first job we get you up to speed — safety, our process, and the techniques and standards we paint to." },
   { n: "05", label: "Start working", detail: "Gear, an intro to the crew, and your first project — with on-the-job training so you keep learning as you go." },
@@ -92,12 +92,12 @@ export default function CareersPage() {
         </div>
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-background/70 mb-4">Join the team</div>
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Join the team</div>
             <h1 className="font-serif text-background text-[2.25rem] md:text-[3.5rem] leading-[1.1]">
-              Work hard. Paint well. Enjoy Whistler.
+              Start a rewarding career in the trades.
             </h1>
             <p className="mt-6 text-background/90 text-lg leading-relaxed max-w-lg">
-              We hire a small crew of serious painters each season. If you take pride in your work and want a company that treats you like an adult, keep reading.
+              Hands-on work that challenges you, a crew that&rsquo;s genuinely fun to be around, a strong culture, and real room to grow long-term.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button
@@ -155,7 +155,7 @@ export default function CareersPage() {
               <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Pay structure</span>
             </div>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Real numbers. No surprises.
+              Based on performance.
             </h2>
             <p className="mt-5 text-ink leading-relaxed">
               Performance matters here. Base rates are competitive, and top performers earn more through our bonus structure. We also offer retention bonuses for painters who return for a second season and referral bonuses when you bring in someone good.

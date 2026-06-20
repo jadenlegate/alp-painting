@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { Container } from "./Container";
+import { TextUsButton } from "./TextUsButton";
 import { SITE } from "@/lib/site";
 import { SERVICE_GROUPS } from "@/lib/services";
 
@@ -12,7 +13,7 @@ import { SERVICE_GROUPS } from "@/lib/services";
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Process", href: "/process" },
-  { label: "Our Work", href: "/work" },
+  { label: "Portfolio", href: "/work" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Warranty", href: "/warranty" },
   { label: "FAQ", href: "/faq" },
@@ -27,7 +28,7 @@ export function Footer() {
       <Container>
         <div className="py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand column */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Alpenglow Logo Blue.svg" alt="Alpenglow Painting" className="h-8 w-auto" />
             <p className="text-sm text-muted max-w-[280px]">
@@ -64,7 +65,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Services
             </div>
@@ -88,9 +89,9 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
-              Company
+              Explore
             </div>
             <ul className="space-y-2.5">
               {COMPANY_LINKS.map((l) => (
@@ -103,7 +104,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Contact
             </div>
@@ -114,7 +115,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="hover:text-navy">
+                <a href={`mailto:${SITE.email}`} className="hover:text-navy break-words">
                   {SITE.email}
                 </a>
               </li>
@@ -122,6 +123,9 @@ export function Footer() {
                 Based in Whistler, BC
               </li>
             </ul>
+            <div className="mt-5">
+              <TextUsButton />
+            </div>
           </div>
         </div>
 

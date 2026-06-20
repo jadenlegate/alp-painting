@@ -6,9 +6,9 @@ import { WarrantyTiers } from "@/components/WarrantyTiers";
 import { ShieldCheck, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painting Warranty — Up to 10 Years in Writing",
+  title: "Painting Warranty — Up to 5 Years in Writing",
   description:
-    "Alpenglow Painting's written warranty — up to 10 years on interior painting, 5 years on exterior solid finishes, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
+    "Alpenglow Painting's written warranty — 5 years on interior painting, 5 years on exterior solid finishes, 2 years on semi-transparent stains. Coverage by service, exclusions, and how to register a claim.",
   alternates: { canonical: "/warranty" },
 };
 
@@ -38,9 +38,9 @@ export default function WarrantyPage() {
               Every Alpenglow project comes with a written workmanship warranty,
               included at no extra cost. How long it runs depends on the work —
               the prep level, the products specified, and the surface itself.
-              Qualifying interior projects carry up to 10 years; exterior solid
-              finishes up to 5; penetrating and semi-transparent stains 2.
-              We&rsquo;ll tell you exactly which applies before you sign.
+              Qualifying interior and exterior solid finishes carry up to 5 years;
+              penetrating and semi-transparent stains 2. We&rsquo;ll tell you
+              exactly which applies before you sign.
             </p>
           </div>
         </Container>

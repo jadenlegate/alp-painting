@@ -2,7 +2,7 @@ import { ShieldCheck } from "lucide-react";
 import { Container } from "./Container";
 
 type Props = {
-  /** Single-line warranty title, e.g. "10-Year Interior Painting Warranty". */
+  /** Single-line warranty title, e.g. "5-Year Interior Painting Warranty". */
   title: string;
   /** Supporting paragraph. */
   body: string;

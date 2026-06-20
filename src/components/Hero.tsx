@@ -56,14 +56,14 @@ export function Hero({
               overlayClass ??
               (isHome
                 ? "bg-gradient-to-t from-black/85 via-black/55 to-black/40"
-                : "bg-gradient-to-t from-black/60 via-black/25 to-black/30")
+                : "bg-gradient-to-t from-black/80 via-black/50 to-black/45")
             }`}
           />
         </div>
       )}
       {!imageUrl && <div className="absolute inset-0 -z-10 bg-navy" />}
 
-      <Container>
+      <Container className="w-full">
         <motion.div
           className={`${isHome ? "max-w-5xl" : "max-w-3xl"} ${alignClass}`}
           variants={container}

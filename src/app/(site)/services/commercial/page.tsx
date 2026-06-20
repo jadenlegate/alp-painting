@@ -113,7 +113,7 @@ const FAQS = [
   },
   {
     q: "What does your warranty look like for commercial work?",
-    a: "The warranty matches the substrate. Interior painting: 10 years. Exterior solid finishes: 5 years. Exterior semi-transparent and translucent stains: 2 years. Same written terms as our residential work — we don't water it down for B2B.",
+    a: "The warranty matches the substrate. Interior painting: 5 years. Exterior solid finishes: 5 years. Exterior semi-transparent and translucent stains: 2 years. Same written terms as our residential work — we don't water it down for B2B.",
   },
   {
     q: "How do you handle deficiencies or callbacks?",
@@ -168,7 +168,7 @@ export default function CommercialPage() {
 
       <WarrantyBanner
         title="Warranty Matched to the Substrate"
-        body="Every commercial project is backed in writing — 10 years on interior painting, 5 on exterior solid finishes, 2 on exterior stains. The same terms as our residential work, documented in the project agreement."
+        body="Every commercial project is backed in writing — 5 years on interior and exterior solid finishes, 2 on exterior stains. The same terms as our residential work, documented in the project agreement."
       />
 
       <ProcessSteps

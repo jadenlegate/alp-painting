@@ -120,7 +120,7 @@ const FAQS = [
   },
   {
     q: "What warranty does the homeowner get?",
-    a: "The warranty matches the substrate, same as our residential work: 10 years on interior painting, 5 years on exterior solid finishes, 2 years on exterior semi-transparent and translucent stains. Documented in the project agreement so it's on record with the home.",
+    a: "The warranty matches the substrate, same as our residential work: 5 years on interior painting, 5 years on exterior solid finishes, 2 years on exterior semi-transparent and translucent stains. Documented in the project agreement so it's on record with the home.",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function NewConstructionPage() {
 
       <WarrantyBanner
         title="Warranty Matched to the Substrate"
-        body="Every build is backed in writing — 10 years on interior painting, 5 on exterior solid finishes, 2 on exterior stains. The same terms your client would get on residential work, documented so it transfers with the home."
+        body="Every build is backed in writing — 5 years on interior and exterior solid finishes, 2 on exterior stains. The same terms your client would get on residential work, documented so it transfers with the home."
       />
 
       <ProcessSteps

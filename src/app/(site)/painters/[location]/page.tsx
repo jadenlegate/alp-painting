@@ -78,7 +78,7 @@ export async function generateMetadata({
   const { location } = await params;
   const loc = LOCATIONS.find((l) => l.slug === location);
   if (!loc) return { title: "Location Not Found" };
-  const description = `Alpenglow Painting serves ${loc.name} and the ${loc.region}. Interior, exterior, wood restoration, cabinet refinishing, and commercial painting. Owner-operated, locally based, with up to a 10-year warranty.`;
+  const description = `Alpenglow Painting serves ${loc.name} and the ${loc.region}. Interior, exterior, wood restoration, cabinet refinishing, and commercial painting. Owner-operated, locally based, with up to a 5-year warranty.`;
   return {
     title: `Painters in ${loc.name}, BC — Alpenglow Painting`,
     description,

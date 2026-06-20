@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Alpenglow Painting",
   },
   description:
-    "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, and cabinet refinishing with up to a 10-year warranty.",
+    "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, and cabinet refinishing with up to a 5-year warranty.",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   keywords: [
@@ -66,14 +66,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Whistler Painters | Alpenglow Painting — Sea to Sky, BC",
     description:
-      "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Up to a 10-year warranty.",
+      "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Up to a 5-year warranty.",
     images: [{ url: OG_IMAGE, width: 2048, height: 1024, alt: "Alpenglow Painting — Whistler, BC" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Whistler Painters | Alpenglow Painting",
     description:
-      "Premium painting across Whistler, Pemberton, and Squamish. Up to a 10-year warranty.",
+      "Premium painting across Whistler, Pemberton, and Squamish. Up to a 5-year warranty.",
     images: [OG_IMAGE],
   },
   icons: { icon: "/favicon.ico" },
@@ -91,7 +91,7 @@ const localBusinessLd = {
   telephone: SITE.phoneRaw,
   email: SITE.email,
   description:
-    "Premium residential and commercial painting in Whistler and the Sea to Sky corridor. Interior, exterior, wood restoration, cabinet refinishing, and light carpentry with up to a 10-year warranty.",
+    "Premium residential and commercial painting in Whistler and the Sea to Sky corridor. Interior, exterior, wood restoration, cabinet refinishing, and light carpentry with up to a 5-year warranty.",
   address: {
     "@type": "PostalAddress",
     addressLocality: SITE.address.city,

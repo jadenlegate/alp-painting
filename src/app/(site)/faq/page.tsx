@@ -44,8 +44,8 @@ const FAQ_SECTIONS = [
         a: "We specify products to the project. Typical brands include Sherwin-Williams (Duration, Emerald), Benjamin Moore (Aura, Advance), Cabot, Sikkens, and Armstrong Clark. We'll tell you exactly what we're using, why, and what the expected lifespan is — before you sign anything.",
       },
       {
-        q: "Can I choose my own color?",
-        a: "Yes. Most clients come with a color direction or a specific swatch; we help refine from there. If you want color consultation as a service, we offer that too.",
+        q: "Can I choose my own colour?",
+        a: "Yes. Most clients come with a colour direction or a specific swatch; we help refine from there. If you want colour consultation as a service, we offer that too.",
       },
       {
         q: "What's the difference between the paint brands?",
@@ -87,7 +87,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What warranty do you offer?",
-        a: "Written warranty on every project, matched to the service: 10 years on interior painting, 5 years on exterior solid finishes, 2 years on exterior semi-transparent and translucent stains, and 2 years of workmanship on light carpentry repairs. Nobody else in the Sea to Sky offers a 10-year warranty on interior work.",
+        a: "Written warranty on every project, matched to the service: 5 years on interior painting, 5 years on exterior solid finishes, 2 years on exterior semi-transparent and translucent stains, and 2 years of workmanship on light carpentry repairs. All in writing, included at no extra cost.",
       },
       {
         q: "What does the warranty cover?",
@@ -104,11 +104,11 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What is the Alpenglow Project Report?",
-        a: "A written document we leave at the end of every project. It records the exact products used (manufacturer, product line, color name, sheen level), areas covered, and care instructions. It's meant to live with the house.",
+        a: "A written document we leave at the end of every project. It records the exact products used (manufacturer, product line, colour name, sheen level), areas covered, and care instructions. It's meant to live with the house.",
       },
       {
         q: "Why does the project report matter?",
-        a: "Years from now, when you need a touch-up or want to match a color for a renovation, you'll know exactly what was used. The next owner will too. Most painters hand you nothing when the job is done — we give you a record.",
+        a: "Years from now, when you need a touch-up or want to match a colour for a renovation, you'll know exactly what was used. The next owner will too. Most painters hand you nothing when the job is done — we give you a record.",
       },
     ],
   },

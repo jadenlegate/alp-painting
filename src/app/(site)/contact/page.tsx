@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ContactForm } from "@/components/ContactForm";
+import { TextUsButton } from "@/components/TextUsButton";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -64,6 +65,9 @@ export default function ContactPage() {
                     label="Based in"
                     value={`${SITE.address.city}, ${SITE.address.region}`}
                   />
+                </div>
+                <div className="mt-6">
+                  <TextUsButton />
                 </div>
               </div>
             </aside>

@@ -8,7 +8,7 @@ const ITEMS = [
   { icon: Shield, label: "$5M liability insured" },
   { icon: HardHat, label: "WorkSafeBC covered" },
   { icon: MapPin, label: "Locally owned" },
-  { icon: Award, label: "Up to 10-year warranty" },
+  { icon: Award, label: "Up to 5-year warranty" },
 ];
 
 export function TrustBar() {

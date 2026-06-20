@@ -10,7 +10,7 @@ export type WarrantyTier = {
 
 export const WARRANTY_TIERS: WarrantyTier[] = [
   {
-    years: "10",
+    years: "5",
     label: "Interior painting",
     description:
       "Walls, trim, ceilings, doors — every interior painting project. Covers peeling, flaking, and premature finish failure under normal interior conditions.",

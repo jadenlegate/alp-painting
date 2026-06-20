@@ -290,7 +290,7 @@ function DirectionC() {
             <dl className="grid grid-cols-2 gap-y-3 gap-x-6 border-t border-[#15234a]/80 pt-6 max-w-md">
               {[
                 ["Established", "Whistler, BC"],
-                ["Warranty", "Up to 10 years"],
+                ["Warranty", "Up to 5 years"],
                 ["Insurance", "$5M liability"],
                 ["Medium", "Benjamin Moore + SW"],
                 ["Crew", "Small, consistent, local"],

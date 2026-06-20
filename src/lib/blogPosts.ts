@@ -538,7 +538,7 @@ The biggest variables, in roughly the order they affect price:
 When one quote is significantly lower than others, it's almost always one of these:
 
 - Single-coat finish instead of two-coat.
-- Cheaper paint specified but labeled "premium" without a product name.
+- Cheaper paint specified but labelled "premium" without a product name.
 - Prep listed generically with no commitment to sanding, scraping, priming.
 - No caulk replacement.
 - Crew that disappears at callback time.

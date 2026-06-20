@@ -12,7 +12,7 @@ import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 export const metadata: Metadata = {
   title: "Interior Painters — Whistler, Pemberton & Squamish",
   description:
-    "Professional interior painters serving Whistler, Pemberton, and Squamish. Walls, trim, ceilings, and doors with clean crews, premium finishes, and a 10-year warranty.",
+    "Professional interior painters serving Whistler, Pemberton, and Squamish. Walls, trim, ceilings, and doors with clean crews, premium finishes, and a 5-year warranty.",
   alternates: { canonical: "/services/interior-painting" },
 };
 
@@ -28,7 +28,7 @@ const serviceJsonLd = {
     { "@type": "City", name: "Squamish" },
   ],
   description:
-    "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and a 10-year warranty.",
+    "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and a 5-year warranty.",
   url: "https://alpenglowpainting.ca/services/interior-painting",
 };
 
@@ -145,7 +145,7 @@ const FAQS = [
   },
   {
     q: "What does the warranty cover?",
-    a: "Peeling, flaking, and premature failure of the paint finish under normal interior conditions. Interior projects carry a 10-year written warranty when we apply approved products with standard prep.",
+    a: "Peeling, flaking, and premature failure of the paint finish under normal interior conditions. Interior projects carry a 5-year written warranty when we apply approved products with standard prep.",
   },
 ];
 
@@ -199,7 +199,7 @@ export default function InteriorPaintingPage() {
       </section>
 
       <WarrantyBanner
-        title="10-Year Interior Painting Warranty"
+        title="5-Year Interior Painting Warranty"
         body="Every interior project is backed in writing against peeling, flaking, and premature finish failure under normal conditions. If it fails inside the window, we come back and fix it."
       />
 

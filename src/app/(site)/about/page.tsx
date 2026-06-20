@@ -28,7 +28,7 @@ const VALUES = [
   },
   {
     title: "We stand behind the work.",
-    body: "Up to 10-year warranty, honored without friction. If something fails within the warranty period, we come back and fix it. That's the whole deal.",
+    body: "Up to a 5-year warranty, honoured without friction. If something fails within the warranty period, we come back and fix it. That's the whole deal.",
   },
 ];
 
@@ -65,16 +65,12 @@ export default function AboutPage() {
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
                 Jaden Legate, Owner
               </h2>
-              {/* Jaden: replace this placeholder with your actual story via Sanity */}
               <div className="mt-5 space-y-4 text-ink leading-relaxed">
                 <p>
-                  <strong className="text-navy font-semibold">Alpenglow started because I kept seeing the same thing:</strong> homeowners who had been through enough bad trades experiences that they approached every new contractor with their guard up. They weren&rsquo;t wrong to. The industry earned that skepticism.
+                  Alpenglow Painting&rsquo;s founder, Jaden, is a born-and-raised Whistler local. Combining operational experience from running a student painting franchise in Whistler with business acumen gained in the Commerce program at UBC&rsquo;s Sauder School of Business, he started Alpenglow Painting.
                 </p>
                 <p>
-                  I started Alpenglow to build something different — a company where <span className="text-navy font-semibold">the process itself is a reason to hire us</span>, not just the finished wall. Clear communication, professional crews, documentation at every step.
-                </p>
-                <p>
-                  We&rsquo;re based in Whistler and happy to take on projects any time of year — interior work, exterior work, and everything in between.
+                  Jaden recognized a need to not only provide clients with a great finished product, but to provide an excellent overall experience throughout each project &mdash; from the first time you reach out to the final walkthrough.
                 </p>
               </div>
             </div>

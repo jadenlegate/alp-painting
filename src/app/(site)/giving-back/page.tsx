@@ -27,7 +27,7 @@ export default function GivingBackPage() {
         <Container size="prose">
           <div className="space-y-5 text-ink leading-relaxed">
             <p>
-              We live here. Our clients are our neighbors. The mountains we look at every morning are the same ones everyone in the Sea to Sky is trying to protect.
+              We live here. Our clients are our neighbours. The mountains we look at every morning are the same ones everyone in the Sea to Sky is trying to protect.
             </p>
             <p>
               We donate 1% of annual profits to local environmental and community organizations. We don&rsquo;t say it loudly — this page exists once, linked from our about section, and we don&rsquo;t put it in our sales pitch.
