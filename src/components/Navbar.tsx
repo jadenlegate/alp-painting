@@ -7,18 +7,12 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { SITE } from "@/lib/site";
+import { SERVICE_GROUPS } from "@/lib/services";
 
 // Sticky top navigation. Transparent while at the top of the hero on the
 // home page, solid elsewhere or after scroll. Mobile uses a full-screen
 // overlay menu — simpler and more on-brand than a cramped dropdown.
-const SERVICES = [
-  { label: "Interior Painting", href: "/services/interior-painting" },
-  { label: "Exterior Painting", href: "/services/exterior-painting" },
-  { label: "Wood Restoration & Staining", href: "/services/wood-restoration" },
-  { label: "Cabinet Refinishing", href: "/services/cabinet-refinishing" },
-  { label: "Light Carpentry & Repair", href: "/services/light-carpentry" },
-  { label: "Commercial, Strata & Hotels", href: "/services/commercial" },
-];
+// Services live in @/lib/services so the nav and footer can't drift apart.
 
 const ABOUT_LINKS = [
   { label: "About Us", href: "/about" },
@@ -93,16 +87,25 @@ export function Navbar() {
                   Services <ChevronDown size={14} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 pt-2 w-64">
-                    <div className="bg-surface border border-border rounded-sm shadow-sm py-2">
-                      {SERVICES.map((s) => (
-                        <Link
-                          key={s.href}
-                          href={s.href}
-                          className="block px-4 py-2 text-sm text-ink hover:bg-stone-light/40 hover:text-navy transition-colors"
-                        >
-                          {s.label}
-                        </Link>
+                  <div className="absolute top-full left-0 pt-2 w-[680px] max-w-[calc(100vw-2rem)]">
+                    <div className="bg-surface border border-border rounded-sm shadow-sm p-6 grid grid-cols-3 gap-x-6 gap-y-6">
+                      {SERVICE_GROUPS.map((group) => (
+                        <div key={group.heading}>
+                          <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-medium mb-3">
+                            {group.heading}
+                          </div>
+                          <div className="space-y-1">
+                            {group.items.map((s) => (
+                              <Link
+                                key={s.href}
+                                href={s.href}
+                                className="block py-1.5 text-sm text-ink hover:text-navy transition-colors"
+                              >
+                                {s.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -178,22 +181,29 @@ export function Navbar() {
         <div className="lg:hidden fixed inset-0 top-16 z-40 bg-background overflow-y-auto">
           <Container className="py-8">
             <div className="space-y-6">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted mb-3">
+              <div className="space-y-5">
+                <div className="text-xs uppercase tracking-widest text-muted">
                   Services
                 </div>
-                <div className="space-y-3">
-                  {SERVICES.map((s) => (
-                    <Link
-                      key={s.href}
-                      href={s.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block font-serif text-xl text-navy"
-                    >
-                      {s.label}
-                    </Link>
-                  ))}
-                </div>
+                {SERVICE_GROUPS.map((group) => (
+                  <div key={group.heading}>
+                    <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-medium mb-2">
+                      {group.heading}
+                    </div>
+                    <div className="space-y-2">
+                      {group.items.map((s) => (
+                        <Link
+                          key={s.href}
+                          href={s.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block font-serif text-lg text-navy"
+                        >
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <div className="pt-6 border-t border-border space-y-3">

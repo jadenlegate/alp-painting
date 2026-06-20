@@ -3,17 +3,11 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { Container } from "./Container";
 import { SITE } from "@/lib/site";
+import { SERVICES as SERVICE_LINKS } from "@/lib/services";
 
 // Four-column footer per brief §6: Brand / Services / Company / Contact.
-// Bottom bar holds legal + association logos.
-const SERVICE_LINKS = [
-  { label: "Interior Painting", href: "/services/interior-painting" },
-  { label: "Exterior Painting", href: "/services/exterior-painting" },
-  { label: "Wood Restoration", href: "/services/wood-restoration" },
-  { label: "Cabinet Refinishing", href: "/services/cabinet-refinishing" },
-  { label: "Light Carpentry", href: "/services/light-carpentry" },
-  { label: "Commercial & Strata", href: "/services/commercial" },
-];
+// Bottom bar holds legal + association logos. Service links come from
+// @/lib/services so the footer always matches the nav dropdown.
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
