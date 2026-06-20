@@ -6,8 +6,8 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Check, Building2, Users, Clock, CalendarCheck, Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
+import { Building2, Users, Clock, CalendarCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Commercial, Strata & Hotel Painting — Whistler & Sea to Sky",
@@ -32,15 +32,6 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/commercial",
 };
 
-const PILLARS = [
-  "Phased to keep buildings running",
-  "Strata coordination included",
-  "$5M liability insurance",
-  "WorkSafeBC coverage",
-  "Resident & guest notification",
-  "Warranty matched to substrate",
-];
-
 const AUDIENCES = [
   {
     icon: Building2,
@@ -64,14 +55,43 @@ const AUDIENCES = [
   },
 ];
 
-const INCLUDED = [
-  "Pre-project walkthrough with strata manager or property owner",
-  "Written scope and timeline — no vague 'a few weeks'",
-  "Resident or guest notification coordination",
-  "Phased scheduling to keep areas of the building functional",
-  "Daily cleanup to professional standard",
-  "Progress updates at agreed milestones",
-  "Project report at close — products, areas covered, warranty terms",
+// Add a real photo to a step with image: "/working-images/commercial-step-phasing-whistler.jpg".
+const PROCESS: ProcessStep[] = [
+  {
+    n: "01",
+    title: "Pre-project walkthrough",
+    body: "We meet the strata manager, property owner, or site contact to walk the building, confirm scope, and understand how the space is used. For occupied buildings, this is where we map out access, common-area constraints, and the parts of the property that can't go offline. The walkthrough is what lets us build a realistic plan instead of a guess.",
+  },
+  {
+    n: "02",
+    title: "Written scope & schedule",
+    body: "You get a written scope and timeline — phases, dates, and milestones — not a vague 'a few weeks.' We document the spec, the areas covered, and the sequence so the council or owner knows exactly what's happening and when. Everyone's working from the same plan before a single drop cloth goes down.",
+  },
+  {
+    n: "03",
+    title: "Resident & guest notification",
+    body: "Before each phase, we coordinate notification so residents and guests know what to expect — which areas, which days, and any temporary access changes. Clear, advance communication is the difference between a smooth project and a flood of complaints to the manager. We handle the messaging in whatever format your building uses.",
+  },
+  {
+    n: "04",
+    title: "Phased execution",
+    body: "We work the building in phases — by floor, wing, or time of day — so it keeps running while we paint. Common areas stay accessible, hotel revenue keeps flowing, and residents keep their routines. Night and weekend work is available for high-traffic or guest-facing areas. The plan is built around your operations, not ours.",
+  },
+  {
+    n: "05",
+    title: "Daily cleanup & milestone updates",
+    body: "The site is left clean and safe at the end of every shift, and you get progress updates at the agreed milestones — no chasing us for status. For multi-phase contracts, each phase closes with documentation so the council or owner always knows what's done and what's pending. Predictable communication is the whole point.",
+  },
+  {
+    n: "06",
+    title: "Walkthrough & deficiencies",
+    body: "At substantial completion we walk the work with you and log any deficiencies formally, in writing. Items get addressed promptly — typically within five business days — so the painting line clears without lingering. Nothing is left to 'we'll get to it.' You sign off when the work meets the standard.",
+  },
+  {
+    n: "07",
+    title: "Project report & close-out",
+    body: "Every commercial project closes with a written report: the exact products and colours used, the areas covered, and the warranty terms that apply. Insurance certificates are on file from the start. The documentation lives with the building, so the next manager or council inherits a clear record instead of a mystery.",
+  },
 ];
 
 const FAQS = [
@@ -120,58 +140,6 @@ export default function CommercialPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Commercial painting in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                B2B clients have different needs.<br />We plan around <em className="text-alpine not-italic font-medium">them</em>.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Commercial painting isn&rsquo;t harder than residential —
-                  it&rsquo;s different. Tighter scheduling, more formal
-                  communication, and a higher cost of disruption.
-                </p>
-                <p>
-                  Strata buildings, hotels, builders, developers — each runs on a
-                  different rhythm. Our job is to fit into yours.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get in Touch</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every commercial project includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Who we work with */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -203,35 +171,12 @@ export default function CommercialPage() {
         body="Every commercial project is backed in writing — 10 years on interior painting, 5 on exterior solid finishes, 2 on exterior stains. The same terms as our residential work, documented in the project agreement."
       />
 
-      {/* What's standard */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
-            <div>
-              <Eyebrow className="mb-5">Standard on every commercial project</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
-                Structure that keeps B2B projects on track.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                The biggest frustration in commercial painting is
-                miscommunication — unclear scope, missed milestones, nobody to
-                call. We address that with structure from day one.
-              </p>
-              <div className="mt-8">
-                <Button href="/process" variant="secondary">See our full process</Button>
-              </div>
-            </div>
-            <ul className="space-y-4">
-              {INCLUDED.map((item) => (
-                <li key={item} className="flex items-start gap-4 border-l-2 border-alpine pl-5 py-1">
-                  <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                  <span className="text-ink leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        eyebrow="How we do it"
+        heading="Structure that keeps B2B projects on track."
+        intro="The biggest frustration in commercial painting is miscommunication — unclear scope, missed milestones, nobody to call. We address that with structure from day one. Here's how a project runs, walkthrough to close-out."
+        steps={PROCESS}
+      />
 
       {/* Insurance callout */}
       <section className="py-12 md:py-16">

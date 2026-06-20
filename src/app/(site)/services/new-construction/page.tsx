@@ -6,8 +6,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Check, Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "New Construction Painting for Builders — Whistler & Sea to Sky",
@@ -31,15 +30,6 @@ const serviceJsonLd = {
     "New construction painting for general contractors and builders in Whistler and the Sea to Sky. Schedule integration, spec-precise finishing, and progress documentation.",
   url: "https://alpenglowpainting.ca/services/new-construction",
 };
-
-const PILLARS = [
-  "Built into your schedule",
-  "Spec-precise, room to room",
-  "New-drywall prep & priming",
-  "Coordinated with other trades",
-  "Updates at milestones",
-  "Clean handoff for walkthrough",
-];
 
 const SCOPE_CARDS = [
   {
@@ -68,33 +58,43 @@ const SCOPE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/new-construction-step-priming-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "Built into your schedule.",
-    body: "We integrate with the build sequence and hit our milestones, so painting never becomes the bottleneck.",
+    n: "01",
+    title: "Pre-start walkthrough & spec",
+    body: "We meet your site super or PM before we mobilize to confirm scope, schedule, and the finish spec — products, colours, and sheens, room by room. We map our phases to your build sequence so painting slots in cleanly around the other trades. Anything ambiguous gets pinned down in writing now, not argued over at handoff. You know exactly what you're getting and when.",
   },
   {
-    title: "Spec-precise, every room consistent.",
-    body: "We paint to the spec — products, colours, sheens — identical from the primary suite to the utility room.",
+    n: "02",
+    title: "New drywall prep & priming",
+    body: "Fresh board and joint compound drink primer unevenly and telegraph every flaw, so this is its own dedicated step. We prime uniformly, then assess the walls under raking light and skim or spot-fix where it's needed before any finish coat. Proper priming is the single biggest reason a new build's walls look custom instead of builder-grade once the furniture's in.",
   },
   {
-    title: "One trade you don't manage.",
-    body: "Clear communication with your super, documentation in the format your accounting needs, and a crew that shows up.",
+    n: "03",
+    title: "Trim, doors & millwork",
+    body: "Baseboard, casing, crown, built-ins, and doors are finished to a furniture-grade standard — sprayed or hand-finished depending on the piece. This is the woodwork buyers run their hands across at the walkthrough, so it's finished like it'll be inspected, because it will be. We sequence it with the other trades to protect the finish.",
   },
   {
-    title: "A clean handoff.",
-    body: "We close out with the walkthrough in mind — deficiencies cleared and a report of exactly what went where.",
+    n: "04",
+    title: "Wall & ceiling finish coats",
+    body: "We apply the finish coats in the right order — ceilings before walls, both before floors go in — to keep everything clean and consistent. Each surface gets the product and sheen the spec calls for, applied to full, even coverage. We hold proper dry time and protect completed areas as we move through the build.",
   },
-];
-
-const STANDARD = [
-  "Pre-start walkthrough with the site super or builder",
-  "Written scope, schedule, and spec confirmation",
-  "Primer and prep matched to new substrates",
-  "Spray sequencing coordinated with other trades",
-  "Progress updates at agreed milestones",
-  "Prompt punch-list and deficiency completion",
-  "Project report at handoff — products, colours, sheens, areas",
+  {
+    n: "05",
+    title: "Exterior coatings",
+    body: "Siding, soffits, fascia, trim, and decks get climate-rated coatings from day one, coordinated with the exterior weather window. Getting the exterior right on a new build is far cheaper than a callback after the first Sea-to-Sky winter exposes a shortcut. Same prep discipline as the interior, built for the elements.",
+  },
+  {
+    n: "06",
+    title: "Punch list & touch-ups",
+    body: "We close out clean. Touch-ups and deficiency items get handled promptly — usually within a few business days of the walkthrough — so the painting line on your deficiency list clears without you chasing us. A clean handoff is the part of the job a builder actually remembers.",
+  },
+  {
+    n: "07",
+    title: "Handoff & documentation",
+    body: "We hand off a project report listing the exact products, colours, sheens, and areas covered — so it lives with the home and transfers to the buyer. Insurance certificates and warranty documentation come with it. The warranty matches the substrate, the same terms your client would get on residential work, on record from day one.",
+  },
 ];
 
 const FAQS = [
@@ -144,60 +144,6 @@ export default function NewConstructionPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">New construction · for builders</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                The painting line that <em className="text-alpine not-italic font-medium">never</em> slips your schedule.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  On a build, the painter can make or break the finish — and the
-                  schedule. A crew that shows up late, paints to the wrong spec,
-                  or leaves a messy punch list costs you time and a walkthrough
-                  you have to apologize for.
-                </p>
-                <p>
-                  We work as the painting trade builders keep calling back:
-                  integrated with your sequence, precise to the spec, clean at
-                  handoff.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Talk to Us</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What working with us looks like</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Scope */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -233,54 +179,13 @@ export default function NewConstructionPage() {
         body="Every build is backed in writing — 10 years on interior painting, 5 on exterior solid finishes, 2 on exterior stains. The same terms your client would get on residential work, documented so it transfers with the home."
       />
 
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">How we work with builders</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Built around how your project actually runs.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-background p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* What's standard */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
-            <div>
-              <Eyebrow className="mb-5">Standard on every build</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
-                Structure from first coat to handoff.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                The same process on every project, so you know exactly what
-                you&rsquo;re getting on the next one.
-              </p>
-              <div className="mt-8">
-                <Button href="/process" variant="secondary">See our full process</Button>
-              </div>
-            </div>
-            <ul className="space-y-4">
-              {STANDARD.map((item) => (
-                <li key={item} className="flex items-start gap-4 border-l-2 border-alpine pl-5 py-1">
-                  <Check size={18} className="text-navy mt-0.5 flex-shrink-0" />
-                  <span className="text-ink leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        bg="white"
+        eyebrow="How we do it"
+        heading="From first coat to clean handoff."
+        intro="The same disciplined sequence on every build, so you know exactly what you're getting on the next one. Here's how a project runs from pre-start to documentation."
+        steps={PROCESS}
+      />
 
       <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">

@@ -7,8 +7,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Log Home Restoration — Whistler, Pemberton & Squamish",
@@ -33,16 +32,7 @@ const serviceJsonLd = {
   url: "https://alpenglowpainting.ca/services/log-restoration",
 };
 
-const PILLARS = [
-  "Media blasting or sanding",
-  "Borate preservative treatment",
-  "Checking & chinking repair",
-  "Penetrating log finishes",
-  "Back-brushed, multiple coats",
-  "Written maintenance schedule",
-];
-
-const PROCESS = [
+const PROCESS: ProcessStep[] = [
   {
     n: "01",
     title: "Inspection & moisture assessment",
@@ -77,25 +67,6 @@ const PROCESS = [
     n: "07",
     title: "Maintenance coat schedule",
     body: "Log finishes are a system you maintain. Your report includes a re-coat window — usually a maintenance coat every 3–5 years on exposed walls — which costs a fraction of a full strip-and-restore.",
-  },
-];
-
-const APPROACH = [
-  {
-    title: "Logs aren't siding.",
-    body: "Round profiles, exposed end grain, settling, and checks make a log home behave nothing like a clad wall. The methods are built for logs.",
-  },
-  {
-    title: "Blasting where it counts.",
-    body: "Blasting strips the full round profile and the checks and chinking lines without flat-spotting — the difference between a finish that bonds and one that lifts.",
-  },
-  {
-    title: "The finish is a system.",
-    body: "Borate, then a penetrating stain, then a maintenance coat on schedule — each layer does a job the others can't.",
-  },
-  {
-    title: "Water management is everything.",
-    body: "Most log failure is water finding its way in. We chase that down during restoration, because no finish outruns trapped moisture.",
   },
 ];
 
@@ -169,118 +140,17 @@ export default function LogRestorationPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Log home restoration in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                A log home is a <em className="text-alpine not-italic font-medium">system</em> — we restore all of it.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  A log home is one of the most beautiful — and most demanding —
-                  structures to own in the mountains. The same logs that give it
-                  character also check, settle, and shed their finish faster than
-                  any clad wall.
-                </p>
-                <p>
-                  We restore the whole system — bare-wood prep, preservative,
-                  sealing, finish, and a maintenance plan — not just the coat you
-                  can see.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every log restoration includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* The process — numbered timeline (a genuine sequence) */}
-      <section className="py-16 md:py-28 bg-stone-light/50">
-        <Container>
-          <div className="max-w-3xl mb-12 md:mb-16">
-            <Eyebrow className="mb-5">The process, step by step</Eyebrow>
-            <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
-              How we restore a log home.
-            </h2>
-            <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
-              Order matters more on logs than almost any other surface. Each step
-              sets up the next — skip one and the finish fails early.
-            </p>
-          </div>
-          <div className="space-y-px bg-navy/10 border border-navy/10">
-            {PROCESS.map((step) => (
-              <div
-                key={step.n}
-                className="bg-stone-light/50 grid md:grid-cols-[88px_1fr] gap-4 md:gap-8 p-7 md:p-9"
-              >
-                <div className="font-serif text-navy/30 text-4xl md:text-5xl tabular-nums leading-none">
-                  {step.n}
-                </div>
-                <div>
-                  <h3 className="font-serif text-navy text-[1.375rem] md:text-[1.625rem] leading-[1.15] tracking-tight font-medium">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-ink leading-relaxed max-w-3xl">{step.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        eyebrow="The process, step by step"
+        heading="How we restore a log home."
+        intro="A log home is a system — bare-wood prep, preservative, sealing, finish, and a maintenance plan, not just the coat you can see. Order matters more here than on almost any surface; skip a step and the finish fails early. Here's the full sequence."
+        steps={PROCESS}
+      />
 
       <WarrantyBanner
         title="2-Year Log Finish Warranty"
         body="Penetrating log and semi-transparent finishes are backed for 2 years, matched to how they wear in mountain sun. The maintenance-coat schedule in your project report is what takes the finish the distance."
       />
-
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Why it&rsquo;s a specialty</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Log work isn&rsquo;t just exterior painting.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-background p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* Related */}
       <section className="py-16 md:py-24">
