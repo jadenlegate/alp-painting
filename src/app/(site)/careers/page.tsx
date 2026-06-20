@@ -63,8 +63,8 @@ export default function CareersPage() {
         <div className="absolute inset-0 -z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=2000&q=85"
-            alt="Painter working on a Whistler home exterior"
+            src="/working-images/alpenglow-painting-crew-whistler.jpg"
+            alt="Two Alpenglow Painting crew members on a dock at Levette Lake, Whistler"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/35 to-black/45" />

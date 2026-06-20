@@ -29,7 +29,7 @@ const SERVICES = [
     title: "Wood Restoration & Staining",
     href: "/services/wood-restoration",
     blurb: "Cedar siding, decks, timber-frame beams. Restored, stained, sealed to last.",
-    imageUrl: "/stock-images/wood-restoration-staining-whistler.jpg",
+    imageUrl: "/working-images/wood-restoration-staining-cedar-whistler.jpg",
   },
   {
     title: "Cabinet Refinishing",
