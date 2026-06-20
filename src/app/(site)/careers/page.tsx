@@ -120,9 +120,8 @@ export default function CareersPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Why join us</span>
+            <div className="mb-5">
+              <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Why join us</span>
             </div>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               A crew worth being on.
@@ -152,9 +151,8 @@ export default function CareersPage() {
       <section id="pay" className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Pay structure</span>
+            <div className="mb-5">
+              <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Pay structure</span>
             </div>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Real numbers. No surprises.
@@ -183,9 +181,8 @@ export default function CareersPage() {
         <Container>
           <div className="grid gap-12 md:grid-cols-2 items-start">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">What we look for</span>
+              <div className="mb-5">
+                <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">What we look for</span>
               </div>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
                 The traits that actually matter.
@@ -203,9 +200,8 @@ export default function CareersPage() {
               </ul>
             </div>
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Life in Whistler</span>
+              <div className="mb-5">
+                <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Life in Whistler</span>
               </div>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.25rem] leading-[1.1] tracking-tight font-medium">
                 Not just a job.
@@ -230,7 +226,7 @@ export default function CareersPage() {
                 <FileText size={22} className="text-navy" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine mb-2 font-medium">Full job description</div>
+                <div className="text-sm uppercase tracking-[0.16em] text-alpine mb-2 font-semibold">Full job description</div>
                 <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
                   Prefer the full details up front?
                 </h3>
@@ -258,9 +254,8 @@ export default function CareersPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">How it works</span>
+            <div className="mb-5">
+              <span className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">How it works</span>
             </div>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               The hiring process, start to finish.

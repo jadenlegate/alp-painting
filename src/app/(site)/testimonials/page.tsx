@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
-import { Star } from "lucide-react";
+import { Star, Play } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Testimonials — Whistler Painters with 5.0 Google Rating",
   description:
-    "Testimonials from homeowners and property managers across Whistler, Pemberton, and Squamish. 5.0 on Google — see what clients say about working with Alpenglow Painting.",
+    "Testimonials from homeowners and property managers across Whistler, Pemberton, and Squamish. 5.0 on Google — see and hear what clients say about working with Alpenglow Painting.",
   alternates: { canonical: "/testimonials" },
 };
 
-// Testimonials page. Placeholder testimonials — replace with live Google
-// reviews embed or structured review data pulled from Google Business Profile API.
+// Testimonials page. Written testimonials are placeholders for live Google
+// reviews. Video testimonials: drop a vertical (9:16) file into /public and
+// set `src` (and an optional `poster` image) on the matching entry below —
+// the card switches from the placeholder to a real player automatically.
+type VideoTestimonial = { title: string; src?: string; poster?: string };
+
+const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
+  { title: "Exterior painting project" },
+  { title: "Wood restoration project" },
+  { title: "Interior painting project" },
+];
 
 type Review = {
   name: string;
-  location: string;
   rating: number;
   body: string;
 };
@@ -23,49 +32,41 @@ type Review = {
 const REVIEWS: Review[] = [
   {
     name: "Lawrence N.",
-    location: "Whistler",
     rating: 5,
     body: "Jayden and his crew at Alpenglow did a fantastic job of painting the exterior of my house at Whistler, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. Jayden kept me well informed throughout the process. He and his crew are just really great guys. They are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
   },
   {
     name: "Cheryl W.",
-    location: "Whistler",
     rating: 5,
     body: "Jaden was professional and efficient. He took the time to explain the process he would need to do to change colour from dark to light and varnished wood to white semi gloss window trim. He went out to his truck and put together our quote and brought it back to us right away. Price was good! His crew were friendly and flexible and did a great job. They worked around other contractors with ease as we prepared for our home to be listed and got the job done in time and at the price quoted. I highly recommend Alpenglow Painting.",
   },
   {
     name: "Wilf G.",
-    location: "Whistler",
     rating: 5,
     body: "Jaden and his team at Alpenglow worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. And that's exactly why we chose Alpenglow. Jaden made sure a few deficiencies were completed to our satisfaction. We chose Alpenglow partly because they pay their employees a living wage, who seemed happy and respectful in their work.",
   },
   {
     name: "Don W.",
-    location: "Whistler",
     rating: 5,
     body: "Expert workmanship in at a fair price. Very good communication. I highly recommend Alpenglow Painting.",
   },
   {
     name: "Neil McK.",
-    location: "Whistler",
     rating: 5,
     body: "Good communication, fair estimate and overdelivered on nice work with pleasant team. You can't ask for more. Highly recommend.",
   },
   {
     name: "Adam N.",
-    location: "Whistler",
     rating: 5,
     body: "Detailing proposal; value-added recommendations on approach and proactive communication. Well done.",
   },
   {
     name: "Robbie M.",
-    location: "Whistler",
     rating: 5,
     body: "Very happy with quality of work, professionalism, quote break down and follow-up. Nice job!",
   },
   {
     name: "David N.",
-    location: "Whistler",
     rating: 5,
     body: "Excellent customer service and workmanship. They won't leave until you're satisfied with the end product.",
   },
@@ -85,6 +86,38 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+function VideoCard({ video }: { video: VideoTestimonial }) {
+  return (
+    <div>
+      <div className="relative aspect-[9/16] rounded-sm overflow-hidden border border-navy/15 bg-navy">
+        {video.src ? (
+          /* eslint-disable-next-line jsx-a11y/media-has-caption */
+          <video
+            src={video.src}
+            poster={video.poster}
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-alpine/15 flex items-center justify-center">
+              <Play size={24} className="text-alpine translate-x-0.5" fill="currentColor" />
+            </div>
+            <span className="mt-4 text-background/45 text-[0.7rem] uppercase tracking-[0.2em]">
+              Coming soon
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="mt-4 font-serif text-navy text-lg leading-snug tracking-tight">
+        {video.title}
+      </div>
+    </div>
+  );
+}
+
 export default function TestimonialsPage() {
   const avgRating = (REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length).toFixed(1);
 
@@ -93,19 +126,37 @@ export default function TestimonialsPage() {
       <section className="pt-32 md:pt-40 pb-12 md:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Testimonials</div>
+            <Eyebrow className="mb-4">Testimonials</Eyebrow>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               What clients say.
             </h1>
             <p className="mt-5 text-ink text-lg leading-relaxed">
-              Homeowners and property managers from across the Sea to Sky. Every review is from a real project.
+              Homeowners and property managers from across the Sea to Sky. Every
+              testimonial is from a real project.
             </p>
           </div>
         </Container>
       </section>
 
+      {/* Video testimonials */}
+      <section className="pb-16 md:pb-20">
+        <Container>
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <Eyebrow className="mb-4">Hear it from clients</Eyebrow>
+            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+              In their own words.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
+            {VIDEO_TESTIMONIALS.map((v) => (
+              <VideoCard key={v.title} video={v} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* Stats bar */}
-      <section className="border-y border-border py-8 md:py-10">
+      <section className="border-y border-border py-8 md:py-10 bg-stone-light/30">
         <Container>
           <div className="flex flex-wrap gap-8 md:gap-16">
             <div>
@@ -123,7 +174,7 @@ export default function TestimonialsPage() {
         </Container>
       </section>
 
-      {/* Review grid */}
+      {/* Written review grid */}
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
@@ -131,10 +182,7 @@ export default function TestimonialsPage() {
               <div key={i} className="border border-border rounded-sm bg-surface p-6 md:p-7">
                 <StarRating rating={r.rating} />
                 <p className="mt-4 text-ink leading-relaxed">&ldquo;{r.body}&rdquo;</p>
-                <div className="mt-5">
-                  <div className="font-medium text-navy text-sm">{r.name}</div>
-                  <div className="text-xs text-muted mt-0.5">{r.location}</div>
-                </div>
+                <div className="mt-5 font-medium text-navy text-sm">{r.name}</div>
               </div>
             ))}
           </div>

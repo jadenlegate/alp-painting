@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { SITE } from "@/lib/site";
 import { AlertTriangle, Phone } from "lucide-react";
 
@@ -37,39 +37,33 @@ const PILLARS = [
   "Paired with painting",
   "Coordinated by one crew",
   "Weatherproofed properly",
-  "2-year workmanship warranty",
+  "Repairs that disappear",
 ];
 
 const SCOPE_CARDS = [
   {
-    n: "01",
-    title: "Rotted siding & trim replacement.",
-    body: "When prep reveals rot, replacing the failing board is part of the work — not a separate project. We pull the damaged piece, match the species and profile, fasten it correctly, and seal the joinery before the new finish goes on. Done as part of painting so the repair blends in once colour lands.",
+    title: "Rotted siding & trim",
+    body: "Failing boards pulled and replaced in matched species before the finish goes on.",
   },
   {
-    n: "02",
-    title: "Fascia, soffit & rake board repair.",
-    body: "Failed fascia and soffit are the most common reason exterior paint jobs fail at the roofline. We replace damaged sections with matched material, re-flash where needed, and prime the new wood so the topcoat reads consistent with the existing finish. The roofline is where the eye lands first.",
+    title: "Fascia, soffit & rake board",
+    body: "The roofline rot that makes a paint job fail early, fixed and re-flashed.",
   },
   {
-    n: "03",
-    title: "Window & door trim rebuilds.",
-    body: "Window and door trim takes water, sun, and impact. Rotted casings, split sills, and failing mitres get replaced in matched profile before priming and painting. The repair is invisible because it's measured, fastened, and finished by the same crew doing the paint — not handed off to a sub.",
+    title: "Window & door trim",
+    body: "Rotted casings, split sills, and failing mitres rebuilt in matched profile.",
   },
   {
-    n: "04",
-    title: "Deck boards, railings & balustrades.",
-    body: "Loose boards, soft pickets, and rotten rail caps don't get covered up with stain. We swap the failing pieces, re-fasten the deck where needed, and finish the new wood to match the existing. The deck reads as a single restoration project, not a patchwork of new and old.",
+    title: "Deck boards & railings",
+    body: "Loose boards, soft pickets, and rotten rail caps swapped — not painted over.",
   },
   {
-    n: "05",
-    title: "Cedar & Hardie repairs.",
-    body: "Cedar and Hardie don't behave the same — cedar splits along the grain, Hardie cracks and crumbles. We use the right cut, fastener, and caulk for each, then finish to match the existing siding. Repairs disappear once the paint goes on, even on the south-facing wall.",
+    title: "Cedar & Hardie repairs",
+    body: "The right cut, fastener, and caulk for each, finished to match the siding.",
   },
   {
-    n: "06",
-    title: "Caulking, flashing & weatherproofing.",
-    body: "Most exterior failures start at the joints — a bad caulk bead, a missing kick-out flashing, a gap where water can sit. As part of every repair we tighten the building envelope around the work: caulk, flashing, sealant. The result is a repair that doesn't recur the next winter.",
+    title: "Caulking & flashing",
+    body: "The joints and details where water gets in, sealed as part of the repair.",
   },
 ];
 
@@ -82,20 +76,20 @@ const OUT_OF_SCOPE = [
 
 const APPROACH = [
   {
-    title: "Coordinated through one point of contact.",
-    body: "You work with Alpenglow start to finish. We handle the scheduling, the trades, and the hand-off between carpentry and paint so you're not chasing multiple contractors to keep a project moving.",
+    title: "One point of contact.",
+    body: "We handle the scheduling and the hand-off between carpentry and paint so you're not chasing trades.",
   },
   {
-    title: "Identified during the quote, not as a surprise.",
-    body: "On the site visit we look for rot, soft spots, and failing trim before we write the proposal. If we find it, it's in the quote. If we miss something that only shows up once prep starts, we tell you before spending a dollar.",
+    title: "Found at the quote, not as a surprise.",
+    body: "We look for rot and failing trim before we write the proposal. If we find it, it's in the quote.",
   },
   {
-    title: "Matched to the surrounding materials.",
-    body: "Repairs are done with the same siding species, profile, and finish as the rest of the house — cedar with cedar, Hardie with Hardie — so the work blends in once the paint or stain goes on.",
+    title: "Matched to the house.",
+    body: "Same species, profile, and finish as the rest of the home, so the repair blends in once painted.",
   },
   {
     title: "Paired with paint, not sold alone.",
-    body: "We do this work because it's almost always needed before painting. We don't take standalone carpentry jobs — if you need a builder or finish carpenter, we'll point you to one we trust.",
+    body: "We do this because it's needed before painting. We don't take standalone carpentry jobs.",
   },
 ];
 
@@ -106,27 +100,23 @@ const FAQS = [
   },
   {
     q: "What if you find more rot once you start prepping?",
-    a: "We stop and tell you immediately. Nothing gets built or billed without a written change order. Hidden rot is one of the most common reasons exterior projects go over budget — we'd rather pause and re-scope than push through and surprise you.",
+    a: "We stop and tell you immediately. Nothing gets built or billed without a written change order. Hidden rot is one of the most common reasons exterior projects go over budget — we'd rather pause and re-scope than surprise you.",
   },
   {
     q: "How do you match the new material to the existing siding?",
-    a: "Same species, same profile, same dimension wherever possible. For cedar that's typically rough or smooth in matching widths; for Hardie, the same product line and texture. Once the finish goes on, the repair disappears.",
+    a: "Same species, profile, and dimension wherever possible — rough or smooth cedar in matching widths, or the same Hardie line and texture. Once the finish goes on, the repair disappears.",
   },
   {
     q: "Do you do interior carpentry too?",
     a: "Only incidental — baseboard and trim swaps as part of an interior paint job, for example. We don't take on cabinetry, built-ins, or finish carpentry as standalone work.",
   },
   {
-    q: "Is the repair work covered under your warranty?",
-    a: "The workmanship on the carpentry repair is covered for 2 years. Wood that fails later due to moisture, structural movement, or defects outside our control isn't — same exclusions that apply to any exterior work. Details are in our full warranty page.",
-  },
-  {
     q: "Can you just do the carpentry and we'll paint it ourselves?",
-    a: "We prefer to pair the two — and there's a real reason for it. A big part of the value of fixing rot or trim before a paint job is making sure the repair is sealed and protected properly, which happens in the way the paint or stain is applied right after. When both sides are handled by the same team, the repair blends in, the warranty stays clean, and you get one crew accountable for the result. If a carpentry-only job is really what you need, we're happy to recommend someone in the corridor.",
+    a: "We prefer to pair the two. A big part of the value of fixing rot or trim before painting is making sure the repair is sealed and protected properly — which happens in how the paint or stain goes on right after. When one team handles both, the repair blends in and you get one crew accountable. If a carpentry-only job is really what you need, we're happy to recommend someone in the corridor.",
   },
   {
     q: "How long does a typical repair add to the project?",
-    a: "Most rot and trim repairs add 1–3 days to the front end of a paint project, depending on the scope. We sequence the repair, give it the right cure or dry time, then move into prep and finish — so the surface is ready and the new wood blends in.",
+    a: "Most rot and trim repairs add 1–3 days to the front of a paint project, depending on scope. We sequence the repair, give it the right cure time, then move into prep and finish so the new wood blends in.",
   },
 ];
 
@@ -154,27 +144,21 @@ export default function LightCarpentryPage() {
         <Container>
           <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Repair-level carpentry
-                </span>
-              </div>
+              <Eyebrow className="mb-5">Repair-level carpentry</Eyebrow>
               <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
                 Fix the wood,<br /><em className="text-alpine not-italic font-medium">then</em> paint it.
               </h2>
               <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
                 <p>
                   Rot, rotted trim, and failing fascia don&rsquo;t wait for the
-                  painter. On Sea-to-Sky homes, moisture and freeze-thaw cycles
-                  quietly undo exterior surfaces year after year — and if you
-                  paint over compromised wood, the paint fails.
+                  painter. Moisture and freeze-thaw quietly undo exterior surfaces
+                  year after year — and if you paint over compromised wood, the
+                  paint fails.
                 </p>
                 <p>
                   We scope and coordinate the repair as part of your painting or
-                  wood restoration project. Small-to-medium repair work on
-                  siding, trim, fascia, soffits, deck boards, and the
-                  weatherproofing details that surround them.
+                  wood restoration project — siding, trim, fascia, soffits, deck
+                  boards, and the weatherproofing around them.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -190,9 +174,7 @@ export default function LightCarpentryPage() {
             </div>
 
             <div>
-              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
-                How every repair runs
-              </div>
+              <Eyebrow className="mb-5">How every repair runs</Eyebrow>
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {PILLARS.map((p) => (
                   <div
@@ -211,45 +193,37 @@ export default function LightCarpentryPage() {
         </Container>
       </section>
 
-      {/* What's in scope — 3x2 card grid */}
+      {/* What's in scope */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
           <div className="max-w-3xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                What&rsquo;s in scope
-              </span>
-            </div>
+            <Eyebrow className="mb-5">What&rsquo;s in scope</Eyebrow>
             <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
               Repair work that disappears under the finish.
             </h2>
             <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
-              Six categories of repair we handle as part of paint and wood
-              restoration projects. If your scope falls outside these, we&rsquo;ll
-              tell you at the site visit and point you to someone we trust.
+              The repairs we handle as part of paint and wood restoration projects.
+              If your scope falls outside these, we&rsquo;ll point you to someone we trust.
             </p>
           </div>
           <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SCOPE_CARDS.map((c) => (
               <article
-                key={c.n}
-                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+                key={c.title}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 transition-colors hover:border-navy/40"
               >
                 <div className="h-px w-7 bg-alpine" aria-hidden />
                 <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {c.title}
                 </h3>
-                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
-                  {c.body}
-                </p>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{c.body}</p>
               </article>
             ))}
           </div>
 
-          {/* Out of scope list */}
+          {/* Out of scope */}
           <div className="mt-12 md:mt-16 max-w-3xl border-t border-navy/10 pt-10">
-            <div className="text-[0.7rem] uppercase tracking-[0.3em] text-muted mb-5 font-medium">
+            <div className="text-sm uppercase tracking-[0.16em] text-muted mb-5 font-semibold">
               What&rsquo;s not
             </div>
             <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
@@ -268,12 +242,9 @@ export default function LightCarpentryPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">How we approach it</span>
-            </div>
+            <Eyebrow className="mb-5">How we approach it</Eyebrow>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Repair work that disappears — not patches that announce themselves.
+              Repairs that disappear — not patches that announce themselves.
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
@@ -292,19 +263,17 @@ export default function LightCarpentryPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <AlertTriangle size={24} className="mx-auto mb-5 text-alpine" />
-            <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
+            <div className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold mb-5">
               Honest about scope
             </div>
             <h2 className="font-serif text-background font-medium text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight">
               If the repair is big enough to be its own project, we&rsquo;ll say so.
             </h2>
             <p className="mt-6 text-background/75 text-lg leading-relaxed">
-              There&rsquo;s a line where a repair becomes a build — and on the
-              other side of that line, you&rsquo;re better served by a dedicated
-              carpenter or GC. We won&rsquo;t take on work we can&rsquo;t do at
-              the same standard as our painting. If your project needs more than
-              repair-level carpentry, we&rsquo;ll tell you at the site visit and
-              recommend someone in the corridor we&rsquo;d use ourselves.
+              There&rsquo;s a line where a repair becomes a build — and past it,
+              you&rsquo;re better served by a dedicated carpenter or GC. If your
+              project needs more than repair-level carpentry, we&rsquo;ll tell you
+              at the site visit and recommend someone in the corridor we&rsquo;d use ourselves.
             </p>
           </div>
         </Container>
@@ -312,20 +281,11 @@ export default function LightCarpentryPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-10 bg-alpine" aria-hidden />
-            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
-          </div>
+          <Eyebrow className="mb-5">Frequently asked</Eyebrow>
           <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Light carpentry questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
-
-      <WarrantyBanner
-        years="2"
-        heading="Years of workmanship warranty on every repair."
-        body="Covers the work we performed — joinery, fastening, weatherproofing, and finish prep. Wood that fails later due to moisture, structural movement, or defects outside our control sits outside the warranty, same as any exterior wood."
-      />
 
       <CtaBlock
         heading="Got rot or failing trim?"

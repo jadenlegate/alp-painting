@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
@@ -12,7 +13,7 @@ import { Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Interior Painters — Whistler, Pemberton & Squamish",
   description:
-    "Professional interior painters serving Whistler, Pemberton, and Squamish. Walls, trim, ceilings, and doors with clean crews, premium Benjamin Moore and Sherwin-Williams finishes, and up to a 10-year warranty.",
+    "Professional interior painters serving Whistler, Pemberton, and Squamish. Walls, trim, ceilings, and doors with clean crews, premium finishes, and a 10-year warranty.",
   alternates: { canonical: "/services/interior-painting" },
 };
 
@@ -28,7 +29,7 @@ const serviceJsonLd = {
     { "@type": "City", name: "Squamish" },
   ],
   description:
-    "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and up to a 10-year warranty.",
+    "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and a 10-year warranty.",
   url: "https://alpenglowpainting.ca/services/interior-painting",
 };
 
@@ -43,61 +44,48 @@ const PILLARS = [
 
 const SURFACE_CARDS = [
   {
-    n: "01",
-    title: "Walls — every room, every sheen.",
-    body: "Bedrooms want flat. Kitchens and baths want a scrubbable eggshell. Accent walls want a finish that holds the saturated colour. We pick sheen by room, prep so the coat lays even, and roll two coats standard — three when the colour demands it. Lines stay sharp against trim, ceilings, and corners in any light.",
+    title: "Walls",
+    body: "Bedrooms, kitchens, baths, accent walls — sheen matched to the room, two coats standard, lines cut sharp.",
   },
   {
-    n: "02",
-    title: "Ceilings — including the vaulted ones.",
-    body: "Ceilings get noticed when they're done wrong — roller spatter on the wall, an uneven line at the cornice, paint on the trim. We mask, sheet, and cut every edge by hand. Vaulted and beam-detailed ceilings get extra care to manage spray drift and protect timber. Done properly, the ceiling reads as part of the room.",
+    title: "Ceilings",
+    body: "Flat, vaulted, and beam-detailed, masked and cut by hand so nothing lands on the walls or trim.",
   },
   {
-    n: "03",
-    title: "Trim, baseboards & crown moulding.",
-    body: "Trim is where careful painters separate from quick ones. We caulk every gap, sand previous coats so the new finish lays smooth, and hand-cut every line against wall and floor. Cabinet-grade alkyds on door casings, baseboards, and handrails — the surfaces you'll touch — so the finish stays hard and washable for years.",
+    title: "Trim, baseboards & crown",
+    body: "Caulked, sanded, and hand-finished in a hard, washable coat built for daily contact.",
   },
   {
-    n: "04",
-    title: "Doors, frames & jambs.",
-    body: "Doors take more handling than any other interior surface, which means the finish has to hold. We remove doors when sensible, sand and prime the slab, and spray or hand-finish for a hardware-grade result. Frames and jambs get the same hard finish — they're the surfaces people brush past every day.",
+    title: "Doors, frames & jambs",
+    body: "Removed where it makes sense and finished smooth — the surfaces you touch every day, done right.",
   },
   {
-    n: "05",
-    title: "Stair railings, spindles & risers.",
-    body: "Staircases are tedious and visible — exactly the kind of work that exposes a corner-cutting crew. We hand-sand every spindle, mask risers separately, and refinish handrails with a hard topcoat that takes daily contact. The result is the staircase the house wants to remember itself by.",
+    title: "Stair railings & spindles",
+    body: "Hand-sanded spindles and a hard-wearing handrail finish — the tedious work most crews rush.",
   },
   {
-    n: "06",
-    title: "Closets, repair & colour guidance.",
-    body: "Closet interiors, drywall patches, water-damage repair, and on-wall colour testing are all included when they come up — we don't quote them separately at invoice time. If you want help picking a colour, we'll bring drawdowns and test them in your actual light, not under the showroom's.",
+    title: "Closets, repair & colour",
+    body: "Closet interiors, drywall patches, and on-wall colour testing — included, not billed as extras.",
   },
 ];
 
 const APPROACH = [
   {
     title: "We protect before we paint.",
-    body: "Floors, furniture, fixtures — nothing painted accidentally, nothing dusty at the end. You'll notice on day one.",
+    body: "Floors, furniture, fixtures — nothing painted accidentally, nothing dusty at the end.",
   },
   {
     title: "Two coats is the baseline.",
-    body: "We don't call a room 'done' because the roller ran over it once. Full, even coverage with proper dry time between coats.",
+    body: "Full, even coverage with proper dry time between coats. We don't call a room done after one pass.",
   },
   {
     title: "Low-VOC products by default.",
-    body: "Benjamin Moore Aura, Sherwin-Williams Emerald, and similar premium lines — low odour, safe to sleep in the same night.",
+    body: "Premium low-odour lines — safe to sleep in the same room the night we finish.",
   },
   {
     title: "Closeout you'll actually use.",
-    body: "Every project ends with a document listing the exact products, colours, and sheens we used — so repairs or touch-ups, years later, aren't guesswork.",
+    body: "A project report listing the exact products, colours, and sheens — so touch-ups years later aren't guesswork.",
   },
-];
-
-const PRODUCTS = [
-  "Benjamin Moore",
-  "Sherwin-Williams",
-  "Sikkens",
-  "Minwax",
 ];
 
 const RELATED_PROJECTS: Project[] = [
@@ -134,16 +122,12 @@ const FAQS = [
     a: "Almost always, yes. We use low-VOC products and work one area at a time so you have a clean, dry space to live in. We'll walk through the logistics on the site visit.",
   },
   {
-    q: "What's included in the quote?",
-    a: "Everything that goes into the project — prep, materials, labour, drop cloths, masking, two-coat finish, daily cleanup, and the final walkthrough. The proposal itemizes each room so you can see exactly what's covered. No vague lump sums.",
-  },
-  {
-    q: "Do you move furniture?",
-    a: "We move light-to-medium furniture to the center of the room and cover it. For large or fragile pieces we'll coordinate in advance — usually you move the antiques, we handle everything else.",
+    q: "What products do you use?",
+    a: "Premium interior lines specified to the surface and the wear — Benjamin Moore Aura and Advance, Sherwin-Williams Emerald, and similar. We don't upcharge for a brand name; we use the right product for the job and tell you exactly what's going on your walls before we start.",
   },
   {
     q: "How do you handle colour selection?",
-    a: "We can test swatches on your walls and compare in your light. If you want outside help, we partner with a local colour consultant who knows Sea-to-Sky light conditions. Either way, you'll see the colours on your wall before they go on the wall.",
+    a: "We test swatches on your walls and compare them in your light. If you want outside help, we partner with a local colour consultant who knows Sea-to-Sky light. Either way, you see the colours on your wall before they go on the wall.",
   },
   {
     q: "What prep work is included before painting?",
@@ -152,10 +136,6 @@ const FAQS = [
   {
     q: "What does the warranty cover?",
     a: "Peeling, flaking, and premature failure of the paint finish under normal interior conditions. Interior projects carry a 10-year written warranty when we apply approved products with standard prep.",
-  },
-  {
-    q: "What happens at the final walkthrough?",
-    a: "We walk the project with you room by room, address any touch-ups on the spot, and hand off a project report listing the exact products, colours, and sheens we used. So if you need to touch up years later, it's not guesswork.",
   },
 ];
 
@@ -173,40 +153,30 @@ export default function InteriorPaintingPage() {
         imageUrl="/stock-images/empty-dark-blue-wall-modern-living-room-mock-up-interior-contemporary-style-free-space-picture-poster-leather-sofa-armchair-fireplace-plant-3d-rendering_429124-1653.avif"
         imageAlt="Interior of a Whistler home mid-repaint"
       >
-        <Button
-          href="/contact"
-          size="lg"
-          className="!bg-background !text-navy hover:!bg-surface"
-        >
+        <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
       </Hero>
 
-      {/* Intro — editorial display + pillars */}
+      {/* Intro */}
       <section className="py-16 md:py-28">
         <Container>
           <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Interior painting in the Sea to Sky
-                </span>
-              </div>
+              <Eyebrow className="mb-5">Interior painting in the Sea to Sky</Eyebrow>
               <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
                 The full interior,<br />done <em className="text-alpine not-italic font-medium">properly</em>.
               </h2>
               <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
                 <p>
                   Most homes we paint in Whistler are lived in — primary
-                  residences, long-term rentals, second homes used every
-                  weekend. That means the job has to be precise, low-disruption,
-                  and finished cleanly enough that the house is better than
-                  before we arrived.
+                  residences, long-term rentals, second homes used every weekend.
+                  The job has to be precise, low-disruption, and finished cleanly
+                  enough that the house is better than before we arrived.
                 </p>
                 <p>
-                  Whether it&rsquo;s a single accent wall or a whole-house
-                  repaint, the standard is the same.
+                  A single accent wall or a whole-house repaint — the standard is
+                  the same.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -221,11 +191,8 @@ export default function InteriorPaintingPage() {
               </div>
             </div>
 
-            {/* Pillars — outlined editorial boxes */}
             <div>
-              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
-                What every project includes
-              </div>
+              <Eyebrow className="mb-5">What every project includes</Eyebrow>
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {PILLARS.map((p) => (
                   <div
@@ -244,55 +211,46 @@ export default function InteriorPaintingPage() {
         </Container>
       </section>
 
-      {/* Surfaces & details — 3x2 card grid */}
+      {/* Surfaces & details */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
           <div className="max-w-3xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                Surfaces & details
-              </span>
-            </div>
+            <Eyebrow className="mb-5">Surfaces & details</Eyebrow>
             <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
               Everything inside the house — from baseboards to vaulted ceilings.
             </h2>
             <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
-              Homeowners often ask if we&rsquo;ll paint the closet interiors,
-              the stair spindles, or the inside of the door frames. The answer
-              is yes — and the proposal will show you exactly what&rsquo;s in
-              scope so nothing is skipped and nothing surprises you on invoice day.
+              If it&rsquo;s a finished surface and you want it painted, we paint
+              it — and the proposal shows exactly what&rsquo;s in scope.
             </p>
           </div>
           <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SURFACE_CARDS.map((c) => (
               <article
-                key={c.n}
-                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+                key={c.title}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 transition-colors hover:border-navy/40"
               >
                 <div className="h-px w-7 bg-alpine" aria-hidden />
                 <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {c.title}
                 </h3>
-                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
-                  {c.body}
-                </p>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{c.body}</p>
               </article>
             ))}
           </div>
         </Container>
       </section>
 
+      <WarrantyBanner
+        title="10-Year Interior Painting Warranty"
+        body="Every interior project is backed in writing against peeling, flaking, and premature finish failure under normal conditions. If it fails inside the window, we come back and fix it."
+      />
+
       {/* Approach */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                Our approach
-              </span>
-            </div>
+            <Eyebrow className="mb-5">Our approach</Eyebrow>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               The details other painters skip.
             </h2>
@@ -301,7 +259,7 @@ export default function InteriorPaintingPage() {
             {APPROACH.map((a) => (
               <div
                 key={a.title}
-                className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8"
+                className="border-l-2 border-alpine bg-background p-6 md:p-8"
               >
                 <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">
                   {a.title}
@@ -313,44 +271,7 @@ export default function InteriorPaintingPage() {
             ))}
           </div>
           <div className="mt-10">
-            <Button href="/process" variant="text">
-              See our full process →
-            </Button>
-          </div>
-        </Container>
-      </section>
-
-      {/* Products */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Products we use
-                </span>
-              </div>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
-                Premium lines, specified for the job.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                We don&rsquo;t upcharge for a brand name. We use the right
-                product for the surface, the sheen, and the wear you&rsquo;ll
-                put it through — and document the exact specification in the
-                project report.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              {PRODUCTS.map((p) => (
-                <div
-                  key={p}
-                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
-                >
-                  {p}
-                </div>
-              ))}
-            </div>
+            <Button href="/process" variant="text">See our full process →</Button>
           </div>
         </Container>
       </section>
@@ -360,19 +281,12 @@ export default function InteriorPaintingPage() {
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div className="max-w-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Recent interior work
-                </span>
-              </div>
+              <Eyebrow className="mb-5">Recent interior work</Eyebrow>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
                 A few projects we&rsquo;ve loved.
               </h2>
             </div>
-            <Button href="/work" variant="text">
-              See all work →
-            </Button>
+            <Button href="/work" variant="text">See all work →</Button>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {RELATED_PROJECTS.map((p) => (
@@ -385,24 +299,13 @@ export default function InteriorPaintingPage() {
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-10 bg-alpine" aria-hidden />
-            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-              Frequently asked
-            </span>
-          </div>
+          <Eyebrow className="mb-5">Frequently asked</Eyebrow>
           <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">
             Interior painting questions.
           </h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
-
-      <WarrantyBanner
-        years="10"
-        heading="Years on every interior painting project, in writing."
-        body="Standard on every interior project — covers peeling, flaking, and premature finish failure under normal conditions, when work is done with approved products. If something fails inside the window, we come back and fix it. That's the whole deal."
-      />
 
       <CtaBlock
         eyebrow="Get in touch"

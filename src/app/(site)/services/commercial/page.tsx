@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
@@ -35,35 +36,31 @@ const PILLARS = [
   "Phased to keep buildings running",
   "Strata coordination included",
   "$5M liability insurance",
-  "WorkSafeBC coverage on every worker",
+  "WorkSafeBC coverage",
   "Resident & guest notification",
   "Warranty matched to substrate",
 ];
 
 const AUDIENCES = [
   {
-    n: "01",
     icon: Building2,
-    title: "Strata councils & property managers.",
-    body: "Multi-unit projects require coordination with residents, clear communication to the council, and a crew that shows up professional. We've done strata work and know what it actually involves — scheduling around moves, keeping common areas accessible, formal progress updates at council meetings.",
+    title: "Strata councils & property managers",
+    body: "Resident coordination, formal updates to the council, and a crew that shows up professional.",
   },
   {
-    n: "02",
     icon: Clock,
-    title: "Hotels & commercial properties.",
-    body: "Your revenue doesn't stop for a paint job. We work around your operations — phased by floor, by wing, or by time of day. Night work is available for high-priority guest areas. We've delivered work in occupied hotel buildings without disrupting check-ins or housekeeping rhythms.",
+    title: "Hotels & commercial properties",
+    body: "Phased by floor, wing, or time of day — night work available — so your revenue doesn't stop.",
   },
   {
-    n: "03",
     icon: Users,
-    title: "Custom home builders.",
-    body: "Deadline-driven, specification-precise, no drama. We integrate with your build schedule, hit our milestones, and communicate with your site super directly. Several Sea-to-Sky builders use us as their go-to painting partner because we don't slip and we don't surprise them.",
+    title: "Custom home builders",
+    body: "Deadline-driven and spec-precise. We integrate with your build and hit our milestones.",
   },
   {
-    n: "04",
     icon: CalendarCheck,
-    title: "Property developers.",
-    body: "Pre-sale condition work, suite turns, common area refreshes. Fast turnarounds, consistent quality across multiple units, and documentation you can hand to buyers. Multi-building and multi-phase contracts handled with progress documentation at every close.",
+    title: "Property developers",
+    body: "Pre-sale work, suite turns, and common-area refreshes with documentation you can hand to buyers.",
   },
 ];
 
@@ -84,7 +81,7 @@ const FAQS = [
   },
   {
     q: "Can you work outside regular hours for hotels?",
-    a: "Yes. For guest-area work, we can shift to early morning, evening, or weekend schedules. This costs more but is often worth it to avoid revenue disruption. We talk through the options on the site visit.",
+    a: "Yes. For guest-area work we can shift to early morning, evening, or weekend schedules. It costs more but is often worth it to avoid revenue disruption. We talk through the options on the site visit.",
   },
   {
     q: "Do you provide references for commercial work?",
@@ -101,14 +98,6 @@ const FAQS = [
   {
     q: "How do you handle deficiencies or callbacks?",
     a: "Formally, in writing, within 5 business days of substantial completion. If a deficiency shows up after that, contact us — we stand behind the work within the warranty period.",
-  },
-  {
-    q: "Do you work directly with general contractors?",
-    a: "Yes. For new builds and major renovations we integrate with the GC's schedule, hit our painting milestones, and provide invoicing and progress updates in whatever format the GC's accounting needs. We've worked under several Sea-to-Sky builders.",
-  },
-  {
-    q: "Can you handle multi-building or multi-phase contracts?",
-    a: "Yes. We've delivered phased multi-building work for strata clients and property developers, with documentation handed back at each phase close so the client always knows what's been completed and what's pending.",
   },
 ];
 
@@ -136,26 +125,19 @@ export default function CommercialPage() {
         <Container>
           <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Commercial painting in the Sea to Sky
-                </span>
-              </div>
+              <Eyebrow className="mb-5">Commercial painting in the Sea to Sky</Eyebrow>
               <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
                 B2B clients have different needs.<br />We plan around <em className="text-alpine not-italic font-medium">them</em>.
               </h2>
               <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
                 <p>
                   Commercial painting isn&rsquo;t harder than residential —
-                  it&rsquo;s different. The scheduling is tighter, the
-                  communication has to be more formal, and the cost of
-                  disruption is higher. We&rsquo;ve done the work to understand
-                  what that means in practice.
+                  it&rsquo;s different. Tighter scheduling, more formal
+                  communication, and a higher cost of disruption.
                 </p>
                 <p>
-                  Strata buildings, hotels, builders, developers — each
-                  one runs on a different rhythm. Our job is to fit into yours.
+                  Strata buildings, hotels, builders, developers — each runs on a
+                  different rhythm. Our job is to fit into yours.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -171,9 +153,7 @@ export default function CommercialPage() {
             </div>
 
             <div>
-              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
-                What every commercial project includes
-              </div>
+              <Eyebrow className="mb-5">What every commercial project includes</Eyebrow>
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {PILLARS.map((p) => (
                   <div
@@ -192,16 +172,11 @@ export default function CommercialPage() {
         </Container>
       </section>
 
-      {/* Who we work with — audience cards */}
+      {/* Who we work with */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
           <div className="max-w-3xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                Who we work with
-              </span>
-            </div>
+            <Eyebrow className="mb-5">Who we work with</Eyebrow>
             <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
               Four B2B audiences. One approach.
             </h2>
@@ -209,39 +184,38 @@ export default function CommercialPage() {
           <div className="grid gap-5 md:gap-6 md:grid-cols-2">
             {AUDIENCES.map((a) => (
               <article
-                key={a.n}
+                key={a.title}
                 className="group relative border border-navy/15 bg-background p-7 md:p-9 transition-colors hover:border-navy/40"
               >
                 <a.icon size={22} className="text-navy/50 mb-4" />
                 <h3 className="font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {a.title}
                 </h3>
-                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
-                  {a.body}
-                </p>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </article>
             ))}
           </div>
         </Container>
       </section>
 
+      <WarrantyBanner
+        title="Warranty Matched to the Substrate"
+        body="Every commercial project is backed in writing — 10 years on interior painting, 5 on exterior solid finishes, 2 on exterior stains. The same terms as our residential work, documented in the project agreement."
+      />
+
       {/* What's standard */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="grid gap-12 md:gap-16 md:grid-cols-2 items-start">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Standard on every commercial project</span>
-              </div>
+              <Eyebrow className="mb-5">Standard on every commercial project</Eyebrow>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
                 Structure that keeps B2B projects on track.
               </h2>
               <p className="mt-5 text-ink leading-relaxed">
                 The biggest frustration in commercial painting is
-                miscommunication. Unclear scope, missed milestones, nobody to
-                call when something&rsquo;s wrong. We address that with
-                structure from day one.
+                miscommunication — unclear scope, missed milestones, nobody to
+                call. We address that with structure from day one.
               </p>
               <div className="mt-8">
                 <Button href="/process" variant="secondary">See our full process</Button>
@@ -260,7 +234,7 @@ export default function CommercialPage() {
       </section>
 
       {/* Insurance callout */}
-      <section className="py-12 md:py-16 bg-stone-light/50">
+      <section className="py-12 md:py-16">
         <Container>
           <div className="grid gap-4 md:gap-5 md:grid-cols-3">
             {[
@@ -280,22 +254,13 @@ export default function CommercialPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-10 bg-alpine" aria-hidden />
-            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
-          </div>
+          <Eyebrow className="mb-5">Frequently asked</Eyebrow>
           <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Commercial project questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
-
-      <WarrantyBanner
-        years="10"
-        heading="Years on interior. Five on exterior solid. Two on exterior stain."
-        body="Written warranty on every commercial project, matched to the substrate. Same terms as our residential work — we don't water it down for B2B. Documented in the project agreement."
-      />
 
       <CtaBlock
         eyebrow="Commercial inquiry"

@@ -69,9 +69,7 @@ export function Hero({
           {eyebrow && (
             <motion.div
               variants={item}
-              className={`text-xs uppercase tracking-[0.2em] mb-5 ${
-                imageUrl ? "text-alpine" : "text-alpine"
-              }`}
+              className="text-sm uppercase tracking-[0.16em] font-semibold mb-5 text-alpine"
             >
               {eyebrow}
             </motion.div>

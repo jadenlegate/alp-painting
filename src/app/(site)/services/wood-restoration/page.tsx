@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
@@ -13,7 +14,7 @@ import { Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Wood Restoration & Staining — Whistler, Pemberton & Squamish",
   description:
-    "Cedar siding, decks, timber-frame beams, and fences. Wood restoration and staining across Whistler, Pemberton, and Squamish using Sansin, Sikkens, and Messmer's penetrating finishes.",
+    "Cedar siding, decks, timber-frame beams, and fences. Wood restoration and staining across Whistler, Pemberton, and Squamish with penetrating finishes built for mountain exposure.",
   alternates: { canonical: "/services/wood-restoration" },
 };
 
@@ -29,7 +30,7 @@ const serviceJsonLd = {
     { "@type": "City", name: "Squamish" },
   ],
   description:
-    "Wood restoration and staining for cedar siding, decks, timber-frame beams, and fences across Whistler and the Sea to Sky. Premium penetrating stains specified for mountain exposure.",
+    "Wood restoration and staining for cedar siding, decks, timber-frame beams, and fences across Whistler and the Sea to Sky.",
   url: "https://alpenglowpainting.ca/services/wood-restoration",
 };
 
@@ -44,57 +45,49 @@ const PILLARS = [
 
 const SURFACE_CARDS = [
   {
-    n: "01",
-    title: "Cedar siding & shingles.",
-    body: "Sea-to-Sky cedar tells you exactly how long it's been since the last finish — UV graying, raised grain, peeling stain over weathered substrate. We clean and brighten first so new stain bonds with the wood, not just sits on top. Penetrating finishes for most applications because they fail gracefully, not in sheets.",
+    title: "Cedar siding & shingles",
+    body: "Cleaned, brightened, and stained back from grey — penetrating finishes that fail gracefully, not in sheets.",
   },
   {
-    n: "02",
-    title: "Decks, railings & spindles.",
-    body: "Decks take the most punishment of any wood on the house — sun, foot traffic, snow load, pooling water. We strip back failing finishes, sand to a clean surface, and apply two coats of product matched to traffic and exposure. Most horizontal surfaces re-coat every 2–4 years, and we tell you when.",
+    title: "Decks, railings & spindles",
+    body: "Stripped and sanded, then two coats matched to traffic on the hardest-working wood on the house.",
   },
   {
-    n: "03",
-    title: "Timber frames, beams & posts.",
-    body: "Exposed timber frames are the defining detail of mountain architecture — and the most expensive to replace if they fail. We assess for checking, raised grain, and previous finish behaviour, then specify Sansin or a similar penetrating finish that protects the wood without changing how it reads in natural light.",
+    title: "Timber frames, beams & posts",
+    body: "Checked for splits and finished to protect exposed timber without changing how it reads in the light.",
   },
   {
-    n: "04",
-    title: "Pine ceilings & deck soffits.",
-    body: "Covered ceilings — pine T&G, cedar V-joint, deck soffits — develop a yellow-to-orange cast with age that most homeowners want to refresh. We assess, sand back where needed, and apply a finish that maintains the wood's natural grain. Spar urethane where durability matters; penetrating stains where appearance does.",
+    title: "Pine ceilings & deck soffits",
+    body: "Covered ceilings brought back from a yellowed cast to clean, natural grain.",
   },
   {
-    n: "05",
-    title: "Fences, gates & garden structures.",
-    body: "Fences age fast and inconsistently — exposed pickets gray while sheltered sections stay sound. We strip and brighten the failing wood, replace boards where needed, and finish with a stain matched to the original — or shifted intentionally if you want a different look. Most fences need a refresh every 3–5 years.",
+    title: "Fences, gates & garden structures",
+    body: "Stripped, repaired where needed, and stained to a consistent colour again.",
   },
   {
-    n: "06",
-    title: "Re-coat scheduling & maintenance.",
-    body: "Wood restoration done once doesn't stay done forever. Every project closes with a written maintenance schedule in your final report. Most penetrating finishes hold 2–5 years depending on exposure; proactive re-coats cost a fraction of a full restoration. We tell you when to call us back.",
+    title: "Re-coat scheduling",
+    body: "A written maintenance window so you refresh on time instead of starting over.",
   },
 ];
 
 const APPROACH = [
   {
     title: "Restoration before staining.",
-    body: "Stain over weathered, gray wood doesn't penetrate properly. We clean and brighten the surface first so the product actually bonds with the wood — not just coats the top.",
+    body: "Stain over weathered grey wood doesn't bond. We clean and brighten first so the product penetrates.",
   },
   {
     title: "Penetrating finishes by default.",
-    body: "Film-forming finishes peel. Penetrating products absorb into the wood and fail gracefully — they don't crack or lift. On most Sea-to-Sky exteriors, that's the right call.",
+    body: "Film-formers peel. Penetrating products absorb and fail gracefully — the right call on most exteriors here.",
   },
   {
     title: "Product matched to species.",
-    body: "Cedar, Douglas fir, pine, and pressure-treated all behave differently. Sansin for raw timber, Messmer's for smooth cedar, Sikkens for high-traffic decks. Not one-size-fits-all.",
+    body: "Cedar, fir, pine, and pressure-treated all behave differently. We spec to the wood, not one-size-fits-all.",
   },
   {
     title: "Maintenance scheduling included.",
-    body: "Your project report includes a recommended re-coat window — usually 3–5 years depending on exposure. Proactive maintenance costs a fraction of a full restoration.",
+    body: "Your report includes a re-coat window. Proactive maintenance costs a fraction of a full restoration.",
   },
 ];
-
-const PRODUCTS = ["Sansin", "Sikkens", "Messmer's", "Benjamin Moore"];
 
 const RELATED_PROJECTS: Project[] = [
   {
@@ -123,35 +116,27 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "How do I know if my wood needs restoration or just a re-stain?",
-    a: "Gray, weathered wood with raised grain or previous finish peeling needs restoration first. Wood that's just fading but still structurally sound and clean usually just needs a re-coat. We assess this on the site visit and recommend accordingly.",
+    a: "Grey, weathered wood with raised grain or peeling finish needs restoration first. Wood that's just fading but still sound usually needs a re-coat. We assess on the site visit and recommend accordingly.",
   },
   {
-    q: "Can you match the original stain colour?",
-    a: "Usually yes, if you know the product and colour. If not, we can bring samples and test patches on a less visible area to match closely. On very weathered wood the base colour has shifted, which affects how new stain reads.",
+    q: "What products do you use?",
+    a: "Penetrating stains matched to the wood and exposure — Sansin for raw and log work, Messmer's for smooth cedar, Sikkens for high-traffic surfaces. Product choice follows the wood, and we document the exact spec for future maintenance coats.",
   },
   {
     q: "Can you change the stain colour — go darker or lighter?",
-    a: "Going darker is straightforward. Going lighter is harder and usually requires stripping the previous finish back to bare wood before staining. We'll be honest at the site visit about what's realistic for your wood and what it'll cost.",
-  },
-  {
-    q: "How long does a deck staining project take?",
-    a: "A standard deck is typically 2–3 days — one day for prep and cleaning, one to two for staining with proper dry time between coats. Larger or more complex decks take longer.",
+    a: "Going darker is straightforward. Going lighter usually requires stripping back to bare wood first. We'll be honest at the site visit about what's realistic for your wood and what it'll cost.",
   },
   {
     q: "How long will the stain last?",
-    a: "Horizontal surfaces (decks, handrails) take the most punishment and typically need re-coating every 2–4 years. Vertical surfaces like siding last 5–8 years with quality products. Your project report will include a recommended re-coat window for each surface.",
+    a: "Horizontal surfaces (decks, handrails) typically need re-coating every 2–4 years; siding lasts 5–8 years with quality products. Your report includes a recommended re-coat window for each surface.",
   },
   {
-    q: "What does the warranty cover for stain work?",
-    a: "Solid stains and paints carry a 5-year written warranty against peeling and finish failure. Semi-transparent and translucent stains carry a 2-year warranty — they wear gracefully but faster, which is the trade-off for keeping the wood grain visible.",
+    q: "What does the warranty cover?",
+    a: "Solid stains carry a 5-year written warranty against peeling and finish failure. Semi-transparent and translucent stains carry 2 years — they wear gracefully but faster, the trade-off for keeping the grain visible.",
   },
   {
     q: "Do you do log homes?",
-    a: "Yes. Log home restoration is a specialty — chinking inspection, checking for checking (splits), proper borate treatment if needed, and Sansin or similar penetrating finish. It's more involved than a standard exterior but we've done it.",
-  },
-  {
-    q: "Can you stain pressure-treated lumber?",
-    a: "Yes, but pressure-treated has to dry out first — usually 3–6 months after installation depending on the season. Staining wet PT traps moisture under the finish and causes peeling. If your deck is brand new, we'll tell you when it's ready.",
+    a: "Yes — log restoration is a specialty of ours, with its own process for blasting, chinking, and log-specific finishes. See our dedicated Log Restoration page for the full breakdown.",
   },
 ];
 
@@ -179,28 +164,21 @@ export default function WoodRestorationPage() {
         <Container>
           <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                  Wood restoration in the Sea to Sky
-                </span>
-              </div>
+              <Eyebrow className="mb-5">Wood restoration in the Sea to Sky</Eyebrow>
               <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
                 Wood that looks the way <em className="text-alpine not-italic font-medium">it should</em> — and stays that way.
               </h2>
               <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
                 <p>
-                  Wood is the defining material of Sea-to-Sky architecture.
-                  Cedar siding, exposed timber frames, wraparound decks —
-                  they&rsquo;re beautiful when maintained and problematic when
-                  they&rsquo;re not. UV graying, moisture damage, and failing
-                  previous finishes are all fixable, but only if the restoration
-                  is done in the right order.
+                  Wood is the defining material of Sea-to-Sky architecture — and
+                  it&rsquo;s beautiful when maintained, problematic when
+                  it&rsquo;s not. UV graying, moisture, and failing finishes are
+                  all fixable, but only if the restoration is done in the right
+                  order.
                 </p>
                 <p>
-                  We work on cedar, Douglas fir, pine, pressure-treated, and log
-                  construction. Decks, siding, railings, fences, gazebos, and
-                  exterior timber framing.
+                  Cedar, fir, pine, pressure-treated, and log — siding, decks,
+                  railings, fences, and exterior timber framing.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -216,9 +194,7 @@ export default function WoodRestorationPage() {
             </div>
 
             <div>
-              <div className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium mb-5">
-                What every wood project includes
-              </div>
+              <Eyebrow className="mb-5">What every wood project includes</Eyebrow>
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {PILLARS.map((p) => (
                   <div
@@ -241,56 +217,49 @@ export default function WoodRestorationPage() {
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
           <div className="max-w-3xl mb-12 md:mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">
-                What we cover
-              </span>
-            </div>
+            <Eyebrow className="mb-5">What we cover</Eyebrow>
             <h2 className="font-serif text-navy text-[2rem] md:text-[2.875rem] leading-[1.05] tracking-tight font-medium">
               Every piece of exposed wood — siding to soffits.
             </h2>
             <p className="mt-6 text-ink leading-relaxed text-[1.0625rem] max-w-2xl">
-              If it&rsquo;s wood and it&rsquo;s exposed to weather (or air, in
-              the case of covered ceilings and timber frames), we restore and
-              finish it. Different species, exposures, and conditions call for
-              different products — we&rsquo;ll spec each surface on the proposal.
+              Different species, exposures, and conditions call for different
+              products — we spec each surface on the proposal.
             </p>
           </div>
           <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SURFACE_CARDS.map((c) => (
               <article
-                key={c.n}
-                className="group relative border border-navy/15 bg-background p-7 md:p-8 lg:p-9 transition-colors hover:border-navy/40"
+                key={c.title}
+                className="group relative border border-navy/15 bg-background p-7 md:p-8 transition-colors hover:border-navy/40"
               >
                 <div className="h-px w-7 bg-alpine" aria-hidden />
                 <h3 className="mt-4 font-serif text-navy text-[1.375rem] md:text-[1.5rem] leading-[1.15] tracking-tight font-medium">
                   {c.title}
                 </h3>
-                <p className="mt-4 text-ink leading-relaxed text-[0.95rem]">
-                  {c.body}
-                </p>
+                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{c.body}</p>
               </article>
             ))}
           </div>
         </Container>
       </section>
 
+      <WarrantyBanner
+        title="Up to a 5-Year Finish Warranty"
+        body="Solid stains are backed for 5 years; semi-transparent and translucent finishes for 2, matched to how penetrating products actually wear in mountain weather — documented with a re-coat schedule."
+      />
+
       {/* Approach */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Our approach</span>
-            </div>
+            <Eyebrow className="mb-5">Our approach</Eyebrow>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Why wood restoration done right lasts twice as long.
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
+              <div key={a.title} className="border-l-2 border-alpine bg-background p-6 md:p-8">
                 <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
                 <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
               </div>
@@ -299,53 +268,14 @@ export default function WoodRestorationPage() {
         </Container>
       </section>
 
-      {/* Products */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="grid gap-10 md:gap-16 md:grid-cols-[1fr_1.3fr] md:items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Products we use</span>
-              </div>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.375rem] leading-[1.05] tracking-tight font-medium">
-                Penetrating stains that last.
-              </h2>
-              <p className="mt-5 text-ink leading-relaxed">
-                Sansin for raw and natural log work, Messmer&rsquo;s for smooth
-                cedar, Sikkens for high-traffic horizontal surfaces. Product
-                choice follows the wood — not the other way around.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              {PRODUCTS.map((p) => (
-                <div
-                  key={p}
-                  className="border border-navy/15 bg-background py-6 px-5 font-serif text-navy text-[1.0625rem] md:text-[1.125rem] text-center tracking-tight"
-                >
-                  {p}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Before / after */}
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-2xl mb-10 md:mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-10 bg-alpine" aria-hidden />
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Before & after</span>
-            </div>
+            <Eyebrow className="mb-5">Before & after</Eyebrow>
             <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
               Drag to see the difference.
             </h2>
-            <p className="mt-5 text-ink leading-relaxed">
-              Real Whistler wood — stripped, sanded, and stained back to better
-              than new. Slide the handle to compare.
-            </p>
           </div>
           <div className="grid gap-8 md:gap-10 md:grid-cols-2">
             <BeforeAfterSlider
@@ -354,7 +284,7 @@ export default function WoodRestorationPage() {
               afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
               beforeAlt="Weathered cedar ceiling before restoration, Whistler"
               afterAlt="Cedar ceiling after cleaning and re-staining, Whistler"
-              caption="Old finish stripped, wood sanded smooth, 4 coats of spar urethane applied."
+              caption="Old finish stripped, wood sanded smooth, four coats of spar urethane."
             />
             <BeforeAfterSlider
               aspectClass="aspect-[4/3]"
@@ -362,7 +292,7 @@ export default function WoodRestorationPage() {
               afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
               beforeAlt="Weathered cedar deck before restoration, Whistler"
               afterAlt="Freshly stained cedar deck and rail, Whistler"
-              caption="Pressure washed, sanded to bare, semi-solid stain applied in two coats."
+              caption="Pressure washed, sanded to bare, semi-solid stain in two coats."
             />
           </div>
         </Container>
@@ -373,10 +303,7 @@ export default function WoodRestorationPage() {
         <Container>
           <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-alpine" aria-hidden />
-                <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Recent wood work</span>
-              </div>
+              <Eyebrow className="mb-5">Recent wood work</Eyebrow>
               <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Restoration we&rsquo;re proud of.</h2>
             </div>
             <Button href="/work" variant="text">See all work →</Button>
@@ -389,20 +316,11 @@ export default function WoodRestorationPage() {
 
       <section className="py-16 md:py-24">
         <Container size="prose">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-10 bg-alpine" aria-hidden />
-            <span className="text-[0.7rem] uppercase tracking-[0.3em] text-alpine font-medium">Frequently asked</span>
-          </div>
+          <Eyebrow className="mb-5">Frequently asked</Eyebrow>
           <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Wood restoration questions.</h2>
           <FAQAccordion items={FAQS} />
         </Container>
       </section>
-
-      <WarrantyBanner
-        years="5"
-        heading="Years on solid stain. Two on semi-transparent and translucent finishes."
-        body="Penetrating stains wear gracefully but faster than solid finishes — so each product gets a warranty matched to how it actually performs in mountain weather. Documented in your project report so you know what's covered, and for how long."
-      />
 
       <CtaBlock
         eyebrow="Wood done right"
