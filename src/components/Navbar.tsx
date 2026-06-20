@@ -51,12 +51,14 @@ export function Navbar() {
   // Services accordion each time the menu closes.
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
+    document.body.classList.toggle("mobile-menu-open", mobileOpen);
     if (!mobileOpen) {
       setMobileServicesOpen(false);
       setMobileAboutOpen(false);
     }
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("mobile-menu-open");
     };
   }, [mobileOpen]);
 

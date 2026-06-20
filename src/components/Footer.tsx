@@ -65,13 +65,13 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Services
             </div>
             <div className="space-y-5">
               {SERVICE_GROUPS.map((group) => (
                 <div key={group.heading}>
-                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2.5">
+                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted font-semibold mb-2.5">
                     {group.heading}
                   </div>
                   <ul className="space-y-2.5">
@@ -89,7 +89,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Company
             </div>
             <ul className="space-y-2.5">
@@ -104,7 +104,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-widest text-navy mb-4">
+            <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Contact
             </div>
             <ul className="space-y-2.5 text-sm text-ink">

@@ -204,30 +204,30 @@ export default function CareersPage() {
       {/* Detailed job description callout */}
       <section className="py-12 md:py-16 bg-stone-light/50">
         <Container>
-          <div className="border border-navy/15 bg-background p-6 md:p-8 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8">
-            <div className="flex items-start gap-5 lg:gap-6 flex-1 min-w-0">
-              <div className="flex-shrink-0 w-12 h-12 rounded-sm bg-navy/5 flex items-center justify-center">
-                <FileText size={22} className="text-navy" />
+          <div className="border border-navy/15 bg-background p-6 md:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex-shrink-0 w-10 h-10 rounded-sm bg-navy/5 flex items-center justify-center">
+                  <FileText size={20} className="text-navy" />
+                </div>
+                <div className="text-sm uppercase tracking-[0.16em] text-alpine font-semibold">Full job description</div>
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-sm uppercase tracking-[0.16em] text-alpine mb-2 font-semibold">Full job description</div>
-                <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
-                  Prefer the full details up front?
-                </h3>
-                <p className="mt-2 text-ink leading-relaxed">
-                  Read the complete job description — duties, expectations, schedule, benefits, and growth path — before you apply.
-                </p>
-              </div>
+              <h3 className="font-serif text-navy text-xl md:text-2xl leading-tight">
+                Prefer the full details up front?
+              </h3>
+              <p className="mt-2 text-ink leading-relaxed">
+                Read the complete job description — duties, expectations, schedule, benefits, and growth path — before you apply.
+              </p>
             </div>
-            <div className="lg:flex-shrink-0">
+            <div className="lg:flex-shrink-0 w-full lg:w-auto">
               <Button
                 href="/job-description/alpenglow-painter-job-description-2026.pdf"
                 target="_blank"
                 size="lg"
                 variant="secondary"
-                className="w-full sm:w-auto justify-center whitespace-nowrap"
+                className="w-full lg:w-auto justify-center text-center"
               >
-                Read Detailed Job Description
+                Read Job Description
               </Button>
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function CareersPage() {
           primaryLabel="Apply Now"
           primaryHref="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
           primaryNewTab
-          secondaryLabel="Read Detailed Job Description"
+          secondaryLabel="Read Job Description"
           secondaryHref="/job-description/alpenglow-painter-job-description-2026.pdf"
           secondaryNewTab
         />

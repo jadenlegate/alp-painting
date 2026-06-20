@@ -169,7 +169,7 @@ export default function HomePage() {
         <Container>
           <FadeIn>
             <div className="max-w-2xl">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-4">Why Alpenglow</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Why Alpenglow</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 We&rsquo;re not the biggest painter in the Sea to Sky. We&rsquo;re the one that takes <span className="text-alpine">the experience</span> seriously.
               </h2>
@@ -198,7 +198,7 @@ export default function HomePage() {
         <Container>
           <FadeIn>
             <div className="mb-10 md:mb-14">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Services</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Services</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                 What we offer.
               </h2>
@@ -226,7 +226,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
               <div>
-                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Recent work</div>
+                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Recent work</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
                   Projects across the Sea to Sky.
                 </h2>
@@ -260,7 +260,7 @@ export default function HomePage() {
             </FadeIn>
             <FadeIn direction="right">
               <div>
-                <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Designed around you</div>
+                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Designed around you</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                   A painting project should feel <span className="text-alpine">straightforward</span>, not stressful.
                 </h2>
@@ -298,7 +298,7 @@ export default function HomePage() {
         <Container>
           <FadeIn>
             <div className="max-w-xl mb-12">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">Our process</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Our process</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 From first call to <span className="text-alpine">final walkthrough</span>.
               </h2>
@@ -346,7 +346,7 @@ export default function HomePage() {
         <Container>
           <FadeIn>
             <div className="max-w-xl mb-10 md:mb-14">
-              <div className="text-xs uppercase tracking-[0.2em] text-alpine mb-3">What clients say</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">What clients say</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 <span className="text-alpine">5.0 on Google</span> — across the Sea to Sky.
               </h2>

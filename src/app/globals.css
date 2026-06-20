@@ -79,3 +79,9 @@ body {
 .tabular-nums {
   font-variant-numeric: tabular-nums lining-nums;
 }
+
+/* Hide the mobile sticky CTA while the mobile menu is open (the menu has
+ * its own CTA). Body class toggled by Navbar. */
+.mobile-menu-open .mobile-cta-bar {
+  display: none;
+}
