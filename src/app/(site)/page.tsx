@@ -144,10 +144,13 @@ const PROCESS_STEPS: { n: string; label: string; body: string; icon: LucideIcon 
 export default function HomePage() {
   return (
     <>
+      {/* Previous hero image — swap back by restoring:
+          imageUrl="/stock-images/I_Blackcomb_Dusk_1-scaled.jpg"
+          imageAlt="Blackcomb mountain at dusk — Whistler, BC" */}
       <Hero
         variant="home"
-        imageUrl="/stock-images/I_Blackcomb_Dusk_1-scaled.jpg"
-        imageAlt="Blackcomb mountain at dusk — Whistler, BC"
+        imageUrl="/photos/home-hero-green-chalet.jpg"
+        imageAlt="Green-stained timber-frame chalet with cedar accents and stone base — Whistler, BC"
         headline={SITE.tagline}
         subline={SITE.subline}
       >

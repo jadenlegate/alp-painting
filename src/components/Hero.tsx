@@ -51,7 +51,7 @@ export function Hero({
           <div
             className={`absolute inset-0 ${
               isHome
-                ? "bg-gradient-to-t from-black/75 via-black/40 to-black/30"
+                ? "bg-gradient-to-t from-black/85 via-black/55 to-black/40"
                 : "bg-gradient-to-t from-black/60 via-black/25 to-black/30"
             }`}
           />
