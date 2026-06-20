@@ -6,8 +6,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Cabinet Refinishing — Whistler, Pemberton & Squamish",
@@ -31,15 +30,6 @@ const serviceJsonLd = {
     "Cabinet refinishing across Whistler and the Sea to Sky. Spray-applied, factory-grade finishes for kitchen and bathroom cabinets without replacing the boxes.",
   url: "https://alpenglowpainting.ca/services/cabinet-refinishing",
 };
-
-const PILLARS = [
-  "Doors sprayed in shop",
-  "Boxes prepped on-site",
-  "Cabinet-grade finishes",
-  "Kitchen stays usable",
-  "Colour samples on real doors",
-  "Documented for touch-ups",
-];
 
 const SURFACE_CARDS = [
   {
@@ -68,22 +58,42 @@ const SURFACE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/cabinet-step-spraying-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "Spray, not brush.",
-    body: "Every door and drawer face sprayed off-site for a flat, smooth finish that reads factory-new.",
+    n: "01",
+    title: "Protection & kitchen prep",
+    body: "Cabinet work makes dust, so containment comes first. We mask off the kitchen, protect countertops, floors, and appliances, and set up to keep airborne dust out of the rest of the home. Because we work in phases, we plan the layout with you so the sink, stove, and fridge stay usable throughout. The space is sealed and staged before any doors come off.",
   },
   {
-    title: "Proper prep every time.",
-    body: "Cabinets take grease, humidity, and daily contact. We degrease, sand, and prime before any finish.",
+    n: "02",
+    title: "Door & drawer removal",
+    body: "Every door and drawer front comes off and is labelled so each piece returns to its exact opening. Hinges, pulls, and hardware are removed and bagged by location. The fronts head to our shop for finishing while the boxes stay with you. Careful labelling here is what makes reinstall seamless at the end.",
   },
   {
-    title: "Stay in your kitchen.",
-    body: "We work in phases — the sink, stove, and fridge stay accessible throughout.",
+    n: "03",
+    title: "Clean, degrease, sand & prime",
+    body: "Cabinets carry years of grease and cooking residue that paint won't stick to, so we degrease thoroughly, then scuff-sand every surface to give the finish a mechanical grip. Grain is filled where a glass-smooth result calls for it. Then we apply a bonding primer made for cabinetry. This adhesion prep is the single biggest reason a refinish lasts a decade instead of chipping in a year.",
   },
   {
-    title: "Colour consultation included.",
-    body: "We bring samples and test them in your actual kitchen light before committing to the project.",
+    n: "04",
+    title: "Spray finishing in the shop",
+    body: "Doors and drawer fronts are sprayed in our controlled, dust-free shop — not brushed or rolled — for the flat, even, factory-grade finish that's the whole point of refinishing. We apply multiple thin coats of a hard, cabinet-specific finish in your chosen colour and sheen, with proper cure time between each. Spraying off-site is what eliminates brush marks and lets the finish level out perfectly.",
+  },
+  {
+    n: "05",
+    title: "Box finishing on-site",
+    body: "The cabinet boxes that stay in your kitchen get the same prep and finish, sprayed in place with an HVLP setup and full masking so overspray stays contained. We match the boxes precisely to the shop-sprayed fronts so everything reads as one consistent finish. Working clean and contained is what lets us do this without taking your kitchen apart.",
+  },
+  {
+    n: "06",
+    title: "Reinstall & adjust",
+    body: "Once everything has cured, we rehang the doors and drawers, reinstall the hardware, and adjust every hinge so doors sit square and close evenly. New hardware, soft-close hinges, or bumpers go on at this stage if you've added them. The kitchen goes back together tighter and cleaner than it came apart.",
+  },
+  {
+    n: "07",
+    title: "Inspection & close-out",
+    body: "We walk the finished kitchen with you, checking every face and edge in good light and touching up anything that isn't perfect. You get a written project report with the exact product, colour, and sheen so future touch-ups match. Final payment happens once you're satisfied — and your kitchen looks new without the renovation.",
   },
 ];
 
@@ -157,59 +167,6 @@ export default function CabinetRefinishingPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Cabinet refinishing in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                New kitchen,<br />a <em className="text-alpine not-italic font-medium">fraction</em> of the cost.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Cabinet replacement is one of the most disruptive renovations in
-                  a home. Refinishing gets you 90% of the visual result for
-                  10–20% of the cost — and you&rsquo;re back in your kitchen
-                  within a week.
-                </p>
-                <p>
-                  If the boxes are solid and the layout works, refinishing is
-                  almost always the right call.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every project includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Surfaces */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -240,25 +197,13 @@ export default function CabinetRefinishingPage() {
         </Container>
       </section>
 
-      {/* Approach */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Our approach</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Why our cabinet finish looks different from a brushed repaint.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        bg="white"
+        eyebrow="How we do it"
+        heading="The cabinet refinishing process, step by step."
+        intro="A factory-smooth finish comes from controlled prep and spray work, not a quick brush-over. Here's exactly how a kitchen runs from masking to reinstall — with your sink and stove usable throughout."
+        steps={PROCESS}
+      />
 
       {/* Related */}
       <section className="py-16 md:py-24 bg-stone-light/50">

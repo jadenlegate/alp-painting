@@ -8,8 +8,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Exterior Painters — Whistler, Pemberton & Squamish",
@@ -33,15 +32,6 @@ const serviceJsonLd = {
     "Exterior painting for homes and commercial buildings in Whistler and the Sea to Sky. Weather-tough finishes for mountain climates.",
   url: "https://alpenglowpainting.ca/services/exterior-painting",
 };
-
-const PILLARS = [
-  "Pressure wash & full prep",
-  "Two coats standard",
-  "Weather buffer days planned",
-  "Landscaping protected",
-  "Climate-rated coatings",
-  "5-year written warranty",
-];
 
 const SURFACE_CARDS = [
   {
@@ -70,22 +60,42 @@ const SURFACE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/exterior-step-washing-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "Prep is 80% of the job.",
-    body: "A beautiful coat over a failing substrate peels in a season. We wash, scrape, sand, caulk, and prime first.",
+    n: "01",
+    title: "Protection & masking",
+    body: "Before any prep begins, we protect everything that isn't being painted. Windows, doors, lights, and hardware get masked; drop cloths and breathable covers go over landscaping, decks, and walkways. We photograph the property first so nothing fragile is overlooked. The goal is a finish on the house and your plants, patio, and pathways exactly as we found them.",
   },
   {
-    title: "Coatings rated for mountain weather.",
-    body: "UV, rain, freeze-thaw, and snow load — we spec products proven to handle it, not whatever's on sale.",
+    n: "02",
+    title: "Pressure washing",
+    body: "Paint will not bond to dirt, chalk, mildew, or spider webs, so the whole structure gets a thorough pressure wash. Where needed we follow with a cleaner to kill mildew and cut through built-up grime. This strips away everything loose and gives the coating clean substrate to grip. We then let the surface dry fully before any prep or paint goes on.",
   },
   {
-    title: "We work around the weather.",
-    body: "Buffer days are planned into every project, and we tell you early if conditions force a change.",
+    n: "03",
+    title: "Scraping & sanding",
+    body: "Any failing or peeling paint is scraped back to a sound edge, and those edges are feather-sanded so the repair won't telegraph through the topcoat. Bare and weathered wood gets sanded to accept the finish. This is the slow, unglamorous work that separates a paint job that lasts a decade from one that peels in a season. We don't rush it.",
   },
   {
-    title: "Cleanup like we were never there.",
-    body: "Overspray masked, drop cloths down, landscaping protected. Tidy daily, clean at the end.",
+    n: "04",
+    title: "Caulking & priming",
+    body: "We caulk gaps, seams, and joints to seal out the water that drives most exterior failure, and spot- or full-prime bare wood and stained areas. Priming locks down the surface, blocks tannin bleed, and gives the finish coats a uniform base. On Sea-to-Sky homes, sealing the envelope before painting is what keeps freeze-thaw from getting behind the coating. Then the surface is ready for finish.",
+  },
+  {
+    n: "05",
+    title: "Premium application",
+    body: "We apply two full coats of premium, climate-rated coating — sprayed, back-rolled, or brushed depending on the surface — in your chosen colour and sheen. Trim, fascia, doors, and siding each get the right product and technique. We work to the weather window, holding proper dry time between coats rather than forcing the schedule. The result is even, durable coverage built for mountain exposure.",
+  },
+  {
+    n: "06",
+    title: "Clean-up & inspection",
+    body: "Once the final coat has set, we pull all the masking and covers, sweep up, and return the property to how it was — landscaping uncovered, walkways clear, nothing left behind. Then we walk the full exterior looking for thin spots, missed edges, and drips, and touch up anything that isn't right. We'd rather catch it on the ladder than have you spot it from the driveway.",
+  },
+  {
+    n: "07",
+    title: "Project close-out",
+    body: "We finish with a walkthrough together so you can see the work up close and flag anything you'd like addressed. You get a written project report listing the exact products, colours, and the warranty that applies to each finish. Final payment happens once you're satisfied — and the exterior is set to hold up through the seasons ahead.",
   },
 ];
 
@@ -159,59 +169,6 @@ export default function ExteriorPaintingPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Exterior painting in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                A finish that <em className="text-alpine not-italic font-medium">lasts</em><br />— and a process that earns it.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Sea-to-Sky homes face conditions that expose every shortcut —
-                  high UV, freeze-thaw, and heavy snow load. The only way to get
-                  paint that lasts is proper prep and products rated for the
-                  climate.
-                </p>
-                <p>
-                  Every exterior project starts with a real assessment of what
-                  the surface needs before we open a can.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every exterior includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Surfaces & details */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -247,28 +204,12 @@ export default function ExteriorPaintingPage() {
         body="Solid paint and stain finishes are backed for 5 years; semi-transparent and translucent stains for 2, since they wear faster in the sun. In writing, on every exterior project."
       />
 
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Our approach</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Where most exterior jobs fail — and how we don&rsquo;t.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-background p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Button href="/process" variant="text">See our full process →</Button>
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        eyebrow="How we do it"
+        heading="The exterior painting process, step by step."
+        intro="A finish that lasts is built in order — wash, prep, seal, then coat. Skip a step and the weather finds it. Here's exactly how an exterior project runs."
+        steps={PROCESS}
+      />
 
       {/* Before / after */}
       <section className="py-16 md:py-24">

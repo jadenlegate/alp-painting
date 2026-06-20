@@ -7,8 +7,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { WarrantyBanner } from "@/components/WarrantyBanner";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Interior Painters — Whistler, Pemberton & Squamish",
@@ -32,15 +31,6 @@ const serviceJsonLd = {
     "Interior painting for homes and businesses across Whistler and the Sea to Sky. Walls, trim, ceilings, and doors with a clean-crew process and a 10-year warranty.",
   url: "https://alpenglowpainting.ca/services/interior-painting",
 };
-
-const PILLARS = [
-  "Two-coat finish standard",
-  "Low-VOC, premium products",
-  "Furniture protected & moved",
-  "Daily cleanup, livable home",
-  "Written project report",
-  "10-year written warranty",
-];
 
 const SURFACE_CARDS = [
   {
@@ -69,22 +59,42 @@ const SURFACE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/interior-step-prep-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "We protect before we paint.",
-    body: "Floors, furniture, fixtures — nothing painted accidentally, nothing dusty at the end.",
+    n: "01",
+    title: "Protection & furniture moving",
+    body: "Before anything else, we make your space safe to work in. We move furniture to the centre of each room (or out, for larger pieces), cover everything with clean drop cloths and plastic, and mask floors, fixtures, and hardware. Nothing gets painted by accident, and nothing comes back dusty. The room is fully staged before a brush is opened.",
   },
   {
-    title: "Two coats is the baseline.",
-    body: "Full, even coverage with proper dry time between coats. We don't call a room done after one pass.",
+    n: "02",
+    title: "Surface prep",
+    body: "This is where a lasting finish is won. We fill nail holes and dents, sand rough spots and old drips smooth, scrape any failing paint, and caulk gaps along trim and corners. Problem areas — water stains, cracks, bad previous patches — get addressed properly, not painted over. Walls come out flat and uniform so the colour reads evenly.",
   },
   {
-    title: "Low-VOC products by default.",
-    body: "Premium low-odour lines — safe to sleep in the same room the night we finish.",
+    n: "03",
+    title: "Priming",
+    body: "We spot-prime patches, repairs, and bare drywall, and full-prime when you're making a big colour change or covering stains. Primer gives the topcoat something consistent to grip, prevents flashing, and stops old stains from bleeding through. Skipping it is the most common reason a repaint looks blotchy a month later. We don't skip it.",
   },
   {
-    title: "Closeout you'll actually use.",
-    body: "A project report listing the exact products, colours, and sheens — so touch-ups years later aren't guesswork.",
+    n: "04",
+    title: "Premium application",
+    body: "We apply two full coats of premium, low-VOC paint in your chosen sheen — cutting in edges by hand and rolling walls for an even finish. Trim, doors, and ceilings each get the right product and technique for the surface. We hold proper dry time between coats rather than rushing a second pass onto a wet first. The result is full, even coverage with crisp lines.",
+  },
+  {
+    n: "05",
+    title: "Daily clean-up",
+    body: "We tidy the site at the end of every day — tools away, debris removed, walkways clear — so your home stays livable while we work. Low-odour products mean you can usually sleep in a freshly painted room the same night. You shouldn't feel like the house has been taken over. If we hit anything unexpected, you hear about it before we proceed.",
+  },
+  {
+    n: "06",
+    title: "Final walkthrough & touch-ups",
+    body: "When the work is done, we walk every room with you in good light and look for anything that isn't perfect — a thin spot, a missed edge, a stray mark. We fix it on the spot, before we pack up. This isn't a quick courtesy glance; it's a deliberate review of the finished result. You sign off only when you're happy.",
+  },
+  {
+    n: "07",
+    title: "Project close-out",
+    body: "We do a final clean, reset the furniture, and hand off a written project report listing the exact products, colours, and sheens used in each room. That record lives with the house, so a touch-up years from now isn't a guessing game. Final payment happens once you're satisfied — and the space is ready to live in.",
   },
 ];
 
@@ -158,59 +168,6 @@ export default function InteriorPaintingPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Interior painting in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                The full interior,<br />done <em className="text-alpine not-italic font-medium">properly</em>.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Most homes we paint in Whistler are lived in — primary
-                  residences, long-term rentals, second homes used every weekend.
-                  The job has to be precise, low-disruption, and finished cleanly
-                  enough that the house is better than before we arrived.
-                </p>
-                <p>
-                  A single accent wall or a whole-house repaint — the standard is
-                  the same.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every project includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Surfaces & details */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -246,35 +203,12 @@ export default function InteriorPaintingPage() {
         body="Every interior project is backed in writing against peeling, flaking, and premature finish failure under normal conditions. If it fails inside the window, we come back and fix it."
       />
 
-      {/* Approach */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Our approach</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              The details other painters skip.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div
-                key={a.title}
-                className="border-l-2 border-alpine bg-background p-6 md:p-8"
-              >
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">
-                  {a.title}
-                </h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">
-                  {a.body}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Button href="/process" variant="text">See our full process →</Button>
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        eyebrow="How we do it"
+        heading="The interior painting process, step by step."
+        intro="A clean, predictable process is what keeps a lived-in home livable through a repaint. Here's exactly how a project runs, from the first drop cloth to the final walkthrough."
+        steps={PROCESS}
+      />
 
       {/* Related projects */}
       <section className="py-16 md:py-24">

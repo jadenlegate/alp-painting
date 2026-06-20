@@ -7,8 +7,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import { SITE } from "@/lib/site";
-import { Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Deck & Fence Staining — Whistler, Pemberton & Squamish",
@@ -32,15 +31,6 @@ const serviceJsonLd = {
     "Deck and fence staining for homes across Whistler and the Sea to Sky. Stripping, sanding, brightening, and penetrating stains matched to foot traffic and exposure.",
   url: "https://alpenglowpainting.ca/services/deck-fence-staining",
 };
-
-const PILLARS = [
-  "Stripped & sanded to bare",
-  "Cleaned & brightened",
-  "Product matched to traffic",
-  "Two coats on walking surfaces",
-  "Railings & pickets included",
-  "Re-coat schedule provided",
-];
 
 const SURFACE_CARDS = [
   {
@@ -69,22 +59,42 @@ const SURFACE_CARDS = [
   },
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/deck-step-staining-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "Strip and sand first.",
-    body: "Stain over a failing finish or grey wood doesn't bond — it sits on top and peels. We take it back to a sound surface.",
+    n: "01",
+    title: "Protection",
+    body: "Before any prep, we protect what surrounds the deck or fence. Plants and gardens close to the work get covered, adjacent siding and stonework gets shielded, and we clear the area of furniture and anything moveable. Decks and fences sit right in the middle of your yard, so a clean setup matters. The work zone is staged so the rest of your outdoor space stays untouched.",
   },
   {
-    title: "Product matched to traffic.",
-    body: "A walked-on deck, a hand rail, and a fence all wear differently. Each gets a product matched to the abuse it takes.",
+    n: "02",
+    title: "Cleaning & brightening",
+    body: "Old finish, grey weathering, mildew, and dirt all stop new stain from bonding, so we deep-clean the wood first. Where the wood has gone grey or fuzzy, a brightener restores the natural tone and reopens the grain. This step is what lets the stain soak in rather than sit on the surface and peel. We then let the wood dry to the right moisture content before going further.",
   },
   {
-    title: "Timed around weather and use.",
-    body: "Stain needs dry wood and a dry window after. We plan around the forecast and your summer.",
+    n: "03",
+    title: "Stripping & sanding",
+    body: "Any failing finish gets stripped, and the boards are sanded to remove splinters, raised grain, and the last of the old coating. Deck surfaces and handrails get the most attention since that's where wear and feet land. Sanding leaves a smooth, even surface that takes stain consistently instead of blotching. We vacuum and wipe down so the finish goes onto clean wood.",
   },
   {
-    title: "Maintenance you can plan for.",
-    body: "Your report tells you when to refresh — usually every 2–4 years on horizontals — so you don't wait for a full failure.",
+    n: "04",
+    title: "Masking & drop sheets",
+    body: "Right before staining, we mask off the house, posts, hardware, and anything adjacent that isn't being stained, and lay drop sheets to protect surfaces below and around the work. This finer round of protection keeps lines crisp and overspray contained. It's a few minutes that saves a lot of cleanup — and gives a sharper edge where the deck meets the house.",
+  },
+  {
+    n: "05",
+    title: "Stain application",
+    body: "We apply a penetrating stain matched to the wood and how the surface gets used — two coats on walking surfaces and high-wear areas for durability. We back-brush so the product works into the grain rather than puddling on top, and we finish every face of the pickets and rails, not just the ones you see from the chair. Conditions are watched closely, since dry time and temperature shape how the stain cures.",
+  },
+  {
+    n: "06",
+    title: "Clean-up & inspection",
+    body: "Once the stain has set enough to handle, we pull the masking and drop sheets, uncover the plants, and return your yard to how it was. Then we walk the whole project looking for thin spots, lap marks, and drips, and touch up anything that isn't right. The deck should look better than the day it was built, with nothing left behind.",
+  },
+  {
+    n: "07",
+    title: "Re-coat schedule & close-out",
+    body: "We walk the finished deck or fence with you and hand off a written report listing the exact product, colour, and — importantly — the recommended re-coat window for each surface. Horizontal surfaces typically need a refresh every 2–4 years, and staying on that schedule is far cheaper than a full strip-and-restore. Final payment happens once you're satisfied, with a clear plan to keep the wood protected.",
   },
 ];
 
@@ -158,59 +168,6 @@ export default function DeckFenceStainingPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Deck & fence staining in the Sea to Sky</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                The hardest-working wood on your property, <em className="text-alpine not-italic font-medium">protected</em>.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Decks and fences take more abuse than any other wood on a home —
-                  direct sun, foot traffic, snow load, and standing water, often
-                  on the same boards. They&rsquo;re also the first thing to look
-                  tired when the finish gives out.
-                </p>
-                <p>
-                  We strip them back, prep them properly, and stain them with
-                  products matched to how they get used — then tell you when to refresh.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">What every project includes</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* Surfaces */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -241,25 +198,13 @@ export default function DeckFenceStainingPage() {
         </Container>
       </section>
 
-      {/* Approach */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Our approach</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Why our deck stain outlasts a quick re-coat.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        bg="white"
+        eyebrow="How we do it"
+        heading="The deck & fence staining process, step by step."
+        intro="A deck that holds its finish is built in order — clean, strip, sand, then stain. Skip the prep and it peels by next summer. Here's exactly how a project runs."
+        steps={PROCESS}
+      />
 
       {/* Before / after */}
       <section className="py-16 md:py-24 bg-stone-light/50">

@@ -18,6 +18,8 @@ type Props = {
   heading: string;
   intro?: string;
   steps: ProcessStep[];
+  /** Section background — use "white" when the preceding section is already stone. */
+  bg?: "stone" | "white";
 };
 
 // Step-by-step service process. Each step is a card with a photo of the crew
@@ -25,9 +27,9 @@ type Props = {
 // horizontal image stacked above the text on mobile. Drop a real photo in by
 // setting `image` (+ `imageAlt`) on the step — until then a clean placeholder
 // shows so nothing looks broken.
-export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps }: Props) {
+export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, bg = "stone" }: Props) {
   return (
-    <section className="py-16 md:py-28 bg-stone-light/50">
+    <section className={`py-16 md:py-28 ${bg === "stone" ? "bg-stone-light/50" : ""}`}>
       <Container>
         <div className="max-w-3xl mb-12 md:mb-16">
           <Eyebrow className="mb-5">{eyebrow}</Eyebrow>

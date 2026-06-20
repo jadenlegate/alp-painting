@@ -5,8 +5,8 @@ import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { SITE } from "@/lib/site";
-import { AlertTriangle, Phone } from "lucide-react";
+import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
+import { AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Light Carpentry & Repair — Whistler, Pemberton & Squamish",
@@ -30,15 +30,6 @@ const serviceJsonLd = {
     "Exterior carpentry repair for Sea to Sky homes: rotted siding, fascia, soffits, trim, deck boards, and weatherproofing — coordinated with your painting project.",
   url: "https://alpenglowpainting.ca/services/light-carpentry",
 };
-
-const PILLARS = [
-  "Identified at the quote",
-  "Matched species & profile",
-  "Paired with painting",
-  "Coordinated by one crew",
-  "Weatherproofed properly",
-  "Repairs that disappear",
-];
 
 const SCOPE_CARDS = [
   {
@@ -74,22 +65,37 @@ const OUT_OF_SCOPE = [
   "Roofing repairs",
 ];
 
-const APPROACH = [
+// Add a real photo to a step with image: "/working-images/carpentry-step-replace-whistler.jpg".
+const PROCESS: ProcessStep[] = [
   {
-    title: "One point of contact.",
-    body: "We handle the scheduling and the hand-off between carpentry and paint so you're not chasing trades.",
+    n: "01",
+    title: "Find it at the quote",
+    body: "Repairs start before the proposal. On the site visit we probe for rot, soft spots, and failing trim — the things that quietly undo a paint job — and write any repair work into the quote as its own clear line item. You see the cost up front, not as a surprise mid-project. If we find more once prep starts, nothing gets built or billed without a written change order first.",
   },
   {
-    title: "Found at the quote, not as a surprise.",
-    body: "We look for rot and failing trim before we write the proposal. If we find it, it's in the quote.",
+    n: "02",
+    title: "Remove the failed material",
+    body: "We cut out the rotted or failing board, trim, or section back to sound, dry material. Removing all the compromised wood matters — leaving damp or punky wood behind just lets the rot spread under the new piece. We inspect what's behind it for hidden moisture or damage while it's open, so the repair fixes the cause, not just the symptom.",
   },
   {
-    title: "Matched to the house.",
-    body: "Same species, profile, and finish as the rest of the home, so the repair blends in once painted.",
+    n: "03",
+    title: "Replace in matched material",
+    body: "The new piece goes in using the same species, profile, and dimension as the original — rough or smooth cedar in the matching width, or the same Hardie line and texture. Cut and fit on-site so it sits flush with the surrounding surfaces. Matching the material is what makes the repair vanish once the finish goes on, instead of standing out as an obvious patch.",
   },
   {
-    title: "Paired with paint, not sold alone.",
-    body: "We do this because it's needed before painting. We don't take standalone carpentry jobs.",
+    n: "04",
+    title: "Fasten & weatherproof",
+    body: "We fasten with the right corrosion-resistant hardware for the material, then seal the repair against the weather — caulking joints, re-flashing where needed, and detailing the spots where water tends to get in. Most exterior rot starts at an unsealed joint, so closing those up is what keeps the same failure from coming back. The envelope goes back tighter than before.",
+  },
+  {
+    n: "05",
+    title: "Prime & seal for finish",
+    body: "New wood gets primed and sealed — all faces, including the cut ends that drink up moisture — so the finish coat bonds and the repair is protected from day one. This is also why we pair carpentry with painting: the repair only stays protected if it's coated properly right after. Bare patched wood left for a season is the start of the next rot problem.",
+  },
+  {
+    n: "06",
+    title: "Hand off to the finish",
+    body: "With the repair primed and weatherproofed, it flows straight into the paint or stain work, finished to match the rest of the house. One crew owns the whole thing, so there's no gap between the carpenter and the painter where the work stalls or the accountability slips. The result is a surface that's sound underneath and seamless on top.",
   },
 ];
 
@@ -139,60 +145,6 @@ export default function LightCarpentryPage() {
         </Button>
       </Hero>
 
-      {/* Intro */}
-      <section className="py-16 md:py-28">
-        <Container>
-          <div className="grid gap-12 md:gap-20 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <div>
-              <Eyebrow className="mb-5">Repair-level carpentry</Eyebrow>
-              <h2 className="font-serif text-navy text-[2.25rem] md:text-[3.25rem] lg:text-[3.75rem] leading-[1.02] tracking-tight font-medium">
-                Fix the wood,<br /><em className="text-alpine not-italic font-medium">then</em> paint it.
-              </h2>
-              <div className="mt-8 max-w-xl space-y-4 text-ink leading-relaxed text-[1.0625rem]">
-                <p>
-                  Rot, rotted trim, and failing fascia don&rsquo;t wait for the
-                  painter. Moisture and freeze-thaw quietly undo exterior surfaces
-                  year after year — and if you paint over compromised wood, the
-                  paint fails.
-                </p>
-                <p>
-                  We scope and coordinate the repair as part of your painting or
-                  wood restoration project — siding, trim, fascia, soffits, deck
-                  boards, and the weatherproofing around them.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <Button href="/contact" size="lg">Get a Quote</Button>
-                <a
-                  href={`tel:${SITE.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-navy text-sm font-medium hover:text-alpine transition-colors"
-                >
-                  <Phone size={15} />
-                  {SITE.phone}
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <Eyebrow className="mb-5">How every repair runs</Eyebrow>
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                {PILLARS.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-navy/15 bg-background p-5 md:p-6 hover:border-navy/35 transition-colors"
-                  >
-                    <div className="h-px w-7 bg-alpine mb-3.5" aria-hidden />
-                    <div className="font-serif text-navy text-[1rem] md:text-[1.0625rem] leading-[1.25] tracking-tight">
-                      {p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* What's in scope */}
       <section className="py-16 md:py-28 bg-stone-light/50">
         <Container>
@@ -238,25 +190,13 @@ export default function LightCarpentryPage() {
         </Container>
       </section>
 
-      {/* Approach */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">How we approach it</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Repairs that disappear — not patches that announce themselves.
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {APPROACH.map((a) => (
-              <div key={a.title} className="border-l-2 border-alpine bg-stone-light/40 p-6 md:p-8">
-                <h3 className="font-serif text-xl md:text-[1.375rem] text-navy leading-tight tracking-tight font-medium">{a.title}</h3>
-                <p className="mt-3 text-ink leading-relaxed text-[0.95rem]">{a.body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <ProcessSteps
+        bg="white"
+        eyebrow="How we do it"
+        heading="The repair process, step by step."
+        intro="A repair only lasts if the cause is fixed and the new wood is sealed and finished properly. Here's how we handle it — coordinated with the paint so the patch disappears."
+        steps={PROCESS}
+      />
 
       {/* Honest callout */}
       <section className="py-16 md:py-20 bg-navy">
