@@ -89,9 +89,11 @@ export function Hero({
           {subline && (
             <motion.p
               variants={item}
-              className={`mt-6 md:mt-7 text-base md:text-xl max-w-xl ${
-                align === "center" ? "mx-auto" : ""
-              } text-background/80`}
+              className={`${
+                isHome
+                  ? "mt-6 md:mt-8 text-lg md:text-2xl lg:text-3xl uppercase tracking-[0.1em] font-medium max-w-2xl text-background/90"
+                  : "mt-6 md:mt-7 text-base md:text-xl max-w-xl text-background/80"
+              } ${align === "center" ? "mx-auto" : ""}`}
             >
               {subline}
             </motion.p>
