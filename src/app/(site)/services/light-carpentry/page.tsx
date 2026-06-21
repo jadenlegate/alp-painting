@@ -102,27 +102,27 @@ const PROCESS: ProcessStep[] = [
 const FAQS = [
   {
     q: "Is carpentry priced inside the paint quote, or separate?",
-    a: "Usually separate. The paint quote covers prep and painting; repair work is its own line item based on the materials and time needed. You'll see both on the proposal with a clear breakdown — nothing is buried.",
+    a: "Carpentry repairs are included as a separate line item on your written proposal. The painting line items include prep and painting, and repair work is on its own line based on the materials and time needed. Your written proposal will show a clear breakdown.",
   },
   {
     q: "What if you find more rot once you start prepping?",
-    a: "We stop and tell you immediately. Nothing gets built or billed without a written change order. Hidden rot is one of the most common reasons exterior projects go over budget — we'd rather pause and re-scope than surprise you.",
+    a: "We stop and tell you immediately. Nothing gets built or billed without a written and approved change order. Hidden rot is one of the most common reasons exterior projects go over budget — we'd rather pause and re-scope than surprise you.",
   },
   {
     q: "How do you match the new material to the existing siding?",
-    a: "Same species, profile, and dimension wherever possible — rough or smooth cedar in matching widths, or the same Hardie line and texture. Once the finish goes on, the repair disappears.",
+    a: "We match the existing materials and stain/paint colours to ensure that the repair is minimally visible or completely indistinguishable.",
   },
   {
     q: "Do you do interior carpentry too?",
-    a: "Only incidental — baseboard and trim swaps as part of an interior paint job, for example. We don't take on cabinetry, built-ins, or finish carpentry as standalone work.",
+    a: "We only do incidental interior carpentry like small repairs and trim replacement, but we don't take on cabinetry, built-ins, or finish carpentry as standalone work.",
   },
   {
     q: "Can you just do the carpentry and we'll paint it ourselves?",
-    a: "We prefer to pair the two. A big part of the value of fixing rot or trim before painting is making sure the repair is sealed and protected properly — which happens in how the paint or stain goes on right after. When one team handles both, the repair blends in and you get one crew accountable. If a carpentry-only job is really what you need, we're happy to recommend someone in the corridor.",
+    a: "We prefer to pair the two. A big part of the value of fixing rot or trim before painting is making sure the repair is sealed and protected properly which happens in how the paint or stain goes on right after. When one team handles both, the repair blends in and you get one crew accountable. If a carpentry-only job is really what you need, we're happy to recommend someone.",
   },
   {
     q: "How long does a typical repair add to the project?",
-    a: "Most rot and trim repairs add 1–3 days to the front of a paint project, depending on scope. We sequence the repair, give it the right cure time, then move into prep and finish so the new wood blends in.",
+    a: "This is completely dependent on how extensive the repair work is. We'll give you an idea of what is necessary, or consult with a dedicated carpentry subcontractor for more extensive repairs.",
   },
 ];
 
