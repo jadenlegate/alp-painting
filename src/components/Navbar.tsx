@@ -81,7 +81,7 @@ export function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
           solid
             ? "bg-background/95 backdrop-blur border-b border-border"
-            : "bg-transparent"
+            : "bg-gradient-to-b from-black/55 via-black/30 to-transparent"
         }`}
       >
         <Container>

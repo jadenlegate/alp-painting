@@ -27,9 +27,9 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-stone-light/20">
       <Container>
-        <div className="py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand column */}
-          <div className="space-y-4 min-w-0">
+        <div className="py-16 grid gap-10 md:gap-12 md:grid-cols-3 lg:grid-cols-4">
+          {/* Brand column — full-width row on tablet, first column on desktop */}
+          <div className="space-y-4 min-w-0 md:col-span-3 lg:col-span-1">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Alpenglow Logo Blue.svg" alt="Alpenglow Painting" className="h-8 w-auto" />
             <p className="text-sm text-muted max-w-[280px]">
