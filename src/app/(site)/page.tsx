@@ -331,7 +331,7 @@ export default function HomePage() {
             <div className="max-w-xl mb-12">
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Our process</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                From first call to <span className="text-alpine">final walkthrough</span>.
+                From first call to <span className="text-background">final walkthrough</span>.
               </h2>
             </div>
           </FadeIn>
@@ -356,7 +356,7 @@ export default function HomePage() {
             ))}
           </div>
           <FadeIn delay={0.3}>
-            <div className="mt-12">
+            <div className="mt-12 flex justify-center">
               <Button href="/process" size="lg" className="border !border-background/25 !bg-transparent !text-background hover:!bg-background/10">See how it works</Button>
             </div>
           </FadeIn>

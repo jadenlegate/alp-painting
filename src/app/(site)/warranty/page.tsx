@@ -110,7 +110,7 @@ export default function WarrantyPage() {
 
       <CtaBlock
         heading="Questions about coverage?"
-        eyebrow="Before you sign"
+        eyebrow="Before you book"
         subline="Ask us anything about the warranty at the site visit."
         primaryLabel="Get a Quote"
       />

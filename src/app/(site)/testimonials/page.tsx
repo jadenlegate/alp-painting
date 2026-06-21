@@ -79,7 +79,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={i}
           size={14}
-          className={i < rating ? "fill-navy text-navy" : "text-border"}
+          className={i < rating ? "fill-alpine text-alpine" : "text-border"}
         />
       ))}
     </div>

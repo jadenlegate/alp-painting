@@ -1,6 +1,8 @@
 import { Star } from "lucide-react";
 
 // Review tile. Matches eventual Sanity `testimonial` doc shape.
+// Visual format is kept identical to the testimonials page cards
+// (border, alpine stars, quote, name — no location).
 export type Testimonial = {
   name: string;
   location?: string;
@@ -11,24 +13,18 @@ export type Testimonial = {
 export function TestimonialCard({ t }: { t: Testimonial }) {
   const stars = t.rating ?? 5;
   return (
-    <figure className="h-full flex flex-col bg-surface rounded-sm p-6 md:p-8">
-      <div className="flex items-center gap-0.5 text-alpine mb-5" aria-label={`${stars} stars`}>
+    <div className="border border-border rounded-sm bg-surface p-6 md:p-7">
+      <div className="flex gap-0.5" aria-label={`${stars} stars`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
             size={14}
-            fill={i < stars ? "currentColor" : "none"}
-            strokeWidth={1.5}
+            className={i < stars ? "fill-alpine text-alpine" : "text-border"}
           />
         ))}
       </div>
-      <blockquote className="text-ink leading-relaxed flex-1 text-[0.95rem]">
-        &ldquo;{t.text}&rdquo;
-      </blockquote>
-      <figcaption className="mt-6 pt-5 border-t border-border text-sm">
-        <span className="text-navy font-semibold">{t.name}</span>
-        {t.location && <span className="text-muted"> · {t.location}</span>}
-      </figcaption>
-    </figure>
+      <p className="mt-4 text-ink leading-relaxed">&ldquo;{t.text}&rdquo;</p>
+      <div className="mt-5 font-medium text-navy text-sm">{t.name}</div>
+    </div>
   );
 }
