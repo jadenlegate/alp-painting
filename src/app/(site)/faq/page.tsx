@@ -23,6 +23,10 @@ const FAQ_SECTIONS = [
         a: "No. The site visit and written proposal are free.",
       },
       {
+        q: "What's the difference between a quote and an estimate?",
+        a: "A quote is a fixed price — the number we give you is the number you pay, as long as the scope doesn't change. An estimate is our best projection for work that can't be fully measured upfront. We provide fixed-price quotes for almost everything we do. Occasionally a project has genuine unknowns — hidden rot behind siding, the condition of a surface under old finish, or log work that can't be assessed until it's blasted — and only those portions are handled on an estimated basis. We'll always tell you which parts (if any) are estimated and why, before any work begins.",
+      },
+      {
         q: "How quickly can you start a project?",
         a: "It depends on our current schedule. Typical lead time is a few weeks, though we can sometimes accommodate urgent jobs. Ask on the call.",
       },

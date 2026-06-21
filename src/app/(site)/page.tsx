@@ -7,7 +7,7 @@ import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
-import { MessageSquare, UserCheck, ShieldCheck, Ruler, Paintbrush, BookOpen, HardHat, type LucideIcon } from "lucide-react";
+import { MessageSquare, UserCheck, ShieldCheck, Ruler, CalendarCheck, HardHat, Paintbrush, ClipboardCheck, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { BulletList } from "@/components/BulletList";
 
@@ -131,36 +131,44 @@ const VALUE_PROPS = [
   },
 ];
 
+// Condensed teaser of the full process. Step titles mirror /process exactly —
+// keep the two in sync if either changes.
 const PROCESS_STEPS: { n: string; label: string; body: string; icon: LucideIcon }[] = [
   {
     n: "01",
     icon: MessageSquare,
     label: "Request a quote",
-    body: "Tell us about the project online or by phone.",
+    body: "Tell us about your project online or by phone. We follow up soon to learn exactly what you have in mind.",
   },
   {
     n: "02",
     icon: Ruler,
-    label: "Proposal & walkthrough",
-    body: "We come see the space, ask the right questions, and present a detailed written proposal — usually the day of the visit.",
+    label: "Site visit & proposal",
+    body: "We visit the property, talk through colours and products, and present a detailed written proposal.",
   },
   {
     n: "03",
-    icon: HardHat,
-    label: "Professional preparation",
-    body: "We protect your space, then prep every surface — filling, sanding, caulking, priming. The prep is what makes the finish last.",
+    icon: CalendarCheck,
+    label: "Booking & scheduling",
+    body: "We confirm your start date, send a project agreement, and walk you through how to prep the space.",
   },
   {
     n: "04",
-    icon: Paintbrush,
-    label: "Premium application",
-    body: "Clean crews, premium products, daily updates. Your home stays livable from day one to walkthrough.",
+    icon: HardHat,
+    label: "Day one on site",
+    body: "The crew arrives on time and protects everything that isn't being painted before any work begins.",
   },
   {
     n: "05",
-    icon: BookOpen,
-    label: "Final report & warranty",
-    body: "We walk every space with you, fix any touch-ups on the spot, and hand off documentation for the warranty.",
+    icon: Paintbrush,
+    label: "During the project",
+    body: "Thorough professional preparation, then premium application — on a clean, tidy site with daily updates.",
+  },
+  {
+    n: "06",
+    icon: ClipboardCheck,
+    label: "Final walkthrough",
+    body: "We review every detail with you, handle any touch-ups, and close out with a written project report.",
   },
 ];
 
@@ -330,7 +338,7 @@ export default function HomePage() {
               </p>
             </div>
           </FadeIn>
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {PROCESS_STEPS.map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.08}>
                 <div className="flex flex-col items-center text-center">
@@ -343,7 +351,7 @@ export default function HomePage() {
                   <h3 className="font-serif text-background text-lg md:text-xl leading-[1.2] tracking-tight font-medium">
                     {s.label}
                   </h3>
-                  <p className="mt-2.5 text-background/65 text-sm leading-relaxed">
+                  <p className="mt-2.5 max-w-[19rem] text-background/65 text-[0.95rem] leading-relaxed">
                     {s.body}
                   </p>
                 </div>

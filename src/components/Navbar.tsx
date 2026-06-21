@@ -48,6 +48,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu on navigation — backstop for the Get a Quote CTA and
+  // any link that doesn't close the menu itself.
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   // Lock background scroll while the mobile menu is open, and collapse the
   // Services accordion each time the menu closes.
   useEffect(() => {
@@ -94,7 +100,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-7">
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
               {/* Services dropdown */}
               <div
                 className="relative"
@@ -173,27 +179,27 @@ export function Navbar() {
               </Link>
             </nav>
 
-            {/* Right-side utility: phone + primary CTA */}
-            <div className="hidden lg:flex items-center gap-5">
+            {/* Right-side cluster: phone (xl only, so it never wraps to two lines),
+                Get a Quote (visible at every width), and the hamburger (below lg).
+                On smaller screens the CTA stays put to the left of the hamburger. */}
+            <div className="flex items-center gap-3 lg:gap-5">
               <a
                 href={`tel:${SITE.phoneRaw}`}
-                className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
+                className={`hidden xl:flex items-center gap-1.5 text-sm font-medium transition-colors ${solid ? "text-ink hover:text-navy" : "text-background/90 hover:text-background"}`}
               >
                 <Phone size={14} /> {SITE.phone}
               </a>
               <Button href="/contact" size="md">
                 Get a Quote
               </Button>
+              <button
+                className={`lg:hidden p-2 -mr-2 cursor-pointer ${solid ? "text-navy" : "text-background"}`}
+                onClick={() => setMobileOpen((o) => !o)}
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              >
+                {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
             </div>
-
-            {/* Mobile menu trigger */}
-            <button
-              className={`lg:hidden p-2 -mr-2 cursor-pointer ${solid ? "text-navy" : "text-background"}`}
-              onClick={() => setMobileOpen((o) => !o)}
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            >
-              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
           </div>
         </Container>
       </header>
@@ -307,7 +313,7 @@ export function Navbar() {
                 <CallUsButton className="flex-1" />
                 <TextUsButton className="flex-1" />
               </div>
-              <Button href="/contact" size="lg" className="w-full">
+              <Button href="/contact" size="lg" className="w-full" onClick={() => setMobileOpen(false)}>
                 Get a Quote
               </Button>
             </div>
