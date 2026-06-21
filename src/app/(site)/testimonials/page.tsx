@@ -31,21 +31,6 @@ type Review = {
 
 const REVIEWS: Review[] = [
   {
-    name: "Lawrence N.",
-    rating: 5,
-    body: "Jayden and his crew at Alpenglow did a fantastic job of painting the exterior of my house at Whistler, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. Jayden kept me well informed throughout the process. He and his crew are just really great guys. They are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
-  },
-  {
-    name: "Cheryl W.",
-    rating: 5,
-    body: "Jaden was professional and efficient. He took the time to explain the process he would need to do to change colour from dark to light and varnished wood to white semi gloss window trim. He went out to his truck and put together our quote and brought it back to us right away. Price was good! His crew were friendly and flexible and did a great job. They worked around other contractors with ease as we prepared for our home to be listed and got the job done in time and at the price quoted. I highly recommend Alpenglow Painting.",
-  },
-  {
-    name: "Wilf G.",
-    rating: 5,
-    body: "Jaden and his team at Alpenglow worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. And that's exactly why we chose Alpenglow. Jaden made sure a few deficiencies were completed to our satisfaction. We chose Alpenglow partly because they pay their employees a living wage, who seemed happy and respectful in their work.",
-  },
-  {
     name: "Don W.",
     rating: 5,
     body: "Expert workmanship in at a fair price. Very good communication. I highly recommend Alpenglow Painting.",
@@ -56,9 +41,9 @@ const REVIEWS: Review[] = [
     body: "Good communication, fair estimate and overdelivered on nice work with pleasant team. You can't ask for more. Highly recommend.",
   },
   {
-    name: "Adam N.",
+    name: "David N.",
     rating: 5,
-    body: "Detailing proposal; value-added recommendations on approach and proactive communication. Well done.",
+    body: "Excellent customer service and workmanship. They won't leave until you're satisfied with the end product.",
   },
   {
     name: "Robbie M.",
@@ -66,9 +51,24 @@ const REVIEWS: Review[] = [
     body: "Very happy with quality of work, professionalism, quote break down and follow-up. Nice job!",
   },
   {
-    name: "David N.",
+    name: "Adam N.",
     rating: 5,
-    body: "Excellent customer service and workmanship. They won't leave until you're satisfied with the end product.",
+    body: "Detailing proposal; value-added recommendations on approach and proactive communication. Well done.",
+  },
+  {
+    name: "Lawrence N.",
+    rating: 5,
+    body: "Jayden and his crew at Alpenglow did a fantastic job of painting the exterior of my house at Whistler, including sanding down and staining all beams, posts and two large decks. I am very happy with the whole process and especially the end result. Jayden kept me well informed throughout the process. He and his crew are just really great guys. They are professional, reliable, trustworthy, courteous and personable. I would highly recommend them for your painting project.",
+  },
+  {
+    name: "Wilf G.",
+    rating: 5,
+    body: "Jaden and his team at Alpenglow worked hard on the preparation of our house prior to the actual painting, which gives me confidence it will look great for many years to come. And that's exactly why we chose Alpenglow. Jaden made sure a few deficiencies were completed to our satisfaction. We chose Alpenglow partly because they pay their employees a living wage, who seemed happy and respectful in their work.",
+  },
+  {
+    name: "Cheryl W.",
+    rating: 5,
+    body: "Jaden was professional and efficient. He took the time to explain the process he would need to do to change colour from dark to light and varnished wood to white semi gloss window trim. He went out to his truck and put together our quote and brought it back to us right away. Price was good! His crew were friendly and flexible and did a great job. They worked around other contractors with ease as we prepared for our home to be listed and got the job done in time and at the price quoted. I highly recommend Alpenglow Painting.",
   },
 ];
 
