@@ -27,14 +27,14 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "01",
     icon: MessageSquare,
     title: "Request a quote",
-    body: "Fill out the form on our contact page or call us directly. Tell us what you're thinking — rough scope, timing, location. We'll get in touch soon to discuss it.",
+    body: "Tell us about your project online or by phone/text. We'll discuss with you on the phone to understand exactly what you have in mind before visiting your property.",
     detail: null,
   },
   {
     n: "02",
     icon: Ruler,
     title: "Site visit & proposal",
-    body: "We come to the property to measure, look at the surfaces, and work through product and colour options with you.",
+    body: "We visit your property, talk through colours and products, complete a thorough assessment and collect accurate measurements, and present a detailed written proposal.",
     detail: "Most proposals are presented on the spot. For larger projects that need more calculation, we usually have it ready within a day. If we can't meet in person, we'll schedule a video call to walk through it together.",
   },
   {
@@ -48,14 +48,14 @@ const STEPS: { n: string; title: string; body: string; detail: string | null; ic
     n: "04",
     icon: HardHat,
     title: "Day one on site",
-    body: "The crew arrives on time, in uniform, with everything they need. First order of business: protect what isn't being painted. Drop cloths, plastic masking, furniture moved. Nothing starts until the space is properly staged.",
+    body: "The project scope is reviewed in detail with the crew, and they begin protecting and preparing your space.",
     detail: "You'll meet the crew lead on day one. They're your main contact for the duration of the project.",
   },
   {
     n: "05",
     icon: Paintbrush,
     title: "During the project",
-    body: "We work a clean, professional site. Daily tidying is standard — you shouldn't feel like your home has been taken over. If something unexpected comes up (hidden rot, a surface that needs extra prep), we tell you immediately and don't start work until you've approved the change.",
+    body: "We work a clean, professional site. Daily tidying is standard. You shouldn't feel like your home has been taken over. If something unexpected comes up (hidden rot, a surface that needs extra prep), we tell you immediately and don't start work until you've approved the change.",
     detail: "We don't surprise you with extras at the end of the job. Anything outside the original scope gets a written change order first.",
   },
   {

@@ -21,37 +21,37 @@ const SERVICES = [
   {
     title: "Exterior Painting",
     href: "/services/exterior-painting",
-    blurb: "Weather-tough finishes built for Whistler winters. Sikkens, Benjamin Moore, Sherwin-Williams.",
+    blurb: "Painting and staining with premium prep and products to withstand harsh Sea-to-Sky weather.",
     imageUrl: "/stock-images/exterior-painting-whistler.webp",
   },
   {
     title: "Cabinet Refinishing",
     href: "/services/cabinet-refinishing",
-    blurb: "Factory-grade finishes without replacing the boxes. Spray-booth precision in your kitchen.",
+    blurb: "Factory-grade coatings without the cost of replacement. Meticulous prep and stunning finishes.",
     imageUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
   },
   {
     title: "Wood Refinishing & Staining",
     href: "/services/wood-restoration",
-    blurb: "Cedar siding, decks, timber-frame beams. Refinished, stained, sealed to last.",
+    blurb: "Exterior and interior woodwork revitalized, refinished and stained to last.",
     imageUrl: "/working-images/wood-restoration-staining-cedar-whistler.jpg",
   },
   {
     title: "Log Restoration",
     href: "/services/log-restoration",
-    blurb: "Media blasting, borate treatment, chinking, and penetrating finishes — full log home restoration.",
+    blurb: "Full log home restoration: finish removal, sanding, rot repair, sealing and finishing.",
     imageUrl: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg",
   },
   {
     title: "Deck & Fence Staining",
     href: "/services/deck-fence-staining",
-    blurb: "Stripped, sanded, and stained to last — decks, railings, and fences built for daily use.",
+    blurb: "Decks, railings, and fences. Stripped, sanded, and stained to last.",
     imageUrl: "/stock-images/portfolio/stained-cedar-exterior-whistler.jpg",
   },
   {
     title: "Light Carpentry & Repair",
     href: "/services/light-carpentry",
-    blurb: "Rot, trim, and fascia repair coordinated with your paint project — one team, one point of contact.",
+    blurb: "Rot and trim repairs coordinated with your painting project. One point of contact for streamlined scheduling.",
     imageUrl: "/stock-images/light-carpentry-repair-whistler.jpg",
   },
   {
@@ -333,9 +333,6 @@ export default function HomePage() {
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 From first call to <span className="text-alpine">final walkthrough</span>.
               </h2>
-              <p className="mt-4 text-background/70 text-lg leading-relaxed">
-                <strong className="text-background font-semibold">Every step, documented.</strong> No surprises, no improvising.
-              </p>
             </div>
           </FadeIn>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

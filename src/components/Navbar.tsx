@@ -189,7 +189,11 @@ export function Navbar() {
               >
                 <Phone size={14} /> {SITE.phone}
               </a>
-              <Button href="/contact" size="md">
+              <Button
+                href="/contact"
+                size="md"
+                className={solid ? "" : "!bg-background !text-navy hover:!bg-surface"}
+              >
                 Get a Quote
               </Button>
               <button
