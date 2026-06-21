@@ -125,15 +125,15 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "Do you strip the old stain or just coat over it?",
-    a: "If the existing finish is failing, peeling, or the wood has greyed, we strip and sand back to bare — coating over a dying finish just fails with it. If the finish is sound but tired, a clean-and-brighten plus a maintenance coat is enough. We assess which on the site visit.",
+    a: "If the existing finish is failing, peeling, or the wood is otherwise very weathered, we strip and sand back to bare since coating over a peeling finish will lead to premature failure. If the finish is in good condition but faded, a wash and brighten plus a maintenance coat is usually enough. We assess which process is best on the site visit.",
   },
   {
     q: "What products do you use?",
-    a: "Penetrating and semi-solid stains rated for horizontal, walked-on surfaces — Sansin, Sikkens, Messmer's, and similar — matched to the wood, the wear, and the look you want. Not whatever's cheapest by the gallon.",
+    a: "We generally recommend penetrating, non-film-forming, translucent or semi-transparent stains that only fade instead of peel over time. These are more cost-effective to maintain long term and provide the best protection for the wood surface. However, solid stains are also an option, depending on the look you want to go for.",
   },
   {
     q: "How long does a deck take?",
-    a: "A standard deck is typically 2–3 days — a day for stripping, sanding, and cleaning, then one to two for staining with dry time between coats. Railings and intricate balusters add time; fences depend on length.",
+    a: "The length of a deck, railing or fence project depends on the size of the area and what prep is necessary. Several days of dry time is necessary between washing and staining to ensure the wood is dry enough to stain. We'll give you an approximate timeline for your project on the written proposal.",
   },
   {
     q: "How long will the stain last before it needs redoing?",
@@ -141,11 +141,11 @@ const FAQS = [
   },
   {
     q: "Can you change the colour of my deck or fence?",
-    a: "Going darker is straightforward once we've stripped to bare. Going much lighter is harder and depends on the wood's condition. We test a sample area so you see the real colour on your actual boards first.",
+    a: "When starting fresh from bare wood, any stain colour can be used. However, if re-coating over an old surface with a translucent or semi-transparent stain, it depends on the previous finish and wood condition. We test a sample area so you see the real colour on your actual boards before staining the whole area.",
   },
   {
     q: "Can I use the deck while you work?",
-    a: "We work in sections where we can, but freshly stained boards need dry time before foot traffic. We'll map out the schedule so you know which areas are off-limits and when, and time the job to disrupt your summer as little as possible.",
+    a: "Freshly stained boards typically need at least 48 hours of dry time before foot traffic.",
   },
 ];
 
