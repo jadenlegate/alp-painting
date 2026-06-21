@@ -24,7 +24,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "What's the difference between a quote and an estimate?",
-        a: "A quote is a fixed price — the number we give you is the number you pay, as long as the scope doesn't change. An estimate is our best projection for work that can't be fully measured upfront. We provide fixed-price quotes for almost everything we do. Occasionally a project has genuine unknowns — hidden rot behind siding, the condition of a surface under old finish, or log work that can't be assessed until it's blasted — and only those portions are handled on an estimated basis. We'll always tell you which parts (if any) are estimated and why, before any work begins.",
+        a: "A quote is a fixed price that doesn't change as long as the scope doesn't change. An estimate is a projection for work that can't be fully measured upfront. We provide fixed-price quotes for most of the work we do. Occasionally a project or part of a project has real unknowns like hidden wood rot, small finicky repairs or extensive wood restoration which may be handled on an estimate basis. We'll always tell you which parts (if any) are estimated instead of quoted (and why that is) on your written proposal.",
       },
       {
         q: "How quickly can you start a project?",
@@ -53,7 +53,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "Are your painters professionals?",
-        a: "Yes. All of our painters are vetted and trained to a professional standard, and every project is run under the eye of an experienced crew lead who holds the team to it. We take real pride in our workmanship and stand behind every job we do.",
+        a: "Yes. All of our painters are vetted and trained to a professional standard. We take pride in our workmanship and stand behind every job we do.",
       },
       {
         q: "What's the difference between the paint brands?",
@@ -86,11 +86,11 @@ const FAQ_SECTIONS = [
       },
       {
         q: "What happens if it rains?",
-        a: "We do not apply any paint if it is raining or if the surface is still wet. We watch the weather very closely during the exterior season — including temperature, precipitation, humidity, and dew point — to ensure we never have an issue.",
+        a: "Prep work and painting sheltered surfaces can be done on rain days, but exposed surfaces are left for dry days. We track forecasts daily, including temperature, precipitation, humidity, and dew point, so that we're completing work in adequate weather conditions that ensure longevity for your project.",
       },
       {
         q: "How do you protect my landscaping and plants?",
-        a: "We take care to protect your property throughout the project. Plants, gardens, and other landscaping near the work area are covered and protected with drop cloths, and we keep the site clean as we go. Anything that can't be covered, we work around carefully.",
+        a: "We take care to protect your property throughout the project. Plants, gardens, and other landscaping near the work area are covered and protected with drop cloths, and we keep the site clean as we go.",
       },
       {
         q: "What happens with my furniture when the house is being painted?",
@@ -98,12 +98,12 @@ const FAQ_SECTIONS = [
       },
       {
         q: "When should I hire a professional painter vs doing it myself?",
-        a: "DIY painting can work for small, simple projects like freshening up a single room if you have the tools, time, and patience. But for large areas, high ceilings, tricky prep work, specialty finishes, or when you want a long-lasting, flawless result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
+        a: "DIY painting can work for small, simple projects like freshening up a single room or staining a small deck if you have the tools, time, and patience. But for large areas, high ceilings, tough access, tricky prep work, specialty finishes, or when you want a guaranteed long-lasting result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
         link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" },
       },
       {
         q: "Do you clean up at the end of each day?",
-        a: "Yes. Daily cleanup is standard.",
+        a: "Yes. Daily clean up and organization is standard. At the end of the job, we pack out all garbage and empty paint cans and leave you with leftover paint for future touch-ups.",
       },
     ],
   },

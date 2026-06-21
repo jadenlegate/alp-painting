@@ -96,28 +96,20 @@ const RELATED_PROJECTS: Project[] = [
 
 const FAQS = [
   {
-    q: "Blasting or sanding — which do you use?",
-    a: "Media blasting (crushed glass or corn cob) on most full restorations — it strips the failing finish off the round profile and out of the checks and chinking lines a sander can't reach, without flattening the wood. We hand-sand smaller areas and interior logs.",
+    q: "Do you use sanding or blasting to remove existing finish?",
+    a: "For most projects, grinding and sanding is our preferred method. Media blasting is another option. We'll discuss pros and cons with you at the site visit.",
   },
   {
     q: "What finishes do you use on logs?",
-    a: "Log-specific penetrating systems and flexible sealants built for round profiles and seasonal movement — Sansin, Sikkens Cetol Log & Siding, Sashco, and Perma-Chink — not general exterior paint. We spec the system to your logs and exposure and document it for the maintenance coats.",
-  },
-  {
-    q: "What is chinking, and do I need it?",
-    a: "Chinking is the flexible sealant between logs and in corner notches and checks. It seals the building against air and water while flexing as the logs move. Failed or missing chinking is a common reason a log home leaks and rots — replacing it is a core part of restoration.",
+    a: "We use log-specific penetrating systems and flexible sealants built for round profiles and seasonal movement, including Sico ProLuxe (formerly Sikkens), Sansin, Sashco, and Perma-Chink, among other select products. We'll discuss coating systems with you at the site visit.",
   },
   {
     q: "Can you fix rotted logs without replacing the whole log?",
-    a: "Often, yes. If the log is sound behind the damage, we consolidate and rebuild the rotted area with structural epoxy. If a section is too far gone, we let in a matched piece. If the rot is structural, we'll tell you honestly and bring in a log builder.",
+    a: "Often, yes. If the log is sound behind the damage, we consolidate and rebuild the rotted area with structural epoxy. If a section is too far gone or the rot is causing structural issues, we'll need to bring in a specialized carpentry service.",
   },
   {
     q: "How often does a log home need recoating?",
-    a: "Plan on a maintenance coat every 3–5 years on sun- and weather-exposed walls, longer on protected sides. We give you a specific schedule — staying on it is far cheaper than letting the finish fail and starting over.",
-  },
-  {
-    q: "Do you finish interior log walls too?",
-    a: "Yes. Interior logs get a different finish — lower sheen, no UV package — but the same care with prep and back-brushing, and thorough masking since it's finishing work inside a lived-in home.",
+    a: "Plan on a maintenance coat every 3–5 years on sun- and weather-exposed walls, and longer on protected sides. We'll provide you with recoating recommendations so you can stay on top of maintenance and avoid having to start fresh again if it gets left too long.",
   },
 ];
 

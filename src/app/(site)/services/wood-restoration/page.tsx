@@ -127,11 +127,11 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "How do I know if my wood needs refinishing or just a re-stain?",
-    a: "Grey, weathered wood with raised grain or peeling finish needs full refinishing first. Wood that's just fading but still sound usually needs a re-coat. We assess on the site visit and recommend accordingly.",
+    a: "Peeling finish needs a full refinish to achieve long-lasting results. Wood that's just fading or dirty but still sound can usually be washed and re-coated without extensive sanding. We assess on the site visit and recommend accordingly.",
   },
   {
     q: "What products do you use?",
-    a: "Penetrating stains matched to the wood and exposure — Sansin for raw and log work, Messmer's for smooth cedar, Sikkens for high-traffic surfaces. Product choice follows the wood, and we document the exact spec for future maintenance coats.",
+    a: "We specify the best products to use to ensure a great finish, your desired look, and the best longevity. We use the highest quality products from Sherwin-Williams, Benjamin Moore, Sico ProLuxe (formerly Sikkens), and Sansin, among other select brands. We'll tell you exactly what we're using, why, and what the expected lifespan is.",
   },
   {
     q: "Can you change the stain colour — go darker or lighter?",
@@ -139,15 +139,17 @@ const FAQS = [
   },
   {
     q: "How long will the stain last?",
-    a: "Horizontal surfaces (decks, handrails) typically need re-coating every 2–4 years; siding lasts 5–8 years with quality products. Your report includes a recommended re-coat window for each surface.",
+    a: "Horizontal surfaces (decks, handrails, stairs) typically need re-coating every 2–4 years; siding typically lasts 4–12 years with quality products. Longevity can be highly variable and depends on substrate, products used, and weather exposure. Your report includes a recommended re-coat window for each surface.",
   },
   {
     q: "What does the warranty cover?",
-    a: "Solid stains carry a 5-year written warranty against peeling and finish failure. Semi-transparent and translucent stains carry 2 years — they wear gracefully but faster, the trade-off for keeping the grain visible.",
+    a: "We provide a written warranty on every project, matched to the service: 5 years on interior painting, 5 years on exterior solid finishes, and 2 years on exterior semi-transparent and translucent stains. There are a few exceptions to our warranty, which we will discuss with you if they apply to your project. All in writing, included at no extra cost.",
+    link: { href: "/warranty", label: "Learn more about our warranty" },
   },
   {
     q: "Do you do log homes?",
-    a: "Yes — log restoration is a specialty of ours, with its own process for blasting, chinking, and log-specific finishes. See our dedicated Log Restoration page for the full breakdown.",
+    a: "Yes, we offer professional log restoration and finishing services, including refinishing, staining, and rot repair. See our dedicated Log Restoration page for the full breakdown.",
+    link: { href: "/services/log-restoration", label: "Log Restoration page" },
   },
 ];
 

@@ -134,7 +134,7 @@ const FAQS = [
   },
   {
     q: "What products do you use?",
-    a: "We don't use one product for every exterior — Sikkens for cedar, Sansin for log, Benjamin Moore Aura and Sherwin-Williams Duration for painted siding. The right coating for the substrate and exposure, specified on the site visit and documented in your project report.",
+    a: "We specify the best products to use to ensure a great finish, your desired look, and the best longevity. We use the highest quality products from Sherwin-Williams, Benjamin Moore, Sico ProLuxe (formerly Sikkens), and Sansin, among other select brands. We'll tell you exactly what we're using, why, and what the expected lifespan is.",
   },
   {
     q: "How long will the paint last?",
@@ -146,7 +146,7 @@ const FAQS = [
   },
   {
     q: "What if the weather doesn't cooperate?",
-    a: "We plan buffer days into every project. If a forecast shifts and we lose a window, we tell you the same day and reshuffle — we don't paint into rain or below-spec temperatures just to keep moving.",
+    a: "Prep work and painting sheltered surfaces can be done on rain days, but exposed surfaces are left for dry days. We track forecasts daily, including temperature, precipitation, humidity, and dew point, so that we're completing work in adequate weather conditions that ensure longevity for your project.",
   },
 ];
 

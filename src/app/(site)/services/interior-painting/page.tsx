@@ -137,7 +137,7 @@ const FAQS = [
   },
   {
     q: "What products do you use?",
-    a: "We use the best interior paint products from Sherwin-Williams and Benjamin Moore, matched for the specific surface and application to ensure we achieve your preferred look and the best longevity.",
+    a: "We use the best interior paint products from Sherwin-Williams, Benjamin Moore, and other select brands, matched for the specific surface and application to ensure we achieve your preferred look and the best longevity.",
   },
   {
     q: "How do you handle colour selection?",
@@ -146,6 +146,10 @@ const FAQS = [
   {
     q: "What prep work is included before painting?",
     a: "Hole filling, sanding, spot-priming, caulking where needed, and protecting floors, furniture, and fixtures. Prep is the most important step to a successful interior painting project.",
+  },
+  {
+    q: "Do you do drywall repairs?",
+    a: "We do some minor drywall repairs, but extensive drywall work would need to be coordinated through a dedicated drywalling subcontractor, which we can coordinate to ensure a smooth project experience.",
   },
   {
     q: "When should I hire a professional painter vs doing it myself?",
