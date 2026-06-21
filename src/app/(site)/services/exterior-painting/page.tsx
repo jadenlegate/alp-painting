@@ -126,11 +126,11 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "What's the best time of year to paint exterior in Whistler?",
-    a: "Late spring through early fall is the typical window — we need temperatures above 10°C and dry conditions for at least 24 hours after application. We track forecasts and plan project windows with buffer days.",
+    a: "We complete most exterior projects between May and September. For most projects we need temperatures above 10°C and dry conditions during painting and staining. Prep work and painting sheltered surfaces can be done on rain days, but exposed surfaces are left for dry days. We track forecasts daily to ensure we're completing work in adequate weather conditions to ensure longevity for your project.",
   },
   {
     q: "How long does an exterior project take?",
-    a: "A typical single-family home runs 4–8 working days depending on size, prep condition, and weather. We give you a day-range in the proposal, not a vague 'a few weeks.'",
+    a: "Exterior project duration depends on the scope and type of project. Projects can last anywhere from one day to several weeks, depending on the scope, amount of prep required, weather, and access requirements, among other factors. We'll give you an approximate timeline with your written proposal.",
   },
   {
     q: "What products do you use?",
@@ -138,11 +138,11 @@ const FAQS = [
   },
   {
     q: "How long will the paint last?",
-    a: "With proper prep and premium products, 7–12 years is realistic on most Whistler exteriors. Solid finishes carry a 5-year written warranty; semi-transparent and translucent stains carry 2 years because they wear differently in the sun.",
+    a: "The longevity of a project is highly dependent on the substrate, products used, weather exposure (UV, rain, snow, moisture, etc.), and most importantly, thorough preparation. Exterior solid finishes typically last 8–12 years or more. Exterior semi-transparent and translucent finishes typically last 3–10 years. Decks typically last 2–5 years. We'll discuss longevity and maintenance schedules with you at the site visit.",
   },
   {
     q: "What prep do you actually do?",
-    a: "Pressure wash, scrape failing paint, sand to feather the edges, caulk gaps and seams, spot-prime bare wood, and mask windows, doors, lights, and landscaping. Prep is 80% of an exterior job — we don't skip it to come in cheap.",
+    a: "Prep required depends on the type of substrate, current surface condition, and products being used. Standard prep includes a combination of pressure washing, soft washing, scraping and sanding failing paint/stain, caulking gaps and seams, spot priming, and masking windows, doors, lights, and covering landscaping and furniture. Proper prep takes up between 30% and 80% of an exterior job.",
   },
   {
     q: "What if the weather doesn't cooperate?",

@@ -103,6 +103,10 @@ const FAQS = [
     a: "We plan our phases around your sequence — priming before trim-out, finish coats timed around flooring and fixtures, exterior coordinated with weather windows. We hold our milestones and flag early if anything upstream affects our start.",
   },
   {
+    q: "How long does it take?",
+    a: "It depends on the size and scope of the build, but we maintain a sizable crew and can scale up to hit tight deadlines when the schedule demands it. We map out a realistic timeline with your proposal and hold our milestones so we're never the trade holding up the project.",
+  },
+  {
     q: "Do you prime and finish new drywall?",
     a: "Yes — sealing fresh board and joint compound is its own step. We prime uniformly, assess under raking light, and skim or spot-fix before finish coats. Skipping proper primer is the most common reason a new build's walls look cheap once furniture's in.",
   },

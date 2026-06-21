@@ -100,6 +100,10 @@ const FAQS = [
     a: "We plan the work in phases by floor or section, coordinate with the strata manager on resident notification, and keep common areas accessible at all times. We've done occupied multi-unit buildings and know how to minimize impact.",
   },
   {
+    q: "How long does it take?",
+    a: "It depends on the size and scope of the project, but we maintain a sizable crew and can scale up to meet tight deadlines when needed. We build a phased schedule into the proposal and coordinate closely so the work fits around your operations.",
+  },
+  {
     q: "Can you work outside regular hours for hotels?",
     a: "Yes. For guest-area work we can shift to early morning, evening, or weekend schedules. It costs more but is often worth it to avoid revenue disruption. We talk through the options on the site visit.",
   },

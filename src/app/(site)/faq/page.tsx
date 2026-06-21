@@ -16,7 +16,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "How do I get a quote?",
-        a: "Fill out the form on our contact page or call us at (604) 938-4037. Tell us the rough scope, location, and timing, and we'll get in touch to discuss it and schedule a quote.",
+        a: "Fill out the form on our contact page, call/text us at (604) 938-4037, or email us at hello@alpenglowpainting.ca. Tell us the rough scope and timing, and we'll get in touch to discuss it and schedule a quote.",
       },
       {
         q: "Do you charge for quotes?",
@@ -28,15 +28,15 @@ const FAQ_SECTIONS = [
       },
       {
         q: "How quickly can you start a project?",
-        a: "It depends on our current schedule. Typical lead time is a few weeks, though we can sometimes accommodate urgent jobs. Ask on the call.",
+        a: "It depends on our current schedule. Typical lead time is 2–6 weeks, though we can sometimes accommodate urgent jobs. Reach out to us, and we can discuss your timing. We always do our best to accommodate your schedule.",
       },
       {
         q: "What areas do you serve?",
-        a: "Based in Whistler. Most of our work is in the valley — we occasionally take on projects further out when the timing and scope are right.",
+        a: "We are based in Whistler but also work in Pemberton and Squamish. We occasionally take on projects further out when the timing and scope are right.",
       },
       {
         q: "Do you do work any time of year?",
-        a: "Yes. We're happy to help with projects any time of year. Exterior timing depends on weather and surface conditions, which we'll discuss at the site visit.",
+        a: "Yes. We're happy to help with projects any time of year. Most exterior work is completed between May and September. Interior work can be completed year-round.",
       },
     ],
   },
@@ -45,19 +45,23 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What products do you use?",
-        a: "We specify products to the project. Typical brands include Sherwin-Williams (Duration, Emerald), Benjamin Moore (Aura, Advance), Cabot, Sikkens, and Armstrong Clark. We'll tell you exactly what we're using, why, and what the expected lifespan is — before you sign anything.",
+        a: "We specify the best products to use to ensure a great finish, your desired look, and the best longevity. We use the highest quality products from Sherwin-Williams, Benjamin Moore, Sico ProLuxe (formerly Sikkens), and Sansin, among other select brands. We'll tell you exactly what we're using, why, and what the expected lifespan is.",
       },
       {
         q: "Can I choose my own colour?",
-        a: "Yes. Most clients come with a colour direction or a specific swatch; we help refine from there. If you want colour consultation as a service, we offer that too.",
+        a: "Of course! If you have a general idea or specific colour in mind, we can work with that or help refine if needed. If you're not sure what looks good, we're happy to provide advice for what looks best. Before starting the project, we test the colours for you to make sure you're 100% happy with it before proceeding with the work. We also offer complimentary AI colour visualisation so you can envision what it will look like beforehand.",
+      },
+      {
+        q: "Are your painters professionals?",
+        a: "Yes. All of our painters are vetted and trained to a professional standard, and every project is run under the eye of an experienced crew lead who holds the team to it. We take real pride in our workmanship and stand behind every job we do.",
       },
       {
         q: "What's the difference between the paint brands?",
-        a: "We'll walk through that on the site visit — it's surface and context dependent. In short: Sherwin-Williams Duration and Benjamin Moore Aura are our go-to exterior workhorses. Advance is our preferred cabinet finish. We use premium-tier products on everything we do.",
+        a: "We'll walk through that on the site visit. The best product to use is surface and context dependent. We use premium-tier products on everything we do.",
       },
       {
         q: "Do you spray or brush and roll?",
-        a: "Both, depending on the surface. Cabinets are almost always sprayed for finish quality. Interiors are typically rolled. Exteriors are brush-and-rolled on most surfaces, sprayed on some. We'll tell you which we're using and why.",
+        a: "We use all three methods, depending on the surface. Exteriors use a combination of brushing, rolling, and spraying, and interiors are usually brush and rolled. Cabinets are almost always sprayed for finish quality. We'll tell you which we're using and why.",
       },
     ],
   },
@@ -65,24 +69,41 @@ const FAQ_SECTIONS = [
     category: "Scheduling and the job",
     items: [
       {
-        q: "How long does an exterior project take?",
-        a: "A typical single-family exterior takes 3–5 days of active work. We build weather buffer days into the schedule — you'll know the realistic range upfront, not just a start date that slips.",
+        q: "How long does a project take?",
+        a: "Project duration depends on the scope and type of project. Projects can last anywhere from one day to several weeks, depending on the scope, amount of prep required, and access requirements, among other factors. We'll give you an approximate timeline with your written proposal.",
       },
       {
         q: "What do I need to do to prep?",
-        a: "We'll tell you exactly what to do after you book. Typically: move furniture away from walls for interior work, clear the area around the exterior for outdoor work, and give us access codes if you won't be home. We handle everything else.",
+        a: "We'll let you know what we need from you to prep before we arrive. We aim to provide a full service so there's minimal work on your end.",
       },
       {
         q: "Do I need to be home during the project?",
-        a: "No. Most clients give us an access code and we work independently. The crew lead will text you if anything needs a decision. You'll meet us on day one and at the final walkthrough — the rest is up to you.",
+        a: "No. Most clients give us an access code and we work independently. We will provide regular updates with photos and contact you immediately if anything needs a decision. Once the project is completed, we conduct an in-person walkthrough with you to make sure you're fully happy with things before we pack up.",
       },
       {
         q: "What if something unexpected comes up?",
-        a: "We tell you immediately, before doing anything. Hidden rot, a surface that needs extra prep, a change in weather — you hear from us before it affects timeline or cost. Any change to scope gets a written change order first.",
+        a: "We tell you immediately, before doing anything. Hidden rot, unforeseen repairs, a surface that needs extra prep, a change in weather, etc. — you'll hear from us before it affects timeline or cost. Any change to scope gets a written and approved change order first.",
+      },
+      {
+        q: "What happens if it rains?",
+        a: "We do not apply any paint if it is raining or if the surface is still wet. We watch the weather very closely during the exterior season — including temperature, precipitation, humidity, and dew point — to ensure we never have an issue.",
+      },
+      {
+        q: "How do you protect my landscaping and plants?",
+        a: "We take care to protect your property throughout the project. Plants, gardens, and other landscaping near the work area are covered and protected with drop cloths, and we keep the site clean as we go. Anything that can't be covered, we work around carefully.",
+      },
+      {
+        q: "What happens with my furniture when the house is being painted?",
+        a: "We move all furniture to the centre of the room and cover it with plastic sheeting to protect it.",
+      },
+      {
+        q: "When should I hire a professional painter vs doing it myself?",
+        a: "DIY painting can work for small, simple projects like freshening up a single room if you have the tools, time, and patience. But for large areas, high ceilings, tricky prep work, specialty finishes, or when you want a long-lasting, flawless result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
+        link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" },
       },
       {
         q: "Do you clean up at the end of each day?",
-        a: "Yes. Daily cleanup is standard. You shouldn't feel like your home has been taken over.",
+        a: "Yes. Daily cleanup is standard.",
       },
     ],
   },
@@ -91,15 +112,17 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What warranty do you offer?",
-        a: "Written warranty on every project, matched to the service: 5 years on interior painting, 5 years on exterior solid finishes, 2 years on exterior semi-transparent and translucent stains, and 2 years of workmanship on light carpentry repairs. All in writing, included at no extra cost.",
+        a: "We provide a written warranty on every project, matched to the service: 5 years on interior painting, 5 years on exterior solid finishes, and 2 years on exterior semi-transparent and translucent stains. There are a few exceptions to our warranty, which we will discuss with you if they apply to your project. All in writing, included at no extra cost.",
+        link: { href: "/warranty", label: "Learn more about our warranty" },
       },
       {
         q: "What does the warranty cover?",
-        a: "Peeling, flaking, and premature finish failure under normal use. It doesn't cover damage from impact, flooding, or structural movement.",
+        a: "Our warranty covers workmanship errors on our part, including peeling, flaking, and premature finish failure under normal use.",
+        link: { href: "/warranty", label: "Learn more about our warranty" },
       },
       {
         q: "What happens if something fails under warranty?",
-        a: "Contact us. We respond within 5 business days and schedule the repair promptly. The warranty isn't a legal escape hatch — it's a commitment that the work holds up.",
+        a: "Contact us and we'll conduct a site visit to inspect the area and schedule a time for a repair.",
       },
     ],
   },
@@ -108,24 +131,24 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What is the Alpenglow Project Report?",
-        a: "A written document we leave at the end of every project. It records the exact products used (manufacturer, product line, colour name, sheen level), areas covered, and care instructions. It's meant to live with the house.",
+        a: "A written document we leave at the end of every project. It records the exact products used (manufacturer, product line, colour name, sheen level), areas covered, and care instructions.",
       },
       {
         q: "Why does the project report matter?",
-        a: "Years from now, when you need a touch-up or want to match a colour for a renovation, you'll know exactly what was used. The next owner will too. Most painters hand you nothing when the job is done — we give you a record.",
+        a: "Years from now, when you need a touch-up or want to match a colour for a renovation, you'll know exactly what was used. It also acts as a helpful reference for staying on top of regular maintenance.",
       },
     ],
   },
   {
-    category: "Insurance and licensing",
+    category: "Insurance",
     items: [
       {
         q: "Are you insured?",
-        a: "Yes. We carry $5M commercial general liability insurance and full WorkSafeBC coverage for all workers. Certificates are available on request.",
+        a: "Yes. We carry $5M commercial general liability insurance. Certificates are available on request.",
       },
       {
-        q: "Are you a licensed contractor?",
-        a: "Yes. We're a member of the Whistler Chamber of Commerce and the Painting Contractors Association (PCA).",
+        q: "Do you have workers' compensation?",
+        a: "Yes. All of our workers are covered by WorkSafeBC. Certificates are available on request.",
       },
     ],
   },

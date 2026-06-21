@@ -125,23 +125,32 @@ const RELATED_PROJECTS: Project[] = [
 const FAQS = [
   {
     q: "How long does an interior project take?",
-    a: "A typical three-bedroom repaint runs 3–5 working days depending on scope. We give you a specific day count in the proposal, not a vague range.",
+    a: "Interior painting projects can last anywhere from one day to several weeks, depending on the scope, amount of prep required, and access requirements, among other factors. We'll give you a timeline with your written proposal.",
   },
   {
     q: "Can we stay in the house while you paint?",
-    a: "Almost always, yes. We use low-VOC products and work one area at a time so you have a clean, dry space to live in. We'll walk through the logistics on the site visit.",
+    a: "Almost always, yes. Many clients prefer to leave while we paint their interior, but you're welcome to stay at home while we paint too.",
+  },
+  {
+    q: "What happens with my furniture when the house is being painted?",
+    a: "We move all furniture to the centre of the room and cover it with plastic sheeting to protect it.",
   },
   {
     q: "What products do you use?",
-    a: "Premium interior lines specified to the surface and the wear — Benjamin Moore Aura and Advance, Sherwin-Williams Emerald, and similar. We don't upcharge for a brand name; we use the right product for the job and tell you exactly what's going on your walls before we start.",
+    a: "We use the best interior paint products from Sherwin-Williams and Benjamin Moore, matched for the specific surface and application to ensure we achieve your preferred look and the best longevity.",
   },
   {
     q: "How do you handle colour selection?",
-    a: "We test swatches on your walls and compare them in your light. If you want outside help, we partner with a local colour consultant who knows Sea-to-Sky light. Either way, you see the colours on your wall before they go on the wall.",
+    a: "We test swatches on your walls and compare them in your light so you're 100% happy with the colour before we start. We also offer complimentary AI colour visualisation so you can envision what it will look like beforehand.",
   },
   {
     q: "What prep work is included before painting?",
-    a: "Hole filling, sanding, spot-priming, caulking where needed, and protecting floors, furniture, and fixtures. Prep is where a paint job is won or lost — we don't shortcut it.",
+    a: "Hole filling, sanding, spot-priming, caulking where needed, and protecting floors, furniture, and fixtures. Prep is the most important step to a successful interior painting project.",
+  },
+  {
+    q: "When should I hire a professional painter vs doing it myself?",
+    a: "DIY painting can work for small, simple projects like freshening up a single room if you have the tools, time, and patience. But for large areas, high ceilings, tricky prep work, specialty finishes, or when you want a long-lasting, flawless result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
+    link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" },
   },
   {
     q: "What does the warranty cover?",

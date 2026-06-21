@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 
 // Simple accordion. Kept client-side (stateful open/close). One item open
 // at a time for focus; pass `allowMultiple` to open several.
-export type FAQItem = { q: string; a: string };
+// Optional `link` renders an underlined "learn more" link below the answer.
+export type FAQItem = { q: string; a: string; link?: { href: string; label: string } };
 
 type Props = {
   items: FAQItem[];
@@ -44,7 +46,16 @@ export function FAQAccordion({ items, allowMultiple = false }: Props) {
             </button>
             {isOpen && (
               <div className="pb-6 pr-10 text-ink leading-relaxed">
-                {item.a}
+                <p>{item.a}</p>
+                {item.link && (
+                  <Link
+                    href={item.link.href}
+                    className="mt-3 inline-flex items-center gap-1 font-medium text-navy underline underline-offset-4 decoration-[0.5px] hover:decoration-2"
+                  >
+                    {item.link.label}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                )}
               </div>
             )}
           </div>

@@ -78,8 +78,8 @@ const PROCESS: ProcessStep[] = [
   },
   {
     n: "04",
-    title: "Masking & drop sheets",
-    body: "Right before staining, we mask off the house, posts, hardware, and anything adjacent that isn't being stained, and lay drop sheets to protect surfaces below and around the work. This finer round of protection keeps lines crisp and overspray contained. It's a few minutes that saves a lot of cleanup — and gives a sharper edge where the deck meets the house.",
+    title: "Masking & drop cloths",
+    body: "Right before staining, we mask off the house, posts, hardware, and anything adjacent that isn't being stained, and lay drop cloths to protect surfaces below and around the work. This finer round of protection keeps lines crisp and overspray contained. It's a few minutes that saves a lot of cleanup — and gives a sharper edge where the deck meets the house.",
   },
   {
     n: "05",
@@ -89,7 +89,7 @@ const PROCESS: ProcessStep[] = [
   {
     n: "06",
     title: "Clean-up & inspection",
-    body: "Once the stain has set enough to handle, we pull the masking and drop sheets, uncover the plants, and return your yard to how it was. Then we walk the whole project looking for thin spots, lap marks, and drips, and touch up anything that isn't right. The deck should look better than the day it was built, with nothing left behind.",
+    body: "Once the stain has set enough to handle, we pull the masking and drop cloths, uncover the plants, and return your yard to how it was. Then we walk the whole project looking for thin spots, lap marks, and drips, and touch up anything that isn't right. The deck should look better than the day it was built, with nothing left behind.",
   },
   {
     n: "07",

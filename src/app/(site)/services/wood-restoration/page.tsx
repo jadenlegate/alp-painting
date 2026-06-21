@@ -80,8 +80,8 @@ const PROCESS: ProcessStep[] = [
   },
   {
     n: "04",
-    title: "Protection — drop sheets & masking",
-    body: "Right before finish goes on, we mask and sheet everything that isn't getting stained — siding, glass, hardware, stonework, and adjacent painted surfaces. Drop sheets protect decking, walkways, and landscaping below. This finer round of protection keeps the lines crisp and the overspray off everything else. A few minutes of masking saves hours of cleanup and gives a sharper result.",
+    title: "Protection — drop cloths & masking",
+    body: "Right before finish goes on, we mask and sheet everything that isn't getting stained — siding, glass, hardware, stonework, and adjacent painted surfaces. Drop cloths protect decking, walkways, and landscaping below. This finer round of protection keeps the lines crisp and the overspray off everything else. A few minutes of masking saves hours of cleanup and gives a sharper result.",
   },
   {
     n: "05",
@@ -91,7 +91,7 @@ const PROCESS: ProcessStep[] = [
   {
     n: "06",
     title: "Clean-up & inspection",
-    body: "When the final coat is down and cured enough to handle, we pull all the masking and drop sheets and return your space to how it was — furniture back, site swept, nothing left behind. Then we walk the whole project looking for missed spots, thin areas, or drips, and touch up anything that isn't right. We'd rather catch it ourselves than have you find it later.",
+    body: "When the final coat is down and cured enough to handle, we pull all the masking and drop cloths and return your space to how it was — furniture back, site swept, nothing left behind. Then we walk the whole project looking for missed spots, thin areas, or drips, and touch up anything that isn't right. We'd rather catch it ourselves than have you find it later.",
   },
   {
     n: "07",

@@ -32,6 +32,81 @@ export type Post = {
 
 export const POSTS: Post[] = [
   {
+    slug: "diy-vs-hiring-a-professional-painter",
+    title: "DIY vs hiring a professional painter: when each one makes sense",
+    publishedAt: "2026-06-15",
+    excerpt:
+      "Painting a single room yourself is a reasonable weekend project. Repainting a whole house is a different kind of job. Here's an honest look at when DIY makes sense, when it quietly costs more than it saves, and what you're actually paying a professional for.",
+    coverUrl: "/stock-images/portfolio/alpenglow-painter-exterior-prep-whistler.jpg",
+    category: "Advice",
+    content: `There's no universal answer to whether you should paint it yourself or hire someone. It depends on the room, the surfaces, the result you want, and how much you value your own weekends. We're a painting company, so we have an obvious bias — but we also turn down small jobs a homeowner could easily handle, and we tell people when DIY is the smarter call. Here's the honest version.
+
+## When DIY is the right call
+
+DIY painting makes the most sense when the project is small, simple, and forgiving:
+
+- A single bedroom, office, or hallway with sound walls.
+- A repaint in a similar colour, so coverage is easy.
+- Flat, reachable walls — no two-storey stairwells or vaulted ceilings.
+- Minimal prep: no major patching, no peeling, no water stains.
+- You have the time, the patience, and somewhere to make a mess.
+
+If that describes your project, a careful weekend with good paint and a bit of masking will get you a result you're happy with. You save the labour cost — which is most of any professional quote — and the stakes are low if one corner isn't perfect.
+
+## Where DIY quietly costs more than it saves
+
+Most projects aren't that simple, and the real cost of DIY shows up in places people don't price in upfront:
+
+**Prep.** The part that makes a paint job last is the part nobody enjoys — filling, sanding, caulking, priming, and protecting everything around the work. Skipped or rushed prep is the single most common reason a fresh coat fails within a year or two. A professional crew spends a large share of every project on prep precisely because it's what you're paying for.
+
+**Time.** A crew of two can repaint a whole house in a few days. The same job stretched across a homeowner's evenings and weekends can run for weeks, with the house half-finished the whole time.
+
+**Height and access.** Stairwells, vaulted ceilings, and exterior work put you on ladders and scaffolding. That's where DIY stops being a money question and becomes a safety one.
+
+**The finish itself.** Cutting clean lines, avoiding lap marks and roller stipple, and keeping an even sheen across a big surface is a learned skill. On a small wall, small flaws hide. In a great room, raking light shows everything.
+
+**Buying twice.** Cheaper retail paint, the wrong roller nap, a colour that looks different once it's up — the do-overs add up, in both product and time.
+
+## What you're actually paying a professional for
+
+A good painting quote isn't just "paint on walls." It's:
+
+- Proper preparation matched to each surface, which is what makes the finish hold up.
+- The right products specified for the job, not whatever's on sale.
+- Clean, protected work — furniture and floors covered, lines cut tight, the site tidied daily.
+- Experienced people working efficiently, so your home isn't disrupted for weeks.
+- A warranty in writing, and someone to call if anything isn't right.
+
+For [interior projects](/services/interior-painting) that means living in a clean, finished home in a few days. For [exterior work](/services/exterior-painting) in the Sea to Sky — high UV, freeze-thaw cycles, snow sitting against the walls — it means a finish built to survive the climate, which is a much harder problem than it looks.
+
+## The DIY mistakes we get called to fix
+
+When a homeowner calls us after a DIY project, it's usually one of a handful of things:
+
+- **Skipped prep** — painting over dust, grease, or glossy trim without cleaning, sanding, or priming, so the new coat peels.
+- **One coat where two were needed** — it looks fine wet and patchy once it dries, especially over a colour change.
+- **Tape pulled at the wrong time,** lifting the fresh paint with it.
+- **The wrong product for the surface** — wall paint on trim, interior paint outdoors, or a finish that can't handle a bathroom or kitchen.
+- **Lap marks and roller texture** from letting an edge dry before rolling back into it on a large wall.
+
+None of these are hard to avoid once you know about them, but they're the difference between a finish that lasts and one you're redoing in a year. A professional crew has simply already made and fixed all of them.
+
+## A simple way to decide
+
+Ask yourself four questions:
+
+1. **How big and how high is it?** One reachable room leans DIY. A whole house, or anything at height, leans professional.
+2. **How much prep does it need?** Sound walls in good shape are forgiving. Peeling, patching, and surface repairs reward experience.
+3. **How much does the result matter?** A guest room can be a learning project. The main living space you look at every day usually isn't where you want to practise.
+4. **What's your time worth?** If the project will eat a month of evenings, the labour you'd pay a crew may be the cheaper trade.
+
+If you land on DIY for a small project, great — do it well, don't skip the prep, and buy decent paint. If you land on professional, the next step is a couple of written quotes so you can compare scope, not just price. [Our guide to choosing a painting contractor](/blog/choosing-a-painting-contractor-whistler) covers what to look for, and [our interior cost breakdown](/blog/interior-painting-cost-whistler) gives you realistic numbers to plan around.
+
+## Where to start
+
+If you'd like an honest opinion on whether your project is a DIY job or one worth handing off, [get in touch](/contact). We'll tell you straight — and if it's something you can handle yourself, we'll say so.`,
+  },
+  {
     slug: "choosing-a-painting-contractor-whistler",
     title: "Choosing a painting contractor in Whistler: what actually matters",
     publishedAt: "2025-10-02",
