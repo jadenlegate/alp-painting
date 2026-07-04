@@ -313,11 +313,12 @@ export default function HomePage() {
                 <div className="mt-7">
                   <BulletList
                     items={[
-                      "A clear, itemized quote — no vague lump sums",
+                      "A clear, detailed, and precise proposal",
                       "Punctual starts and realistic timelines with weather buffer",
                       "A clean, protected work site throughout the project",
                       "Proactive updates so you always know what's happening",
-                      "Fixed pricing that only moves if the scope actually changes",
+                      // Hidden in MVP mode, returns in V2 — see @/lib/flags.
+                      ...(IS_FULL ? ["Fixed pricing that only moves if the scope actually changes"] : []),
                       "A thorough final walkthrough before you sign off",
                       "$5M liability insurance and full WorkSafeBC coverage",
                       "A written warranty — up to 5 years, matched to the service",
