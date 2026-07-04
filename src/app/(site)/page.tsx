@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/Button";
 import { ServiceCard } from "@/components/ServiceCard";
-import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { TestimonialCard, type Testimonial } from "@/components/TestimonialCard";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FadeIn } from "@/components/FadeIn";
@@ -18,13 +18,13 @@ const SERVICES = [
     title: "Interior Painting",
     href: "/services/interior-painting",
     blurb: "Walls, trim, ceilings, doors. Clean lines and a process that respects your home.",
-    imageUrl: "/stock-images/interior-painting-whistler.jpg",
+    imageUrl: "/photos/portfolio/master-bedroom-arched-window-grey-walls-whistler.jpg",
   },
   {
     title: "Exterior Painting",
     href: "/services/exterior-painting",
     blurb: "Painting and staining with premium prep and products to withstand harsh Sea-to-Sky weather.",
-    imageUrl: "/stock-images/exterior-painting-whistler.webp",
+    imageUrl: "/photos/portfolio/two-tone-taupe-exterior-repaint-after-whistler.jpg",
   },
   {
     title: "Cabinet Refinishing",
@@ -74,27 +74,19 @@ const SERVICES = [
   },
 ];
 
-const FEATURED_PROJECTS: Project[] = [
+// Three real project photos for the Portfolio teaser (all 3:2 landscape).
+const FEATURED_PHOTOS = [
   {
-    slug: "whistler-chalet-exterior",
-    title: "Whistler chalet — exterior restoration",
-    location: "Whistler",
-    serviceTags: ["Exterior", "Wood restoration"],
-    coverUrl: "/stock-images/portfolio/chalet-bay-window-after-whistler.jpg",
+    src: "/photos/portfolio/master-bedroom-arched-window-grey-walls-whistler.jpg",
+    alt: "Master bedroom with soft grey painted walls and arched fir-trimmed window, Whistler",
   },
   {
-    slug: "whistler-chalet-interior",
-    title: "Chalet interior — full repaint",
-    location: "Whistler",
-    serviceTags: ["Interior"],
-    coverUrl: "/stock-images/portfolio/finished-interior-chandelier-whistler.jpg",
+    src: "/photos/portfolio/refinished-cedar-soffit-dark-timber-trim-whistler.jpg",
+    alt: "Freshly refinished tongue-and-groove cedar soffit with dark timber trim, Whistler",
   },
   {
-    slug: "whistler-cedar-deck-ceiling",
-    title: "Covered deck — cedar ceiling restoration",
-    location: "Whistler",
-    serviceTags: ["Wood restoration"],
-    coverUrl: "/stock-images/portfolio/cedar-ceiling-after-whistler.jpg",
+    src: "/photos/portfolio/cream-siding-green-trim-exterior-repaint-whistler.jpg",
+    alt: "Two-storey home with cream lap siding and sage-green trim after exterior repaint, Whistler",
   },
 ];
 
@@ -123,17 +115,17 @@ const VALUE_PROPS = [
   {
     icon: MessageSquare,
     title: "Clear communication",
-    body: "We respond fast, show up when we say we will, and tell you if something changes. No surprises, no chasing us down.",
+    body: "We respond fast, show up when we say we will, and tell you if anything changes. No surprises and no chasing us down.",
   },
   {
     icon: UserCheck,
     title: "Professional crews",
-    body: "On time, in uniform, and careful with your home. Trades work the way it should be — but rarely is.",
+    body: "On time, in uniform, and careful with your home. We aim to provide the best overall experience to you.",
   },
   {
     icon: ShieldCheck,
     title: "Work that lasts",
-    body: "Up to a 5-year written warranty on interior and exterior finishes. Not just a handshake.",
+    body: "We stand behind our work and provide up to a 5-year written warranty on interior and exterior finishes.",
   },
 ];
 
@@ -263,18 +255,29 @@ export default function HomePage() {
           <FadeIn>
             <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
               <div>
-                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Recent work</div>
+                <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Portfolio</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.75rem] leading-[1.1] max-w-xl">
-                  Projects across the Sea to Sky.
+                  See the team and the results of their hard work.
                 </h2>
               </div>
               <Button href="/portfolio" variant="text">See all work →</Button>
             </div>
           </FadeIn>
           <div className="grid gap-6 md:grid-cols-3">
-            {FEATURED_PROJECTS.map((p, i) => (
-              <FadeIn key={p.slug} delay={i * 0.1}>
-                <ProjectCard project={p} />
+            {FEATURED_PHOTOS.map((p, i) => (
+              <FadeIn key={p.src} delay={i * 0.1}>
+                <div className="overflow-hidden rounded-sm border border-border bg-stone-light/40">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    width={1600}
+                    height={1066}
+                    loading="lazy"
+                    quality={85}
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="block w-full h-auto aspect-[3/2] object-cover hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
               </FadeIn>
             ))}
           </div>
@@ -289,8 +292,8 @@ export default function HomePage() {
               <div className="h-full min-h-[400px] md:min-h-0 rounded-sm overflow-hidden bg-stone-light/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/stock-images/6ModernMountainHomeStudioMcGee.jpg"
-                  alt="A finished Alpenglow project"
+                  src="/photos/portfolio/green-chalet-exterior-repaint-stone-garage-whistler.jpg"
+                  alt="Whistler chalet with freshly painted sage-green siding, stained garage doors, and stone columns"
                   className="w-full h-full object-cover"
                 />
               </div>
