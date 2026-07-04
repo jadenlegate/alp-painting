@@ -99,8 +99,8 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* Step-by-step */}
-      <section className="py-16 md:py-24">
+      {/* Step-by-step — tight top so the first step sits close under the hero band */}
+      <section className="pt-2 md:pt-4 pb-16 md:pb-24">
         <Container>
           <div className="max-w-3xl mx-auto space-y-0">
             {STEPS.map((step, i) => (
@@ -144,7 +144,7 @@ export default function ProcessPage() {
               Every project closes with a written record: the products we used, colour codes, sheens, areas covered, and care notes.
             </p>
             <p className="mt-4 text-background/65 leading-relaxed">
-              It lives with the house. Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used.
+              Years later, when you need a touch-up or sell the property, you&rsquo;ll know exactly what was used.
             </p>
             <div className="mt-8">
               <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">

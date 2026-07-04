@@ -37,7 +37,7 @@ export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
   return (
     <footer className="mt-24 border-t border-border bg-stone-light/20">
       <Container>
-        <div className="py-16 grid gap-10 md:gap-12 md:grid-cols-3 lg:grid-cols-4">
+        <div className="py-12 md:py-16 grid gap-8 md:gap-12 md:grid-cols-3 lg:grid-cols-4">
           {/* Brand column — full-width row on tablet, first column on desktop */}
           <div className="space-y-4 min-w-0 md:col-span-3 lg:col-span-1">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -80,13 +80,13 @@ export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Services
             </div>
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               {serviceGroups.map((group) => (
                 <div key={group.heading}>
-                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2.5">
+                  <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-1.5 md:mb-2.5">
                     {group.heading}
                   </div>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-1.5 md:space-y-2.5">
                     {group.items.map((l) => (
                       <li key={l.href}>
                         <Link href={l.href} className="text-sm text-ink hover:text-navy">
@@ -104,7 +104,7 @@ export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Explore
             </div>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5 md:space-y-2.5">
               {COMPANY_LINKS.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-sm text-ink hover:text-navy">
@@ -119,7 +119,7 @@ export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">
               Contact
             </div>
-            <ul className="space-y-2.5 text-sm text-ink">
+            <ul className="space-y-1.5 md:space-y-2.5 text-sm text-ink">
               <li>
                 <a href={`tel:${SITE.phoneRaw}`} className="hover:text-navy">
                   {SITE.phone}
