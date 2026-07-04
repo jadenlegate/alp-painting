@@ -200,7 +200,7 @@ export default function HomePage() {
             <div className="max-w-2xl">
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Why Alpenglow</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
-                Painting isn&rsquo;t just about the end result. It&rsquo;s about <span className="text-alpine">the entire experience</span> from the first time you reach out until we&rsquo;ve packed up and left your property.
+                Painting isn&rsquo;t just about the end result. It&rsquo;s about the entire experience from the first time you reach out until we&rsquo;ve packed up and left your property.
               </h2>
               <p className="mt-5 text-background/70 text-lg leading-relaxed">
                 What separates a good job from a bad one is showing up when you said you would, treating your property like it&rsquo;s our own, keeping the site clean, communicating clearly along the way and following through on what was promised.
@@ -302,7 +302,7 @@ export default function HomePage() {
               <div>
                 <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Designed around you</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
-                  A painting project should feel <span className="text-alpine">straightforward</span>, not stressful.
+                  A painting project should feel straightforward, not stressful.
                 </h2>
                 <p className="mt-5 text-ink text-lg leading-relaxed font-semibold text-navy">
                   That belief shapes how we quote, schedule, and run every job.

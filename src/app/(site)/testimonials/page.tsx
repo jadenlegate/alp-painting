@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -138,22 +139,24 @@ export default function TestimonialsPage() {
         </Container>
       </section>
 
-      {/* Video testimonials */}
-      <section className="pb-16 md:pb-20">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-4">Hear it from clients</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              In their own words.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
-            {VIDEO_TESTIMONIALS.map((v) => (
-              <VideoCard key={v.title} video={v} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      {/* Video testimonials — hidden in MVP mode until real videos exist. @/lib/flags */}
+      {IS_FULL && (
+        <section className="pb-16 md:pb-20">
+          <Container>
+            <div className="max-w-2xl mb-10 md:mb-14">
+              <Eyebrow className="mb-4">Hear it from clients</Eyebrow>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
+                In their own words.
+              </h2>
+            </div>
+            <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
+              {VIDEO_TESTIMONIALS.map((v) => (
+                <VideoCard key={v.title} video={v} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Stats bar */}
       <section className="border-y border-border py-8 md:py-10 bg-stone-light/30">

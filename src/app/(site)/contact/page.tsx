@@ -36,7 +36,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="pb-24">
+      <section className="pb-12 lg:pb-24">
         <Container>
           <div className="grid gap-12 lg:gap-16 lg:grid-cols-[1.5fr_1fr]">
             <div>

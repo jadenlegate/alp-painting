@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
+import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 
 export const metadata: Metadata = {
@@ -35,21 +37,12 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2000&q=85"
-            alt="Alpenglow Painting crew at work"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/40" />
-        </div>
+      {/* Hero — same editorial pattern as the Process and Warranty pages */}
+      <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-widest text-background/70 mb-4">Our story</div>
-            <h1 className="font-serif text-background text-[2rem] md:text-[3rem] leading-[1.1]">
+          <div className="max-w-3xl mx-auto">
+            <Eyebrow className="mb-4">Our Story</Eyebrow>
+            <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               A painting company built around the experience — not just the paint.
             </h1>
           </div>
@@ -59,7 +52,7 @@ export default function AboutPage() {
       {/* Founder story */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-10 md:gap-16 lg:grid-cols-[1.3fr_1fr] items-center">
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-[1.3fr_1fr] items-center">
             <div>
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">The founder</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
@@ -74,7 +67,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-stone-light/40 ring-1 ring-navy/10">
+            <div className="mx-auto w-44 h-44 sm:w-56 sm:h-56 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-stone-light/40 ring-1 ring-navy/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Jaden Alpenglow Headshot-2.jpg"
@@ -106,7 +99,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team — placeholder, populate via Sanity */}
+      {/* Team — hidden in MVP mode until real crew photos exist. @/lib/flags */}
+      {IS_FULL && (
       <section className="py-16 md:py-24">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
@@ -137,6 +131,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      )}
 
       <CtaBlock
         eyebrow="Work with us"
