@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { IS_FULL } from "@/lib/flags";
 import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
@@ -55,6 +56,7 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  if (!IS_FULL) notFound(); // MVP: blog hidden until launch-ready
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();

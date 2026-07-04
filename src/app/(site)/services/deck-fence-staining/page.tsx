@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -206,43 +207,48 @@ export default function DeckFenceStainingPage() {
         steps={PROCESS}
       />
 
-      {/* Before / after */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Before & after</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Drag to see the difference.
-            </h2>
-          </div>
-          <div className="max-w-3xl">
-            <BeforeAfterSlider
-              aspectClass="aspect-[4/3]"
-              beforeUrl="/stock-images/portfolio/cedar-deck-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
-              beforeAlt="Weathered grey cedar deck before restoration, Whistler"
-              afterAlt="Freshly stained cedar deck and railing, Whistler"
-              caption="Pressure washed, sanded to bare, two coats of semi-solid stain."
-            />
-          </div>
-        </Container>
-      </section>
+      {/* Before/after + Related — hidden in MVP mode, returning with tweaks in V2 */}
+      {IS_FULL && (
+        <>
+          {/* Before / after */}
+          <section className="py-16 md:py-24 bg-stone-light/50">
+            <Container>
+              <div className="max-w-2xl mb-10 md:mb-14">
+                <Eyebrow className="mb-5">Before & after</Eyebrow>
+                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+                  Drag to see the difference.
+                </h2>
+              </div>
+              <div className="max-w-3xl">
+                <BeforeAfterSlider
+                  aspectClass="aspect-[4/3]"
+                  beforeUrl="/stock-images/portfolio/cedar-deck-before-whistler.jpg"
+                  afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
+                  beforeAlt="Weathered grey cedar deck before restoration, Whistler"
+                  afterAlt="Freshly stained cedar deck and railing, Whistler"
+                  caption="Pressure washed, sanded to bare, two coats of semi-solid stain."
+                />
+              </div>
+            </Container>
+          </section>
 
-      {/* Related */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div>
-              <Eyebrow className="mb-5">Recent deck & wood work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Decks we&rsquo;re proud of.</h2>
-            </div>
-            <Button href="/portfolio" variant="text">See all work →</Button>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
-          </div>
-        </Container>
-      </section>
+          {/* Related */}
+          <section className="py-16 md:py-24">
+            <Container>
+              <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
+                <div>
+                  <Eyebrow className="mb-5">Recent deck & wood work</Eyebrow>
+                  <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Decks we&rsquo;re proud of.</h2>
+                </div>
+                <Button href="/portfolio" variant="text">See all work →</Button>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
 
       <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">

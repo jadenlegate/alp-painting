@@ -5,13 +5,15 @@ import { Container } from "./Container";
 import { TextUsButton } from "./TextUsButton";
 import { CallUsButton } from "./CallUsButton";
 import { SITE } from "@/lib/site";
-import { SERVICE_GROUPS } from "@/lib/services";
+import { SERVICE_GROUPS, type ServiceGroup } from "@/lib/services";
 
 // Four-column footer per brief §6: Brand / Services / Company / Contact.
 // Bottom bar holds legal + association logos. Service links come from
 // @/lib/services so the footer always matches the nav dropdown.
+// serviceGroups/showBlog come pre-filtered from the server layout (site-mode
+// gating — the flag env var isn't available in client bundles).
 
-const COMPANY_LINKS = [
+const ALL_COMPANY_LINKS = [
   { label: "About", href: "/about" },
   { label: "Process", href: "/process" },
   { label: "Portfolio", href: "/portfolio" },
@@ -23,7 +25,15 @@ const COMPANY_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function Footer() {
+type Props = {
+  serviceGroups?: ServiceGroup[];
+  showBlog?: boolean;
+};
+
+export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Props) {
+  const COMPANY_LINKS = showBlog
+    ? ALL_COMPANY_LINKS
+    : ALL_COMPANY_LINKS.filter((l) => l.href !== "/blog");
   return (
     <footer className="mt-24 border-t border-border bg-stone-light/20">
       <Container>
@@ -71,7 +81,7 @@ export function Footer() {
               Services
             </div>
             <div className="space-y-5">
-              {SERVICE_GROUPS.map((group) => (
+              {serviceGroups.map((group) => (
                 <div key={group.heading}>
                   <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2.5">
                     {group.heading}

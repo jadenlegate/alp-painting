@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -211,51 +212,56 @@ export default function ExteriorPaintingPage() {
         steps={PROCESS}
       />
 
-      {/* Before / after */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Before & after</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Drag to see the difference.
-            </h2>
-          </div>
-          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
-            <BeforeAfterSlider
-              aspectClass="aspect-[4/3]"
-              beforeUrl="/stock-images/portfolio/cedar-chalet-exterior-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg"
-              beforeAlt="Faded cedar chalet exterior before repaint, Whistler"
-              afterAlt="Cedar chalet exterior after full repaint, Whistler"
-              caption="Pressure washed, scraped and sanded, two coats of premium solid stain."
-            />
-            <BeforeAfterSlider
-              aspectClass="aspect-[4/3]"
-              beforeUrl="/stock-images/portfolio/family-home-exterior-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/exterior-repaint-finished-whistler.jpg"
-              beforeAlt="Faded family home exterior before repaint, Whistler"
-              afterAlt="Family home after full exterior repaint, Whistler"
-              caption="Two-tone solid finish over a full prep — siding, trim, and fascia."
-            />
-          </div>
-        </Container>
-      </section>
+      {/* Before/after + Related — hidden in MVP mode, returning with tweaks in V2 */}
+      {IS_FULL && (
+        <>
+          {/* Before / after */}
+          <section className="py-16 md:py-24">
+            <Container>
+              <div className="max-w-2xl mb-10 md:mb-14">
+                <Eyebrow className="mb-5">Before & after</Eyebrow>
+                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+                  Drag to see the difference.
+                </h2>
+              </div>
+              <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+                <BeforeAfterSlider
+                  aspectClass="aspect-[4/3]"
+                  beforeUrl="/stock-images/portfolio/cedar-chalet-exterior-before-whistler.jpg"
+                  afterUrl="/stock-images/portfolio/cedar-chalet-exterior-whistler.jpg"
+                  beforeAlt="Faded cedar chalet exterior before repaint, Whistler"
+                  afterAlt="Cedar chalet exterior after full repaint, Whistler"
+                  caption="Pressure washed, scraped and sanded, two coats of premium solid stain."
+                />
+                <BeforeAfterSlider
+                  aspectClass="aspect-[4/3]"
+                  beforeUrl="/stock-images/portfolio/family-home-exterior-before-whistler.jpg"
+                  afterUrl="/stock-images/portfolio/exterior-repaint-finished-whistler.jpg"
+                  beforeAlt="Faded family home exterior before repaint, Whistler"
+                  afterAlt="Family home after full exterior repaint, Whistler"
+                  caption="Two-tone solid finish over a full prep — siding, trim, and fascia."
+                />
+              </div>
+            </Container>
+          </section>
 
-      {/* Related projects */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div>
-              <Eyebrow className="mb-5">Recent exterior work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Projects that hold up.</h2>
-            </div>
-            <Button href="/portfolio" variant="text">See all work →</Button>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
-          </div>
-        </Container>
-      </section>
+          {/* Related projects */}
+          <section className="py-16 md:py-24 bg-stone-light/50">
+            <Container>
+              <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
+                <div>
+                  <Eyebrow className="mb-5">Recent exterior work</Eyebrow>
+                  <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Projects that hold up.</h2>
+                </div>
+                <Button href="/portfolio" variant="text">See all work →</Button>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
 
       <section className="py-16 md:py-24">
         <Container size="prose">

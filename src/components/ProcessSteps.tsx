@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Camera } from "lucide-react";
 import { Container } from "./Container";
 import { Eyebrow } from "./Eyebrow";
+import { IS_FULL } from "@/lib/flags";
 
 export type ProcessStep = {
   /** Step number, e.g. "01". */
@@ -27,6 +28,8 @@ type Props = {
 // horizontal image stacked above the text on mobile. Drop a real photo in by
 // setting `image` (+ `imageAlt`) on the step — until then a clean placeholder
 // shows so nothing looks broken.
+// MVP mode (see @/lib/flags) hides the photo column entirely until enough
+// real step photos exist — the layout below is unchanged and returns in V2.
 export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, bg = "stone" }: Props) {
   return (
     <section className={`py-16 md:py-28 ${bg === "stone" ? "bg-stone-light/50" : ""}`}>
@@ -45,25 +48,30 @@ export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, b
           {steps.map((step) => (
             <article
               key={step.n}
-              className="border border-navy/15 bg-background rounded-sm overflow-hidden grid md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]"
+              className={`border border-navy/15 bg-background rounded-sm overflow-hidden ${
+                IS_FULL ? "grid md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]" : ""
+              }`}
             >
-              {/* Photo — horizontal on mobile (top), vertical on desktop (left) */}
-              <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[360px] bg-stone-light">
-                {step.image ? (
-                  <Image
-                    src={step.image}
-                    alt={step.imageAlt ?? step.title}
-                    fill
-                    sizes="(min-width: 1024px) 340px, (min-width: 768px) 300px, 100vw"
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-navy/25">
-                    <Camera size={28} strokeWidth={1.5} />
-                    <span className="mt-2 text-[0.65rem] uppercase tracking-[0.2em]">Photo coming</span>
-                  </div>
-                )}
-              </div>
+              {/* Photo — horizontal on mobile (top), vertical on desktop (left).
+                  Hidden in MVP mode until real step photos exist. */}
+              {IS_FULL && (
+                <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[360px] bg-stone-light">
+                  {step.image ? (
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt ?? step.title}
+                      fill
+                      sizes="(min-width: 1024px) 340px, (min-width: 768px) 300px, 100vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-navy/25">
+                      <Camera size={28} strokeWidth={1.5} />
+                      <span className="mt-2 text-[0.65rem] uppercase tracking-[0.2em]">Photo coming</span>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* Text */}
               <div className="p-7 md:p-9 lg:p-10 flex flex-col justify-center">

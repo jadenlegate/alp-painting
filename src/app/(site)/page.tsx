@@ -10,7 +10,9 @@ import { FadeIn } from "@/components/FadeIn";
 import { MessageSquare, UserCheck, ShieldCheck, Ruler, CalendarCheck, HardHat, Paintbrush, ClipboardCheck, type LucideIcon } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { BulletList } from "@/components/BulletList";
+import { IS_FULL } from "@/lib/flags";
 
+// `fullOnly` cards are hidden in MVP mode (main branch) — see @/lib/flags.
 const SERVICES = [
   {
     title: "Interior Painting",
@@ -29,6 +31,7 @@ const SERVICES = [
     href: "/services/cabinet-refinishing",
     blurb: "Factory-grade coatings without the cost of replacement. Meticulous prep and stunning finishes.",
     imageUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
+    fullOnly: true,
   },
   {
     title: "Wood Refinishing & Staining",
@@ -41,6 +44,7 @@ const SERVICES = [
     href: "/services/log-restoration",
     blurb: "Full log home restoration: finish removal, sanding, rot repair, sealing and finishing.",
     imageUrl: "/stock-images/portfolio/dark-cedar-chalet-whistler.jpg",
+    fullOnly: true,
   },
   {
     title: "Deck & Fence Staining",
@@ -59,12 +63,14 @@ const SERVICES = [
     href: "/services/new-construction",
     blurb: "Schedule-integrated, spec-precise finishing for general contractors and custom home builders.",
     imageUrl: "/working-images/new-construction-painting-whistler.jpg",
+    fullOnly: true,
   },
   {
     title: "Commercial, Strata & Hotels",
     href: "/services/commercial",
     blurb: "Flexible scheduling around operations and residents. Clear communication, no drama.",
     imageUrl: "/stock-images/commercial-strata-hotel-painting-whistler.jpg",
+    fullOnly: true,
   },
 ];
 
@@ -236,9 +242,9 @@ export default function HomePage() {
             </div>
           </FadeIn>
           <div className="grid gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s, i) => (
+            {SERVICES.filter((s) => IS_FULL || !s.fullOnly).map((s, i) => (
               <FadeIn key={s.href} delay={i * 0.07}>
-                <ServiceCard {...s} />
+                <ServiceCard title={s.title} href={s.href} blurb={s.blurb} imageUrl={s.imageUrl} />
               </FadeIn>
             ))}
           </div>

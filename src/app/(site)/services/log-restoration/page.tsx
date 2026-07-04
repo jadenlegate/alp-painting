@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -114,6 +116,7 @@ const FAQS = [
 ];
 
 export default function LogRestorationPage() {
+  if (!IS_FULL) notFound(); // MVP: page hidden until launch-ready
   return (
     <>
       <script
@@ -144,21 +147,23 @@ export default function LogRestorationPage() {
         body="Penetrating log and semi-transparent finishes are backed for 2 years, matched to how they wear in mountain sun. The maintenance-coat schedule in your project report is what takes the finish the distance."
       />
 
-      {/* Related */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div>
-              <Eyebrow className="mb-5">Recent wood & log work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Wood we&rsquo;ve brought back.</h2>
+      {/* Related — hidden in MVP mode, returning with tweaks in V2 */}
+      {IS_FULL && (
+        <section className="py-16 md:py-24">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
+              <div>
+                <Eyebrow className="mb-5">Recent wood & log work</Eyebrow>
+                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Wood we&rsquo;ve brought back.</h2>
+              </div>
+              <Button href="/portfolio" variant="text">See all work →</Button>
             </div>
-            <Button href="/portfolio" variant="text">See all work →</Button>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
-          </div>
-        </Container>
-      </section>
+            <div className="grid gap-6 md:grid-cols-3">
+              {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">

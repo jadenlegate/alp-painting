@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -154,7 +155,8 @@ const FAQS = [
   {
     q: "When should I hire a professional painter vs doing it myself?",
     a: "DIY painting can work for small, simple projects like freshening up a single room if you have the tools, time, and patience. But for large areas, high ceilings, tricky prep work, specialty finishes, or when you want a long-lasting, flawless result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
-    link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" },
+    // Blog is hidden in MVP mode — only link to the article when it exists.
+    ...(IS_FULL ? { link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" } } : {}),
   },
   {
     q: "What does the warranty cover?",
@@ -223,25 +225,27 @@ export default function InteriorPaintingPage() {
         steps={PROCESS}
       />
 
-      {/* Related projects */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div className="max-w-xl">
-              <Eyebrow className="mb-5">Recent interior work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-                A few projects we&rsquo;ve loved.
-              </h2>
+      {/* Related projects — hidden in MVP mode, returning with tweaks in V2 */}
+      {IS_FULL && (
+        <section className="py-16 md:py-24">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
+              <div className="max-w-xl">
+                <Eyebrow className="mb-5">Recent interior work</Eyebrow>
+                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+                  A few projects we&rsquo;ve loved.
+                </h2>
+              </div>
+              <Button href="/portfolio" variant="text">See all work →</Button>
             </div>
-            <Button href="/portfolio" variant="text">See all work →</Button>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {RELATED_PROJECTS.map((p) => (
-              <ProjectCard key={p.slug} project={p} />
-            ))}
-          </div>
-        </Container>
-      </section>
+            <div className="grid gap-6 md:grid-cols-3">
+              {RELATED_PROJECTS.map((p) => (
+                <ProjectCard key={p.slug} project={p} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-stone-light/50">

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { IS_FULL } from "@/lib/flags";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/Container";
@@ -20,6 +22,7 @@ function formatDate(iso: string) {
 }
 
 export default function BlogPage() {
+  if (!IS_FULL) notFound(); // MVP: blog hidden until launch-ready
   const sorted = [...POSTS].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );

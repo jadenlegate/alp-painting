@@ -1,5 +1,16 @@
 import type { MetadataRoute } from "next";
 import { POSTS } from "@/lib/blogPosts";
+import { IS_FULL } from "@/lib/flags";
+
+// Routes hidden in MVP mode (main branch) — they 404 there, so keep them
+// out of the production sitemap. See @/lib/flags.
+const FULL_ONLY_ROUTES = new Set([
+  "/blog",
+  "/services/cabinet-refinishing",
+  "/services/log-restoration",
+  "/services/new-construction",
+  "/services/commercial",
+]);
 
 const BASE_URL = "https://alpenglowpainting.ca";
 
@@ -35,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const path of STATIC_ROUTES) {
+    if (!IS_FULL && FULL_ONLY_ROUTES.has(path)) continue;
     entries.push({
       url: `${BASE_URL}${path}`,
       lastModified: now,
@@ -44,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const post of POSTS) {
+    if (!IS_FULL) break;
     entries.push({
       url: `${BASE_URL}/blog/${post.slug}`,
       lastModified: new Date(post.publishedAt),

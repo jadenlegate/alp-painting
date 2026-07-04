@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -148,8 +149,9 @@ const FAQS = [
   },
   {
     q: "Do you do log homes?",
-    a: "Yes, we offer professional log restoration and finishing services, including refinishing, staining, and rot repair. See our dedicated Log Restoration page for the full breakdown.",
-    link: { href: "/services/log-restoration", label: "Log Restoration page" },
+    // Log Restoration page is hidden in MVP mode — drop the pointer to it there.
+    a: `Yes, we offer professional log restoration and finishing services, including refinishing, staining, and rot repair.${IS_FULL ? " See our dedicated Log Restoration page for the full breakdown." : ""}`,
+    ...(IS_FULL ? { link: { href: "/services/log-restoration", label: "Log Restoration page" } } : {}),
   },
 ];
 
@@ -214,51 +216,56 @@ export default function WoodRefinishingPage() {
         steps={PROCESS}
       />
 
-      {/* Before / after */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-2xl mb-10 md:mb-14">
-            <Eyebrow className="mb-5">Before & after</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
-              Drag to see the difference.
-            </h2>
-          </div>
-          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
-            <BeforeAfterSlider
-              aspectClass="aspect-[4/3]"
-              beforeUrl="/stock-images/portfolio/cedar-ceiling-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
-              beforeAlt="Weathered cedar ceiling before restoration, Whistler"
-              afterAlt="Cedar ceiling after cleaning and re-staining, Whistler"
-              caption="Old finish stripped, wood sanded smooth, four coats of spar urethane."
-            />
-            <BeforeAfterSlider
-              aspectClass="aspect-[4/3]"
-              beforeUrl="/stock-images/portfolio/cedar-deck-before-whistler.jpg"
-              afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
-              beforeAlt="Weathered cedar deck before restoration, Whistler"
-              afterAlt="Freshly stained cedar deck and rail, Whistler"
-              caption="Pressure washed, sanded to bare, semi-solid stain in two coats."
-            />
-          </div>
-        </Container>
-      </section>
+      {/* Before/after + Related — hidden in MVP mode, returning with tweaks in V2 */}
+      {IS_FULL && (
+        <>
+          {/* Before / after */}
+          <section className="py-16 md:py-24">
+            <Container>
+              <div className="max-w-2xl mb-10 md:mb-14">
+                <Eyebrow className="mb-5">Before & after</Eyebrow>
+                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">
+                  Drag to see the difference.
+                </h2>
+              </div>
+              <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+                <BeforeAfterSlider
+                  aspectClass="aspect-[4/3]"
+                  beforeUrl="/stock-images/portfolio/cedar-ceiling-before-whistler.jpg"
+                  afterUrl="/stock-images/portfolio/cedar-ceiling-after-whistler.jpg"
+                  beforeAlt="Weathered cedar ceiling before restoration, Whistler"
+                  afterAlt="Cedar ceiling after cleaning and re-staining, Whistler"
+                  caption="Old finish stripped, wood sanded smooth, four coats of spar urethane."
+                />
+                <BeforeAfterSlider
+                  aspectClass="aspect-[4/3]"
+                  beforeUrl="/stock-images/portfolio/cedar-deck-before-whistler.jpg"
+                  afterUrl="/stock-images/portfolio/stained-cedar-exterior-whistler.jpg"
+                  beforeAlt="Weathered cedar deck before restoration, Whistler"
+                  afterAlt="Freshly stained cedar deck and rail, Whistler"
+                  caption="Pressure washed, sanded to bare, semi-solid stain in two coats."
+                />
+              </div>
+            </Container>
+          </section>
 
-      {/* Related */}
-      <section className="py-16 md:py-24 bg-stone-light/50">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-            <div>
-              <Eyebrow className="mb-5">Recent wood work</Eyebrow>
-              <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Refinishing we&rsquo;re proud of.</h2>
-            </div>
-            <Button href="/portfolio" variant="text">See all work →</Button>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
-          </div>
-        </Container>
-      </section>
+          {/* Related */}
+          <section className="py-16 md:py-24 bg-stone-light/50">
+            <Container>
+              <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
+                <div>
+                  <Eyebrow className="mb-5">Recent wood work</Eyebrow>
+                  <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Refinishing we&rsquo;re proud of.</h2>
+                </div>
+                <Button href="/portfolio" variant="text">See all work →</Button>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
 
       <section className="py-16 md:py-24">
         <Container size="prose">

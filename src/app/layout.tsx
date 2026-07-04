@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
+import { IS_FULL } from "@/lib/flags";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -120,13 +121,19 @@ const localBusinessLd = {
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting", url: `${SITE_URL}/services/interior-painting` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting", url: `${SITE_URL}/services/exterior-painting` } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cabinet Refinishing", url: `${SITE_URL}/services/cabinet-refinishing` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wood Refinishing & Staining", url: `${SITE_URL}/services/wood-restoration` } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Log Home Restoration", url: `${SITE_URL}/services/log-restoration` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining", url: `${SITE_URL}/services/deck-fence-staining` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Light Carpentry & Repair", url: `${SITE_URL}/services/light-carpentry` } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction & Renovation Painting", url: `${SITE_URL}/services/new-construction` } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial, Strata & Hotel Painting", url: `${SITE_URL}/services/commercial` } },
+      // Services below are hidden in MVP mode — keep their offers (and URLs)
+      // out of production structured data until the pages ship. @/lib/flags
+      ...(IS_FULL
+        ? [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cabinet Refinishing", url: `${SITE_URL}/services/cabinet-refinishing` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Log Home Restoration", url: `${SITE_URL}/services/log-restoration` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction & Renovation Painting", url: `${SITE_URL}/services/new-construction` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial, Strata & Hotel Painting", url: `${SITE_URL}/services/commercial` } },
+          ]
+        : []),
     ],
   },
   openingHoursSpecification: {

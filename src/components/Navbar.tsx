@@ -9,14 +9,16 @@ import { Container } from "./Container";
 import { TextUsButton } from "./TextUsButton";
 import { CallUsButton } from "./CallUsButton";
 import { SITE } from "@/lib/site";
-import { SERVICE_GROUPS } from "@/lib/services";
+import { SERVICE_GROUPS, type ServiceGroup } from "@/lib/services";
 
 // Sticky top navigation. Transparent while at the top of the hero on the
 // home page, solid elsewhere or after scroll. Mobile uses a full-screen
 // overlay menu — simpler and more on-brand than a cramped dropdown.
 // Services live in @/lib/services so the nav and footer can't drift apart.
+// serviceGroups/showBlog come pre-filtered from the server layout (site-mode
+// gating — the flag env var isn't available in client bundles).
 
-const ABOUT_LINKS = [
+const ALL_ABOUT_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Our Process", href: "/process" },
   { label: "Warranty", href: "/warranty" },
@@ -30,7 +32,15 @@ const MAIN_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function Navbar() {
+type Props = {
+  serviceGroups?: ServiceGroup[];
+  showBlog?: boolean;
+};
+
+export function Navbar({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Props) {
+  const ABOUT_LINKS = showBlog
+    ? ALL_ABOUT_LINKS
+    : ALL_ABOUT_LINKS.filter((l) => l.href !== "/blog");
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -112,8 +122,8 @@ export function Navbar() {
                 </button>
                 {servicesOpen && (
                   <div className="absolute top-full left-0 pt-2 w-[680px] max-w-[calc(100vw-2rem)]">
-                    <div className="bg-surface border border-border rounded-sm shadow-sm p-6 grid grid-cols-3 gap-x-6 gap-y-6">
-                      {SERVICE_GROUPS.map((group) => (
+                    <div className={`bg-surface border border-border rounded-sm shadow-sm p-6 grid gap-x-6 gap-y-6 ${serviceGroups.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+                      {serviceGroups.map((group) => (
                         <div key={group.heading}>
                           <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-medium mb-3">
                             {group.heading}
@@ -228,7 +238,7 @@ export function Navbar() {
                 </button>
                 {mobileServicesOpen && (
                   <div className="pb-5 space-y-5">
-                    {SERVICE_GROUPS.map((group) => (
+                    {serviceGroups.map((group) => (
                       <div key={group.heading}>
                         <div className="text-[0.65rem] uppercase tracking-[0.2em] text-alpine font-semibold mb-2">
                           {group.heading}

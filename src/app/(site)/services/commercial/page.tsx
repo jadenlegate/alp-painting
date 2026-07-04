@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/Button";
@@ -126,6 +128,7 @@ const FAQS = [
 ];
 
 export default function CommercialPage() {
+  if (!IS_FULL) notFound(); // MVP: page hidden until launch-ready
   return (
     <>
       <script
