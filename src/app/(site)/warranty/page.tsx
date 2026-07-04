@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -85,28 +86,30 @@ export default function WarrantyPage() {
         </Container>
       </section>
 
-      {/* Fine print */}
-      <section className="py-16 md:py-20 bg-stone-light/30">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <Eyebrow className="mb-4">Fine print worth reading</Eyebrow>
-            <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
-              A few conditions — stated plainly.
-            </h2>
-            <ul className="mt-8 space-y-4">
-              {FINE_PRINT.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-ink leading-relaxed">
-                  <FileText size={16} className="text-navy mt-1 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-10 text-muted text-sm leading-relaxed italic">
-              This page summarizes our warranty. The full terms live in your signed project agreement and take precedence over anything here. If you have questions, ask us before you sign.
-            </p>
-          </div>
-        </Container>
-      </section>
+      {/* Fine print — hidden in MVP mode, kept for V2. See @/lib/flags. */}
+      {IS_FULL && (
+        <section className="py-16 md:py-20 bg-stone-light/30">
+          <Container>
+            <div className="max-w-3xl mx-auto">
+              <Eyebrow className="mb-4">Fine print worth reading</Eyebrow>
+              <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
+                A few conditions — stated plainly.
+              </h2>
+              <ul className="mt-8 space-y-4">
+                {FINE_PRINT.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-ink leading-relaxed">
+                    <FileText size={16} className="text-navy mt-1 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-10 text-muted text-sm leading-relaxed italic">
+                This page summarizes our warranty. The full terms live in your signed project agreement and take precedence over anything here. If you have questions, ask us before you sign.
+              </p>
+            </div>
+          </Container>
+        </section>
+      )}
 
       <CtaBlock
         heading="Questions about coverage?"
