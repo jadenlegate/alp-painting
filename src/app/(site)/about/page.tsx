@@ -53,7 +53,7 @@ export default function AboutPage() {
       {/* Founder story */}
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-8 lg:gap-16 lg:grid-cols-[1.3fr_1fr] items-center">
+          <div className="grid gap-8 md:gap-12 lg:gap-16 md:grid-cols-[1.3fr_1fr] items-center">
             <div>
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">The founder</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto w-44 h-44 sm:w-56 sm:h-56 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-stone-light/40 ring-1 ring-navy/10">
+            <div className="mx-auto w-60 h-60 sm:w-72 sm:h-72 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-stone-light/40 ring-1 ring-navy/10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Jaden Alpenglow Headshot-2.jpg"

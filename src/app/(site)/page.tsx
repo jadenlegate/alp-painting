@@ -197,7 +197,7 @@ export default function HomePage() {
       <Section className="bg-navy">
         <Container>
           <FadeIn>
-            <div className="max-w-2xl">
+            <div className="max-w-4xl">
               <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Why Alpenglow</div>
               <h2 className="font-serif text-background text-[1.75rem] md:text-[2.75rem] leading-[1.1]">
                 Painting isn&rsquo;t just about the end result. It&rsquo;s about the entire experience from the first time you reach out until we&rsquo;ve packed up and left your property.
@@ -288,7 +288,7 @@ export default function HomePage() {
       <Section>
         <Container>
           <FadeIn>
-            <div className="max-w-3xl">
+            <div className="max-w-4xl mx-auto">
                 <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Designed around you</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                   A painting project should feel straightforward, not stressful.
@@ -301,6 +301,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-7">
                   <BulletList
+                    columns={2}
                     items={[
                       "A clear, detailed, and precise proposal",
                       "Punctual starts and realistic timelines with weather buffer",
