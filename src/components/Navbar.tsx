@@ -121,7 +121,7 @@ export function Navbar({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
                   Services <ChevronDown size={14} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 pt-2 w-[680px] max-w-[calc(100vw-2rem)]">
+                  <div className={`absolute top-full left-0 pt-2 max-w-[calc(100vw-2rem)] ${serviceGroups.length >= 3 ? "w-[680px]" : "w-[480px]"}`}>
                     <div className={`bg-surface border border-border rounded-sm shadow-sm p-6 grid gap-x-6 gap-y-6 ${serviceGroups.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
                       {serviceGroups.map((group) => (
                         <div key={group.heading}>

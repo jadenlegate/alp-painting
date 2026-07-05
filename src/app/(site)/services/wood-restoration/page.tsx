@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -162,7 +162,7 @@ export default function WoodRefinishingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="Wood Refinishing & Staining"
         subline="Cedar siding, decks, timber frames, fences. Properly cleaned, properly stained, and documented so you know when to come back."
@@ -172,7 +172,7 @@ export default function WoodRefinishingPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       {/* Surfaces */}
       <section className="py-16 md:py-28 bg-stone-light/50">

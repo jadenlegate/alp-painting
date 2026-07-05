@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -138,7 +138,7 @@ export default function NewConstructionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="New Construction & Renovation"
         subline="For general contractors and custom home builders. Schedule-integrated, spec-precise finishing — and a painting line that never slips your timeline."
@@ -149,7 +149,7 @@ export default function NewConstructionPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       {/* Scope */}
       <section className="py-16 md:py-28 bg-stone-light/50">

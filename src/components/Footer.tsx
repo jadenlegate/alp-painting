@@ -35,7 +35,7 @@ export function Footer({ serviceGroups = SERVICE_GROUPS, showBlog = true }: Prop
     ? ALL_COMPANY_LINKS
     : ALL_COMPANY_LINKS.filter((l) => l.href !== "/blog");
   return (
-    <footer className="mt-24 border-t border-border bg-stone-light/20">
+    <footer className="mt-12 md:mt-16 border-t border-border bg-stone-light/20">
       <Container>
         <div className="py-12 md:py-16 grid gap-8 md:gap-12 md:grid-cols-3 lg:grid-cols-4">
           {/* Brand column — full-width row on tablet, first column on desktop */}

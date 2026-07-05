@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -158,7 +158,7 @@ export default function ExteriorPaintingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="Exterior Painting"
         subline="Built for Whistler winters. Premium coatings, thorough prep, and a warranty that holds up when the weather does its worst."
@@ -168,7 +168,7 @@ export default function ExteriorPaintingPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       {/* Surfaces & details */}
       <section className="py-16 md:py-28 bg-stone-light/50">

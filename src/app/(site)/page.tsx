@@ -284,22 +284,11 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Designed around you — photo-paired benefits block */}
+      {/* Designed around you — benefits block */}
       <Section>
         <Container>
-          <div className="grid gap-10 md:gap-16 md:grid-cols-2 md:items-stretch">
-            <FadeIn direction="left" className="md:h-full">
-              <div className="h-full min-h-[400px] md:min-h-0 rounded-sm overflow-hidden bg-stone-light/40">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/photos/portfolio/green-chalet-exterior-repaint-stone-garage-whistler.jpg"
-                  alt="Whistler chalet with freshly painted sage-green siding, stained garage doors, and stone columns"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </FadeIn>
-            <FadeIn direction="right">
-              <div>
+          <FadeIn>
+            <div className="max-w-3xl">
                 <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">Designed around you</div>
                 <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.1]">
                   A painting project should feel straightforward, not stressful.
@@ -328,9 +317,8 @@ export default function HomePage() {
                 <div className="mt-8">
                   <Button href="/contact" size="lg">Get a Quote</Button>
                 </div>
-              </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </Container>
       </Section>
 

@@ -37,10 +37,11 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero — same editorial pattern as the Process and Warranty pages */}
+      {/* Hero — flat editorial header, left-aligned like Portfolio/Testimonials
+          so it lines up with the founder section below */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-2xl">
             <Eyebrow className="mb-4">Our Story</Eyebrow>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
               A painting company built around the experience — not just the paint.

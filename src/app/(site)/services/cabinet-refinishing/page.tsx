@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -158,7 +158,7 @@ export default function CabinetRefinishingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="Cabinet Refinishing"
         subline="A factory-smooth finish on your existing cabinets. No replacement, no renovation chaos — just a kitchen that looks new."
@@ -168,7 +168,7 @@ export default function CabinetRefinishingPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       {/* Surfaces */}
       <section className="py-16 md:py-28 bg-stone-light/50">

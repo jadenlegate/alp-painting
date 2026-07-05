@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -123,7 +123,7 @@ export default function LogRestorationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="Log Restoration"
         subline="Media blasting, borate treatment, chinking, and penetrating finishes — the full log restoration process, done in the right order."
@@ -133,7 +133,7 @@ export default function LogRestorationPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       <ProcessSteps
         eyebrow="The process, step by step"

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { Hero } from "@/components/Hero";
+import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
@@ -133,7 +133,7 @@ export default function LightCarpentryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Hero
+      <ServiceHero
         eyebrow="Services"
         headline="Light Carpentry & Repair"
         subline="Rot repair, trim replacement, and exterior carpentry handled as part of your painting project — so the work is coordinated and the finish holds up."
@@ -143,7 +143,7 @@ export default function LightCarpentryPage() {
         <Button href="/contact" size="lg" className="!bg-background !text-navy hover:!bg-surface">
           Get a Quote
         </Button>
-      </Hero>
+      </ServiceHero>
 
       {/* What's in scope */}
       <section className="py-16 md:py-28 bg-stone-light/50">
