@@ -18,54 +18,61 @@ export const metadata: Metadata = {
 // section is full-mode only (see @/lib/flags) — it ships in a later revision
 // while the MVP shows the flat gallery.
 
-// Pre-computed column distribution: LPT-balanced so column heights
-// (sum of aspect ratios per column) come out as close to equal as the
-// discrete item sizes allow. Done at build time so the rendered columns
-// are deterministic and SSR-friendly.
+// Pre-computed column distribution, done at build time so the rendered
+// columns are deterministic and SSR-friendly.
+//
+// ORDER-PRESERVING: items fill columns in curated PORTFOLIO_GALLERY order
+// (each next photo goes to the currently-shortest column), so the sequence
+// in portfolioGallery.ts controls what appears near the top of the wall.
+// The last TAIL items are assigned by exhaustive search instead of greedily,
+// which lands the column bottoms as flush as the discrete photo shapes allow.
 // Each item also adds a fixed vertical gap (~20px against a ~370px column),
-// so the gap is included in the balance — otherwise columns holding more
-// items run visibly taller and the gallery bottom lands uneven.
+// included in the balance so columns with more items don't run taller.
 const GAP_UNITS = 0.055;
+const TAIL = 10; // 3^10 combos ≈ 59k — trivial at build time
 
 function balanceColumns(items: GalleryImage[], cols: number): GalleryImage[][] {
   const columns: { items: GalleryImage[]; height: number }[] = Array.from(
     { length: cols },
     () => ({ items: [], height: 0 }),
   );
-  // Longest Processing Time first: largest aspect ratios placed first so
-  // the shorter tail items can fine-tune the final balance.
-  const sorted = [...items]
-    .map((item, idx) => ({ item, idx }))
-    .sort((a, b) => b.item.ratio - a.item.ratio || a.idx - b.idx);
-  for (const { item } of sorted) {
+  const head = Math.max(0, items.length - TAIL);
+
+  // Greedy in-order fill for the bulk of the wall.
+  for (let i = 0; i < head; i++) {
     const target = columns.reduce((min, c) => (c.height < min.height ? c : min), columns[0]);
-    target.items.push(item);
-    target.height += item.ratio + GAP_UNITS;
+    target.items.push(items[i]);
+    target.height += items[i].ratio + GAP_UNITS;
   }
-  // Refinement: swap single items between the tallest and shortest columns
-  // while doing so shrinks the height difference.
-  for (let pass = 0; pass < 8; pass++) {
-    const tall = columns.reduce((max, c) => (c.height > max.height ? c : max), columns[0]);
-    const short = columns.reduce((min, c) => (c.height < min.height ? c : min), columns[0]);
-    const diff = tall.height - short.height;
-    let best: { a: GalleryImage; b: GalleryImage } | null = null;
-    let bestDiff = diff;
-    for (const a of tall.items) {
-      for (const b of short.items) {
-        const newDiff = Math.abs(diff - 2 * (a.ratio - b.ratio));
-        if (a.ratio > b.ratio && newDiff < bestDiff - 1e-6) {
-          bestDiff = newDiff;
-          best = { a, b };
-        }
-      }
+
+  // Exhaustive assignment for the tail: pick the combination that minimizes
+  // the spread between the tallest and shortest column.
+  const tail = items.slice(head);
+  let bestAssign: number[] | null = null;
+  let bestSpread = Infinity;
+  const combos = Math.pow(cols, tail.length);
+  for (let m = 0; m < combos; m++) {
+    const heights = columns.map((c) => c.height);
+    let x = m;
+    const assign: number[] = [];
+    for (const item of tail) {
+      const c = x % cols;
+      x = (x - c) / cols;
+      assign.push(c);
+      heights[c] += item.ratio + GAP_UNITS;
     }
-    if (!best) break;
-    tall.items[tall.items.indexOf(best.a)] = best.b;
-    short.items[short.items.indexOf(best.b)] = best.a;
-    const delta = best.a.ratio - best.b.ratio;
-    tall.height -= delta;
-    short.height += delta;
+    const spread = Math.max(...heights) - Math.min(...heights);
+    if (spread < bestSpread - 1e-9) {
+      bestSpread = spread;
+      bestAssign = assign;
+    }
   }
+  tail.forEach((item, i) => {
+    const c = columns[bestAssign ? bestAssign[i] : 0];
+    c.items.push(item);
+    c.height += item.ratio + GAP_UNITS;
+  });
+
   return columns.map((c) => c.items);
 }
 
