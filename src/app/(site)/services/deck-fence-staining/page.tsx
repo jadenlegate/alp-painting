@@ -8,6 +8,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { WarrantyBanner } from "@/components/WarrantyBanner";
 import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
@@ -205,6 +206,11 @@ export default function DeckFenceStainingPage() {
         heading="The deck & fence staining process, step by step."
         intro="A deck that holds its finish is built in order — clean, strip, sand, then stain. Skip the prep and it peels by next summer. Here's exactly how a project runs."
         steps={PROCESS}
+      />
+
+      <WarrantyBanner
+        title="1-Year No-Peel Guarantee"
+        body="On qualifying projects finished with penetrating, non-film-forming stains, we guarantee the surface against peeling for one year. These stains are designed to fade gracefully instead of peeling — and we stand behind that in writing."
       />
 
       {/* Before/after + Related — hidden in MVP mode, returning with tweaks in V2 */}

@@ -44,7 +44,7 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <Eyebrow className="mb-4">Our Story</Eyebrow>
             <h1 className="font-serif text-navy text-[2rem] md:text-[3rem] leading-[1.1]">
-              A painting company built around the experience — not just the paint.
+              A painting company built around a great client experience.
             </h1>
           </div>
         </Container>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="max-w-xl mb-10 md:mb-14">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">How we work</div>
             <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.5rem] leading-[1.15]">
-              Values stated as behaviors — not platitudes.
+              What we value.
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">

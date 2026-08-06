@@ -18,83 +18,37 @@ export const metadata: Metadata = {
 // section is full-mode only (see @/lib/flags) — it ships in a later revision
 // while the MVP shows the flat gallery.
 
-// Pre-computed column distribution, done at build time so the rendered
-// columns are deterministic and SSR-friendly.
-//
-// ORDER-PRESERVING: items fill columns in curated PORTFOLIO_GALLERY order
-// (each next photo goes to the currently-shortest column), so the sequence
-// in portfolioGallery.ts controls what appears near the top of the wall.
-// The last TAIL items are assigned by exhaustive search instead of greedily,
-// which lands the column bottoms as flush as the discrete photo shapes allow.
-// Each item also adds a fixed vertical gap (~20px against a ~370px column),
-// included in the balance so columns with more items don't run taller.
-const GAP_UNITS = 0.055;
-const TAIL = 10; // 3^10 combos ≈ 59k — trivial at build time
+// Mosaic gallery: the first (drone) photo renders as a full-width hero tile,
+// and every following photo is a uniform 4:3 tile (object-cover crop). With
+// 30 tiles after the hero, the grid divides evenly into both 2 columns (15
+// rows) and 3 columns (10 rows), so the bottom edge lands perfectly flush at
+// every breakpoint — no column balancing, no ragged whitespace.
+// NOTE for future re-picks: keep (total − 1) divisible by 6 (i.e. 31, 37,
+// 43 … photos) so the mosaic stays flush in both column counts.
+const [HERO_TILE, ...MOSAIC_TILES] = PORTFOLIO_GALLERY;
 
-function balanceColumns(items: GalleryImage[], cols: number): GalleryImage[][] {
-  const columns: { items: GalleryImage[]; height: number }[] = Array.from(
-    { length: cols },
-    () => ({ items: [], height: 0 }),
-  );
-  const head = Math.max(0, items.length - TAIL);
-
-  // Greedy in-order fill for the bulk of the wall.
-  for (let i = 0; i < head; i++) {
-    const target = columns.reduce((min, c) => (c.height < min.height ? c : min), columns[0]);
-    target.items.push(items[i]);
-    target.height += items[i].ratio + GAP_UNITS;
-  }
-
-  // Exhaustive assignment for the tail: pick the combination that minimizes
-  // the spread between the tallest and shortest column.
-  const tail = items.slice(head);
-  let bestAssign: number[] | null = null;
-  let bestSpread = Infinity;
-  const combos = Math.pow(cols, tail.length);
-  for (let m = 0; m < combos; m++) {
-    const heights = columns.map((c) => c.height);
-    let x = m;
-    const assign: number[] = [];
-    for (const item of tail) {
-      const c = x % cols;
-      x = (x - c) / cols;
-      assign.push(c);
-      heights[c] += item.ratio + GAP_UNITS;
-    }
-    const spread = Math.max(...heights) - Math.min(...heights);
-    if (spread < bestSpread - 1e-9) {
-      bestSpread = spread;
-      bestAssign = assign;
-    }
-  }
-  tail.forEach((item, i) => {
-    const c = columns[bestAssign ? bestAssign[i] : 0];
-    c.items.push(item);
-    c.height += item.ratio + GAP_UNITS;
-  });
-
-  return columns.map((c) => c.items);
-}
-
-const GALLERY_3_COLS = balanceColumns(PORTFOLIO_GALLERY, 3);
-const GALLERY_2_COLS = balanceColumns(PORTFOLIO_GALLERY, 2);
-
-function GalleryImg({ img }: { img: GalleryImage }) {
-  // Width/height are in "ratio units" — next/image uses them only to compute
-  // aspect ratio, so the intrinsic values don't need to be pixel-accurate.
-  const w = img.ratio >= 1 ? 1000 : Math.round(1000 / img.ratio);
-  const h = img.ratio >= 1 ? Math.round(1000 * img.ratio) : 1000;
+function MosaicTile({
+  img,
+  className = "",
+  sizes,
+  priority = false,
+}: {
+  img: GalleryImage;
+  className?: string;
+  sizes: string;
+  priority?: boolean;
+}) {
   return (
-    <div className="overflow-hidden rounded-sm bg-stone-light/40 border border-border">
+    <div className={`relative overflow-hidden rounded-sm bg-stone-light/40 border border-border ${className}`}>
       <Image
         src={img.src}
         alt={img.alt}
-        width={w}
-        height={h}
-        loading="lazy"
+        fill
+        priority={priority}
+        loading={priority ? undefined : "lazy"}
         quality={85}
-        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-        className="block w-full h-auto hover:scale-[1.02] transition-transform duration-500"
+        sizes={sizes}
+        className="object-cover hover:scale-[1.02] transition-transform duration-500"
       />
     </div>
   );
@@ -208,26 +162,23 @@ export default function WorkPage() {
               </h2>
             </div>
           )}
-          {/* Mobile: single stacked column (bottom is trivially flush) */}
-          <div className="sm:hidden flex flex-col gap-4">
-            {PORTFOLIO_GALLERY.map((img) => <GalleryImg key={img.src} img={img} />)}
-          </div>
-
-          {/* Tablet: 2-column LPT-balanced columns */}
-          <div className="hidden sm:grid lg:hidden grid-cols-2 gap-4 md:gap-5">
-            {GALLERY_2_COLS.map((col, i) => (
-              <div key={i} className="flex flex-col gap-4 md:gap-5">
-                {col.map((img) => <GalleryImg key={img.src} img={img} />)}
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop: 3-column LPT-balanced columns */}
-          <div className="hidden lg:grid grid-cols-3 gap-5">
-            {GALLERY_3_COLS.map((col, i) => (
-              <div key={i} className="flex flex-col gap-5">
-                {col.map((img) => <GalleryImg key={img.src} img={img} />)}
-              </div>
+          {/* Mosaic: full-width hero tile, then uniform 4:3 tiles. 30 tiles
+              divide evenly into 2 and 3 columns, so the bottom edge is flush
+              at every breakpoint. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            <MosaicTile
+              img={HERO_TILE}
+              className="sm:col-span-2 lg:col-span-3 aspect-[16/9] sm:aspect-[21/9]"
+              sizes="100vw"
+              priority
+            />
+            {MOSAIC_TILES.map((img) => (
+              <MosaicTile
+                key={img.src}
+                img={img}
+                className="aspect-[4/3]"
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              />
             ))}
           </div>
         </Container>
