@@ -53,6 +53,8 @@ const nextConfig: NextConfig = {
       { source: "/exterior", destination: "/services/exterior-painting", permanent: true },
       { source: "/services/exterior", destination: "/services/exterior-painting", permanent: true },
       { source: "/services/deck-&-fence-staining", destination: "/services/deck-fence-staining", permanent: true },
+      // Same URL as requested by browsers/crawlers with the ampersand percent-encoded.
+      { source: "/services/deck-%26-fence-staining", destination: "/services/deck-fence-staining", permanent: true },
       { source: "/pressurewashing", destination: "/services/exterior-painting", permanent: true },
       { source: "/our-story", destination: "/about", permanent: true },
       { source: "/join-our-team", destination: "/careers", permanent: true },
