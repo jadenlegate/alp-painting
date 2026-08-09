@@ -18,43 +18,52 @@ export const metadata: Metadata = {
 // section is full-mode only (see @/lib/flags) — it ships in a later revision
 // while the MVP shows the flat gallery.
 
-// Justified-rows gallery (the Flickr/Google-Photos layout): every photo keeps
-// its NATIVE aspect ratio, and each row shares one height while stretching to
-// the full container width (flex-grow proportional to aspect ratio). Because
-// every row spans the full width, the gallery's bottom edge is always flush —
-// no cropping, no ragged columns, regardless of photo count.
-//
-// Rows are packed at build time with a small DP linear partition that keeps
-// the curated order and targets a "width sum" (Σ width/height) per row.
+// Banded gallery — every photo at its NATIVE aspect ratio, zero cropping,
+// flush bottom edge:
+//   - landscapes pair up two per row (large), sharing the row height
+//   - portraits emerge as rows of three, sized so a portrait's WIDTH equals
+//     a landscape row's HEIGHT — portraits and landscapes cover roughly the
+//     same screen area instead of portraits shrinking to slivers
+// Every band stretches to the full container width (flex-grow ∝ aspect
+// ratio), so the bottom edge is always flush regardless of photo count.
+// Bands are emitted in curated order; portraits buffer until three arrive.
 type Row = GalleryImage[];
 
-function packRows(items: GalleryImage[], targetSum: number): Row[] {
-  const n = items.length;
-  const ar = items.map((i) => 1 / i.ratio); // width/height
-  const dp = new Array<number>(n + 1).fill(Infinity);
-  const cut = new Array<number>(n + 1).fill(0);
-  dp[0] = 0;
-  for (let i = 1; i <= n; i++) {
-    let sum = 0;
-    for (let j = i - 1; j >= 0 && i - j <= 6; j--) {
-      sum += ar[j];
-      // The final row may run short of the target at reduced penalty — its
-      // photos simply render a little larger, still filling the row.
-      const weight = i === n ? 0.25 : 1;
-      const cost = dp[j] + (sum - targetSum) ** 2 * weight;
-      if (cost < dp[i]) {
-        dp[i] = cost;
-        cut[i] = j;
+function packBands(items: GalleryImage[]): Row[] {
+  const bands: Row[] = [];
+  let lBuf: GalleryImage[] = [];
+  let pBuf: GalleryImage[] = [];
+  for (const img of items) {
+    if (img.ratio > 1) {
+      pBuf.push(img);
+      if (pBuf.length === 3) {
+        bands.push(pBuf);
+        pBuf = [];
+      }
+    } else {
+      lBuf.push(img);
+      if (lBuf.length === 2) {
+        bands.push(lBuf);
+        lBuf = [];
       }
     }
   }
-  const rows: Row[] = [];
-  for (let i = n; i > 0; i = cut[i]) rows.unshift(items.slice(cut[i], i));
-  return rows;
+  // Leftovers: fold a lone landscape into the previous landscape band (3-up);
+  // fold trailing portraits into the previous portrait band (up to 4-up).
+  if (lBuf.length) {
+    const lastL = [...bands].reverse().find((b) => b[0].ratio <= 1);
+    if (lastL && lastL.length === 2) lastL.push(...lBuf);
+    else bands.push(lBuf);
+  }
+  if (pBuf.length) {
+    const lastP = [...bands].reverse().find((b) => b[0].ratio > 1);
+    if (lastP && lastP.length + pBuf.length <= 4) lastP.push(...pBuf);
+    else bands.push(pBuf);
+  }
+  return bands;
 }
 
-const ROWS_DESKTOP = packRows(PORTFOLIO_GALLERY, 4.8); // ≈3 landscape photos per row
-const ROWS_TABLET = packRows(PORTFOLIO_GALLERY, 3.2); // ≈2 landscape photos per row
+const BANDS = packBands(PORTFOLIO_GALLERY);
 
 function JustifiedRow({ row }: { row: Row }) {
   return (
@@ -73,7 +82,7 @@ function JustifiedRow({ row }: { row: Row }) {
               fill
               loading="lazy"
               quality={85}
-              sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+              sizes="(min-width: 640px) 55vw, 100vw"
               className="object-cover hover:scale-[1.02] transition-transform duration-500"
             />
           </div>
@@ -213,16 +222,9 @@ export default function WorkPage() {
             ))}
           </div>
 
-          {/* Tablet: ~2-per-row justified rows */}
-          <div className="hidden sm:flex lg:hidden flex-col gap-4 md:gap-5">
-            {ROWS_TABLET.map((row, i) => (
-              <JustifiedRow key={i} row={row} />
-            ))}
-          </div>
-
-          {/* Desktop: ~3-per-row justified rows */}
-          <div className="hidden lg:flex flex-col gap-5">
-            {ROWS_DESKTOP.map((row, i) => (
+          {/* Tablet + desktop: banded rows (landscape pairs / portrait trios) */}
+          <div className="hidden sm:flex flex-col gap-4 md:gap-5">
+            {BANDS.map((row, i) => (
               <JustifiedRow key={i} row={row} />
             ))}
           </div>
