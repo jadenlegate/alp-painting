@@ -18,38 +18,67 @@ export const metadata: Metadata = {
 // section is full-mode only (see @/lib/flags) — it ships in a later revision
 // while the MVP shows the flat gallery.
 
-// Mosaic gallery: the first (drone) photo renders as a full-width hero tile,
-// and every following photo is a uniform 4:3 tile (object-cover crop). With
-// 30 tiles after the hero, the grid divides evenly into both 2 columns (15
-// rows) and 3 columns (10 rows), so the bottom edge lands perfectly flush at
-// every breakpoint — no column balancing, no ragged whitespace.
-// NOTE for future re-picks: keep (total − 1) divisible by 6 (i.e. 31, 37,
-// 43 … photos) so the mosaic stays flush in both column counts.
-const [HERO_TILE, ...MOSAIC_TILES] = PORTFOLIO_GALLERY;
+// Justified-rows gallery (the Flickr/Google-Photos layout): every photo keeps
+// its NATIVE aspect ratio, and each row shares one height while stretching to
+// the full container width (flex-grow proportional to aspect ratio). Because
+// every row spans the full width, the gallery's bottom edge is always flush —
+// no cropping, no ragged columns, regardless of photo count.
+//
+// Rows are packed at build time with a small DP linear partition that keeps
+// the curated order and targets a "width sum" (Σ width/height) per row.
+type Row = GalleryImage[];
 
-function MosaicTile({
-  img,
-  className = "",
-  sizes,
-  priority = false,
-}: {
-  img: GalleryImage;
-  className?: string;
-  sizes: string;
-  priority?: boolean;
-}) {
+function packRows(items: GalleryImage[], targetSum: number): Row[] {
+  const n = items.length;
+  const ar = items.map((i) => 1 / i.ratio); // width/height
+  const dp = new Array<number>(n + 1).fill(Infinity);
+  const cut = new Array<number>(n + 1).fill(0);
+  dp[0] = 0;
+  for (let i = 1; i <= n; i++) {
+    let sum = 0;
+    for (let j = i - 1; j >= 0 && i - j <= 6; j--) {
+      sum += ar[j];
+      // The final row may run short of the target at reduced penalty — its
+      // photos simply render a little larger, still filling the row.
+      const weight = i === n ? 0.25 : 1;
+      const cost = dp[j] + (sum - targetSum) ** 2 * weight;
+      if (cost < dp[i]) {
+        dp[i] = cost;
+        cut[i] = j;
+      }
+    }
+  }
+  const rows: Row[] = [];
+  for (let i = n; i > 0; i = cut[i]) rows.unshift(items.slice(cut[i], i));
+  return rows;
+}
+
+const ROWS_DESKTOP = packRows(PORTFOLIO_GALLERY, 4.8); // ≈3 landscape photos per row
+const ROWS_TABLET = packRows(PORTFOLIO_GALLERY, 3.2); // ≈2 landscape photos per row
+
+function JustifiedRow({ row }: { row: Row }) {
   return (
-    <div className={`relative overflow-hidden rounded-sm bg-stone-light/40 border border-border ${className}`}>
-      <Image
-        src={img.src}
-        alt={img.alt}
-        fill
-        priority={priority}
-        loading={priority ? undefined : "lazy"}
-        quality={85}
-        sizes={sizes}
-        className="object-cover hover:scale-[1.02] transition-transform duration-500"
-      />
+    <div className="flex gap-4 md:gap-5">
+      {row.map((img) => {
+        const ar = (1 / img.ratio).toFixed(4); // width/height
+        return (
+          <div
+            key={img.src}
+            className="relative overflow-hidden rounded-sm bg-stone-light/40 border border-border"
+            style={{ flex: `${ar} 1 0%`, aspectRatio: ar }}
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              loading="lazy"
+              quality={85}
+              sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+              className="object-cover hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -162,23 +191,39 @@ export default function WorkPage() {
               </h2>
             </div>
           )}
-          {/* Mosaic: full-width hero tile, then uniform 4:3 tiles. 30 tiles
-              divide evenly into 2 and 3 columns, so the bottom edge is flush
-              at every breakpoint. */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-            <MosaicTile
-              img={HERO_TILE}
-              className="sm:col-span-2 lg:col-span-3 aspect-[16/9] sm:aspect-[21/9]"
-              sizes="100vw"
-              priority
-            />
-            {MOSAIC_TILES.map((img) => (
-              <MosaicTile
+          {/* Justified rows — native aspect ratios, flush bottom edge.
+              Mobile: single stacked column (trivially flush). */}
+          <div className="sm:hidden flex flex-col gap-4">
+            {PORTFOLIO_GALLERY.map((img) => (
+              <div
                 key={img.src}
-                img={img}
-                className="aspect-[4/3]"
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              />
+                className="relative overflow-hidden rounded-sm bg-stone-light/40 border border-border"
+                style={{ aspectRatio: (1 / img.ratio).toFixed(4) }}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  loading="lazy"
+                  quality={85}
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Tablet: ~2-per-row justified rows */}
+          <div className="hidden sm:flex lg:hidden flex-col gap-4 md:gap-5">
+            {ROWS_TABLET.map((row, i) => (
+              <JustifiedRow key={i} row={row} />
+            ))}
+          </div>
+
+          {/* Desktop: ~3-per-row justified rows */}
+          <div className="hidden lg:flex flex-col gap-5">
+            {ROWS_DESKTOP.map((row, i) => (
+              <JustifiedRow key={i} row={row} />
             ))}
           </div>
         </Container>
