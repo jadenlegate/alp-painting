@@ -32,6 +32,13 @@ export const metadata: Metadata = {
     "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Interior, exterior, wood restoration, and cabinet refinishing with up to a 5-year warranty.",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "Whistler painters",
     "painters in Whistler",
@@ -77,7 +84,6 @@ export const metadata: Metadata = {
       "Premium painting across Whistler, Pemberton, and Squamish. Up to a 5-year warranty.",
     images: [OG_IMAGE],
   },
-  icons: { icon: "/favicon.ico" },
 };
 
 const localBusinessLd = {
