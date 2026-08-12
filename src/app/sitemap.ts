@@ -1,18 +1,19 @@
 import type { MetadataRoute } from "next";
-import { POSTS } from "@/lib/blogPosts";
+import { buildSitemapEntries } from "@opinly/shared";
+import { opinlyConfig } from "@opinly/next";
+import { opinly } from "@/clients/opinly";
 import { IS_FULL } from "@/lib/flags";
+
+const BASE_URL = "https://www.alpenglowpainting.ca";
 
 // Routes hidden in MVP mode (main branch) — they 404 there, so keep them
 // out of the production sitemap. See @/lib/flags.
 const FULL_ONLY_ROUTES = new Set([
-  "/blog",
   "/services/cabinet-refinishing",
   "/services/log-restoration",
   "/services/new-construction",
   "/services/commercial",
 ]);
-
-const BASE_URL = "https://alpenglowpainting.ca";
 
 const STATIC_ROUTES = [
   "",
@@ -41,7 +42,7 @@ const STATIC_ROUTES = [
 
 const LOCATION_SLUGS = ["whistler", "pemberton", "squamish", "squamish-valley"];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
@@ -55,16 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  for (const post of POSTS) {
-    if (!IS_FULL) break;
-    entries.push({
-      url: `${BASE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.publishedAt),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    });
-  }
-
   for (const slug of LOCATION_SLUGS) {
     entries.push({
       url: `${BASE_URL}/painters/${slug}`,
@@ -72,6 +63,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     });
+  }
+
+  // Opinly blog content (posts, categories, authors, tags). A failed fetch —
+  // e.g. missing OPINLY_API_KEY at build time — degrades to a sitemap without
+  // blog entries rather than a failed build.
+  try {
+    const routes = await opinly.routes();
+    for (const entry of buildSitemapEntries(routes, opinlyConfig)) {
+      // Skip the blog home — already in STATIC_ROUTES.
+      if (entry.url === `${BASE_URL}/blog`) continue;
+      entries.push({
+        url: entry.url,
+        lastModified: new Date(entry.lastModified),
+        changeFrequency: "weekly",
+        priority: 0.6,
+      });
+    }
+  } catch (err) {
+    console.error("[sitemap] Opinly routes fetch failed:", err);
   }
 
   return entries;

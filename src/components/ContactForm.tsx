@@ -47,6 +47,11 @@ export function ContactForm() {
 
     const firstName = String(data.get("firstName") ?? "");
     const lastName = String(data.get("lastName") ?? "");
+    // Opinly pixel globals (if loaded) — anonId ties this lead to the
+    // visitor's browsing history for campaign attribution.
+    const opinlyPixel = (window as unknown as {
+      opinly?: { anonId?: string; identify?: (p: { email: string }) => void };
+    }).opinly;
     const payload = {
       firstName,
       lastName,
@@ -56,6 +61,7 @@ export function ContactForm() {
       project: String(data.get("project") ?? ""),
       submittedAt: new Date().toISOString(),
       source: "alpenglowpainting.ca",
+      anonId: opinlyPixel?.anonId,
     };
 
     const validationErrors = validate(payload);
@@ -79,6 +85,12 @@ export function ContactForm() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(`Server responded ${res.status}`);
+      // Link this visitor's history to the person who just reached out.
+      try {
+        opinlyPixel?.identify?.({ email: payload.email });
+      } catch {
+        /* analytics must never break the form */
+      }
       setStatus("success");
       form.reset();
     } catch (err) {

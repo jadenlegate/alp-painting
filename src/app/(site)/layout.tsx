@@ -11,9 +11,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   const serviceGroups = getServiceGroups(IS_FULL);
   return (
     <>
-      <Navbar serviceGroups={serviceGroups} showBlog={IS_FULL} />
+      {/* Blog is Opinly-powered and live in both modes now. */}
+      <Navbar serviceGroups={serviceGroups} showBlog />
       <main className="flex-1">{children}</main>
-      <Footer serviceGroups={serviceGroups} showBlog={IS_FULL} />
+      <Footer serviceGroups={serviceGroups} showBlog />
       <MobileCtaBar />
     </>
   );

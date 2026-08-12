@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withOpinlyConfig } from "@opinly/next";
 
 // Pin Turbopack's workspace root to this directory so Next doesn't
 // pick up lockfiles from a parent directory.
@@ -90,4 +91,12 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Opinly blog SDK — injects image rewrites (CDN namespace) and the public
+// config env vars read by opinlyConfig at runtime.
+export default withOpinlyConfig({
+  blogPath: "/blog",
+  imagesPath: "/images",
+  companyName: "Alpenglow Painting",
+  cdnNamespace: "Lmb9EVfujyhL_kYw_Vkvt",
+  siteUrl: "https://www.alpenglowpainting.ca",
+})(nextConfig);

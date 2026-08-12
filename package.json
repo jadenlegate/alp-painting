@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@opinly/backend": "^1.4.0",
+    "@opinly/next": "^1.4.0",
+    "@opinly/react": "^1.4.0",
+    "@opinly/shared": "^1.4.0",
     "@portabletext/react": "^6.0.3",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.21.0",

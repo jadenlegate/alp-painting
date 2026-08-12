@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fraunces, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
@@ -20,7 +21,8 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const SITE_URL = "https://alpenglowpainting.ca";
+// www is the Vercel primary domain (apex 308s to it) — canonicals match it.
+const SITE_URL = "https://www.alpenglowpainting.ca";
 const OG_IMAGE = `${SITE_URL}/stock-images/I_Blackcomb_Dusk_1-scaled.jpg`;
 
 export const metadata: Metadata = {
@@ -177,6 +179,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
         {children}
+        {/* Opinly analytics pixel — traffic attribution + conversion tracking.
+            Auto-captures emails from type="email" fields (contact form) to
+            link visitors; the quote API records generate_lead server-side. */}
+        <Script
+          id="opinly-pixel"
+          strategy="afterInteractive"
+          src="https://static.opinly.ai/p.js"
+          data-key="pk-uX9eMVDutYRCKkxKKs-9pk4weghDJ6-jmOdRfFS"
+        />
       </body>
     </html>
   );

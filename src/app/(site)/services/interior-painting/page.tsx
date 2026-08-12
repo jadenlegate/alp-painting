@@ -155,8 +155,8 @@ const FAQS = [
   {
     q: "When should I hire a professional painter vs doing it myself?",
     a: "DIY painting can work for small, simple projects like freshening up a single room if you have the tools, time, and patience. But for large areas, high ceilings, tricky prep work, specialty finishes, or when you want a long-lasting, flawless result, hiring a professional is the smarter choice. A pro saves you time, ensures quality, and handles safety concerns.",
-    // Blog is hidden in MVP mode — only link to the article when it exists.
-    ...(IS_FULL ? { link: { href: "/blog/diy-vs-hiring-a-professional-painter", label: "Read this article to learn more" } } : {}),
+    // TODO: re-link "Read this article" once a DIY-vs-professional post is
+    // published in Opinly (the old hand-built article was retired).
   },
   {
     q: "What does the warranty cover?",
