@@ -6,20 +6,25 @@ import { opinly } from "@/clients/opinly";
 // pixel's anonId when the form provides it) attribute the lead back to the
 // campaign/content that brought the visitor. externalEventId dedupes retries.
 function trackLead(body: Record<string, unknown>) {
-  const email = typeof body.email === "string" ? body.email : undefined;
-  const anonId = typeof body.anonId === "string" ? body.anonId : undefined;
-  if (!email && !anonId) return;
-  opinly
-    .track(
-      "generate_lead",
-      { source: "quote-form" },
-      {
-        email,
-        anonId,
-        externalEventId: `quote:${email ?? anonId}:${typeof body.submittedAt === "string" ? body.submittedAt : ""}`,
-      },
-    )
-    .catch((err) => console.warn("[quote] Opinly generate_lead failed:", err));
+  try {
+    const email = typeof body.email === "string" ? body.email : undefined;
+    const anonId = typeof body.anonId === "string" ? body.anonId : undefined;
+    if (!email && !anonId) return;
+    opinly
+      .track(
+        "generate_lead",
+        { source: "quote-form" },
+        {
+          email,
+          anonId,
+          externalEventId: `quote:${email ?? anonId}:${typeof body.submittedAt === "string" ? body.submittedAt : ""}`,
+        },
+      )
+      .catch((err) => console.warn("[quote] Opinly generate_lead failed:", err));
+  } catch (err) {
+    // Analytics must never break lead capture (e.g. missing OPINLY_API_KEY).
+    console.warn("[quote] Opinly client unavailable:", err);
+  }
 }
 
 // Receives quote-request submissions from <ContactForm /> and forwards the
