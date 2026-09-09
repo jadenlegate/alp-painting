@@ -45,7 +45,7 @@ const BENEFITS = [
 const PAY_TIERS = [
   {
     role: "Junior Painter",
-    range: "$25–28/hr",
+    range: "$26–28/hr",
     description: "Some painting experience or strong willingness to learn. Reliable, shows up, follows direction well.",
   },
   {
