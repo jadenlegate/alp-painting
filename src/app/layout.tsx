@@ -23,7 +23,9 @@ const montserrat = Montserrat({
 
 // www is the Vercel primary domain (apex 308s to it) — canonicals match it.
 const SITE_URL = "https://www.alpenglowpainting.ca";
-const OG_IMAGE = `${SITE_URL}/stock-images/I_Blackcomb_Dusk_1-scaled.jpg`;
+// Link-preview (Open Graph) card: a real Alpenglow project — sage-green
+// chalet exterior — pre-cropped to the 1200x630 platforms expect.
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export const metadata: Metadata = {
   title: {
@@ -77,7 +79,7 @@ export const metadata: Metadata = {
     title: "Whistler Painters | Alpenglow Painting — Sea to Sky, BC",
     description:
       "Premium residential and commercial painting across Whistler, Pemberton, and Squamish. Up to a 5-year warranty.",
-    images: [{ url: OG_IMAGE, width: 2048, height: 1024, alt: "Alpenglow Painting — Whistler, BC" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Sage-green chalet exterior painted and stained by Alpenglow Painting — Whistler, BC" }],
   },
   twitter: {
     card: "summary_large_image",
