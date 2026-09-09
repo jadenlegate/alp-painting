@@ -144,3 +144,26 @@ body {
   border-top: 1px solid var(--color-border);
   margin: 2rem 0;
 }
+
+/* Document-style pages (e.g. the painter job description) print cleanly:
+ * drop the site chrome and the sheet's own frame, keep the type. */
+@media print {
+  .print-hide,
+  header,
+  footer,
+  .mobile-cta-bar {
+    display: none !important;
+  }
+  .doc-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .doc-h2 {
+    break-after: avoid;
+  }
+  li,
+  p {
+    break-inside: avoid;
+  }
+}
