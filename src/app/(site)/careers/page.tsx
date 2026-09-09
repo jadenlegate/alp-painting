@@ -221,8 +221,7 @@ export default function CareersPage() {
             </div>
             <div className="lg:flex-shrink-0 w-full lg:w-auto">
               <Button
-                href="/job-description/alpenglow-painter-job-description-2026.pdf"
-                target="_blank"
+                href="/careers/job-description"
                 size="lg"
                 variant="secondary"
                 className="w-full lg:w-auto justify-center text-center"
@@ -267,8 +266,7 @@ export default function CareersPage() {
           primaryHref="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
           primaryNewTab
           secondaryLabel="Read Job Description"
-          secondaryHref="/job-description/alpenglow-painter-job-description-2026.pdf"
-          secondaryNewTab
+          secondaryHref="/careers/job-description"
         />
       </div>
     </>
