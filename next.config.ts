@@ -62,6 +62,7 @@ const nextConfig: NextConfig = {
       { source: "/questions", destination: "/faq", permanent: true },
       // Job description is a real page now, not a PDF.
       { source: "/job-description/alpenglow-painter-job-description-2026.pdf", destination: "/careers/job-description", permanent: true },
+      { source: "/job-description", destination: "/careers/job-description", permanent: true },
       { source: "/job-description/:path*", destination: "/careers/job-description", permanent: true },
       { source: "/work", destination: "/portfolio", permanent: true },
 
