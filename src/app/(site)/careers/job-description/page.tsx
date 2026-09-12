@@ -163,7 +163,7 @@ export default function JobDescriptionPage() {
           <img src="/Alpenglow Logo Blue.svg" alt="Alpenglow Painting" className="h-9 w-auto" />
 
           <h1 className="mt-7 font-serif text-navy text-[1.625rem] md:text-[2rem] leading-tight">
-            Junior Painter &amp; Crew Lead
+            Job Description
           </h1>
 
           <dl className="mt-4 space-y-1 text-[0.9rem] leading-[1.6]">
