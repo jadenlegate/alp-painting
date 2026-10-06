@@ -45,12 +45,12 @@ const BENEFITS = [
 const PAY_TIERS = [
   {
     role: "Junior Painter",
-    range: "$26–28/hr",
+    range: "$27–29/hr",
     description: "Some painting experience or strong willingness to learn. Reliable, shows up, follows direction well.",
   },
   {
     role: "Crew Lead",
-    range: "$28–33/hr",
+    range: "$30–34/hr",
     description: "Experienced painter who can manage a small crew, communicate with clients on-site, and work independently.",
   },
   {

@@ -68,8 +68,8 @@ const PAY_EXAMPLES: readonly (readonly [string, string])[] = [
 ];
 
 const PAY_RATES: readonly (readonly [string, string])[] = [
-  ["Junior Painter starting pay", "$26–28/hour"],
-  ["Crew Lead starting pay", "$28–33/hour"],
+  ["Junior Painter starting pay", "$27–29/hour"],
+  ["Crew Lead starting pay", "$30–34/hour"],
   ["Top performers", "$30–40+/hour by improving speed and skill"],
 ];
 
@@ -170,7 +170,7 @@ export default function JobDescriptionPage() {
             {[
               ["Location", "Whistler, BC"],
               ["Employment type", "Full-time, seasonal"],
-              ["Compensation", "$26–40+/hour (performance-based pay)"],
+              ["Compensation", "$27–40+/hour (performance-based pay)"],
             ].map(([label, value]) => (
               <div key={label} className="flex flex-wrap gap-x-2">
                 <dt className="font-semibold text-navy">{label}:</dt>
@@ -232,7 +232,7 @@ export default function JobDescriptionPage() {
           <TermList items={PAY_EXAMPLES} />
           <P>
             This system rewards painters who work hard, follow instructions, and become more efficient — so you can earn{" "}
-            <strong className="font-semibold text-navy">$26–40+/hour</strong> depending on your speed and skill.
+            <strong className="font-semibold text-navy">$27–40+/hour</strong> depending on your speed and skill.
             Productivity is regularly assessed and feedback is given to help you improve as you go.
           </P>
 
