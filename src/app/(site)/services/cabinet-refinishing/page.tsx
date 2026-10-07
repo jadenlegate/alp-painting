@@ -13,7 +13,7 @@ import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 export const metadata: Metadata = {
   title: "Cabinet Refinishing in Whistler, Pemberton & Squamish",
   description:
-    "Kitchen and bathroom cabinet refinishing in Whistler, Pemberton, and Squamish. We spray a smooth, durable finish onto the cabinets you already have, so you don't have to replace them.",
+    "Kitchen and bathroom cabinet refinishing in Whistler, Pemberton, and Squamish. Your existing cabinets get a smooth, hard-wearing lacquer finish, so you don't have to replace them.",
   alternates: { canonical: "/services/cabinet-refinishing" },
 };
 
@@ -29,14 +29,14 @@ const serviceJsonLd = {
     { "@type": "City", name: "Squamish" },
   ],
   description:
-    "Cabinet refinishing in Whistler and the Sea to Sky. Kitchen and bathroom cabinets are sprayed with a hard, cabinet-grade finish, so the existing cabinets can stay.",
+    "Cabinet refinishing in Whistler and the Sea to Sky. Kitchen and bathroom cabinets are finished in premium sprayed lacquer, so the existing cabinets can stay.",
   url: "https://alpenglowpainting.ca/services/cabinet-refinishing",
 };
 
 const SURFACE_CARDS = [
   {
     title: "Kitchen cabinets",
-    body: "Uppers, lowers, and islands. Doors and drawer fronts are sprayed in our shop, and we work in phases so you can keep using the kitchen.",
+    body: "Uppers, lowers, and islands. Doors and drawer fronts are sprayed off-site in a shop, and we work in phases so you can keep using the kitchen.",
   },
   {
     title: "Bathroom vanities",
@@ -56,7 +56,7 @@ const SURFACE_CARDS = [
   },
   {
     title: "Colour consultation & samples",
-    body: "We paint sample colours on one of your cabinet doors and look at them in your kitchen's light before you decide.",
+    body: "We'll go over colour and sheen samples with you and look at them in your kitchen's light before you decide.",
   },
 ];
 
@@ -70,22 +70,22 @@ const PROCESS: ProcessStep[] = [
   {
     n: "02",
     title: "Door & drawer removal",
-    body: "We take off every door and drawer front and label each one, so it goes back on the same opening it came from. Hinges, pulls, and other hardware are bagged and marked by location. The doors and drawer fronts go to our shop, and the cabinet boxes stay in your kitchen. The labelling takes time, but it's why everything lines up again at the end.",
+    body: "We take off every door and drawer front and label each one, so it goes back on the same opening it came from. Hinges, pulls, and other hardware are bagged and marked by location. The doors and drawer fronts go off-site to a shop for finishing, and the cabinet boxes stay in your kitchen. The labelling takes time, but it's why everything lines up again at the end.",
   },
   {
     n: "03",
     title: "Clean, degrease, sand & prime",
-    body: "Kitchen cabinets build up years of grease and cooking residue, and paint won't stick to it. We degrease every surface, then scuff-sand it so the primer has something to grab onto. On open-grain wood like oak, we can fill the grain if you want a completely smooth look. Then we apply a bonding primer made for cabinets. When a cabinet paint job starts chipping within a year, this is usually the step that was skipped.",
+    body: "Kitchen cabinets build up years of grease and cooking residue, and no finish will stick to it. Every surface is degreased, then scuff-sanded so the new finish has something to grab onto. On open-grain wood like oak, the grain can be filled if you want a completely smooth look with a solid finish. Then the surfaces are primed or sealed, depending on the finish you've chosen. When a cabinet finish starts chipping within a year, this is usually the step that was skipped.",
   },
   {
     n: "04",
-    title: "Spray finishing in the shop",
-    body: "We spray the doors and drawer fronts in our shop, where we can keep dust under control. Several thin coats of a hard, cabinet-grade finish go on in the colour and sheen you picked, with full drying time between coats. Spraying leaves no brush or roller marks, and the finish comes out much smoother than cabinets painted by hand.",
+    title: "Spray finishing off-site",
+    body: "The doors and drawer fronts are sprayed off-site in a shop, where dust can be kept under control. Several thin coats of premium lacquer go on in the colour and sheen you picked, with full drying time between coats. Lacquer cures much harder than standard cabinet paint, and spraying leaves no brush or roller marks.",
   },
   {
     n: "05",
     title: "Box finishing on-site",
-    body: "The cabinet boxes get the same cleaning, sanding, and priming. We spray them in place with an HVLP sprayer, which keeps overspray low, and everything around them is masked off. The boxes are matched to the doors so the whole kitchen has one consistent finish.",
+    body: "The cabinet boxes get the same cleaning, sanding, and priming, then they're sprayed in place with an HVLP sprayer, which keeps overspray low. Everything around them is masked off. The boxes are matched to the doors so the whole kitchen has one consistent finish.",
   },
   {
     n: "06",
@@ -130,7 +130,7 @@ const FAQS = [
   },
   {
     q: "What products and finishes do you use?",
-    a: "We use paints made specifically for cabinets, in both waterborne and alkyd formulas, from brands like Sherwin-Williams and Benjamin Moore. They cure much harder than wall paint, so they're easier to clean and resist chipping. You can choose matte, eggshell, satin, or semi-gloss. Satin is the most popular for kitchens.",
+    a: "We use premium lacquer, which cures much harder than standard cabinet paint for maximum durability. You can choose a solid lacquer, which looks like paint, or a semi-transparent stain that lets the wood grain show through. Sheens range from matte to semi-gloss, and satin is the most popular for kitchens.",
   },
   {
     q: "How long does cabinet refinishing take?",
@@ -142,11 +142,11 @@ const FAQS = [
   },
   {
     q: "Will the finish hold up to daily use?",
-    a: "With proper prep and a sprayed finish, refinished cabinets typically last 8 to 12 years with normal use. Prep makes the biggest difference. Without it, even good paint can start failing in a busy kitchen within a couple of years.",
+    a: "With proper prep and a sprayed lacquer finish, refinished cabinets typically last 8 to 12 years with normal use. Prep makes the biggest difference. Without it, even a good finish can start failing in a busy kitchen within a couple of years.",
   },
   {
     q: "Do you spray on-site or in a shop?",
-    a: "Both. Doors and drawer fronts are sprayed in our shop, where we can keep dust under control. The cabinet boxes are sprayed on-site with an HVLP sprayer, with everything around them masked off.",
+    a: "Both. Doors and drawer fronts are sprayed off-site in a shop, where dust can be kept under control. The cabinet boxes are sprayed on-site with an HVLP sprayer, with everything around them masked off.",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function CabinetRefinishingPage() {
       <ServiceHero
         eyebrow="Services"
         headline="Cabinet Refinishing"
-        subline="A smooth, sprayed finish on the cabinets you already have. Your kitchen looks new without the cost and mess of replacing them."
+        subline="A smooth, hard-wearing lacquer finish on the cabinets you already have. Your kitchen looks new without the cost and mess of replacing them."
         imageUrl="/stock-images/WKP-53Constitution-HR-10.jpeg.webp"
         imageAlt="Freshly refinished white kitchen cabinets"
       >
@@ -239,7 +239,7 @@ export default function CabinetRefinishingPage() {
       <CtaBlock
         eyebrow="Get in touch"
         heading="Want to see what your kitchen could look like?"
-        subline="We'll come look at your cabinets, tell you honestly what we think, and give you a quote the day of the visit."
+        subline="We'll come look at your cabinets and tell you honestly what we think. We can usually quote the same day, and if not, you'll have it within a couple of days."
       />
     </>
   );
