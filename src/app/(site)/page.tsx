@@ -31,7 +31,6 @@ const SERVICES = [
     href: "/services/cabinet-refinishing",
     blurb: "Factory-grade coatings without the cost of replacement. Meticulous prep and stunning finishes.",
     imageUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
-    fullOnly: true,
   },
   {
     title: "Wood Refinishing & Staining",

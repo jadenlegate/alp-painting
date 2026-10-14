@@ -13,7 +13,7 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
     items: [
       { label: "Interior Painting", href: "/services/interior-painting" },
       { label: "Exterior Painting", href: "/services/exterior-painting" },
-      { label: "Cabinet Refinishing", href: "/services/cabinet-refinishing", fullOnly: true },
+      { label: "Cabinet Refinishing", href: "/services/cabinet-refinishing" },
     ],
   },
   {

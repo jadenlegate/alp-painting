@@ -134,11 +134,11 @@ const localBusinessLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wood Refinishing & Staining", url: `${SITE_URL}/services/wood-restoration` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining", url: `${SITE_URL}/services/deck-fence-staining` } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Light Carpentry & Repair", url: `${SITE_URL}/services/light-carpentry` } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cabinet Refinishing", url: `${SITE_URL}/services/cabinet-refinishing` } },
       // Services below are hidden in MVP mode — keep their offers (and URLs)
       // out of production structured data until the pages ship. @/lib/flags
       ...(IS_FULL
         ? [
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cabinet Refinishing", url: `${SITE_URL}/services/cabinet-refinishing` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Log Home Restoration", url: `${SITE_URL}/services/log-restoration` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Construction & Renovation Painting", url: `${SITE_URL}/services/new-construction` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial, Strata & Hotel Painting", url: `${SITE_URL}/services/commercial` } },

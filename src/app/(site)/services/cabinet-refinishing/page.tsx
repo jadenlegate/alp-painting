@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { IS_FULL } from "@/lib/flags";
 import { Container } from "@/components/Container";
 import { ServiceHero } from "@/components/ServiceHero";
 import { Button } from "@/components/Button";
@@ -126,7 +124,6 @@ const FAQS = [
 ];
 
 export default function CabinetRefinishingPage() {
-  if (!IS_FULL) notFound(); // MVP: page hidden until launch-ready
   return (
     <>
       <script

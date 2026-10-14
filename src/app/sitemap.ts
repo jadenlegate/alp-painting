@@ -9,7 +9,6 @@ const BASE_URL = "https://www.alpenglowpainting.ca";
 // Routes hidden in MVP mode (main branch) — they 404 there, so keep them
 // out of the production sitemap. See @/lib/flags.
 const FULL_ONLY_ROUTES = new Set([
-  "/services/cabinet-refinishing",
   "/services/log-restoration",
   "/services/new-construction",
   "/services/commercial",
