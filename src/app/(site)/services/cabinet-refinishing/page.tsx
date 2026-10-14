@@ -84,7 +84,7 @@ const PROCESS: ProcessStep[] = [
   {
     n: "05",
     title: "Box finishing on-site",
-    body: "The cabinet boxes get the same cleaning, sanding, and priming, then they're sprayed in place with an HVLP sprayer, which keeps overspray low. Everything around them is masked off. The boxes are matched to the doors so the whole kitchen has one consistent finish.",
+    body: "The cabinet boxes get the same cleaning, sanding, and priming, then they're sprayed in place with everything around them masked off. The boxes are matched to the doors so the whole kitchen has one consistent finish.",
   },
   {
     n: "06",
@@ -121,7 +121,7 @@ const FAQS = [
   },
   {
     q: "Do you spray on-site or in a shop?",
-    a: "Both. Doors and drawer fronts are sprayed off-site in a shop, where dust can be kept under control. The cabinet boxes are sprayed on-site with an HVLP sprayer, with everything around them masked off.",
+    a: "Both. Doors and drawer fronts are sprayed off-site in a shop, where dust can be kept under control. The cabinet boxes are sprayed on-site, with everything around them masked off.",
   },
 ];
 
