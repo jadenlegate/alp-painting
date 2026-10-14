@@ -110,10 +110,6 @@ const FAQS = [
     a: "Most kitchens take 3 to 5 working days. The first day is prep and taking the doors off, the middle days are spraying and drying, and the last day is putting everything back and touching up. We'll give you a timeline with your written proposal.",
   },
   {
-    q: "Can we use the kitchen during the project?",
-    a: "In most cases, yes. We work in sections so part of the kitchen is always usable, and the sink, stove, and fridge stay accessible.",
-  },
-  {
     q: "Will the finish hold up to daily use?",
     a: "With proper prep and a sprayed lacquer finish, refinished cabinets typically last 8 to 12 years with normal use. Prep makes the biggest difference. Without it, even a good finish can start failing in a busy kitchen within a couple of years.",
   },
