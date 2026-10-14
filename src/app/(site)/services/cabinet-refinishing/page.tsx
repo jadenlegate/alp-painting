@@ -198,7 +198,7 @@ export default function CabinetRefinishingPage() {
       <CtaBlock
         eyebrow="Get in touch"
         heading="Want to see what your kitchen could look like?"
-        subline="We'll come look at your cabinets and tell you honestly what we think. We can usually quote the same day, and if not, you'll have it within a couple of days."
+        subline="We'll come look at your cabinets and can usually quote the same day, and if not, you'll have it within a couple of days."
       />
     </>
   );
