@@ -11,6 +11,8 @@ type Props = {
   imageAlt?: string;
   /** Passed through to the full-mode Hero (ignored in the flat MVP header). */
   overlayClass?: string;
+  /** Force the flat, image-free MVP header even in full mode. */
+  flat?: boolean;
   children?: ReactNode;
 };
 
@@ -18,8 +20,8 @@ type Props = {
 // (temporarily, until real hero photos are chosen) renders the flat editorial
 // header used on the Portfolio and Testimonials pages — no background image,
 // no hero CTA (the navbar Get a Quote is always visible).
-export function ServiceHero({ eyebrow = "Services", headline, subline, imageUrl, imageAlt, overlayClass, children }: Props) {
-  if (IS_FULL) {
+export function ServiceHero({ eyebrow = "Services", headline, subline, imageUrl, imageAlt, overlayClass, flat, children }: Props) {
+  if (IS_FULL && !flat) {
     return (
       <Hero eyebrow={eyebrow} headline={headline} subline={subline} imageUrl={imageUrl} imageAlt={imageAlt} overlayClass={overlayClass}>
         {children}

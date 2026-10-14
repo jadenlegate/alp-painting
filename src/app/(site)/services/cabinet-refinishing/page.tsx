@@ -7,7 +7,6 @@ import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CtaBlock } from "@/components/CtaBlock";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { ProjectCard, type Project } from "@/components/ProjectCard";
 import { ProcessSteps, type ProcessStep } from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
@@ -99,30 +98,6 @@ const PROCESS: ProcessStep[] = [
   },
 ];
 
-const RELATED_PROJECTS: Project[] = [
-  {
-    slug: "whistler-chalet-kitchen",
-    title: "Whistler chalet kitchen refresh",
-    location: "Whistler",
-    serviceTags: ["Cabinet refinishing"],
-    coverUrl: "/stock-images/tinted-coty2024-kitchen-1024x690.jpg",
-  },
-  {
-    slug: "whistler-chalet-living",
-    title: "Chalet living room, paint and trim",
-    location: "Whistler",
-    serviceTags: ["Interior"],
-    coverUrl: "/stock-images/portfolio/living-room-chalet-whistler.jpg",
-  },
-  {
-    slug: "whistler-master-suite",
-    title: "Master suite finish carpentry refresh",
-    location: "Whistler",
-    serviceTags: ["Interior"],
-    coverUrl: "/stock-images/portfolio/master-bedroom-detail-whistler.jpg",
-  },
-];
-
 const FAQS = [
   {
     q: "Is refinishing worth it compared to replacing?",
@@ -159,6 +134,7 @@ export default function CabinetRefinishingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <ServiceHero
+        flat
         eyebrow="Services"
         headline="Cabinet Refinishing"
         subline="A smooth, hard-wearing lacquer finish on the cabinets you already have. Your kitchen looks new without the cost and mess of replacing them."
@@ -207,28 +183,11 @@ export default function CabinetRefinishingPage() {
         heading="The cabinet refinishing process, step by step."
         intro="A finish this smooth takes careful prep and spraying, and it can't be rushed. Here's how a typical kitchen goes, from covering the countertops to hanging the doors back up."
         steps={PROCESS}
+        photos={false}
       />
 
-      {/* Related */}
-      {/* Related — hidden in MVP mode, returning with tweaks in V2 */}
-      {IS_FULL && (
-        <section className="py-16 md:py-24 bg-stone-light/50">
-          <Container>
-            <div className="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-14">
-              <div>
-                <Eyebrow className="mb-5">Recent cabinet work</Eyebrow>
-                <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium">Before and after.</h2>
-              </div>
-              <Button href="/portfolio" variant="text">See all work →</Button>
-            </div>
-            <div className="grid gap-6 md:grid-cols-3">
-              {RELATED_PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
-            </div>
-          </Container>
-        </section>
-      )}
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-stone-light/50">
         <Container size="prose">
           <Eyebrow className="mb-5">Frequently asked</Eyebrow>
           <h2 className="font-serif text-navy text-[1.875rem] md:text-[2.625rem] leading-[1.05] tracking-tight font-medium mb-10">Cabinet refinishing questions.</h2>

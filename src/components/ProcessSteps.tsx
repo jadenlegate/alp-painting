@@ -21,6 +21,8 @@ type Props = {
   steps: ProcessStep[];
   /** Section background — use "white" when the preceding section is already stone. */
   bg?: "stone" | "white";
+  /** Show the photo column. Defaults to on in full mode, off in MVP mode. */
+  photos?: boolean;
 };
 
 // Step-by-step service process. Each step is a card with a photo of the crew
@@ -30,7 +32,7 @@ type Props = {
 // shows so nothing looks broken.
 // MVP mode (see @/lib/flags) hides the photo column entirely until enough
 // real step photos exist — the layout below is unchanged and returns in V2.
-export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, bg = "stone" }: Props) {
+export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, bg = "stone", photos = IS_FULL }: Props) {
   return (
     <section className={`py-16 md:py-28 ${bg === "stone" ? "bg-stone-light/50" : ""}`}>
       <Container>
@@ -49,12 +51,12 @@ export function ProcessSteps({ eyebrow = "Our process", heading, intro, steps, b
             <article
               key={step.n}
               className={`border border-navy/15 bg-background rounded-sm overflow-hidden ${
-                IS_FULL ? "grid md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]" : ""
+                photos ? "grid md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]" : ""
               }`}
             >
               {/* Photo — horizontal on mobile (top), vertical on desktop (left).
                   Hidden in MVP mode until real step photos exist. */}
-              {IS_FULL && (
+              {photos && (
                 <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[360px] bg-stone-light">
                   {step.image ? (
                     <Image
