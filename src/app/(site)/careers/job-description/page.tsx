@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 // Keep pay figures in sync with PAY_TIERS on /careers.
 
 const APPLY_URL =
-  "https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2";
+  "https://portal.alpenglowpainting.ca/apply";
 
 const WHY_US: readonly (readonly [string, string])[] = [
   ["Fast-paced, fun, positive work environment", "Join a dynamic and enthusiastic crew that values teamwork and camaraderie."],
@@ -281,7 +281,7 @@ export default function JobDescriptionPage() {
 
         {/* Actions — not part of the document, hidden when printing */}
         <div className="print-hide mt-8 flex flex-wrap items-center gap-4">
-          <Button href={APPLY_URL} size="lg" target="_blank">
+          <Button href={APPLY_URL} size="lg">
             Apply Now
           </Button>
           <Button href="/careers" variant="text">

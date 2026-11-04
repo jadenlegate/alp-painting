@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 // Careers application form (ClickUp).
 const APPLY_URL =
-  "https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2";
+  "https://portal.alpenglowpainting.ca/apply";
 
 // Sticky bottom CTA, mobile/tablet only. The Get a Quote CTA now lives in the
 // top bar at every width, so this bar is used solely for the careers Apply Now
@@ -42,8 +42,6 @@ export function MobileCtaBar() {
       >
         <a
           href={APPLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="flex items-center justify-center py-4 text-navy bg-alpine text-sm font-semibold active:bg-alpine/90 transition-colors"
         >
           Apply Now

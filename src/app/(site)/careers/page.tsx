@@ -101,9 +101,8 @@ export default function CareersPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button
-                href="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
+                href="https://portal.alpenglowpainting.ca/apply"
                 size="lg"
-                target="_blank"
                 className="!bg-background !text-navy hover:!bg-surface"
               >
                 Apply Now
@@ -263,8 +262,7 @@ export default function CareersPage() {
           heading={<>Interested? Let&rsquo;s talk.</>}
           subline="Fill out the application form — takes about 5 minutes. We'll be in touch soon."
           primaryLabel="Apply Now"
-          primaryHref="https://forms.clickup.com/9017949262/f/8cr5z2e-737/2CCGPUOLREF04NSIZ2"
-          primaryNewTab
+          primaryHref="https://portal.alpenglowpainting.ca/apply"
           secondaryLabel="Read Job Description"
           secondaryHref="/careers/job-description"
         />
