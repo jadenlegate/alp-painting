@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-// Careers application form (ClickUp).
+// Careers application form (FirstLight portal).
 const APPLY_URL =
   "https://portal.alpenglowpainting.ca/apply";
 
