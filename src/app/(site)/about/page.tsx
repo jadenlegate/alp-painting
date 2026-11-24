@@ -7,7 +7,7 @@ import { CtaBlock } from "@/components/CtaBlock";
 export const metadata: Metadata = {
   title: "About — Whistler Painting Company",
   description:
-    "Alpenglow Painting is a Whistler-based residential and commercial painting company serving the Sea to Sky corridor. Owner-operated, locally owned, and focused on the experience — not just the paint.",
+    "Alpenglow Painting is a Whistler-based residential and commercial painting company serving the Sea to Sky corridor. Locally owned and focused on the experience — not just the paint.",
   alternates: { canonical: "/about" },
 };
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
               </h2>
               <div className="mt-5 space-y-4 text-ink leading-relaxed">
                 <p>
-                  Jaden is a born-and-raised Whistler local and a project manager at Alpenglow Painting. He brings operational experience from running a student painting franchise in Whistler, along with business acumen gained in the Commerce program at UBC&rsquo;s Sauder School of Business.
+                  Jaden is a born-and-raised Whistler local and project manager at Alpenglow Painting. He brings operational experience from running a student painting franchise in Whistler, along with business acumen gained in the Commerce program at UBC&rsquo;s Sauder School of Business.
                 </p>
                 <p>
                   His focus is on giving clients not only a great finished product, but an excellent overall experience throughout each project, from the first time you reach out to the final walkthrough.
