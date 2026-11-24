@@ -50,7 +50,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Founder story */}
+      {/* Founder story — temporarily hidden in MVP mode. @/lib/flags */}
+      {IS_FULL && (
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-8 md:gap-12 lg:gap-16 md:grid-cols-[1.3fr_1fr] items-center">
@@ -79,9 +80,10 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      )}
 
-      {/* Values */}
-      <section className="py-16 md:py-24 bg-stone-light/30">
+      {/* Values — white in MVP mode, where it directly follows the grey hero */}
+      <section className={`py-16 md:py-24 ${IS_FULL ? "bg-stone-light/30" : ""}`}>
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">How we work</div>
