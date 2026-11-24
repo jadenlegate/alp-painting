@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 // About page — brief §7.5.
-// Placeholder content for the founder story and team sections.
-// Jaden provides his own story and team photos via Sanity once the CMS is live.
+// Placeholder content for the team card grid (preview only).
+// Team photos come via Sanity once the CMS is live.
 
 const VALUES = [
   {
@@ -38,7 +38,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero — flat editorial header, left-aligned like Portfolio/Testimonials
-          so it lines up with the founder section below */}
+          so it lines up with the team section below */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-20 bg-stone-light/30">
         <Container>
           <div className="max-w-2xl">
@@ -50,22 +50,21 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Founder story — temporarily hidden in MVP mode. @/lib/flags */}
-      {IS_FULL && (
+      {/* Our team */}
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-8 md:gap-12 lg:gap-16 md:grid-cols-[1.3fr_1fr] items-center">
             <div>
-              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">The founder</div>
+              <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-4">Our team</div>
               <h2 className="font-serif text-navy text-[1.75rem] md:text-[2.25rem] leading-[1.15]">
-                Jaden Legate, Owner
+                Jaden Legate, Project Manager
               </h2>
               <div className="mt-5 space-y-4 text-ink leading-relaxed">
                 <p>
-                  Alpenglow Painting&rsquo;s founder, Jaden, is a born-and-raised Whistler local. Combining operational experience from running a student painting franchise in Whistler with business acumen gained in the Commerce program at UBC&rsquo;s Sauder School of Business, he started Alpenglow Painting.
+                  Jaden is a born-and-raised Whistler local and a project manager at Alpenglow Painting. He brings operational experience from running a student painting franchise in Whistler, along with business acumen gained in the Commerce program at UBC&rsquo;s Sauder School of Business.
                 </p>
                 <p>
-                  Jaden recognized a need to not only provide clients with a great finished product, but to provide an excellent overall experience throughout each project &mdash; from the first time you reach out to the final walkthrough.
+                  His focus is on giving clients not only a great finished product, but an excellent overall experience throughout each project, from the first time you reach out to the final walkthrough.
                 </p>
               </div>
             </div>
@@ -73,17 +72,16 @@ export default function AboutPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/Jaden Alpenglow Headshot-2.jpg"
-                alt="Jaden Legate — owner of Alpenglow Painting"
+                alt="Jaden Legate, project manager at Alpenglow Painting"
                 className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
         </Container>
       </section>
-      )}
 
-      {/* Values — white in MVP mode, where it directly follows the grey hero */}
-      <section className={`py-16 md:py-24 ${IS_FULL ? "bg-stone-light/30" : ""}`}>
+      {/* Values */}
+      <section className="py-16 md:py-24 bg-stone-light/30">
         <Container>
           <div className="max-w-xl mb-10 md:mb-14">
             <div className="text-sm uppercase tracking-[0.16em] font-semibold text-alpine mb-3">How we work</div>
@@ -118,7 +116,7 @@ export default function AboutPage() {
           {/* Team cards — to be populated from Sanity teamMember documents */}
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {[
-              { name: "Jaden Legate", role: "Owner & Lead Painter", fact: "Whistler local, 10+ years painting" },
+              { name: "Jaden Legate", role: "Project Manager", fact: "Whistler local, 10+ years painting" },
               { name: "Team Member", role: "Crew Lead", fact: "Add via Sanity CMS" },
               { name: "Team Member", role: "Painter", fact: "Add via Sanity CMS" },
             ].map((member, i) => (
